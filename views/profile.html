@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Galacta's Guide</title>
+    <link rel="stylesheet" href="../app/styles.css">
+    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));if(_s?.settings?.theme)document.documentElement.dataset.theme=_s.settings.theme;}catch(e){}</script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="site-title">Galacta's Guide</a>
+        <nav>
+            <ul class="nav-main">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="creator.html">Creator</a></li>
+            </ul>
+            <ul class="nav-utils">
+                <li><a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a></li>
+                <li><a href="profile.html" class="nav-icon-btn active" title="Profile" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-header">
+            <div class="profile-avatar" aria-hidden="true">GG</div>
+            <input id="profile-name-input" class="profile-name-input"
+                   type="text" placeholder="Your Name" maxlength="32" aria-label="Your display name">
+        </div>
+
+        <div class="profile-body">
+            <!-- Left: rank breakdown -->
+            <div class="breakdown-card">
+                <h2>Proficiency Breakdown</h2>
+                <div id="rank-breakdown"></div>
+            </div>
+
+            <!-- Right: concepts count -->
+            <div class="concepts-card">
+                <h2>Creator</h2>
+                <span id="concepts-number" class="concepts-number">0</span>
+                <span class="concepts-label">Concepts Created</span>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../scripts/profile.js"></script>
+</body>
+</html>

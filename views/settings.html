@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Galacta's Guide</title>
+    <link rel="stylesheet" href="../app/styles.css">
+    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));if(_s?.settings?.theme)document.documentElement.dataset.theme=_s.settings.theme;}catch(e){}</script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="site-title">Galacta's Guide</a>
+        <nav>
+            <ul class="nav-main">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="creator.html">Creator</a></li>
+            </ul>
+            <ul class="nav-utils">
+                <li><a href="settings.html" class="nav-icon-btn active" title="Settings" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a></li>
+                <li><a href="profile.html" class="nav-icon-btn" title="Profile" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Settings</h1>
+
+        <!-- Appearance -->
+        <section class="settings-section">
+            <h2>Appearance</h2>
+
+            <div class="setting-group">
+                <span class="setting-label">Theme</span>
+                <div class="setting-options">
+                    <button class="option-btn" data-setting="theme" data-value="galacta">Galacta</button>
+                    <!-- <button class="option-btn" data-setting="theme" data-value="rivals">Rivals</button> -->
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <span class="setting-label">Card Background</span>
+                <div class="setting-options">
+                    <button class="option-btn" data-setting="cardBgMode" data-value="hero">Hero</button>
+                    <button class="option-btn" data-setting="cardBgMode" data-value="proficiency">Proficiency</button>
+                    <button class="option-btn" data-setting="cardBgMode" data-value="role">Role</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data -->
+        <section class="settings-section">
+            <h2>Data</h2>
+            <p style="opacity:0.6;font-size:0.9rem;margin:0 0 1rem">
+                All progress is stored locally in your browser. Export a backup before clearing.
+            </p>
+            <div class="settings-actions">
+                <button id="export-btn" class="btn btn-primary">Export Backup</button>
+                <label class="btn btn-ghost" style="cursor:pointer">
+                    Import Backup
+                    <input id="import-file" type="file" accept=".json" hidden>
+                </label>
+                <button id="clear-btn" class="btn btn-danger">Clear All Data</button>
+            </div>
+            <div id="notice" class="notice hidden"></div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+[
+    {
+        "name": "Adam Warlock",
+        "role": "Strategist",
+        "image": "../assets/heroes/adam-warlock/adam-warlock.png",
+        "prestige": "../assets/heroes/adam-warlock/adam-warlock-prof.png",
+        "color": "#c27643",
+        "season": 0
+    },
+    {
+        "name": "Angela",
+        "role": "Vanguard",
+        "image": "../assets/heroes/angela/angela.png",
+        "prestige": "../assets/heroes/angela/angela-prof.png",
+        "color": "#ec983d",
+        "season": 4
+    },
+    {
+        "name": "Black Cat",
+        "role": "Duelist",
+        "image": "../assets/heroes/black-cat/black-cat.png",
+        "prestige": "../assets/heroes/black-cat/black-cat-prof.png",
+        "color": "#987df9",
+        "season": 7.5
+    },
+    {
+        "name": "Black Panther",
+        "role": "Duelist",
+        "image": "../assets/heroes/black-panther/black-panther.png",
+        "prestige": "../assets/heroes/black-panther/black-panther-prof.png",
+        "color": "#644579",
+        "season": 0
+    },
+    {
+        "name": "Black Widow",
+        "role": "Duelist",
+        "image": "../assets/heroes/black-widow/black-widow.png",
+        "prestige": "../assets/heroes/black-widow/black-widow-prof.png",
+        "color": "#555b6a",
+        "season": 0
+    },
+    {
+        "name": "Blade",
+        "role": "Duelist",
+        "image": "../assets/heroes/blade/blade.png",
+        "prestige": "../assets/heroes/blade/blade-prof.png",
+        "color": "#f15551",
+        "season": 3.5
+    },
+    {
+        "name": "Bruce Banner",
+        "role": "Vanguard",
+        "image": "../assets/heroes/bruce-banner/bruce-banner.png",
+        "prestige": "../assets/heroes/bruce-banner/bruce-banner-prof.png",
+        "color": "#387458",
+        "season": 0
+    },
+    {
+        "name": "Captain America",
+        "role": "Vanguard",
+        "image": "../assets/heroes/captain-america/captain-america.png",
+        "prestige": "../assets/heroes/captain-america/captain-america-prof.png",
+        "color": "#3972b1",
+        "season": 0
+    },
+    {
+        "name": "Cloak & Dagger",
+        "role": "Strategist",
+        "image": "../assets/heroes/cloak-dagger/cloak-dagger.png",
+        "prestige": "../assets/heroes/cloak-dagger/cloak-dagger-prof.png",
+        "color": "#889bfd",
+        "season": 0
+    },
+    {
+        "name": "Daredevil",
+        "role": "Duelist",
+        "image": "../assets/heroes/daredevil/daredevil.png",
+        "prestige": "../assets/heroes/daredevil/daredevil-prof.png",
+        "color": "#d24466",
+        "season": 4.5
+    },
+    {
+        "name": "Deadpool",
+        "role": ["Vanguard", "Duelist", "Strategist"],
+        "image": "../assets/heroes/deadpool/deadpool.png",
+        "prestige": "../assets/heroes/deadpool/deadpool-prof.png",
+        "color": "#f15551",
+        "season": 6
+    },
+    {
+        "name": "Doctor Strange",
+        "role": "Vanguard",
+        "image": "../assets/heroes/doctor-strange/doctor-strange.png",
+        "prestige": "../assets/heroes/doctor-strange/doctor-strange-prof.png",
+        "color": "#db635c",
+        "season": 0
+    },
+    {
+        "name": "Elsa Bloodstone",
+        "role": "Duelist",
+        "image": "../assets/heroes/elsa-bloodstone/elsa-bloodstone.png",
+        "prestige": "../assets/heroes/elsa-bloodstone/elsa-bloodstone-prof.png",
+        "color": "#dc7449",
+        "season": 6.5
+    },
+    {
+        "name": "Emma Frost",
+        "role": "Vanguard",
+        "image": "../assets/heroes/emma-frost/emma-frost.png",
+        "prestige": "../assets/heroes/emma-frost/emma-frost-prof.png",
+        "color": "#3ec6ec",
+        "season": 2
+    },
+    {
+        "name": "Gambit",
+        "role": "Strategist",
+        "image": "../assets/heroes/gambit/gambit.png",
+        "prestige": "../assets/heroes/gambit/gambit-prof.png",
+        "color": "#db6cc0",
+        "season": 5
+    },
+    {
+        "name": "Groot",
+        "role": "Vanguard",
+        "image": "../assets/heroes/groot/groot.png",
+        "prestige": "../assets/heroes/groot/groot-prof.png",
+        "color": "#83a862",
+        "season": 0
+    },
+    {
+        "name": "Hawkeye",
+        "role": "Duelist",
+        "image": "../assets/heroes/hawkeye/hawkeye.png",
+        "prestige": "../assets/heroes/hawkeye/hawkeye-prof.png",
+        "color": "#8969a6",
+        "season": 0
+    },
+    {
+        "name": "Hela",
+        "role": "Duelist",
+        "image": "../assets/heroes/hela/hela.png",
+        "prestige": "../assets/heroes/hela/hela-prof.png",
+        "color": "#388c8c",
+        "season": 0
+    },
+    {
+        "name": "Human Torch",
+        "role": "Duelist",
+        "image": "../assets/heroes/human-torch/human-torch.png",
+        "prestige": "../assets/heroes/human-torch/human-torch-prof.png",
+        "color": "#c45b4d",
+        "season": 1.5
+    },
+    {
+        "name": "Invisible Woman",
+        "role": "Strategist",
+        "image": "../assets/heroes/invisible-woman/invisible-woman.png",
+        "prestige": "../assets/heroes/invisible-woman/invisible-woman-prof.png",
+        "color": "#00a6e3",
+        "season": 1
+    },
+    {
+        "name": "Iron Fist",
+        "role": "Duelist",
+        "image": "../assets/heroes/iron-fist/iron-fist.png",
+        "prestige": "../assets/heroes/iron-fist/iron-fist-prof.png",
+        "color": "#1e9988",
+        "season": 0
+    },
+    {
+        "name": "Iron Man",
+        "role": "Duelist",
+        "image": "../assets/heroes/iron-man/iron-man.png",
+        "prestige": "../assets/heroes/iron-man/iron-man-prof.png",
+        "color": "#dd5067",
+        "season": 0
+    },
+    {
+        "name": "Jeff the Land Shark",
+        "role": "Strategist",
+        "image": "../assets/heroes/jeff-the-land-shark/jeff-the-land-shark.png",
+        "prestige": "../assets/heroes/jeff-the-land-shark/jeff-the-land-shark-prof.png",
+        "color": "#5f79a5",
+        "season": 0
+    },
+    {
+        "name": "Loki",
+        "role": "Strategist",
+        "image": "../assets/heroes/loki/loki.png",
+        "prestige": "../assets/heroes/loki/loki-prof.png",
+        "color": "#4c865c",
+        "season": 0
+    },
+    {
+        "name": "Luna Snow",
+        "role": "Strategist",
+        "image": "../assets/heroes/luna-snow/luna-snow.png",
+        "prestige": "../assets/heroes/luna-snow/luna-snow-prof.png",
+        "color": "#1165bf",
+        "season": 0
+    },
+    {
+        "name": "Magik",
+        "role": "Duelist",
+        "image": "../assets/heroes/magik/magik.png",
+        "prestige": "../assets/heroes/magik/magik-prof.png",
+        "color": "#8f615f",
+        "season": 0
+    },
+    {
+        "name": "Magneto",
+        "role": "Vanguard",
+        "image": "../assets/heroes/magneto/magneto.png",
+        "prestige": "../assets/heroes/magneto/magneto-prof.png",
+        "color": "#5a5189",
+        "season": 0
+    },
+    {
+        "name": "Mantis",
+        "role": "Duelist",
+        "image": "../assets/heroes/mantis/mantis.png",
+        "prestige": "../assets/heroes/mantis/mantis-prof.png",
+        "color": "#6c8c66",
+        "season": 0
+    },
+    {
+        "name": "Mister Fantastic",
+        "role": "Duelist",
+        "image": "../assets/heroes/mister-fantastic/mister-fantastic.png",
+        "prestige": "../assets/heroes/mister-fantastic/mister-fantastic-prof.png",
+        "color": "#19a7cb",
+        "season": 1
+    },
+    {
+        "name": "Moon Knight",
+        "role": "Duelist",
+        "image": "../assets/heroes/moon-knight/moon-knight.png",
+        "prestige": "../assets/heroes/moon-knight/moon-knight-prof.png",
+        "color": "#678094",
+        "season": 0
+    },
+    {
+        "name": "Namor",
+        "role": "Duelist",
+        "image": "../assets/heroes/namor/namor.png",
+        "prestige": "../assets/heroes/namor/namor-prof.png",
+        "color": "#22938a",
+        "season": 0
+    },
+    {
+        "name": "Peni Parker",
+        "role": "Vanguard",
+        "image": "../assets/heroes/peni-parker/peni-parker.png",
+        "prestige": "../assets/heroes/peni-parker/peni-parker-prof.png",
+        "color": "#db5151",
+        "season": 0
+    },
+    {
+        "name": "Phoenix",
+        "role": "Duelist",
+        "image": "../assets/heroes/phoenix/phoenix.png",
+        "prestige": "../assets/heroes/phoenix/phoenix-prof.png",
+        "color": "#db635c",
+        "season": 3
+    },
+    {
+        "name": "Psylocke",
+        "role": "Duelist",
+        "image": "../assets/heroes/psylocke/psylocke.png",
+        "prestige": "../assets/heroes/psylocke/psylocke-prof.png",
+        "color": "#a85bbb",
+        "season": 0
+    },
+    {
+        "name": "Rocket Raccoon",
+        "role": "Strategist",
+        "image": "../assets/heroes/rocket-raccoon/rocket-raccoon.png",
+        "prestige": "../assets/heroes/rocket-raccoon/rocket-raccoon-prof.png",
+        "color": "#d47253",
+        "season": 0
+    },
+    {
+        "name": "Rogue",
+        "role": "Vanguard",
+        "image": "../assets/heroes/rogue/rogue.png",
+        "prestige": "../assets/heroes/rogue/rogue-prof.png",
+        "color": "#cac055",
+        "season": 5.5
+    },
+    {
+        "name": "Scarlet Witch",
+        "role": "Duelist",
+        "image": "../assets/heroes/scarlet-witch/scarlet-witch.png",
+        "prestige": "../assets/heroes/scarlet-witch/scarlet-witch-prof.png",
+        "color": "#d24466",
+        "season": 0
+    },
+    {
+        "name": "Spider-Man",
+        "role": "Duelist",
+        "image": "../assets/heroes/spider-man/spider-man.png",
+        "prestige": "../assets/heroes/spider-man/spider-man-prof.png",
+        "color": "#da515d",
+        "season": 0
+    },
+    {
+        "name": "Squirrel Girl",
+        "role": "Duelist",
+        "image": "../assets/heroes/squirrel-girl/squirrel-girl.png",
+        "prestige": "../assets/heroes/squirrel-girl/squirrel-girl-prof.png",
+        "color": "#d38850",
+        "season": 0
+    },
+    {
+        "name": "Star-Lord",
+        "role": "Duelist",
+        "image": "../assets/heroes/star-lord/star-lord.png",
+        "prestige": "../assets/heroes/star-lord/star-lord-prof.png",
+        "color": "#467ed7",
+        "season": 0
+    },
+    {
+        "name": "Storm",
+        "role": "Duelist",
+        "image": "../assets/heroes/storm/storm.png",
+        "prestige": "../assets/heroes/storm/storm-prof.png",
+        "color": "#454f76",
+        "season": 0
+    },
+    {
+        "name": "The Punisher",
+        "role": "Duelist",
+        "image": "../assets/heroes/the-punisher/the-punisher.png",
+        "prestige": "../assets/heroes/the-punisher/the-punisher-prof.png",
+        "color": "#495366",
+        "season": 0
+    },
+    {
+        "name": "The Thing",
+        "role": "Vanguard",
+        "image": "../assets/heroes/the-thing/the-thing.png",
+        "prestige": "../assets/heroes/the-thing/the-thing-prof.png",
+        "color": "#d9994f",
+        "season": 1.5
+    },
+    {
+        "name": "Thor",
+        "role": "Vanguard",
+        "image": "../assets/heroes/thor/thor.png",
+        "prestige": "../assets/heroes/thor/thor-prof.png",
+        "color": "#5964ab",
+        "season": 0
+    },
+    {
+        "name": "Ultron",
+        "role": "Strategist",
+        "image": "../assets/heroes/ultron/ultron.png",
+        "prestige": "../assets/heroes/ultron/ultron-prof.png",
+        "color": "#6b789e",
+        "season": 2.5
+    },
+    {
+        "name": "Venom",
+        "role": "Vanguard",
+        "image": "../assets/heroes/venom/venom.png",
+        "prestige": "../assets/heroes/venom/venom-prof.png",
+        "color": "#2a2e3d",
+        "season": 0
+    },
+    {
+        "name": "White Fox",
+        "role": "Strategist",
+        "image": "../assets/heroes/white-fox/white-fox.png",
+        "prestige": "../assets/heroes/white-fox/white-fox-prof.png",
+        "color": "#51bbbe",
+        "season": 7
+    },
+    {
+        "name": "Winter Soldier",
+        "role": "Duelist",
+        "image": "../assets/heroes/winter-soldier/winter-soldier.png",
+        "prestige": "../assets/heroes/winter-soldier/winter-soldier-prof.png",
+        "color": "#5a583b",
+        "season": 0
+    },
+    {
+        "name": "Wolverine",
+        "role": "Duelist",
+        "image": "../assets/heroes/wolverine/wolverine.png",
+        "prestige": "../assets/heroes/wolverine/wolverine-prof.png",
+        "color": "#be962a",
+        "season": 0
+    }
+]

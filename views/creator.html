@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator | Galacta's Guide</title>
+    <link rel="stylesheet" href="../app/styles.css">
+    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));if(_s?.settings?.theme)document.documentElement.dataset.theme=_s.settings.theme;}catch(e){}</script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="site-title">Galacta's Guide</a>
+        <nav>
+            <ul class="nav-main">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="creator.html" class="active">Creator</a></li>
+            </ul>
+            <ul class="nav-utils">
+                <li>
+                    <a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html" class="nav-icon-btn" title="Profile" aria-label="Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="creator-grid"></div>
+    </main>
+
+    <div id="creator-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="creator-modal-title" tabindex="-1">
+        <div class="modal-content creator-modal">
+            <button id="creator-modal-close" class="modal-close" aria-label="Close">✕</button>
+            <h2 id="creator-modal-title" style="margin-bottom:1.5rem;padding-right:2rem">New Hero</h2>
+
+            <div class="creator-form-grid">
+
+                <div class="full-width">
+                    <label class="field-label">Name
+                        <input id="creator-name" type="text" class="text-input" placeholder="Hero Name" maxlength="48">
+                    </label>
+                </div>
+
+                <div>
+                    <label class="field-label">Background Color</label>
+                    <div class="color-input-row">
+                        <input id="creator-color" type="color" value="#a612ea">
+                        <span id="creator-color-display" class="color-hex-display">#A612EA</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="field-label">Role(s)</label>
+                    <div id="modal-role-pickers" class="role-checkboxes"></div>
+                </div>
+
+                <!-- Image picker — auto-populated from app/creator.json -->
+                <div class="full-width">
+                    <label class="field-label">Appearance</label>
+                    <div id="image-picker" class="image-picker"></div>
+                </div>
+
+                <div class="full-width">
+                    <div class="tracker-toggle-row">
+                        <span class="tracker-toggle-label">Show in Tracker</span>
+                        <label class="toggle-switch">
+                            <input id="tracker-toggle" type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-actions" style="margin-top:1.5rem">
+                <button id="creator-modal-cancel" class="btn btn-ghost">Cancel</button>
+                <button id="creator-modal-save"   class="btn btn-primary">Save Hero</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/creator.js"></script>
+</body>
+</html>

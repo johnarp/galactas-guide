@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Agent",
+        "minLevel": 1,
+        "maxLevel": 4,
+        "ppl": 125,
+        "icon": "../assets/ranks/agent.webp",
+        "color": "#a29170"
+    },
+    {
+        "title": "Knight",
+        "minLevel": 5,
+        "maxLevel": 9,
+        "ppl": 240,
+        "icon": "../assets/ranks/knight.webp",
+        "color": "#c9d1da"
+    },
+    {
+        "title": "Captain",
+        "minLevel": 10,
+        "maxLevel": 14,
+        "ppl": 400,
+        "icon": "../assets/ranks/captain.webp",
+        "color": "#688597"
+    },
+    {
+        "title": "Centurion",
+        "minLevel": 15,
+        "maxLevel": 19,
+        "ppl": 480,
+        "icon": "../assets/ranks/centurion.webp",
+        "color": "#94b1e1"
+    },
+    {
+        "title": "Lord",
+        "minLevel": 20,
+        "maxLevel": 24,
+        "ppl": 1600,
+        "icon": "../assets/ranks/lord.webp",
+        "color": "#f3cf81"
+    },
+    {
+        "title": "Count",
+        "minLevel": 25,
+        "maxLevel": 29,
+        "ppl": 1600,
+        "icon": "../assets/ranks/count.webp",
+        "color": "#9ccbcd"
+    },
+    {
+        "title": "Colonel",
+        "minLevel": 30,
+        "maxLevel": 34,
+        "ppl": 1600,
+        "icon": "../assets/ranks/colonel.webp",
+        "color": "#7e83af"
+    },
+    {
+        "title": "Warrior",
+        "minLevel": 35,
+        "maxLevel": 39,
+        "ppl": 1600,
+        "icon": "../assets/ranks/warrior.webp",
+        "color": "#ddb5fa"
+    },
+    {
+        "title": "Elite",
+        "minLevel": 40,
+        "maxLevel": 44,
+        "ppl": 1600,
+        "icon": "../assets/ranks/elite.webp",
+        "color": "#ea9466"
+    },
+    {
+        "title": "Guardian",
+        "minLevel": 45,
+        "maxLevel": 49,
+        "ppl": 1600,
+        "icon": "../assets/ranks/guardian.webp",
+        "color": "#f2b5f5"
+    },
+    {
+        "title": "Champion",
+        "minLevel": 50,
+        "maxLevel": 70,
+        "ppl": 3100,
+        "icon": "../assets/ranks/champion.webp",
+        "color": "linear-gradient(#de4344, #f0cc58)"
+    }
+]

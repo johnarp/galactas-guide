@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Vanguard",
+        "icon": "../assets/roles/vanguard.webp",
+        "color": "#3972b1"
+    },
+    {
+        "name": "Duelist",
+        "icon": "../assets/roles/duelist.webp",
+        "color": "#dd5067"
+    },
+    {
+        "name": "Strategist",
+        "icon": "../assets/roles/strategist.webp",
+        "color": "#4c865c"
+    }
+]

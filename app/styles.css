@@ -1,0 +1,1216 @@
+/* ============================================================
+   FONTS
+   ============================================================ */
+
+@font-face {
+    font-family: 'Refrigerator Deluxe';
+    src: url('../assets/fonts/RefrigeratorDeluxe-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Refrigerator Deluxe';
+    src: url('../assets/fonts/RefrigeratorDeluxe.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Refrigerator Deluxe';
+    src: url('../assets/fonts/RefrigeratorDeluxe-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Refrigerator Deluxe';
+    src: url('../assets/fonts/RefrigeratorDeluxe-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Refrigerator Deluxe';
+    src: url('../assets/fonts/RefrigeratorDeluxe-Heavy.woff2') format('woff2');
+    font-weight: 900;
+}
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
+:root {
+    /* Colors */
+    --background      : #17051d;
+    --primary         : #a612ea;
+    --primary-dim     : rgba(166, 18, 234, 0.2);
+    --text            : #f0eef5;       /* very slightly warm white */
+    --nav             : #2d0a3e;       /* richer surface purple */
+    --surface         : #200630;
+    --accent          : #913ad4;       /* refined amber-gold — less neon than before */
+    --accent-glow     : rgba(176, 58, 212, 0.25);
+    --danger          : #c0392b;
+    --success         : #27ae60;
+
+    /* Shape */
+    --radius    : 1rem;
+    --radius-sm : 0.5rem;
+
+    /* Motion */
+    --transition : 0.2s ease;
+
+    /* Overlays */
+    --overlay          : rgba(0, 0, 0, 0.8);
+    --nav-glass-bg     : rgba(17, 3, 22, 0.75);
+    --nav-glass-border : rgba(166, 18, 234, 0.18);
+}
+
+/* ============================================================
+   RESET / BASE
+   ============================================================ */
+
+html {
+    scrollbar-width : none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background  : var(--background);
+    color       : var(--text);
+    font-family : 'Refrigerator Deluxe', sans-serif;
+    margin      : 0;
+}
+
+/* ============================================================
+   HEADER / NAV — sticky glass
+   ============================================================ */
+
+header {
+    align-items             : center;
+    background              : var(--nav-glass-bg);
+    backdrop-filter         : blur(18px);
+    -webkit-backdrop-filter : blur(18px);
+    border-bottom           : 1px solid var(--nav-glass-border);
+    display                 : flex;
+    gap                     : 1.5rem;
+    padding                 : 0.65rem 1.5rem;
+    position                : sticky;
+    top                     : 0;
+    text-transform          : uppercase;
+    z-index                 : 50;
+}
+
+.site-title {
+    color           : var(--primary);
+    flex-shrink     : 0;
+    font-size       : 1.15rem;
+    font-weight     : 800;
+    letter-spacing  : 0.03em;
+    text-decoration : none;
+    white-space     : nowrap;
+}
+
+/* Nav wraps both lists */
+header nav {
+    align-items : center;
+    display     : flex;
+    flex        : 1;
+}
+
+/* Main page links — left side of nav */
+.nav-main {
+    align-items : center;
+    display     : flex;
+    gap         : 1.25rem;
+    list-style  : none;
+    margin      : 0;
+    padding     : 0;
+}
+
+/* Utility icons (settings, profile) — pushed right */
+.nav-utils {
+    align-items : center;
+    display     : flex;
+    gap         : 0.1rem;
+    list-style  : none;
+    margin      : 0 0 0 auto;
+    padding     : 0;
+}
+
+header nav a {
+    color           : inherit;
+    font-size       : 0.9rem;
+    font-weight     : 700;
+    text-decoration : none;
+    transition      : color var(--transition);
+}
+
+header nav a:hover,
+header nav a.active { color: var(--accent); }
+
+/* Icon-only nav buttons */
+.nav-icon-btn {
+    align-items     : center;
+    border-radius   : var(--radius-sm);
+    color           : var(--text);
+    display         : flex;
+    justify-content : center;
+    opacity         : 0.55;
+    padding         : 0.4rem;
+    transition      : opacity var(--transition), color var(--transition), background var(--transition);
+}
+
+.nav-icon-btn svg { display: block; }
+
+.nav-icon-btn:hover,
+.nav-icon-btn.active { background: var(--primary-dim); color: var(--accent); opacity: 1; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1 {
+    color          : var(--primary);
+    font-size      : 5rem;
+    font-weight    : 800;
+    line-height    : 1;
+    margin         : 0;
+    text-transform : uppercase;
+}
+
+h2 {
+    font-size      : 1.5rem;
+    font-weight    : 700;
+    margin         : 0;
+    text-transform : uppercase;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+main { padding: 1.5rem; }
+
+.hidden { display: none !important; }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn {
+    border         : none;
+    border-radius  : var(--radius-sm);
+    cursor         : pointer;
+    font-family    : inherit;
+    font-size      : 1rem;
+    font-weight    : 700;
+    padding        : 0.6rem 1.2rem;
+    text-transform : uppercase;
+    transition     : opacity var(--transition), transform var(--transition);
+}
+
+.btn:hover  { opacity: 0.85; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary { background: var(--primary); color: var(--text); }
+.btn-ghost   { background: transparent; border: 2px solid rgba(255,255,255,0.25); color: var(--text); }
+.btn-danger  { background: var(--danger); color: var(--text); }
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
+.home-main {
+    align-items     : center;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    min-height      : calc(100vh - 3.5rem);
+    padding         : 2rem;
+    text-align      : center;
+}
+
+.home-subtitle {
+    color          : rgba(240, 238, 245, 0.45);
+    font-size      : 1.1rem;
+    font-weight    : 400;
+    letter-spacing : 0.08em;
+    margin         : 0.75rem 0 0;
+    text-transform : uppercase;
+}
+
+.home-cta-grid {
+    display               : grid;
+    gap                   : 1.5rem;
+    grid-template-columns : repeat(auto-fit, minmax(16rem, 1fr));
+    margin-top            : 3.5rem;
+    max-width             : 44rem;
+    width                 : 100%;
+}
+
+.home-cta {
+    background      : var(--surface);
+    border          : 2px solid rgba(166, 18, 234, 0.2);
+    border-radius   : var(--radius);
+    color           : var(--text);
+    display         : flex;
+    flex-direction  : column;
+    gap             : 0.75rem;
+    padding         : 2rem 1.75rem;
+    text-align      : left;
+    text-decoration : none;
+    transition      : border-color var(--transition), transform var(--transition),
+                      background var(--transition), box-shadow var(--transition);
+}
+
+.home-cta:hover {
+    background   : var(--nav);
+    border-color : var(--primary);
+    box-shadow   : 0 0 32px rgba(166, 18, 234, 0.18);
+    transform    : translateY(-5px);
+}
+
+.home-cta-icon {
+    color       : var(--primary);
+    font-size   : 2rem;
+    line-height : 1;
+}
+
+.home-cta-title {
+    font-size      : 2.2rem;
+    font-weight    : 900;
+    line-height    : 1;
+    text-transform : uppercase;
+}
+
+.home-cta-desc {
+    font-size   : 0.9rem;
+    font-weight : 400;
+    opacity     : 0.5;
+}
+
+/* ============================================================
+   HERO GRID
+   ============================================================ */
+
+#hero-grid {
+    display               : grid;
+    gap                   : 1rem;
+    /* grid-template-columns : repeat(auto-fill, 9.5rem); */
+    grid-template-columns : repeat(auto-fill, minmax(10rem, 1fr));
+    margin-top            : 1rem;
+}
+
+.no-results,
+.load-error {
+    grid-column : 1 / -1;
+    opacity     : 0.5;
+    text-align  : center;
+}
+
+/* ============================================================
+   HERO CARD
+   ============================================================ */
+
+.hero-card {
+    aspect-ratio  : 1 / 1.75;
+    background    : var(--hero-color, var(--primary));
+    border-radius : var(--radius);
+    cursor        : pointer;
+    outline       : 2px solid transparent;
+    overflow      : hidden;
+    position      : relative;
+    transition    : transform var(--transition), outline-color var(--transition);
+    /* width         : 9.5rem; */
+}
+
+.hero-card.is-tracked { outline-color: var(--primary-dim); }
+.hero-card:hover      { transform: translateY(-0.25rem); outline-color: var(--accent); }
+
+/* Both art images stack; prestige fades in on hover */
+.hero-art,
+.hero-prestige {
+    display    : block;
+    height     : 100%;
+    inset      : 0;
+    object-fit : cover;
+    position   : absolute;
+    transition : opacity var(--transition);
+    width      : 100%;
+}
+
+.hero-prestige                  { opacity: 0; }
+.hero-card:hover .hero-prestige { opacity: 1; }
+.hero-card:hover .hero-art      { opacity: 0; }
+
+/* Role icon(s) — top left */
+.role-badge {
+    left           : 0.6rem;
+    pointer-events : none;
+    position       : absolute;
+    top            : 0.6rem;
+    width          : 1.5rem;
+    z-index        : 2;
+}
+
+.role-badge img {
+    display : block;
+    height  : auto;
+    opacity : 0.8;
+    width   : 100%;
+}
+
+/* Favourite star — top right */
+.fav-btn {
+    background  : none;
+    border      : none;
+    color       : var(--text);
+    cursor      : pointer;
+    font-size   : 1.15rem;
+    line-height : 1;
+    opacity     : 0.3;
+    padding     : 0.25rem;
+    position    : absolute;
+    right       : 0.4rem;
+    top         : 0.4rem;
+    transition  : opacity var(--transition), color var(--transition), transform var(--transition);
+    z-index     : 2;
+}
+
+.fav-btn:hover  { opacity: 1; transform: scale(1.2); }
+.fav-btn.active { color: var(--accent); opacity: 1; }
+
+/* Name / rank info — bottom gradient */
+.hero-info {
+    background : linear-gradient(transparent, rgba(0, 0, 0, 0.92));
+    bottom     : 0;
+    padding    : 2.5rem 0.6rem 0.6rem;
+    position   : absolute;
+    width      : 100%;
+    z-index    : 2;
+}
+
+.hero-name {
+    font-size      : 0.78rem;
+    font-weight    : 800;
+    line-height    : 1.2;
+    text-transform : uppercase;
+}
+
+/* Rank info — more visually prominent than before */
+.hero-rank-info {
+    align-items   : center;
+    /* background    : rgba(0, 0, 0, 0.45); */
+    /* border-radius : 0.3rem; */
+    display       : inline-flex;
+    font-size     : 0.72rem;
+    font-weight   : 800;
+    gap           : 0.35rem;
+    margin-top    : 0.3rem;
+    /* padding       : 0.2rem 0.4rem 0.2rem 0.25rem; */
+    text-transform: uppercase;
+}
+
+.hero-rank-info img { height: 1.5rem; width: auto; }
+
+/* ============================================================
+   TRACKER CONTROLS
+   ============================================================ */
+
+.tracker-controls {
+    align-items     : center;
+    display         : flex;
+    flex-wrap       : wrap;
+    gap             : 0.6rem;
+    justify-content : space-between;
+}
+
+.filters-row {
+    align-items : center;
+    display     : flex;
+    flex-wrap   : wrap;
+    gap         : 0.5rem;
+}
+
+/* role-filters must be flex too — this is what was causing vertical stacking */
+#role-filters {
+    align-items : center;
+    display     : flex;
+    flex-wrap   : wrap;
+    gap         : 0.5rem;
+}
+
+.controls-right {
+    align-items : center;
+    display     : flex;
+    flex-wrap   : wrap;
+    gap         : 0.5rem;
+}
+
+/* Search input */
+.hero-search {
+    background     : var(--surface);
+    border         : 2px solid rgba(255,255,255,0.1);
+    border-radius  : var(--radius-sm);
+    color          : var(--text);
+    font-family    : inherit;
+    font-size      : 0.82rem;
+    font-weight    : 700;
+    padding        : 0.33rem 0.7rem;
+    text-transform : uppercase;
+    transition     : border-color var(--transition);
+    width          : 12rem;
+}
+
+.hero-search:focus        { border-color: var(--primary); outline: none; }
+.hero-search::placeholder { color: rgba(240,238,245,0.3); font-weight: 400; text-transform: uppercase; }
+
+.filter-btn {
+    align-items     : center;
+    background      : var(--surface);
+    border          : 2px solid transparent;
+    border-radius   : var(--radius-sm);
+    color           : var(--text);
+    cursor          : pointer;
+    display         : flex;
+    font-family     : inherit;
+    font-size       : 0.82rem;
+    font-weight     : 700;
+    justify-content : center;
+    min-width       : 2.4rem;
+    padding         : 0.3rem 0.5rem;
+    text-transform  : uppercase;
+    transition      : border-color var(--transition), background var(--transition);
+}
+
+.filter-btn img         { display: block; height: 1.25rem; width: 1.25rem; }
+#filter-favorites       { font-size: 1.1rem; }  /* star slightly larger */
+
+.filter-btn.active             { background: var(--nav); border-color: var(--accent); }
+.filter-btn:hover:not(.active) { border-color: var(--primary); }
+
+.sort-select {
+    background     : var(--surface);
+    border         : 2px solid transparent;
+    border-radius  : var(--radius-sm);
+    color          : var(--text);
+    cursor         : pointer;
+    font-family    : inherit;
+    font-size      : 0.82rem;
+    font-weight    : 700;
+    padding        : 0.33rem 0.6rem;
+    text-transform : uppercase;
+    transition     : border-color var(--transition);
+}
+
+.sort-select:hover,
+.sort-select:focus { border-color: var(--accent); outline: none; }
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
+.modal {
+    align-items     : center;
+    background      : var(--overlay);
+    display         : flex;
+    inset           : 0;
+    justify-content : center;
+    padding         : 1rem;
+    position        : fixed;
+    z-index         : 100;
+}
+
+.modal-content {
+    background    : var(--nav);
+    border-radius : var(--radius);
+    max-height    : 90vh;
+    max-width     : 28rem;
+    overflow-y    : auto;
+    padding       : 1.5rem;
+    position      : relative;
+    width         : 100%;
+}
+
+.modal-close {
+    background  : none;
+    border      : none;
+    color       : var(--text);
+    cursor      : pointer;
+    font-size   : 1.2rem;
+    line-height : 1;
+    opacity     : 0.5;
+    padding     : 0.25rem;
+    position    : absolute;
+    right       : 1rem;
+    top         : 1rem;
+    transition  : opacity var(--transition);
+}
+
+.modal-close:hover { opacity: 1; }
+
+.modal-hero-header {
+    align-items   : center;
+    display       : flex;
+    gap           : 1rem;
+    margin-bottom : 1.5rem;
+    padding-right : 2rem;
+}
+
+.modal-hero-art {
+    border-radius : var(--radius-sm);
+    height        : 4.5rem;
+    object-fit    : cover;
+    width         : 2.75rem;
+}
+
+.rank-grid {
+    display               : grid;
+    gap                   : 0.5rem;
+    grid-template-columns : repeat(4, 1fr);
+    margin-bottom         : 1.5rem;
+}
+
+.rank-option {
+    align-items     : center;
+    background      : var(--surface);
+    border          : 2px solid transparent;
+    border-radius   : var(--radius-sm);
+    color           : var(--text);
+    cursor          : pointer;
+    display         : flex;
+    flex-direction  : column;
+    font-family     : inherit;
+    font-size       : 0.6rem;
+    font-weight     : 700;
+    gap             : 0.25rem;
+    padding         : 0.4rem 0.15rem;
+    text-transform  : uppercase;
+    transition      : border-color var(--transition), background var(--transition);
+}
+
+.rank-option img               { height: 2rem; width: auto; }
+.rank-option.active             { background: var(--background); border-color: var(--accent); }
+.rank-option:hover:not(.active) { border-color: var(--primary); }
+
+.level-section {
+    border-top    : 1px solid rgba(255,255,255,0.1);
+    margin-bottom : 1.5rem;
+    padding-top   : 1rem;
+}
+
+.field-label {
+    display        : block;
+    font-size      : 0.75rem;
+    font-weight    : 700;
+    margin-bottom  : 0.75rem;
+    opacity        : 0.8;
+    text-transform : uppercase;
+}
+
+.number-input {
+    background    : var(--background);
+    border        : 2px solid rgba(255,255,255,0.15);
+    border-radius : var(--radius-sm);
+    color         : var(--text);
+    display       : block;
+    font-family   : inherit;
+    font-size     : 1rem;
+    font-weight   : 700;
+    margin-top    : 0.4rem;
+    padding       : 0.5rem 0.75rem;
+    transition    : border-color var(--transition);
+    width         : 100%;
+}
+
+.number-input:focus { border-color: var(--primary); outline: none; }
+
+#points-section { margin-top: 0.75rem; }
+
+.modal-actions {
+    display         : flex;
+    gap             : 0.75rem;
+    justify-content : space-between;
+}
+
+/* ============================================================
+   SETTINGS PAGE
+   ============================================================ */
+
+.settings-section {
+    margin-bottom : 2rem;
+    max-width     : 36rem;
+}
+
+.settings-section h2 {
+    border-bottom  : 1px solid rgba(255,255,255,0.1);
+    font-size      : 1.2rem;
+    margin-bottom  : 1rem;
+    padding-bottom : 0.5rem;
+}
+
+.settings-actions {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 0.75rem;
+}
+
+.notice {
+    border-radius  : var(--radius-sm);
+    font-size      : 0.9rem;
+    font-weight    : 700;
+    margin-top     : 1rem;
+    padding        : 0.75rem 1rem;
+    text-transform : uppercase;
+}
+
+.notice.success { background: rgba(39, 174, 96, 0.15);  color: var(--success); }
+.notice.error   { background: rgba(192, 57, 43, 0.15);  color: var(--danger);  }
+
+/* ============================================================
+   PROFILE PAGE
+   ============================================================ */
+
+.profile-header {
+    align-items   : center;
+    display       : flex;
+    gap           : 1.5rem;
+    margin-bottom : 2rem;
+}
+
+.profile-avatar {
+    align-items     : center;
+    background      : var(--primary);
+    border-radius   : 50%;
+    display         : flex;
+    flex-shrink     : 0;
+    font-size       : 1.5rem;
+    font-weight     : 900;
+    height          : 5rem;
+    justify-content : center;
+    width           : 5rem;
+}
+
+.profile-name-input {
+    background     : transparent;
+    border         : none;
+    border-bottom  : 2px solid rgba(255,255,255,0.2);
+    color          : var(--text);
+    font-family    : inherit;
+    font-size      : 2rem;
+    font-weight    : 800;
+    max-width      : 20rem;
+    padding        : 0.25rem 0;
+    text-transform : uppercase;
+    transition     : border-color var(--transition);
+    width          : 100%;
+}
+
+.profile-name-input:focus        { border-color: var(--primary); outline: none; }
+.profile-name-input::placeholder { color: rgba(255,255,255,0.3); }
+
+.stats-grid {
+    display               : grid;
+    gap                   : 1rem;
+    grid-template-columns : repeat(auto-fill, minmax(10rem, 1fr));
+    margin-bottom         : 2rem;
+    max-width             : 40rem;
+}
+
+.stat-card {
+    background    : var(--nav);
+    border-radius : var(--radius);
+    padding       : 1.25rem 1rem;
+    text-align    : center;
+}
+
+.stat-value {
+    color       : var(--accent);
+    display     : block;
+    font-size   : 2rem;
+    font-weight : 900;
+    line-height : 1;
+}
+
+.stat-label {
+    display        : block;
+    font-size      : 0.75rem;
+    font-weight    : 700;
+    margin-top     : 0.4rem;
+    opacity        : 0.6;
+    text-transform : uppercase;
+}
+
+.rank-icon-inline { height: 1.2em; vertical-align: middle; }
+/* ============================================================
+   RIVALS THEME
+   Override design tokens only — all component styles reuse them.
+   ============================================================ */
+
+[data-theme="rivals"] {
+    /* Light bg, black nav, yellow+white+black */
+    --background      : #f5f5f5;
+    --primary         : #e8c84a;
+    --primary-dim     : rgba(232, 200, 74, 0.3);
+    --text            : #0a0a0a;
+    --nav             : #0a0a0a;
+    --surface         : #e2e2e2;
+    --accent          : #e8c84a;
+    --accent-glow     : rgba(232, 200, 74, 0.35);
+    --overlay         : rgba(0, 0, 0, 0.8);
+    --nav-glass-bg    : rgba(10, 10, 10, 0.92);
+    --nav-glass-border: rgba(232, 200, 74, 0.25);
+    --radius          : 0.15rem;
+    --radius-sm       : 0.1rem;
+}
+ 
+/* Nav text stays light because nav bg is black */
+[data-theme="rivals"] header nav a,
+[data-theme="rivals"] .site-title { color: #f5f5f5; }
+ 
+[data-theme="rivals"] header nav a:hover,
+[data-theme="rivals"] header nav a.active { color: var(--accent); }
+ 
+[data-theme="rivals"] .nav-icon-btn { color: #f5f5f5; }
+[data-theme="rivals"] .nav-icon-btn:hover,
+[data-theme="rivals"] .nav-icon-btn.active { color: var(--accent); }
+ 
+/* Modals dark so hero art stays readable */
+[data-theme="rivals"] .modal-content { background: #1a1a1a; color: #f5f5f5; }
+[data-theme="rivals"] .rank-option   { background: #111111; color: #f5f5f5; }
+[data-theme="rivals"] .number-input  { background: #111111; color: #f5f5f5; }
+
+/* ============================================================
+   SETTINGS — OPTION BUTTONS (theme / card bg pickers)
+   ============================================================ */
+
+.setting-group {
+    margin-bottom : 1.5rem;
+}
+
+.setting-label {
+    display        : block;
+    font-size      : 0.72rem;
+    font-weight    : 700;
+    letter-spacing : 0.04em;
+    margin-bottom  : 0.5rem;
+    opacity        : 0.55;
+    text-transform : uppercase;
+}
+
+.setting-options {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 0.5rem;
+}
+
+.option-btn {
+    background     : var(--surface);
+    border         : 2px solid transparent;
+    border-radius  : var(--radius-sm);
+    color          : var(--text);
+    cursor         : pointer;
+    font-family    : inherit;
+    font-size      : 0.82rem;
+    font-weight    : 700;
+    padding        : 0.4rem 1.1rem;
+    text-transform : uppercase;
+    transition     : border-color var(--transition), background var(--transition);
+}
+
+.option-btn.active             { background: var(--nav); border-color: var(--accent); }
+.option-btn:hover:not(.active) { border-color: var(--primary); }
+
+/* ============================================================
+   PROFILE — RANK BREAKDOWN
+   ============================================================ */
+
+.profile-body {
+    display               : grid;
+    gap                   : 2rem;
+    grid-template-columns : 1fr 14rem;
+    max-width             : 60rem;
+}
+
+@media (max-width: 640px) {
+    .profile-body { grid-template-columns: 1fr; }
+}
+
+.breakdown-card,
+.concepts-card {
+    background    : var(--nav);
+    border-radius : var(--radius);
+    padding       : 1.25rem 1.5rem;
+}
+
+.breakdown-card h2,
+.concepts-card h2 {
+    font-size     : 0.85rem;
+    font-weight   : 700;
+    letter-spacing: 0.05em;
+    margin-bottom : 1rem;
+    opacity       : 0.55;
+}
+
+.rank-row {
+    align-items   : center;
+    display       : grid;
+    gap           : 0.6rem;
+    grid-template-columns: 1.6rem 5.5rem 1fr 1.5rem;
+    margin-bottom : 0.5rem;
+}
+
+.rank-row-icon { height: 1.6rem; width: auto; display: block; }
+
+.rank-row-name {
+    font-size      : 0.75rem;
+    font-weight    : 700;
+    opacity        : 0.7;
+    text-transform : uppercase;
+}
+
+.rank-bar-track {
+    background    : rgba(255,255,255,0.07);
+    border-radius : 2px;
+    height        : 0.55rem;
+    overflow      : hidden;
+}
+
+.rank-bar-fill {
+    background    : var(--rank-color, var(--primary));
+    border-radius : 2px;
+    height        : 100%;
+    transition    : width 0.5s cubic-bezier(0.4,0,0.2,1);
+    width         : 0%; /* set via JS */
+}
+
+.rank-row-count {
+    font-size   : 0.78rem;
+    font-weight : 900;
+    opacity     : 0.5;
+    text-align  : right;
+}
+
+.rank-row-count.has-heroes { opacity: 1; color: var(--accent); }
+
+.concepts-number {
+    color       : var(--accent);
+    display     : block;
+    font-size   : 3.5rem;
+    font-weight : 900;
+    line-height : 1;
+    margin      : 0.5rem 0 0.25rem;
+}
+
+.concepts-label {
+    font-size      : 0.75rem;
+    font-weight    : 700;
+    opacity        : 0.5;
+    text-transform : uppercase;
+}
+
+/* ============================================================
+   CREATOR PAGE
+   ============================================================ */
+
+#creator-grid {
+    display               : grid;
+    gap                   : 1rem;
+    grid-template-columns : repeat(auto-fill, minmax(10rem, 1fr));
+    margin-top            : 1rem;
+}
+
+/* "Add hero" placeholder card */
+.creator-add-card {
+    align-items     : center;
+    aspect-ratio    : 1 / 1.75;
+    background      : var(--surface);
+    border          : 2px dashed rgba(255,255,255,0.15);
+    border-radius   : var(--radius);
+    color           : rgba(255,255,255,0.3);
+    cursor          : pointer;
+    display         : flex;
+    flex-direction  : column;
+    font-size       : 0.72rem;
+    font-weight     : 700;
+    gap             : 0.5rem;
+    justify-content : center;
+    text-transform  : uppercase;
+    transition      : border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.creator-add-card:hover {
+    background   : var(--nav);
+    border-color : var(--primary);
+    color        : var(--text);
+}
+
+.creator-add-icon {
+    font-size   : 2.5rem;
+    font-weight : 300;
+    line-height : 1;
+}
+
+/* Custom hero card — overlay actions on hover */
+.hero-card .card-actions {
+    display         : flex;
+    gap             : 0.3rem;
+    inset           : 0;
+    justify-content : flex-end;
+    opacity         : 0;
+    padding         : 0.4rem;
+    pointer-events  : none;
+    position        : absolute;
+    top             : 0;
+    transition      : opacity var(--transition);
+    z-index         : 3;
+}
+
+.hero-card:hover .card-actions {
+    opacity         : 1;
+    pointer-events  : auto;
+}
+
+.card-action-btn {
+    align-items     : center;
+    background      : rgba(0,0,0,0.65);
+    border          : none;
+    border-radius   : var(--radius-sm);
+    color           : var(--text);
+    cursor          : pointer;
+    display         : flex;
+    font-size       : 0.8rem;
+    height          : 1.8rem;
+    justify-content : center;
+    line-height     : 1;
+    transition      : background var(--transition), color var(--transition);
+    width           : 1.8rem;
+}
+
+.card-action-btn:hover          { background: rgba(255,255,255,0.2); }
+.card-action-btn.delete:hover   { background: var(--danger); }
+
+/* Creator modal — slightly wider than tracking modal */
+.modal-content.creator-modal {
+    max-width : 32rem;
+}
+
+.creator-form-grid {
+    display               : grid;
+    gap                   : 1rem;
+    grid-template-columns : 1fr 1fr;
+}
+
+.creator-form-grid .full-width { grid-column: 1 / -1; }
+
+.text-input {
+    background    : var(--background);
+    border        : 2px solid rgba(255,255,255,0.15);
+    border-radius : var(--radius-sm);
+    color         : var(--text);
+    display       : block;
+    font-family   : inherit;
+    font-size     : 1rem;
+    font-weight   : 700;
+    padding       : 0.5rem 0.75rem;
+    text-transform: uppercase;
+    transition    : border-color var(--transition);
+    width         : 100%;
+}
+
+.text-input:focus { border-color: var(--primary); outline: none; }
+
+.color-input-row {
+    align-items : center;
+    display     : flex;
+    gap         : 0.75rem;
+}
+
+.color-input-row input[type="color"] {
+    background    : none;
+    border        : 2px solid rgba(255,255,255,0.15);
+    border-radius : var(--radius-sm);
+    cursor        : pointer;
+    height        : 2.6rem;
+    padding       : 0.2rem;
+    transition    : border-color var(--transition);
+    width         : 3.5rem;
+}
+
+.color-input-row input[type="color"]:focus { border-color: var(--primary); outline: none; }
+
+.color-hex-display {
+    font-size      : 0.82rem;
+    font-weight    : 700;
+    opacity        : 0.6;
+    text-transform : uppercase;
+}
+
+.role-checkboxes {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 0.5rem;
+}
+
+.role-check-btn {
+    align-items    : center;
+    background     : var(--surface);
+    border         : 2px solid transparent;
+    border-radius  : var(--radius-sm);
+    color          : var(--text);
+    cursor         : pointer;
+    display        : flex;
+    font-family    : inherit;
+    font-size      : 0.75rem;
+    font-weight    : 700;
+    gap            : 0.35rem;
+    padding        : 0.3rem 0.6rem;
+    text-transform : uppercase;
+    transition     : border-color var(--transition), background var(--transition);
+}
+
+.role-check-btn img             { height: 1.1rem; width: auto; }
+.role-check-btn.active          { background: var(--nav); border-color: var(--primary); }
+.role-check-btn:hover:not(.active) { border-color: rgba(255,255,255,0.25); }
+
+.image-upload-label {
+    align-items   : center;
+    background    : var(--background);
+    border        : 2px dashed rgba(255,255,255,0.15);
+    border-radius : var(--radius-sm);
+    cursor        : pointer;
+    display       : flex;
+    flex-direction: column;
+    font-size     : 0.72rem;
+    font-weight   : 700;
+    gap           : 0.35rem;
+    min-height    : 4.5rem;
+    justify-content: center;
+    opacity       : 0.6;
+    padding       : 0.75rem;
+    text-align    : center;
+    text-transform: uppercase;
+    transition    : border-color var(--transition), opacity var(--transition);
+}
+
+.image-upload-label:hover { border-color: var(--primary); opacity: 1; }
+.image-upload-label.has-image { opacity: 1; border-style: solid; border-color: var(--primary); }
+
+.image-upload-label img {
+    border-radius : var(--radius-sm);
+    height        : 3rem;
+    object-fit    : cover;
+    width         : 2rem;
+}
+
+.tracker-toggle-row {
+    align-items     : center;
+    background      : var(--surface);
+    border-radius   : var(--radius-sm);
+    display         : flex;
+    gap             : 0.75rem;
+    justify-content : space-between;
+    padding         : 0.75rem 1rem;
+}
+
+.tracker-toggle-label {
+    font-size      : 0.8rem;
+    font-weight    : 700;
+    text-transform : uppercase;
+}
+
+/* Minimal toggle switch */
+.toggle-switch {
+    cursor     : pointer;
+    height     : 1.35rem;
+    position   : relative;
+    width      : 2.5rem;
+}
+
+.toggle-switch input { display: none; }
+
+.toggle-slider {
+    background    : rgba(255,255,255,0.15);
+    border-radius : 1rem;
+    inset         : 0;
+    position      : absolute;
+    transition    : background var(--transition);
+}
+
+.toggle-slider::after {
+    background    : var(--text);
+    border-radius : 50%;
+    content       : '';
+    height        : 1rem;
+    left          : 0.18rem;
+    position      : absolute;
+    top           : 0.175rem;
+    transition    : transform var(--transition);
+    width         : 1rem;
+}
+
+.toggle-switch input:checked + .toggle-slider { background: var(--primary); }
+.toggle-switch input:checked + .toggle-slider::after { transform: translateX(1.15rem); }
+/* ============================================================
+   CREATOR — IMAGE PICKER
+   ============================================================ */
+
+.image-picker {
+    display               : grid;
+    gap                   : 0.5rem;
+    grid-template-columns : repeat(auto-fill, minmax(4rem, 1fr));
+    max-height            : 12rem;
+    overflow-y            : auto;
+}
+
+.image-picker-option {
+    aspect-ratio  : 1 / 1.75;
+    background    : var(--surface);
+    border        : 2px solid transparent;
+    border-radius : var(--radius-sm);
+    cursor        : pointer;
+    overflow      : hidden;
+    position      : relative;
+    transition    : border-color var(--transition);
+}
+
+.image-picker-option img {
+    display    : block;
+    height     : 100%;
+    object-fit : cover;
+    width      : 100%;
+}
+
+.image-picker-option.active             { border-color: var(--accent); }
+.image-picker-option:hover:not(.active) { border-color: var(--primary); }
+
+/* ============================================================
+   HOME FOOTER
+   ============================================================ */
+ 
+.home-footer {
+    align-items     : center;
+    border-top      : 1px solid rgba(255, 255, 255, 0.07);
+    bottom          : 0;
+    display         : flex;
+    justify-content : space-between;
+    left            : 0;
+    padding         : 1rem 1.5rem;
+    position        : fixed;
+    right           : 0;
+    z-index         : 10;
+}
+ 
+.home-footer-copy {
+    color      : rgba(255, 255, 255, 0.25);
+    font-size  : 0.72rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+ 
+.home-footer-github {
+    color      : rgba(255, 255, 255, 0.25);
+    display    : flex;
+    transition : color var(--transition);
+}
+ 
+.home-footer-github:hover { color: var(--text); }
