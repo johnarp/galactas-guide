@@ -36,22 +36,33 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 ## Known Issues
 
 - Multi-role Heroes (eg. Deadpool) show only their first role's color in Role card background mode
-- Rivals theme needs improving (currently disabled)
 
 ## To Do
 
-- Dynamic version number in footer
-    - Changelog pop-up modal (click version number)
-- The newest hero displayed on the home screen
-- Heroes pop-out of their card when hovering
-- Skins
-    - Skin rarity card background mode
-- Change the size of hero cards
-- Select a hero nameplate for your profile
-- Select a hero to display on your profile
-- Lord and Champion icons
-- HTML meta tags
-- Improve README banner
+- General
+    - Site icon
+    - HTML meta tags
+    - GitHub Social preview
+    - Improve README banner
+    - Lord and Champion icons
+    - Rename images with generic names
+- Home
+    - Dynamic version number in footer
+        - Click version to open pop-up changelog
+    - Newest hero displayed on home screen
+- Tracker
+    - Heroes pop-out when hovering
+    - Customize heroes with skins
+        - Skin rarity card background
+        - Option to disable hover image
+    - Change size of hero cards
+    - Exclude-favorites and exclude-created filters
+- Creator
+    - Upload custom images
+    - Allow adding hero abilities and season released
+- Profile
+    - Hero nameplate
+    - Display a hero and its info on your profile
 
 ## License
 

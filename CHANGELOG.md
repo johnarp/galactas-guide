@@ -1,6 +1,17 @@
 # Changelog
 
+[1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.0.1] - 2026-04-25
+
+### Added
+
+- Symbiote and Rivals theme
+
+### Changed
+
+- Theme loading logic to add new themes more easily
 
 ## [1.0.0] - 2026-04-23
 

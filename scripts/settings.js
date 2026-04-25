@@ -4,7 +4,7 @@ import { exportData, importData, clearAllData, getSettings, setSettings } from '
 
 function applySetting(key, value) {
     if (key === 'theme') {
-        document.documentElement.dataset.theme = value === 'rivals' ? 'rivals' : '';
+        document.documentElement.dataset.theme = value === 'galacta' ? '' : value;
     }
 }
 

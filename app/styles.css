@@ -747,11 +747,11 @@ main { padding: 1.5rem; }
 
 [data-theme="rivals"] {
     /* Light bg, black nav, yellow+white+black */
-    --background      : #f5f5f5;
-    --primary         : #e8c84a;
+    --background      : #D2D3DD;
+    --primary         : #FFFF00;
     --primary-dim     : rgba(232, 200, 74, 0.3);
-    --text            : #0a0a0a;
-    --nav             : #0a0a0a;
+    --text            : #ffffff;
+    --nav             : #282A31;
     --surface         : #e2e2e2;
     --accent          : #e8c84a;
     --accent-glow     : rgba(232, 200, 74, 0.35);
@@ -761,22 +761,129 @@ main { padding: 1.5rem; }
     --radius          : 0.15rem;
     --radius-sm       : 0.1rem;
 }
- 
-/* Nav text stays light because nav bg is black */
-[data-theme="rivals"] header nav a,
-[data-theme="rivals"] .site-title { color: #f5f5f5; }
- 
-[data-theme="rivals"] header nav a:hover,
-[data-theme="rivals"] header nav a.active { color: var(--accent); }
- 
-[data-theme="rivals"] .nav-icon-btn { color: #f5f5f5; }
-[data-theme="rivals"] .nav-icon-btn:hover,
-[data-theme="rivals"] .nav-icon-btn.active { color: var(--accent); }
- 
-/* Modals dark so hero art stays readable */
-[data-theme="rivals"] .modal-content { background: #1a1a1a; color: #f5f5f5; }
-[data-theme="rivals"] .rank-option   { background: #111111; color: #f5f5f5; }
-[data-theme="rivals"] .number-input  { background: #111111; color: #f5f5f5; }
+
+[data-theme="rivals"] header nav a, 
+[data-theme="rivals"] .site-title,
+[data-theme="rivals"] .nav-icon-btn { 
+    color: var(--text); 
+}
+
+[data-theme="rivals"] header nav a:hover, 
+[data-theme="rivals"] header nav a.active,
+[data-theme="rivals"] .nav-icon-btn.active,
+[data-theme="rivals"] .nav-icon-btn:hover { 
+    color: var(--primary); 
+}
+
+[data-theme="rivals"] .nav-icon-btn.active {
+    background: var(--accent-glow);
+}
+
+[data-theme="rivals"] .home-cta:hover,
+[data-theme="rivals"] .option-btn.active {
+    color: var(--text);
+}
+
+[data-theme="rivals"] .btn-primary {
+    color: var(--nav);
+}
+
+[data-theme="rivals"] .btn-ghost {
+    color: var(--nav);
+    border-color: var(--nav);
+}
+
+[data-theme="rivals"] .modal-content {
+    background: var(--nav-glass-bg);
+}
+
+[data-theme="rivals"] .rank-option,
+[data-theme="rivals"] .number-input,
+[data-theme="rivals"] #creator-name,
+[data-theme="rivals"] .role-check-btn,
+[data-theme="rivals"] .image-picker-option,
+[data-theme="rivals"] .tracker-toggle-row {
+    background: var(--nav);
+    color: var(--text);
+}
+
+[data-theme="rivals"] .sort-select,
+[data-theme="rivals"] .hero-search:focus,
+[data-theme="rivals"] .hero-search::placeholder,
+[data-theme="rivals"] .home-cta,
+[data-theme="rivals"] .creator-add-card,
+[data-theme="rivals"] h2,
+[data-theme="rivals"] .setting-label,
+[data-theme="rivals"] .option-btn,
+[data-theme="rivals"] p,
+[data-theme="rivals"] .home-footer-copy {
+    color: var(--nav);
+}
+
+[data-theme="rivals"] .home-cta {
+    border-color: var(--nav);
+}
+
+[data-theme="rivals"] .home-cta:hover {
+    box-shadow: 0 0 32px var(--nav);
+    border-color: var(--primary);
+}
+
+[data-theme="rivals"] h1 {
+    color: var(--nav);
+}
+
+[data-theme="rivals"] .home-footer-github {
+    color: var(--nav);
+}
+
+[data-theme="rivals"] .home-footer-github:hover {
+    color: var(--primary);
+}
+
+[data-theme="rivals"] .filter-btn {
+    color: var(--nav);
+}
+
+[data-theme="rivals"] .filter-btn.active {
+    color: var(--text);
+}
+
+/* ============================================================
+   SYMBIOTE THEME
+   ============================================================ */
+
+[data-theme="symbiote"] {
+    --background: #000000;
+    --primary: #ffffff;
+    --primary-dim: rgba(255, 255, 255, 0.3);
+    --text: #f0eef5;
+    --nav: #000000;
+    --surface: #202020;
+    --accent: #8d8d8d;
+    --accent-glow: rgba(145, 145, 145, 0.35);
+    --overlay          : rgba(0, 0, 0, 0.8);
+    --nav-glass-bg     : rgba(19, 19, 19, 0.75);
+    --nav-glass-border : rgba(234, 234, 234, 0.18);
+    --radius          : 0.5rem;
+    --radius-sm       : 0.25rem;
+}
+
+[data-theme="symbiote"] .btn-primary {
+    color: var(--background);
+}
+
+[data-theme="symbiote"]  .nav-icon-btn.active {
+    background: var(--accent-glow);
+}
+
+[data-theme="symbiote"] .home-cta {
+    border-color: var(--primary-dim);
+}
+
+[data-theme="symbiote"] .home-cta:hover {
+    box-shadow: 0 0 32px var(--accent-glow);
+}
 
 /* ============================================================
    SETTINGS — OPTION BUTTONS (theme / card bg pickers)
