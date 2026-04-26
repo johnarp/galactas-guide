@@ -38,6 +38,7 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 - Multi-role Heroes (eg. Deadpool) show only their first role's color in Role card background mode
 - Name in profile and role filter images in tracker are hard to see in Rivals theme
 - Clearing data on a non-default theme requires a page reload to revert to default
+- Switching to a non-Galacta/Rivals theme requires a page reload to take effect
 - Created heroes don't have icons
 - Hela's hover image is cut off
 - Icons are of varying quality
@@ -46,18 +47,16 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 
 ### General
 
-- Site icon
-- HTML meta tags
-- GitHub Social preview
-- Improve README banner
 - Champion icons
 - Rename hero images with generic names
+- Site theme color changes depending on applied theme
 
 ### Home
 
 - Dynamic version number in footer
     - Click to open pop-up changelog
 - Display newest hero on home screen
+- Source Code and Report Issue links
 
 ### Tracker
 
@@ -67,6 +66,7 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
     - Option to disable hover image
 - Change size of hero cards
 - Exclude-favorites and exclude-created filters
+- Choose which icon for hero with multiple appearances (eg. Bruce Banner, Cloak & Dagger)
 
 ### Creator
 
@@ -77,6 +77,7 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 
 - "None" option for Card Background
 - More options for Show Proficiency
+- Show/Hide hero role icon
 
 ### Profile
 

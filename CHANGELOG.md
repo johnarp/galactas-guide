@@ -1,8 +1,22 @@
 # Changelog
 
+[1.1.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.1
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.1.1] - 2026-04-26
+
+### Added
+
+- Site icon
+- HTML meta tags
+- GitHub Social Preview image
+- New README banner
+
+### Fixed
+
+- Broken default hero icon path in tracker.js
 
 ## [1.1.0] - 2026-04-25
 

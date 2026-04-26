@@ -345,7 +345,7 @@ function getModalIcon(hero, data) {
     // temporarily "disabled" until i find a way to make the champ icon animated
     // if (ri >= championIdx) return `${base}/icon-champion.webp`;
     if (ri >= lordIdx) return `${base}/icon-lord.webp`;
-    return `${base}/icon.png`;
+    return `${base}/icon.webp`;
 }
 
 function openModal(hero) {
