@@ -36,33 +36,52 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 ## Known Issues
 
 - Multi-role Heroes (eg. Deadpool) show only their first role's color in Role card background mode
+- Name in profile and role filter images in tracker are hard to see in Rivals theme
+- Clearing data on a non-default theme requires a page reload to revert to default
+- Created heroes don't have icons
+- Hela's hover image is cut off
+- Icons are of varying quality
 
 ## To Do
 
-- General
-    - Site icon
-    - HTML meta tags
-    - GitHub Social preview
-    - Improve README banner
-    - Lord and Champion icons
-    - Rename images with generic names
-- Home
-    - Dynamic version number in footer
-        - Click version to open pop-up changelog
-    - Newest hero displayed on home screen
-- Tracker
-    - Heroes pop-out when hovering
-    - Customize heroes with skins
-        - Skin rarity card background
-        - Option to disable hover image
-    - Change size of hero cards
-    - Exclude-favorites and exclude-created filters
-- Creator
-    - Upload custom images
-    - Allow adding hero abilities and season released
-- Profile
-    - Hero nameplate
-    - Display a hero and its info on your profile
+### General
+
+- Site icon
+- HTML meta tags
+- GitHub Social preview
+- Improve README banner
+- Champion icons
+- Rename hero images with generic names
+
+### Home
+
+- Dynamic version number in footer
+    - Click to open pop-up changelog
+- Display newest hero on home screen
+
+### Tracker
+
+- Heroes pop-out when hovering
+- Customize heroes with skins
+    - Skin rarity card background
+    - Option to disable hover image
+- Change size of hero cards
+- Exclude-favorites and exclude-created filters
+
+### Creator
+
+- Upload custom images
+- Allow adding hero abilities and season released
+
+### Settings
+
+- "None" option for Card Background
+- More options for Show Proficiency
+
+### Profile
+
+- Hero nameplate
+- Display a hero and its info on your profile
 
 ## License
 

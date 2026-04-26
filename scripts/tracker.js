@@ -91,7 +91,7 @@ function saveUIPrefs() {
 // ── Filters UI ────────────────────────────────────────────────────────────────
 
 let allBtn      = null;
-const roleBtns  = new Map(); // roleName -> button element
+const roleBtns  = new Map();
 
 function buildFilters() {
     const container = document.getElementById('role-filters');
@@ -162,15 +162,12 @@ function byRank(a, b) {
     return sa - sb;
 }
 
-// Points remaining until next level up = ppl - current points.
-// Champion (ppl null) = already maxed, distance = 0.
-// Untracked = null (goes to end).
 function levelUpDistance(hero) {
     const d = getHeroData(hero.name);
     if (!d?.rank) return null;
     const rank = ranks.find(r => r.title === d.rank);
     if (!rank) return null;
-    if (rank.ppl === null) return 0;                  // Champion, maxed
+    if (rank.ppl === null) return 0;
     return rank.ppl - (d.points ?? 0);
 }
 
@@ -179,7 +176,7 @@ function byLevelUp(a, b) {
     if (da === null && db === null) return a.name.localeCompare(b.name);
     if (da === null) return 1;
     if (db === null) return -1;
-    return da - db; // ascending = closest first
+    return da - db;
 }
 
 // ── Filter + sort ─────────────────────────────────────────────────────────────
@@ -189,7 +186,6 @@ function getFilteredSorted() {
     const q      = searchQuery.trim().toLowerCase();
 
     const list = heroes.filter(h => {
-        // Role filter — if any roles are selected, hero must match at least one
         if (activeRoles.size > 0) {
             const hr = Array.isArray(h.role) ? h.role : [h.role];
             if (!hr.some(r => activeRoles.has(r))) return false;
@@ -223,15 +219,17 @@ function renderGrid() {
     const grid   = document.getElementById('hero-grid');
     const list   = getFilteredSorted();
     const favSet = new Set(getFavorites());
+    const isIcon = getSettings().viewMode === 'icon';
 
     grid.innerHTML = '';
+    grid.dataset.viewMode = isIcon ? 'icon' : 'card';
 
     if (!list.length) {
         grid.innerHTML = '<p class="no-results">No heroes match your filters.</p>';
         return;
     }
 
-    list.forEach(hero => grid.appendChild(buildCard(hero, favSet)));
+    list.forEach(hero => grid.appendChild(isIcon ? buildIconCard(hero, favSet) : buildCard(hero, favSet)));
 }
 
 function buildCard(hero, favSet) {
@@ -255,15 +253,72 @@ function buildCard(hero, favSet) {
             <span>${data.rank} ${data.level}${data.points != null ? ` · ${data.points} pts` : ''}</span>
         </div>` : '';
 
+    const { showName, showProficiency } = getSettings();
     card.innerHTML = `
         <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">★</button>
         <div class="role-badge" aria-hidden="true">${roleBadges}</div>
         <img src="${hero.image}"    class="hero-art"      alt="${hero.name}" loading="lazy">
         <img src="${hero.prestige || hero.image}" class="hero-prestige" alt="${hero.name} prestige" loading="lazy">
+        ${(showName !== 'off' || showProficiency !== 'off') ? `
         <div class="hero-info">
-            <div class="hero-name">${hero.name}</div>
-            ${rankInfo}
-        </div>
+            ${showName        !== 'off' ? `<div class="hero-name">${hero.name}</div>` : ''}
+            ${showProficiency !== 'off' ? rankInfo : ''}
+        </div>` : ''}
+    `;
+
+    card.querySelector('.fav-btn').addEventListener('click', e => {
+        e.stopPropagation();
+        toggleFavorite(hero.name);
+        renderGrid();
+    });
+
+    card.addEventListener('click', () => openModal(hero));
+    return card;
+}
+
+// ── Icon card ─────────────────────────────────────────────────────────────────
+
+// Pick the right icon image based on rank tier
+function heroIcon(hero, data) {
+    const ri          = data?.rank ? ranks.findIndex(r => r.title === data.rank) : -1;
+    const championIdx = ranks.findIndex(r => r.title === 'Champion');
+    const lordIdx     = ranks.findIndex(r => r.title === 'Lord');
+    if (ri >= championIdx && hero['icon-champion']) return hero['icon-champion'];
+    if (ri >= lordIdx     && hero['icon-lord'])     return hero['icon-lord'];
+    return hero.icon ?? hero.image;
+}
+
+function buildIconCard(hero, favSet) {
+    const heroRoles = Array.isArray(hero.role) ? hero.role : [hero.role];
+    const data      = getHeroData(hero.name);
+    const isFav     = favSet.has(hero.name);
+    const rank      = data ? ranks.find(r => r.title === data.rank) : null;
+
+    const card = document.createElement('div');
+    card.className = 'hero-icon-card' + (data ? ' is-tracked' : '');
+    card.style.setProperty('--hero-color', cardColor(hero));
+
+    const roleBadges = heroRoles
+        .filter(r => roleIconMap[r])
+        .map(r => `<img src="${roleIconMap[r]}" alt="${r}">`)
+        .join('');
+
+    const rankInfo = rank ? `
+        <div class="hero-rank-info">
+            <img src="${rank.icon}" alt="${data.rank}">
+            <span>${data.rank} ${data.level}${data.points != null ? ` · ${data.points}pts` : ''}</span>
+        </div>` : '';
+
+    const { showName, showProficiency } = getSettings();
+    card.innerHTML = `
+        <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">★</button>
+        <div class="role-badge" aria-hidden="true">${roleBadges}</div>
+        <img src="${heroIcon(hero, data)}" class="hero-icon-img" alt="${hero.name}" loading="lazy">
+        ${(showName !== 'off' || showProficiency !== 'off') ? `
+        <div class="hero-info">
+            ${showName        !== 'off' ? `<div class="hero-name">${hero.name}</div>` : ''}
+            ${showProficiency !== 'off' ? rankInfo : ''}
+        </div>` : ''}
     `;
 
     card.querySelector('.fav-btn').addEventListener('click', e => {
@@ -281,13 +336,25 @@ function buildCard(hero, favSet) {
 let currentHero  = null;
 let selectedRank = null;
 
+function getModalIcon(hero, data) {
+    const base = hero.image.substring(0, hero.image.lastIndexOf('/'));
+    if (!data?.rank) return `${base}/icon.webp`;
+    const ri = ranks.findIndex(r => r.title === data.rank);
+    const championIdx = ranks.findIndex(r => r.title === 'Champion');
+    const lordIdx = ranks.findIndex(r => r.title === 'Lord');
+    // temporarily "disabled" until i find a way to make the champ icon animated
+    // if (ri >= championIdx) return `${base}/icon-champion.webp`;
+    if (ri >= lordIdx) return `${base}/icon-lord.webp`;
+    return `${base}/icon.png`;
+}
+
 function openModal(hero) {
     currentHero = hero;
     const data  = getHeroData(hero.name) ?? {};
 
     document.getElementById('modal-hero-name').textContent = hero.name;
     const artEl = document.getElementById('modal-hero-art');
-    artEl.src = hero.image;
+    artEl.src = getModalIcon(hero, data);
     artEl.alt = hero.name;
 
     selectedRank = data.rank ? (ranks.find(r => r.title === data.rank) ?? null) : null;

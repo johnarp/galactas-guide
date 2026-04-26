@@ -1,7 +1,19 @@
 # Changelog
 
+[1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.1.0] - 2026-04-25
+
+### Added
+
+- Icon view mode for tracker
+- Options to show/hide hero name and proficiency information
+
+### Changed
+
+- Icons in the proficiency modal
 
 ## [1.0.1] - 2026-04-25
 

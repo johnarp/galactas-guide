@@ -4,7 +4,7 @@ import { exportData, importData, clearAllData, getSettings, setSettings } from '
 
 function applySetting(key, value) {
     if (key === 'theme') {
-        document.documentElement.dataset.theme = value === 'galacta' ? '' : value;
+        document.documentElement.dataset.theme = value === 'rivals' ? 'rivals' : '';
     }
 }
 
@@ -18,7 +18,7 @@ function loadSettings() {
 }
 
 function getDefaultSetting(key) {
-    const defaults = { theme: 'galacta', cardBgMode: 'hero' };
+    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on' };
     return defaults[key] ?? null;
 }
 
@@ -73,6 +73,7 @@ document.getElementById('import-file').addEventListener('change', function () {
 document.getElementById('clear-btn').addEventListener('click', () => {
     if (confirm('Clear ALL saved data? This cannot be undone.')) {
         clearAllData();
+        setSettings({ viewMode: 'card', showName: 'on', showProficiency: 'on' });
         showNotice('All data cleared.', 'success');
         loadSettings();
     }

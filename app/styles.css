@@ -559,7 +559,7 @@ main { padding: 1.5rem; }
     border-radius : var(--radius-sm);
     height        : 4.5rem;
     object-fit    : cover;
-    width         : 2.75rem;
+    width         : 4.5rem;
 }
 
 .rank-grid {
@@ -1321,3 +1321,50 @@ main { padding: 1.5rem; }
 }
  
 .home-footer-github:hover { color: var(--text); }
+
+/* ============================================================
+   ICON VIEW MODE
+   ============================================================ */
+ 
+#hero-grid[data-view-mode="icon"] {
+    grid-template-columns : repeat(auto-fill, minmax(5.5rem, 1fr));
+}
+ 
+.hero-icon-card {
+    aspect-ratio  : 1 / 1;
+    background    : var(--hero-color, var(--primary));
+    border-radius : var(--radius-sm);
+    cursor        : pointer;
+    outline       : 2px solid transparent;
+    overflow      : hidden;
+    position      : relative;
+    transition    : transform var(--transition), outline-color var(--transition);
+}
+ 
+.hero-icon-card.is-tracked { outline-color: var(--primary-dim); }
+.hero-icon-card:hover      { transform: translateY(-0.25rem); outline-color: var(--accent); }
+ 
+.hero-icon-img {
+    display    : block;
+    height     : 100%;
+    inset      : 0;
+    object-fit : cover;
+    position   : absolute;
+    width      : 100%;
+}
+ 
+.hero-icon-card .role-badge { width: 1.1rem; }
+.hero-icon-card .fav-btn    { font-size: 0.9rem; }
+ 
+.hero-icon-card .hero-info {
+    background : linear-gradient(transparent, rgba(0,0,0,0.92));
+    bottom     : 0;
+    padding    : 1.5rem 0.4rem 0.35rem;
+    position   : absolute;
+    width      : 100%;
+    z-index    : 2;
+}
+ 
+.hero-icon-card .hero-name      { font-size: 0.6rem; }
+.hero-icon-card .hero-rank-info { font-size: 0.55rem; margin-top: 0.15rem; }
+.hero-icon-card .hero-rank-info img { height: 1rem; }

@@ -4,6 +4,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/adam-warlock/adam-warlock.png",
         "prestige": "../assets/heroes/adam-warlock/adam-warlock-prof.png",
+"icon": "../assets/heroes/adam-warlock/icon.webp",
+"icon-lord": "../assets/heroes/adam-warlock/icon-lord.webp",
+"icon-champion": "../assets/heroes/adam-warlock/icon-lord.webp",
         "color": "#c27643",
         "season": 0
     },
@@ -12,6 +15,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/angela/angela.png",
         "prestige": "../assets/heroes/angela/angela-prof.png",
+"icon": "../assets/heroes/angela/icon.webp",
+"icon-lord": "../assets/heroes/angela/icon-lord.webp",
+"icon-champion": "../assets/heroes/angela/icon-lord.webp",
         "color": "#ec983d",
         "season": 4
     },
@@ -20,6 +26,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/black-cat/black-cat.png",
         "prestige": "../assets/heroes/black-cat/black-cat-prof.png",
+"icon": "../assets/heroes/black-cat/icon.webp",
+"icon-lord": "../assets/heroes/black-cat/icon-lord.webp",
+"icon-champion": "../assets/heroes/black-cat/icon-lord.webp",
         "color": "#987df9",
         "season": 7.5
     },
@@ -28,6 +37,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/black-panther/black-panther.png",
         "prestige": "../assets/heroes/black-panther/black-panther-prof.png",
+"icon": "../assets/heroes/black-panther/icon.webp",
+"icon-lord": "../assets/heroes/black-panther/icon-lord.webp",
+"icon-champion": "../assets/heroes/black-panther/icon-lord.webp",
         "color": "#644579",
         "season": 0
     },
@@ -36,6 +48,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/black-widow/black-widow.png",
         "prestige": "../assets/heroes/black-widow/black-widow-prof.png",
+"icon": "../assets/heroes/black-widow/icon.webp",
+"icon-lord": "../assets/heroes/black-widow/icon-lord.webp",
+"icon-champion": "../assets/heroes/black-widow/icon-lord.webp",
         "color": "#555b6a",
         "season": 0
     },
@@ -44,6 +59,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/blade/blade.png",
         "prestige": "../assets/heroes/blade/blade-prof.png",
+"icon": "../assets/heroes/blade/icon.webp",
+"icon-lord": "../assets/heroes/blade/icon-lord.webp",
+"icon-champion": "../assets/heroes/blade/icon-lord.webp",
         "color": "#f15551",
         "season": 3.5
     },
@@ -52,6 +70,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/bruce-banner/bruce-banner.png",
         "prestige": "../assets/heroes/bruce-banner/bruce-banner-prof.png",
+"icon": "../assets/heroes/bruce-banner/icon.webp",
+"icon-lord": "../assets/heroes/bruce-banner/icon-lord.webp",
+"icon-champion": "../assets/heroes/bruce-banner/icon-lord.webp",
         "color": "#387458",
         "season": 0
     },
@@ -60,6 +81,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/captain-america/captain-america.png",
         "prestige": "../assets/heroes/captain-america/captain-america-prof.png",
+"icon": "../assets/heroes/captain-america/icon.webp",
+"icon-lord": "../assets/heroes/captain-america/icon-lord.webp",
+"icon-champion": "../assets/heroes/captain-america/icon-lord.webp",
         "color": "#3972b1",
         "season": 0
     },
@@ -68,6 +92,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/cloak-dagger/cloak-dagger.png",
         "prestige": "../assets/heroes/cloak-dagger/cloak-dagger-prof.png",
+"icon": "../assets/heroes/cloak-dagger/icon.webp",
+"icon-lord": "../assets/heroes/cloak-dagger/icon-lord.webp",
+"icon-champion": "../assets/heroes/cloak-dagger/icon-lord.webp",
         "color": "#889bfd",
         "season": 0
     },
@@ -76,6 +103,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/daredevil/daredevil.png",
         "prestige": "../assets/heroes/daredevil/daredevil-prof.png",
+"icon": "../assets/heroes/daredevil/icon.webp",
+"icon-lord": "../assets/heroes/daredevil/icon-lord.webp",
+"icon-champion": "../assets/heroes/daredevil/icon-lord.webp",
         "color": "#d24466",
         "season": 4.5
     },
@@ -84,6 +114,9 @@
         "role": ["Vanguard", "Duelist", "Strategist"],
         "image": "../assets/heroes/deadpool/deadpool.png",
         "prestige": "../assets/heroes/deadpool/deadpool-prof.png",
+"icon": "../assets/heroes/deadpool/icon.webp",
+"icon-lord": "../assets/heroes/deadpool/icon-lord.webp",
+"icon-champion": "../assets/heroes/deadpool/icon-lord.webp",
         "color": "#f15551",
         "season": 6
     },
@@ -92,6 +125,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/doctor-strange/doctor-strange.png",
         "prestige": "../assets/heroes/doctor-strange/doctor-strange-prof.png",
+"icon": "../assets/heroes/doctor-strange/icon.webp",
+"icon-lord": "../assets/heroes/doctor-strange/icon-lord.webp",
+"icon-champion": "../assets/heroes/doctor-strange/icon-lord.webp",
         "color": "#db635c",
         "season": 0
     },
@@ -100,6 +136,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/elsa-bloodstone/elsa-bloodstone.png",
         "prestige": "../assets/heroes/elsa-bloodstone/elsa-bloodstone-prof.png",
+"icon": "../assets/heroes/elsa-bloodstone/icon.webp",
+"icon-lord": "../assets/heroes/elsa-bloodstone/icon-lord.webp",
+"icon-champion": "../assets/heroes/elsa-bloodstone/icon-lord.webp",
         "color": "#dc7449",
         "season": 6.5
     },
@@ -108,6 +147,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/emma-frost/emma-frost.png",
         "prestige": "../assets/heroes/emma-frost/emma-frost-prof.png",
+"icon": "../assets/heroes/emma-frost/icon.webp",
+"icon-lord": "../assets/heroes/emma-frost/icon-lord.webp",
+"icon-champion": "../assets/heroes/emma-frost/icon-lord.webp",
         "color": "#3ec6ec",
         "season": 2
     },
@@ -116,6 +158,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/gambit/gambit.png",
         "prestige": "../assets/heroes/gambit/gambit-prof.png",
+"icon": "../assets/heroes/gambit/icon.webp",
+"icon-lord": "../assets/heroes/gambit/icon-lord.webp",
+"icon-champion": "../assets/heroes/gambit/icon-lord.webp",
         "color": "#db6cc0",
         "season": 5
     },
@@ -124,6 +169,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/groot/groot.png",
         "prestige": "../assets/heroes/groot/groot-prof.png",
+"icon": "../assets/heroes/groot/icon.webp",
+"icon-lord": "../assets/heroes/groot/icon-lord.webp",
+"icon-champion": "../assets/heroes/groot/icon-lord.webp",
         "color": "#83a862",
         "season": 0
     },
@@ -132,6 +180,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/hawkeye/hawkeye.png",
         "prestige": "../assets/heroes/hawkeye/hawkeye-prof.png",
+"icon": "../assets/heroes/hawkeye/icon.webp",
+"icon-lord": "../assets/heroes/hawkeye/icon-lord.webp",
+"icon-champion": "../assets/heroes/hawkeye/icon-lord.webp",
         "color": "#8969a6",
         "season": 0
     },
@@ -140,6 +191,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/hela/hela.png",
         "prestige": "../assets/heroes/hela/hela-prof.png",
+"icon": "../assets/heroes/hela/icon.webp",
+"icon-lord": "../assets/heroes/hela/icon-lord.webp",
+"icon-champion": "../assets/heroes/hela/icon-lord.webp",
         "color": "#388c8c",
         "season": 0
     },
@@ -148,6 +202,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/human-torch/human-torch.png",
         "prestige": "../assets/heroes/human-torch/human-torch-prof.png",
+"icon": "../assets/heroes/human-torch/icon.webp",
+"icon-lord": "../assets/heroes/human-torch/icon-lord.webp",
+"icon-champion": "../assets/heroes/human-torch/icon-lord.webp",
         "color": "#c45b4d",
         "season": 1.5
     },
@@ -156,6 +213,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/invisible-woman/invisible-woman.png",
         "prestige": "../assets/heroes/invisible-woman/invisible-woman-prof.png",
+"icon": "../assets/heroes/invisible-woman/icon.webp",
+"icon-lord": "../assets/heroes/invisible-woman/icon-lord.webp",
+"icon-champion": "../assets/heroes/invisible-woman/icon-lord.webp",
         "color": "#00a6e3",
         "season": 1
     },
@@ -164,6 +224,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/iron-fist/iron-fist.png",
         "prestige": "../assets/heroes/iron-fist/iron-fist-prof.png",
+"icon": "../assets/heroes/iron-fist/icon.webp",
+"icon-lord": "../assets/heroes/iron-fist/icon-lord.webp",
+"icon-champion": "../assets/heroes/iron-fist/icon-lord.webp",
         "color": "#1e9988",
         "season": 0
     },
@@ -172,6 +235,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/iron-man/iron-man.png",
         "prestige": "../assets/heroes/iron-man/iron-man-prof.png",
+"icon": "../assets/heroes/iron-man/icon.webp",
+"icon-lord": "../assets/heroes/iron-man/icon-lord.webp",
+"icon-champion": "../assets/heroes/iron-man/icon-lord.webp",
         "color": "#dd5067",
         "season": 0
     },
@@ -180,6 +246,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/jeff-the-land-shark/jeff-the-land-shark.png",
         "prestige": "../assets/heroes/jeff-the-land-shark/jeff-the-land-shark-prof.png",
+"icon": "../assets/heroes/jeff-the-land-shark/icon.webp",
+"icon-lord": "../assets/heroes/jeff-the-land-shark/icon-lord.webp",
+"icon-champion": "../assets/heroes/jeff-the-land-shark/icon-lord.webp",
         "color": "#5f79a5",
         "season": 0
     },
@@ -188,6 +257,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/loki/loki.png",
         "prestige": "../assets/heroes/loki/loki-prof.png",
+"icon": "../assets/heroes/loki/icon.webp",
+"icon-lord": "../assets/heroes/loki/icon-lord.webp",
+"icon-champion": "../assets/heroes/loki/icon-lord.webp",
         "color": "#4c865c",
         "season": 0
     },
@@ -196,6 +268,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/luna-snow/luna-snow.png",
         "prestige": "../assets/heroes/luna-snow/luna-snow-prof.png",
+"icon": "../assets/heroes/luna-snow/icon.webp",
+"icon-lord": "../assets/heroes/luna-snow/icon-lord.webp",
+"icon-champion": "../assets/heroes/luna-snow/icon-lord.webp",
         "color": "#1165bf",
         "season": 0
     },
@@ -204,6 +279,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/magik/magik.png",
         "prestige": "../assets/heroes/magik/magik-prof.png",
+"icon": "../assets/heroes/magik/icon.webp",
+"icon-lord": "../assets/heroes/magik/icon-lord.webp",
+"icon-champion": "../assets/heroes/magik/icon-lord.webp",
         "color": "#8f615f",
         "season": 0
     },
@@ -212,6 +290,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/magneto/magneto.png",
         "prestige": "../assets/heroes/magneto/magneto-prof.png",
+"icon": "../assets/heroes/magneto/icon.webp",
+"icon-lord": "../assets/heroes/magneto/icon-lord.webp",
+"icon-champion": "../assets/heroes/magneto/icon-lord.webp",
         "color": "#5a5189",
         "season": 0
     },
@@ -220,6 +301,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/mantis/mantis.png",
         "prestige": "../assets/heroes/mantis/mantis-prof.png",
+"icon": "../assets/heroes/mantis/icon.webp",
+"icon-lord": "../assets/heroes/mantis/icon-lord.webp",
+"icon-champion": "../assets/heroes/mantis/icon-lord.webp",
         "color": "#6c8c66",
         "season": 0
     },
@@ -228,6 +312,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/mister-fantastic/mister-fantastic.png",
         "prestige": "../assets/heroes/mister-fantastic/mister-fantastic-prof.png",
+"icon": "../assets/heroes/mister-fantastic/icon.webp",
+"icon-lord": "../assets/heroes/mister-fantastic/icon-lord.webp",
+"icon-champion": "../assets/heroes/mister-fantastic/icon-lord.webp",
         "color": "#19a7cb",
         "season": 1
     },
@@ -236,6 +323,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/moon-knight/moon-knight.png",
         "prestige": "../assets/heroes/moon-knight/moon-knight-prof.png",
+"icon": "../assets/heroes/moon-knight/icon.webp",
+"icon-lord": "../assets/heroes/moon-knight/icon-lord.webp",
+"icon-champion": "../assets/heroes/moon-knight/icon-lord.webp",
         "color": "#678094",
         "season": 0
     },
@@ -244,6 +334,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/namor/namor.png",
         "prestige": "../assets/heroes/namor/namor-prof.png",
+"icon": "../assets/heroes/namor/icon.webp",
+"icon-lord": "../assets/heroes/namor/icon-lord.webp",
+"icon-champion": "../assets/heroes/namor/icon-lord.webp",
         "color": "#22938a",
         "season": 0
     },
@@ -252,6 +345,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/peni-parker/peni-parker.png",
         "prestige": "../assets/heroes/peni-parker/peni-parker-prof.png",
+"icon": "../assets/heroes/peni-parker/icon.webp",
+"icon-lord": "../assets/heroes/peni-parker/icon-lord.webp",
+"icon-champion": "../assets/heroes/peni-parker/icon-lord.webp",
         "color": "#db5151",
         "season": 0
     },
@@ -260,6 +356,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/phoenix/phoenix.png",
         "prestige": "../assets/heroes/phoenix/phoenix-prof.png",
+"icon": "../assets/heroes/phoenix/icon.webp",
+"icon-lord": "../assets/heroes/phoenix/icon-lord.webp",
+"icon-champion": "../assets/heroes/phoenix/icon-lord.webp",
         "color": "#db635c",
         "season": 3
     },
@@ -268,6 +367,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/psylocke/psylocke.png",
         "prestige": "../assets/heroes/psylocke/psylocke-prof.png",
+"icon": "../assets/heroes/psylocke/icon.webp",
+"icon-lord": "../assets/heroes/psylocke/icon-lord.webp",
+"icon-champion": "../assets/heroes/psylocke/icon-lord.webp",
         "color": "#a85bbb",
         "season": 0
     },
@@ -276,6 +378,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/rocket-raccoon/rocket-raccoon.png",
         "prestige": "../assets/heroes/rocket-raccoon/rocket-raccoon-prof.png",
+"icon": "../assets/heroes/rocket-raccoon/icon.webp",
+"icon-lord": "../assets/heroes/rocket-raccoon/icon-lord.webp",
+"icon-champion": "../assets/heroes/rocket-raccoon/icon-lord.webp",
         "color": "#d47253",
         "season": 0
     },
@@ -284,6 +389,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/rogue/rogue.png",
         "prestige": "../assets/heroes/rogue/rogue-prof.png",
+"icon": "../assets/heroes/rogue/icon.webp",
+"icon-lord": "../assets/heroes/rogue/icon-lord.webp",
+"icon-champion": "../assets/heroes/rogue/icon-lord.webp",
         "color": "#cac055",
         "season": 5.5
     },
@@ -292,6 +400,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/scarlet-witch/scarlet-witch.png",
         "prestige": "../assets/heroes/scarlet-witch/scarlet-witch-prof.png",
+"icon": "../assets/heroes/scarlet-witch/icon.webp",
+"icon-lord": "../assets/heroes/scarlet-witch/icon-lord.webp",
+"icon-champion": "../assets/heroes/scarlet-witch/icon-lord.webp",
         "color": "#d24466",
         "season": 0
     },
@@ -300,6 +411,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/spider-man/spider-man.png",
         "prestige": "../assets/heroes/spider-man/spider-man-prof.png",
+"icon": "../assets/heroes/spider-man/icon.webp",
+"icon-lord": "../assets/heroes/spider-man/icon-lord.webp",
+"icon-champion": "../assets/heroes/spider-man/icon-lord.webp",
         "color": "#da515d",
         "season": 0
     },
@@ -308,6 +422,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/squirrel-girl/squirrel-girl.png",
         "prestige": "../assets/heroes/squirrel-girl/squirrel-girl-prof.png",
+"icon": "../assets/heroes/squirrel-girl/icon.webp",
+"icon-lord": "../assets/heroes/squirrel-girl/icon-lord.webp",
+"icon-champion": "../assets/heroes/squirrel-girl/icon-lord.webp",
         "color": "#d38850",
         "season": 0
     },
@@ -316,6 +433,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/star-lord/star-lord.png",
         "prestige": "../assets/heroes/star-lord/star-lord-prof.png",
+"icon": "../assets/heroes/star-lord/icon.webp",
+"icon-lord": "../assets/heroes/star-lord/icon-lord.webp",
+"icon-champion": "../assets/heroes/star-lord/icon-lord.webp",
         "color": "#467ed7",
         "season": 0
     },
@@ -324,6 +444,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/storm/storm.png",
         "prestige": "../assets/heroes/storm/storm-prof.png",
+"icon": "../assets/heroes/storm/icon.webp",
+"icon-lord": "../assets/heroes/storm/icon-lord.webp",
+"icon-champion": "../assets/heroes/storm/icon-lord.webp",
         "color": "#454f76",
         "season": 0
     },
@@ -332,6 +455,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/the-punisher/the-punisher.png",
         "prestige": "../assets/heroes/the-punisher/the-punisher-prof.png",
+"icon": "../assets/heroes/the-punisher/icon.webp",
+"icon-lord": "../assets/heroes/the-punisher/icon-lord.webp",
+"icon-champion": "../assets/heroes/the-punisher/icon-lord.webp",
         "color": "#495366",
         "season": 0
     },
@@ -340,6 +466,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/the-thing/the-thing.png",
         "prestige": "../assets/heroes/the-thing/the-thing-prof.png",
+"icon": "../assets/heroes/the-thing/icon.webp",
+"icon-lord": "../assets/heroes/the-thing/icon-lord.webp",
+"icon-champion": "../assets/heroes/the-thing/icon-lord.webp",
         "color": "#d9994f",
         "season": 1.5
     },
@@ -348,6 +477,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/thor/thor.png",
         "prestige": "../assets/heroes/thor/thor-prof.png",
+"icon": "../assets/heroes/thor/icon.webp",
+"icon-lord": "../assets/heroes/thor/icon-lord.webp",
+"icon-champion": "../assets/heroes/thor/icon-lord.webp",
         "color": "#5964ab",
         "season": 0
     },
@@ -356,6 +488,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/ultron/ultron.png",
         "prestige": "../assets/heroes/ultron/ultron-prof.png",
+"icon": "../assets/heroes/ultron/icon.webp",
+"icon-lord": "../assets/heroes/ultron/icon-lord.webp",
+"icon-champion": "../assets/heroes/ultron/icon-lord.webp",
         "color": "#6b789e",
         "season": 2.5
     },
@@ -364,6 +499,9 @@
         "role": "Vanguard",
         "image": "../assets/heroes/venom/venom.png",
         "prestige": "../assets/heroes/venom/venom-prof.png",
+"icon": "../assets/heroes/venom/icon.webp",
+"icon-lord": "../assets/heroes/venom/icon-lord.webp",
+"icon-champion": "../assets/heroes/venom/icon-lord.webp",
         "color": "#2a2e3d",
         "season": 0
     },
@@ -372,6 +510,9 @@
         "role": "Strategist",
         "image": "../assets/heroes/white-fox/white-fox.png",
         "prestige": "../assets/heroes/white-fox/white-fox-prof.png",
+"icon": "../assets/heroes/white-fox/icon.webp",
+"icon-lord": "../assets/heroes/white-fox/icon-lord.webp",
+"icon-champion": "../assets/heroes/white-fox/icon-lord.webp",
         "color": "#51bbbe",
         "season": 7
     },
@@ -380,6 +521,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/winter-soldier/winter-soldier.png",
         "prestige": "../assets/heroes/winter-soldier/winter-soldier-prof.png",
+"icon": "../assets/heroes/winter-soldier/icon.webp",
+"icon-lord": "../assets/heroes/winter-soldier/icon-lord.webp",
+"icon-champion": "../assets/heroes/winter-soldier/icon-lord.webp",
         "color": "#5a583b",
         "season": 0
     },
@@ -388,6 +532,9 @@
         "role": "Duelist",
         "image": "../assets/heroes/wolverine/wolverine.png",
         "prestige": "../assets/heroes/wolverine/wolverine-prof.png",
+"icon": "../assets/heroes/wolverine/icon.webp",
+"icon-lord": "../assets/heroes/wolverine/icon-lord.webp",
+"icon-champion": "../assets/heroes/wolverine/icon-lord.webp",
         "color": "#be962a",
         "season": 0
     }
