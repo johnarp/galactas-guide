@@ -7,11 +7,11 @@
     {
         "name": "Duelist",
         "icon": "../assets/roles/duelist.webp",
-        "color": "#dd5067"
+        "color": "#da515d"
     },
     {
         "name": "Strategist",
         "icon": "../assets/roles/strategist.webp",
-        "color": "#4c865c"
+        "color": "#387458"
     }
 ]

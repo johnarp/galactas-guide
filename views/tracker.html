@@ -23,7 +23,7 @@
     <title>Tracker | Galacta's Guide</title>
     <link rel="stylesheet" href="../app/styles.css">
     <link rel="icon" href="../assets/github/icon.png" type="image/png">
-    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));if(_s?.settings?.theme)document.documentElement.dataset.theme=_s.settings.theme;}catch(e){}</script>
+    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));var _t=_s?.settings?.theme;if(_t)document.documentElement.dataset.theme=_t;var _tc={'rivals':'#282A31','symbiote':'#131313'};var _m=document.querySelector('meta[name="theme-color"]');if(_m&&_t&&_tc[_t])_m.content=_tc[_t];}catch(e){}</script>
 </head>
 <body>
     <header>
@@ -35,6 +35,8 @@
                 <li><a href="creator.html">Creator</a></li>
             </ul>
             <ul class="nav-utils">
+            <ul class="nav-utils">
+                <li><button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button></li>
                 <li><a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a></li>
                 <li><a href="profile.html" class="nav-icon-btn" title="Profile" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a></li>
             </ul>
@@ -51,6 +53,11 @@
             <div class="controls-right">
                 <input type="search" id="hero-search" class="hero-search"
                        placeholder="Search…" aria-label="Search heroes" autocomplete="off">
+                <select id="size-select" class="sort-select" aria-label="Card size">
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                </select>
                 <select id="sort-select" class="sort-select" aria-label="Sort heroes">
                     <option value="name-asc">Name A–Z</option>
                     <option value="name-desc">Name Z–A</option>
@@ -73,6 +80,8 @@
                 <img id="modal-hero-art" src="" alt="" class="modal-hero-art">
                 <h2 id="modal-hero-name"></h2>
             </div>
+            <!-- Icon picker — hidden for heroes with no alts, built by JS -->
+            <div id="modal-icon-picker" class="modal-icon-picker"></div>
             <div id="rank-grid" class="rank-grid"></div>
             <div id="level-section" class="level-section hidden">
                 <label class="field-label">
@@ -94,5 +103,6 @@
     </div>
 
     <script type="module" src="../scripts/tracker.js"></script>
+    <script>!function(){var b=document.querySelector('.nav-hamburger');if(!b)return;var h=document.querySelector('header');b.addEventListener('click',function(){var o=h.classList.toggle('nav-open');b.setAttribute('aria-expanded',String(o));});document.addEventListener('click',function(e){if(!h.contains(e.target)&&h.classList.contains('nav-open')){h.classList.remove('nav-open');b.setAttribute('aria-expanded','false');}});}();</script>
 </body>
 </html>

@@ -294,10 +294,13 @@ main { padding: 1.5rem; }
 #hero-grid {
     display               : grid;
     gap                   : 1rem;
-    /* grid-template-columns : repeat(auto-fill, 9.5rem); */
-    grid-template-columns : repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-columns : repeat(auto-fill, minmax(10rem, 1fr)); /* md default */
     margin-top            : 1rem;
 }
+
+/* ── Card size variants (card view) ────────────────────────── */
+#hero-grid[data-card-size="sm"] { grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); }
+#hero-grid[data-card-size="lg"] { grid-template-columns: repeat(auto-fill, minmax(14rem,  1fr)); }
 
 .no-results,
 .load-error {
@@ -484,8 +487,9 @@ main { padding: 1.5rem; }
 .filter-btn img         { display: block; height: 1.25rem; width: 1.25rem; }
 #filter-favorites       { font-size: 1.1rem; }  /* star slightly larger */
 
-.filter-btn.active             { background: var(--nav); border-color: var(--accent); }
-.filter-btn:hover:not(.active) { border-color: var(--primary); }
+.filter-btn.active               { background: var(--nav); border-color: var(--accent); }
+.filter-btn.filter-exclude       { background: var(--nav); border-color: var(--danger); color: var(--danger); }
+.filter-btn:hover:not(.active):not(.filter-exclude) { border-color: var(--primary); }
 
 .sort-select {
     background     : var(--surface);
@@ -1326,9 +1330,15 @@ main { padding: 1.5rem; }
    ICON VIEW MODE
    ============================================================ */
  
-#hero-grid[data-view-mode="icon"] {
+/* ── Icon view sizes ──────────────────────────────────────────
+   Icon view base (sm): 5.5rem  — user calls this "small"
+   Must come AFTER card-size sm rule to win the specificity tie  */
+#hero-grid[data-view-mode="icon"],
+#hero-grid[data-view-mode="icon"][data-card-size="sm"] {
     grid-template-columns : repeat(auto-fill, minmax(5.5rem, 1fr));
 }
+#hero-grid[data-view-mode="icon"][data-card-size="md"] { grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr)); }
+#hero-grid[data-view-mode="icon"][data-card-size="lg"] { grid-template-columns: repeat(auto-fill, minmax(10rem,  1fr)); }
  
 .hero-icon-card {
     aspect-ratio  : 1 / 1;
@@ -1368,3 +1378,118 @@ main { padding: 1.5rem; }
 .hero-icon-card .hero-name      { font-size: 0.6rem; }
 .hero-icon-card .hero-rank-info { font-size: 0.55rem; margin-top: 0.15rem; }
 .hero-icon-card .hero-rank-info img { height: 1rem; }
+
+/* ============================================================
+   MODAL — ICON PICKER
+   ============================================================ */
+
+.modal-icon-picker {
+    display         : flex;
+    flex-wrap       : wrap;
+    gap             : 0.4rem;
+    margin-bottom   : 1rem;
+}
+
+.modal-icon-option {
+    border        : 2px solid transparent;
+    border-radius : var(--radius-sm);
+    cursor        : pointer;
+    height        : 3rem;
+    overflow      : hidden;
+    transition    : border-color var(--transition);
+    width         : 3rem;
+}
+
+.modal-icon-option img {
+    display    : block;
+    height     : 100%;
+    object-fit : cover;
+    width      : 100%;
+}
+
+.modal-icon-option.active              { border-color: var(--accent); }
+.modal-icon-option:hover:not(.active)  { border-color: var(--primary); }
+/* ============================================================
+   HAMBURGER / MOBILE NAV
+   ============================================================ */
+
+.nav-hamburger {
+    align-items     : center;
+    background      : none;
+    border          : none;
+    border-radius   : var(--radius-sm);
+    color           : var(--text);
+    cursor          : pointer;
+    display         : none;
+    font-size       : 1.35rem;
+    justify-content : center;
+    line-height     : 1;
+    opacity         : 0.7;
+    padding         : 0.4rem 0.5rem;
+    transition      : background var(--transition), opacity var(--transition);
+}
+
+.nav-hamburger:hover { background: var(--primary-dim); opacity: 1; }
+
+/* ============================================================
+   MOBILE — ≤ 640px
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+    /* Show hamburger */
+    .nav-hamburger { display: flex; }
+
+    /* Collapse nav-main into a dropdown anchored to the sticky header */
+    .nav-main {
+        background              : var(--nav-glass-bg);
+        backdrop-filter         : blur(18px);
+        -webkit-backdrop-filter : blur(18px);
+        border-bottom           : 1px solid var(--nav-glass-border);
+        display                 : none;
+        flex-direction          : column;
+        gap                     : 0;
+        left                    : 0;
+        padding                 : 0.25rem 0 0.5rem;
+        position                : absolute;
+        right                   : 0;
+        top                     : 100%;
+        z-index                 : 49;
+    }
+
+    .nav-main li { margin: 0; }
+
+    .nav-main a {
+        display  : block;
+        padding  : 0.7rem 1.5rem;
+        width    : 100%;
+    }
+
+    header.nav-open .nav-main { display: flex; }
+
+    /* Tighten header padding on mobile */
+    header { padding: 0.55rem 1rem; gap: 1rem; }
+
+    /* Tracker controls: search fills its row on mobile */
+    .controls-right { width: 100%; }
+    .hero-search    { flex: 1; width: auto; min-width: 0; }
+
+    /* ── Mobile card sizing: ensure ≥ 2 cards per row ───────── */
+    #hero-grid,
+    #hero-grid[data-card-size="sm"],
+    #hero-grid[data-card-size="md"],
+    #hero-grid[data-card-size="lg"] {
+        grid-template-columns : repeat(auto-fill, minmax(min(10rem, 43vw), 1fr));
+    }
+
+    #hero-grid[data-card-size="sm"] {
+        grid-template-columns : repeat(auto-fill, minmax(min(7.5rem, 38vw), 1fr));
+    }
+
+    #hero-grid[data-view-mode="icon"],
+    #hero-grid[data-view-mode="icon"][data-card-size="sm"],
+    #hero-grid[data-view-mode="icon"][data-card-size="md"],
+    #hero-grid[data-view-mode="icon"][data-card-size="lg"] {
+        grid-template-columns : repeat(auto-fill, minmax(min(5.5rem, 25vw), 1fr));
+    }
+}

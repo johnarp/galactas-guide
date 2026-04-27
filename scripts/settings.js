@@ -4,7 +4,11 @@ import { exportData, importData, clearAllData, getSettings, setSettings } from '
 
 function applySetting(key, value) {
     if (key === 'theme') {
-        document.documentElement.dataset.theme = value === 'rivals' ? 'rivals' : '';
+        document.documentElement.dataset.theme = value === 'galacta' ? '' : value;
+        // Update mobile browser chrome colour
+        const themeColors = { galacta: '#a612ea', rivals: '#282A31', symbiote: '#131313' };
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = themeColors[value] ?? '#a612ea';
     }
 }
 
@@ -74,6 +78,7 @@ document.getElementById('clear-btn').addEventListener('click', () => {
     if (confirm('Clear ALL saved data? This cannot be undone.')) {
         clearAllData();
         setSettings({ viewMode: 'card', showName: 'on', showProficiency: 'on' });
+        document.documentElement.dataset.theme = '';
         showNotice('All data cleared.', 'success');
         loadSettings();
     }

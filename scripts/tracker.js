@@ -1,5 +1,6 @@
 import { getHeroData, setHeroData, clearHeroData, getFavorites, toggleFavorite,
-         getUIPrefs, setUIPrefs, getSettings, getCreators } from './state.js';
+         getUIPrefs, setUIPrefs, getSettings, getCreators,
+         getIconPref, setIconPref } from './state.js';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -8,10 +9,12 @@ let heroes = [], roles = [], ranks = [], roleIconMap = {};
 // ── UI state ──────────────────────────────────────────────────────────────────
 
 let activeRoles    = new Set(); // empty = show all roles
-let showFavsOnly   = false;
-let showCustomOnly = false;
+let favFilter      = 'all';   // 'all' | 'only' | 'exclude'
+let customFilter   = 'all';   // 'all' | 'only' | 'exclude'
 let sortMode       = 'name-asc';
 let searchQuery    = '';
+let cardSize       = 'md';    // 'sm' | 'md' | 'lg'  — card view
+let iconSize       = 'md';    // 'sm' | 'md' | 'lg'  — icon view
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
@@ -59,6 +62,7 @@ function cardColor(hero) {
         const role      = roles.find(r => r.name === firstRole);
         return role?.color ?? 'var(--surface)';
     }
+    if (cardBgMode === 'none') return 'var(--surface)';
     return hero.color ?? '#200630';
 }
 
@@ -67,25 +71,45 @@ function cardColor(hero) {
 function loadUIPrefs() {
     const p        = getUIPrefs();
     activeRoles    = new Set(p.activeRoles    ?? []);
-    showFavsOnly   = p.showFavsOnly   ?? false;
-    showCustomOnly = p.showCustomOnly ?? false;
+    favFilter    = p.favFilter    ?? 'all';
+    customFilter = p.customFilter ?? 'all';
     sortMode       = p.sortMode       ?? 'name-asc';
     searchQuery    = p.searchQuery    ?? '';
+    cardSize       = p.cardSize       ?? 'md';
+    iconSize       = p.iconSize       ?? 'md';
 
     document.getElementById('sort-select').value = sortMode;
+    // Sync size-select to whichever view is currently active
+    const isIconView = getSettings().viewMode === 'icon';
+    document.getElementById('size-select').value = isIconView ? iconSize : cardSize;
     document.getElementById('hero-search').value = searchQuery;
-    document.getElementById('filter-favorites').classList.toggle('active', showFavsOnly);
-    document.getElementById('filter-custom').classList.toggle('active', showCustomOnly);
+    syncCycleBtn(document.getElementById('filter-favorites'), favFilter);
+    syncCycleBtn(document.getElementById('filter-custom'),    customFilter);
 }
 
 function saveUIPrefs() {
     setUIPrefs({
-        activeRoles    : [...activeRoles],
-        showFavsOnly,
-        showCustomOnly,
+        activeRoles  : [...activeRoles],
+        favFilter,
+        customFilter,
         sortMode,
         searchQuery,
+        cardSize,
+        iconSize,
     });
+}
+
+// Cycle: all -> only -> exclude -> all
+function cycleFilterState(current) {
+    if (current === 'all')  return 'only';
+    if (current === 'only') return 'exclude';
+    return 'all';
+}
+
+function syncCycleBtn(btn, state) {
+    btn.classList.remove('active', 'filter-exclude');
+    if (state === 'only')    btn.classList.add('active');
+    if (state === 'exclude') btn.classList.add('filter-exclude');
 }
 
 // ── Filters UI ────────────────────────────────────────────────────────────────
@@ -190,8 +214,10 @@ function getFilteredSorted() {
             const hr = Array.isArray(h.role) ? h.role : [h.role];
             if (!hr.some(r => activeRoles.has(r))) return false;
         }
-        if (showFavsOnly   && !favSet.has(h.name)) return false;
-        if (showCustomOnly && !h.isCustom)          return false;
+        if (favFilter    === 'only'    && !favSet.has(h.name)) return false;
+        if (favFilter    === 'exclude' &&  favSet.has(h.name)) return false;
+        if (customFilter === 'only'    && !h.isCustom)         return false;
+        if (customFilter === 'exclude' &&  h.isCustom)         return false;
         if (q              && !h.name.toLowerCase().includes(q)) return false;
         return true;
     });
@@ -223,6 +249,9 @@ function renderGrid() {
 
     grid.innerHTML = '';
     grid.dataset.viewMode = isIcon ? 'icon' : 'card';
+    grid.dataset.cardSize = isIcon ? iconSize : cardSize;
+    // Keep the size dropdown in sync when switching views
+    document.getElementById('size-select').value = isIcon ? iconSize : cardSize;
 
     if (!list.length) {
         grid.innerHTML = '<p class="no-results">No heroes match your filters.</p>';
@@ -279,13 +308,20 @@ function buildCard(hero, favSet) {
 // ── Icon card ─────────────────────────────────────────────────────────────────
 
 // Pick the right icon image based on rank tier
+// Returns the icon set at a given index (0 = base, 1+ = alt-icons)
+function getIconSet(hero, idx) {
+    if (!idx) return hero;
+    return (hero['alt-icons'] ?? [])[idx - 1] ?? hero;
+}
+
 function heroIcon(hero, data) {
+    const iconSet     = getIconSet(hero, getIconPref(hero.name));
     const ri          = data?.rank ? ranks.findIndex(r => r.title === data.rank) : -1;
     const championIdx = ranks.findIndex(r => r.title === 'Champion');
     const lordIdx     = ranks.findIndex(r => r.title === 'Lord');
-    if (ri >= championIdx && hero['icon-champion']) return hero['icon-champion'];
-    if (ri >= lordIdx     && hero['icon-lord'])     return hero['icon-lord'];
-    return hero.icon ?? hero.image;
+    if (ri >= championIdx && iconSet['icon-champion']) return iconSet['icon-champion'];
+    if (ri >= lordIdx     && iconSet['icon-lord'])     return iconSet['icon-lord'];
+    return iconSet.icon ?? hero.image;
 }
 
 function buildIconCard(hero, favSet) {
@@ -337,15 +373,46 @@ let currentHero  = null;
 let selectedRank = null;
 
 function getModalIcon(hero, data) {
-    const base = hero.image.substring(0, hero.image.lastIndexOf('/'));
-    if (!data?.rank) return `${base}/icon.webp`;
-    const ri = ranks.findIndex(r => r.title === data.rank);
-    const championIdx = ranks.findIndex(r => r.title === 'Champion');
+    const iconSet = getIconSet(hero, getIconPref(hero.name));
+    if (!data?.rank) return iconSet.icon ?? hero.image;
+    const ri      = ranks.findIndex(r => r.title === data.rank);
     const lordIdx = ranks.findIndex(r => r.title === 'Lord');
-    // temporarily "disabled" until i find a way to make the champ icon animated
-    // if (ri >= championIdx) return `${base}/icon-champion.webp`;
-    if (ri >= lordIdx) return `${base}/icon-lord.webp`;
-    return `${base}/icon.webp`;
+    // champion icon temporarily disabled until animated version is sorted
+    if (ri >= lordIdx && iconSet['icon-lord']) return iconSet['icon-lord'];
+    return iconSet.icon ?? hero.image;
+}
+
+function buildIconPicker(hero, data) {
+    const container = document.getElementById('modal-icon-picker');
+    container.innerHTML = '';
+
+    const alts       = hero['alt-icons'] ?? [];
+    const allSets    = [hero, ...alts];   // idx 0 = base, 1+ = alts
+    const currentIdx = getIconPref(hero.name);
+
+    // Only show picker if there are multiple options
+    if (allSets.length <= 1) return;
+
+    allSets.forEach((iconSet, i) => {
+        const opt = document.createElement('div');
+        opt.className = 'modal-icon-option' + (i === currentIdx ? ' active' : '');
+
+        const img = document.createElement('img');
+        img.src     = iconSet.icon ?? hero.image;
+        img.alt     = `Icon ${i + 1}`;
+        img.loading = 'lazy';
+        opt.appendChild(img);
+
+        opt.addEventListener('click', () => {
+            container.querySelectorAll('.modal-icon-option').forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+            setIconPref(hero.name, i);
+            document.getElementById('modal-hero-art').src = getModalIcon(hero, data);
+            renderGrid();
+        });
+
+        container.appendChild(opt);
+    });
 }
 
 function openModal(hero) {
@@ -361,6 +428,7 @@ function openModal(hero) {
 
     renderRankGrid(data.rank ?? null);
     syncLevelControls(selectedRank, data.level ?? null, data.points ?? null);
+    buildIconPicker(hero, data);
 
     document.getElementById('modal').classList.remove('hidden');
 }
@@ -451,6 +519,14 @@ document.getElementById('sort-select').addEventListener('change', e => {
     renderGrid();
 });
 
+document.getElementById('size-select').addEventListener('change', e => {
+    const isIcon = getSettings().viewMode === 'icon';
+    if (isIcon) iconSize = e.target.value;
+    else        cardSize = e.target.value;
+    saveUIPrefs();
+    renderGrid();
+});
+
 document.getElementById('hero-search').addEventListener('input', function () {
     searchQuery = this.value;
     saveUIPrefs();
@@ -458,15 +534,15 @@ document.getElementById('hero-search').addEventListener('input', function () {
 });
 
 document.getElementById('filter-favorites').addEventListener('click', function () {
-    showFavsOnly = !showFavsOnly;
-    this.classList.toggle('active', showFavsOnly);
+    favFilter = cycleFilterState(favFilter);
+    syncCycleBtn(this, favFilter);
     saveUIPrefs();
     renderGrid();
 });
 
 document.getElementById('filter-custom').addEventListener('click', function () {
-    showCustomOnly = !showCustomOnly;
-    this.classList.toggle('active', showCustomOnly);
+    customFilter = cycleFilterState(customFilter);
+    syncCycleBtn(this, customFilter);
     saveUIPrefs();
     renderGrid();
 });

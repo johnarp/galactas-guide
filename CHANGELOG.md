@@ -1,9 +1,30 @@
 # Changelog
 
+[1.2.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.2.0
 [1.1.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.1
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.2.0] - 2026-04-27
+
+### Added
+
+- Card and icon size controls
+- Icon picker for heroes with multiple icon variants (eg. Hulk, Cloak & Dagger, White Fox, etc.) in the proficiency modal
+- Exclude state for Favorites and Created filter buttons. Each cycles through All → Only → Exclude
+- None option for the Card Background setting
+
+### Changed
+
+- Improved mobile layout; hamburger menu and scaled down cards
+- Mobile browser navigation bar color reflects the active theme
+- Adjusted colors for Duelist and Strategist
+
+### Fixed
+
+- Switching to a non-Galacta or non-Rivals theme no longer requires a page reload to take effect
+- Clearing data on a non-default theme no longer requires a page reload to revert to default
 
 ## [1.1.1] - 2026-04-26
 

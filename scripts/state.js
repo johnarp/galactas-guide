@@ -96,3 +96,11 @@ export const getUIPrefs = () => getState().uiPrefs ?? {};
 
 export const setUIPrefs = data =>
     setState(s => ({ ...s, uiPrefs: { ...(s.uiPrefs ?? {}), ...data } }));
+
+// ── Icon preferences ──────────────────────────────────────────────────────────
+
+export const getIconPref = name =>
+    getState().iconPrefs?.[name] ?? 0;
+
+export const setIconPref = (name, idx) =>
+    setState(s => ({ ...s, iconPrefs: { ...(s.iconPrefs ?? {}), [name]: idx } }));
