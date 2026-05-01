@@ -6,5 +6,21 @@
     {
         "image": "../assets/creator/placeholder-2.png",
         "prestige": "../assets/creator/placeholder-2.png"
+    },
+    {
+        "image": "../assets/creator/placeholder-3.png",
+        "prestige": "../assets/creator/placeholder-3.png"
+    },
+    {
+        "image": "../assets/creator/placeholder-4.png",
+        "prestige": "../assets/creator/placeholder-4.png"
+    },
+    {
+        "image": "../assets/creator/placeholder-5.png",
+        "prestige": "../assets/creator/placeholder-5.png"
+    },
+    {
+        "image": "../assets/creator/placeholder-6.png",
+        "prestige": "../assets/creator/placeholder-6.png"
     }
 ]

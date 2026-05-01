@@ -1,10 +1,26 @@
 # Changelog
 
+[1.3.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.3.0
 [1.2.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.2.0
 [1.1.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.1
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.3.0] - 2026-04-30
+
+### Added
+
+- Abilities editor and season field in Creator
+- New, read-only modal when clicking the card body in Creator
+- Role filters, size controls, search bar, and sort options in Creator
+- Proficiency rank filter in Tracker
+- More placeholder Hero images
+
+### Changed
+
+- Mobile browser navigation bar colors to the themes primary color
+- Profile name, profile icon, and Tracker pop-up modal text color in Rivals theme
 
 ## [1.2.0] - 2026-04-27
 

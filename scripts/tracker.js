@@ -9,6 +9,7 @@ let heroes = [], roles = [], ranks = [], roleIconMap = {};
 // ── UI state ──────────────────────────────────────────────────────────────────
 
 let activeRoles    = new Set(); // empty = show all roles
+let activeRanks    = new Set(); // empty = show all ranks
 let favFilter      = 'all';   // 'all' | 'only' | 'exclude'
 let customFilter   = 'all';   // 'all' | 'only' | 'exclude'
 let sortMode       = 'name-asc';
@@ -40,6 +41,7 @@ async function init() {
 
         loadUIPrefs();
         buildFilters();
+        buildRankFilter();
         renderGrid();
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -71,6 +73,7 @@ function cardColor(hero) {
 function loadUIPrefs() {
     const p        = getUIPrefs();
     activeRoles    = new Set(p.activeRoles    ?? []);
+    activeRanks    = new Set(p.activeRanks    ?? []);
     favFilter    = p.favFilter    ?? 'all';
     customFilter = p.customFilter ?? 'all';
     sortMode       = p.sortMode       ?? 'name-asc';
@@ -90,6 +93,7 @@ function loadUIPrefs() {
 function saveUIPrefs() {
     setUIPrefs({
         activeRoles  : [...activeRoles],
+        activeRanks  : [...activeRanks],
         favFilter,
         customFilter,
         sortMode,
@@ -112,7 +116,104 @@ function syncCycleBtn(btn, state) {
     if (state === 'exclude') btn.classList.add('filter-exclude');
 }
 
-// ── Filters UI ────────────────────────────────────────────────────────────────
+// ── Rank filter dropdown ──────────────────────────────────────────────────────
+
+function buildRankFilter() {
+    const wrapper = document.getElementById('rank-filter');
+    wrapper.innerHTML = '';
+
+    // ── Trigger button ────────────────────────────────────────────────────────
+    const trigger = document.createElement('button');
+    trigger.className = 'filter-btn rank-filter-trigger';
+    trigger.id        = 'rank-filter-trigger';
+    updateRankTriggerLabel(trigger);
+
+    // ── Panel ─────────────────────────────────────────────────────────────────
+    const panel = document.createElement('div');
+    panel.className = 'rank-filter-panel hidden';
+    panel.id        = 'rank-filter-panel';
+
+    // "All" clear row
+    const clearRow = document.createElement('button');
+    clearRow.className   = 'rank-filter-row rank-filter-clear';
+    clearRow.textContent = 'All';
+    clearRow.addEventListener('click', () => {
+        activeRanks.clear();
+        updateRankPanelChecks(panel);
+        updateRankTriggerLabel(trigger);
+        saveUIPrefs();
+        renderGrid();
+    });
+    panel.appendChild(clearRow);
+
+    // One row per rank
+    ranks.forEach(rank => {
+        const row = document.createElement('button');
+        row.className        = 'rank-filter-row' + (activeRanks.has(rank.title) ? ' checked' : '');
+        row.dataset.rankTitle = rank.title;
+
+        const check = document.createElement('span');
+        check.className = 'rank-filter-check';
+        check.textContent = '✓';
+
+        const icon = document.createElement('img');
+        icon.src   = rank.icon;
+        icon.alt   = rank.title;
+
+        const label = document.createElement('span');
+        label.textContent = rank.title;
+
+        row.append(check, icon, label);
+
+        row.addEventListener('click', () => {
+            if (activeRanks.has(rank.title)) {
+                activeRanks.delete(rank.title);
+                row.classList.remove('checked');
+            } else {
+                activeRanks.add(rank.title);
+                row.classList.add('checked');
+            }
+            updateRankTriggerLabel(trigger);
+            saveUIPrefs();
+            renderGrid();
+        });
+
+        panel.appendChild(row);
+    });
+
+    wrapper.append(trigger, panel);
+
+    // ── Toggle open/close ─────────────────────────────────────────────────────
+    trigger.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = !panel.classList.contains('hidden');
+        closeAllRankPanels();
+        if (!isOpen) panel.classList.remove('hidden');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', e => {
+        if (!wrapper.contains(e.target)) panel.classList.add('hidden');
+    });
+}
+
+function updateRankTriggerLabel(trigger) {
+    const n = activeRanks.size;
+    trigger.textContent = n > 0 ? `Rank (${n}) ▾` : 'Rank ▾';
+    trigger.classList.toggle('active', n > 0);
+}
+
+function updateRankPanelChecks(panel) {
+    panel.querySelectorAll('.rank-filter-row[data-rank-title]').forEach(row => {
+        row.classList.toggle('checked', activeRanks.has(row.dataset.rankTitle));
+    });
+}
+
+function closeAllRankPanels() {
+    document.querySelectorAll('.rank-filter-panel').forEach(p => p.classList.add('hidden'));
+}
+
+// ── Role filters ──────────────────────────────────────────────────────────────
 
 let allBtn      = null;
 const roleBtns  = new Map();
@@ -210,6 +311,10 @@ function getFilteredSorted() {
     const q      = searchQuery.trim().toLowerCase();
 
     const list = heroes.filter(h => {
+        if (activeRanks.size > 0) {
+            const d = getHeroData(h.name);
+            if (!d?.rank || !activeRanks.has(d.rank)) return false;
+        }
         if (activeRoles.size > 0) {
             const hr = Array.isArray(h.role) ? h.role : [h.role];
             if (!hr.some(r => activeRoles.has(r))) return false;

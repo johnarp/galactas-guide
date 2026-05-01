@@ -36,7 +36,7 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 ## Known Issues
 
 - Multi-role Heroes (eg. Deadpool) show only their first role's color in Role card background mode
-- Name in profile and role filter images in tracker are hard to see in Rivals theme
+- Role filter images in tracker are hard to see in Rivals theme
 - Created heroes don't have icons
 - Hela's hover image is cut off
 - Icons are of varying quality
@@ -66,7 +66,6 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 ### Creator
 
 - Upload custom images
-- Allow adding hero abilities and season released
 
 ### Settings
 
