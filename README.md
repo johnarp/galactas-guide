@@ -6,43 +6,65 @@
 
 A Marvel Rivals proficiency tracker and hero creator.
 
+[![License](https://img.shields.io/github/license/johnarp/galactas-guide?style=for-the-badge)](./LICENSE)
+![Version](https://img.shields.io/github/v/release/johnarp/galactas-guide?style=for-the-badge)
+
+![CSS](https://img.shields.io/badge/CSS-2a65f0?style=for-the-badge&logo=css&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-e44d25?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ffdf00?style=for-the-badge&logo=javascript&logoColor=black)
+
 </div>
 
-## Preview
-
-![Preview](./assets/github/preview.png)
-
-## Features
+## ✨ Features
 
 - Track hero proficiency using rank, level, and points
-- Create hero concepts and integrate into the tracker
-- Customize with themes and card backgrounds
+- Create hero concepts and add them into the tracker
+- Customize with view modes, themes, card backgrounds, and more
 - localStorage persistence with export, import, and clear
 
-## Usage
+## 📸 Preview
 
-The easiest way is the live site: **[https://johnarp.github.io/galactas-guide](https://johnarp.github.io/galactas-guide)**
+<div style="display: flex; gap: 10px; justify-content: center">
+    <img src="./assets/github/preview-1.png" width="45%">
+    <img src="./assets/github/preview-2.png" width="45%">
+</div>
 
-Alternatively, run it locally with any static server (eg. Python):
+## 🚀 Installation
 
-```bash
-git clone https://github.com/johnarp/galactas-guide.git
+The easiest way to access is going to the website: [https://johnarp.github.io/galactas-guide/](https://johnarp.github.io/galactas-guide/)
+
+Or, if you wish to use locally, here are the steps:
+
+### 1. Downloading the Code
+
+Clone the repository through a terminal, such as Command Prompt or Powershell:
+
+```
+git clone https://github.com/johnarp/galactas-guide
 cd galactas-guide
+```
+
+### 2. Running the App
+
+Run the command:
+
+```
 python -m http.server 3000
 ```
 
-Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
+### 3. Using the App
 
-## Known Issues
+Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
-- Multi-role Heroes (eg. Deadpool) show only their first role's color in Role card background mode
-- Role filter images in tracker are hard to see in Rivals theme
-- Created heroes don't have icons
+## ⚠️ Known Issues
+
+- Multi-role Heroes only show the color of their first role while using the Role card background
+- Role filter images remain white in Rivals theme
 - Hela's hover image is cut off
 - Icons are of varying quality
-- Icon changing in proficiency modal requires exiting and opening again to see
+- Icon changing through the proficiency modal requires existing and opening again to see in the modal
 
-## To Do
+## 🗺️ Roadmap
 
 ### General
 
@@ -65,6 +87,7 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 
 ### Creator
 
+- Icons
 - Upload custom images
 
 ### Settings
@@ -77,10 +100,12 @@ Then open in your browser: **[http://localhost:3000](http://localhost:3000)**
 - Hero nameplate
 - Display a hero and its info on your profile
 
-## License
+## 📄 License
 
-Source code is licensed under the [MIT License](./LICENSE)
+This project is licensed under the [MIT License](./LICENSE).
 
-## Legal
+## ⚖️ Legal
 
-Marvel Rivals assets, images, and related media included in this project are the property of NetEase Games and/or Marvel and are not covered by the [MIT License](./LICENSE). This project is not affiliated with or endorsed by NetEase or Marvel.
+Galacta's Guide is an unofficial project and is not affiliated with, endorsed by, or associated with NetEase games or Marvel in any way.
+
+Marvel Rivals assets, images, and related media included in this project are the property of NetEase Games and/or Marvel and are not covered by the MIT License.

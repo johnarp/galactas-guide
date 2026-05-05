@@ -398,7 +398,7 @@ function saveModal() {
     const name      = document.getElementById('creator-name').value.trim();
     const color     = document.getElementById('creator-color').value;
     const rawSeason = document.getElementById('creator-season').value.trim();
-    const season    = rawSeason !== '' ? parseInt(rawSeason, 10) : null;
+    const season    = rawSeason !== '' ? parseFloat(rawSeason) : null;
 
     if (!name) { document.getElementById('creator-name').focus(); return; }
 
