@@ -10,6 +10,9 @@ function applySetting(key, value) {
         const meta = document.querySelector('meta[name="theme-color"]');
         if (meta) meta.content = themeColors[value] ?? '#a612ea';
     }
+    if (key === 'showHoverImage') {
+        document.documentElement.dataset.hoverImage = value;
+    }
 }
 
 function loadSettings() {
@@ -22,7 +25,7 @@ function loadSettings() {
 }
 
 function getDefaultSetting(key) {
-    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on' };
+    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on' };
     return defaults[key] ?? null;
 }
 

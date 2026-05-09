@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Default",
+        "icon": "../assets/rarities/default.webp",
+        "color": "#43494b"
+    },
+    {
+        "name": "Rare",
+        "icon": "../assets/rarities/rare.webp",
+        "color": "#30576c"
+    },
+    {
+        "name": "Epic",
+        "icon": "../assets/rarities/epic.webp",
+        "color": "#503665"
+    },
+    {
+        "name": "Legendary",
+        "icon": "../assets/rarities/legendary.webp",
+        "color": "#ff8c00"
+    },
+    {
+        "name": "Mythic",
+        "icon": "../assets/rarities/mythic.webp",
+        "color": "#a32622"
+    }
+]

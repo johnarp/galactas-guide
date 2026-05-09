@@ -63,13 +63,15 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Hela's hover image is cut off
 - Icons are of varying quality
 - Icon changing through the proficiency modal requires existing and opening again to see in the modal
+- To apply icon or costume change, the proficiency modal can only be closed, not saved
+- There are no Lord/Champion icons for costumes
 
 ## 🗺️ Roadmap
 
 ### General
 
 - Champion icons
-- Rename hero images with generic names
+- (WIP) Rename hero images with generic names
 
 ### Home
 
@@ -81,9 +83,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 ### Tracker
 
 - Heroes pop-out when hovering
-- Customize heroes with skins
-    - Skin rarity card background
-    - Option to disable hover image
 
 ### Creator
 
@@ -94,6 +93,8 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 - More options for Show Proficiency
 - Show/Hide hero role icon
+- Option to disable Lord/Champion icons
+- Option to disable Costume icons
 
 ### Profile
 

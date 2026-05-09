@@ -104,3 +104,17 @@ export const getIconPref = name =>
 
 export const setIconPref = (name, idx) =>
     setState(s => ({ ...s, iconPrefs: { ...(s.iconPrefs ?? {}), [name]: idx } }));
+// ── Costume data ──────────────────────────────────────────────────────────────
+
+export const getCostumeData = hero =>
+    getState().costumes?.[hero] ?? null;
+
+export const setCostumeData = (hero, data) =>
+    setState(s => ({ ...s, costumes: { ...(s.costumes ?? {}), [hero]: data } }));
+
+export const clearCostumeData = hero =>
+    setState(s => {
+        const c = { ...(s.costumes ?? {}) };
+        delete c[hero];
+        return { ...s, costumes: c };
+    });

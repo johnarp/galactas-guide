@@ -121,8 +121,8 @@
     {
         "name": "Daredevil",
         "role": "Duelist",
-        "image": "../assets/heroes/daredevil/daredevil.png",
-        "prestige": "../assets/heroes/daredevil/daredevil-prof.png",
+        "image": "../assets/heroes/daredevil/image.png",
+        "prestige": "../assets/heroes/daredevil/prestige.png",
         "icon": "../assets/heroes/daredevil/icon.webp",
         "icon-lord": "../assets/heroes/daredevil/icon-lord.webp",
         "icon-champion": "../assets/heroes/daredevil/icon-lord.webp",
@@ -176,8 +176,8 @@
     {
         "name": "Gambit",
         "role": "Strategist",
-        "image": "../assets/heroes/gambit/gambit.png",
-        "prestige": "../assets/heroes/gambit/gambit-prof.png",
+        "image": "../assets/heroes/gambit/image.png",
+        "prestige": "../assets/heroes/gambit/prestige.png",
         "icon": "../assets/heroes/gambit/icon.webp",
         "icon-lord": "../assets/heroes/gambit/icon-lord.webp",
         "icon-champion": "../assets/heroes/gambit/icon-lord.webp",
@@ -551,8 +551,8 @@
     {
         "name": "Winter Soldier",
         "role": "Duelist",
-        "image": "../assets/heroes/winter-soldier/winter-soldier.png",
-        "prestige": "../assets/heroes/winter-soldier/winter-soldier-prof.png",
+        "image": "../assets/heroes/winter-soldier/image.png",
+        "prestige": "../assets/heroes/winter-soldier/prestige.png",
         "icon": "../assets/heroes/winter-soldier/icon.webp",
         "icon-lord": "../assets/heroes/winter-soldier/icon-lord.webp",
         "icon-champion": "../assets/heroes/winter-soldier/icon-lord.webp",

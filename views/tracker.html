@@ -83,6 +83,11 @@
             </div>
             <!-- Icon picker — hidden for heroes with no alts, built by JS -->
             <div id="modal-icon-picker" class="modal-icon-picker"></div>
+
+            <!-- Costumes button — hidden if hero has no costumes in costumes.json -->
+            <div id="modal-costume-area" class="hidden" style="margin-bottom:1rem">
+                <button id="modal-costume-btn" class="btn btn-ghost" style="font-size:0.78rem;padding:0.35rem 0.85rem">Costumes</button>
+            </div>
             <div id="rank-grid" class="rank-grid"></div>
             <div id="level-section" class="level-section hidden">
                 <label class="field-label">
@@ -100,6 +105,22 @@
                 <button id="modal-clear" class="btn btn-ghost">Clear</button>
                 <button id="modal-save"  class="btn btn-primary">Save</button>
             </div>
+        </div>
+    </div>
+
+
+    <!-- ── Costume modal ──────────────────────────────────────────────── -->
+    <div id="costume-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="costume-modal-name" tabindex="-1">
+        <div class="modal-content costume-modal-content">
+            <button id="costume-modal-close" class="modal-close" aria-label="Close">✕</button>
+            <div class="modal-hero-header">
+                <img id="costume-modal-art" src="" alt="" class="modal-hero-art">
+                <div>
+                    <h2 id="costume-modal-name"></h2>
+                    <button id="costume-back-btn" class="btn btn-ghost" style="font-size:0.75rem;padding:0.3rem 0.75rem;margin-top:0.5rem">← Proficiency</button>
+                </div>
+            </div>
+            <div id="costume-list" class="costume-list"></div>
         </div>
     </div>
 

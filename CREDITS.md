@@ -1,29 +1,24 @@
 # Credits
 
-## Hero Colors
+## [Marvel Rivals Proficiency Calculator](https://mr-calculator.github.io)
 
-- [PSYLOCKE.GG](https://psylocke.gg)
+- Rank Icons
 
-## Hero Icons
+## [Marvel Rivals Wiki | Fandom](https://marvelrivals.fandom.com/wiki/Marvel_Rivals_Wiki)
 
-- [Marvel Rivals Wiki | Fandom](https://marvelrivals.fandom.com/wiki/Marvel_Rivals_Wiki)
+- Hero Icons
+- Role Icons
 
-## Hero Images
+## [PSYLOCKE.GG](https://psylocke.gg)
 
-- [RivalSkins](https://rivalskins.com/)
+- Hero Colors
+- Hero Images - Prestige
 
-## Hero Images - Prestige
+## [RivalSkins](https://rivalskins.com/)
 
-- [PSYLOCKE.GG](https://psylocke.gg)
-
-## Hero Nameplates
-
-- [RivalSkins](https://rivalskins.com/)
-
-## Rank Icons
-
-- [Marvel Rivals Proficiency Calculator](https://mr-calculator.github.io)
-
-## Role Icons
-
-- [Marvel Rivals Wiki | Fandom](https://marvelrivals.fandom.com/wiki/Marvel_Rivals_Wiki)
+- Hero Icons - Costumes
+- Hero Images
+- Hero Images - Costumes
+- Hero Nameplates
+- Rarity Colors
+- Rarity Icons

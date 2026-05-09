@@ -1,10 +1,12 @@
 import { getHeroData, setHeroData, clearHeroData, getFavorites, toggleFavorite,
          getUIPrefs, setUIPrefs, getSettings, getCreators,
-         getIconPref, setIconPref } from './state.js';
+         getIconPref, setIconPref,
+         getCostumeData, setCostumeData, clearCostumeData } from './state.js';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 let heroes = [], roles = [], ranks = [], roleIconMap = {};
+let costumes = [], rarities = [];
 
 // ── UI state ──────────────────────────────────────────────────────────────────
 
@@ -21,15 +23,17 @@ let iconSize       = 'md';    // 'sm' | 'md' | 'lg'  — icon view
 
 async function init() {
     try {
-        const [hRes, roRes, raRes] = await Promise.all([
+        const [hRes, roRes, raRes, coRes, rarRes] = await Promise.all([
             fetch('../app/heroes.json'),
             fetch('../app/roles.json'),
             fetch('../app/ranks.json'),
+            fetch('../app/costumes.json'),
+            fetch('../app/rarities.json'),
         ]);
 
         let officialHeroes;
-        [officialHeroes, roles, ranks] = await Promise.all([
-            hRes.json(), roRes.json(), raRes.json(),
+        [officialHeroes, roles, ranks, costumes, rarities] = await Promise.all([
+            hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(),
         ]);
 
         const customHeroes = getCreators()
@@ -42,6 +46,8 @@ async function init() {
         loadUIPrefs();
         buildFilters();
         buildRankFilter();
+        const { showHoverImage } = getSettings();
+        document.documentElement.dataset.hoverImage = showHoverImage ?? 'on';
         renderGrid();
     } catch (err) {
         console.error('Failed to load data:', err);
@@ -50,10 +56,40 @@ async function init() {
     }
 }
 
+// ── Active image resolution (hero → costume → recolor) ───────────────────────
+// Only keys present in costume/recolor override the hero. Missing keys fall
+// through to heroes.json automatically — no need to duplicate paths everywhere.
+
+function getActiveImages(hero) {
+    const cd = getCostumeData(hero.name);
+    if (!cd?.name) return hero;
+
+    const costume = costumes.find(c => c.hero === hero.name && c.name === cd.name);
+    if (!costume) return hero;
+
+    const keys   = ['image', 'prestige', 'icon', 'icon-lord', 'icon-champion'];
+    const merged = { ...hero };                       // start with full hero data
+
+    keys.forEach(k => { if (costume[k]) merged[k] = costume[k]; });  // costume overrides
+
+    if (cd.recolorIdx > 0) {
+        const rc = costume.recolors?.[cd.recolorIdx - 1];
+        if (rc) keys.forEach(k => { if (rc[k]) merged[k] = rc[k]; });  // recolor overrides
+    }
+
+    return merged;
+}
+
 // ── Card background colour ────────────────────────────────────────────────────
 
 function cardColor(hero) {
     const { cardBgMode } = getSettings();
+    if (cardBgMode === 'rarity') {
+        const cd      = getCostumeData(hero.name);
+        const costume = cd?.name ? costumes.find(c => c.hero === hero.name && c.name === cd.name) : null;
+        const rarity  = costume  ? rarities.find(r => r.name === costume.rarity) : null;
+        return rarity?.color ?? rarities.find(r => r.name === 'Default')?.color ?? 'var(--surface)';
+    }
     if (cardBgMode === 'proficiency') {
         const d    = getHeroData(hero.name);
         const rank = d?.rank ? ranks.find(r => r.title === d.rank) : null;
@@ -388,11 +424,12 @@ function buildCard(hero, favSet) {
         </div>` : '';
 
     const { showName, showProficiency } = getSettings();
+    const imgs = getActiveImages(hero);
     card.innerHTML = `
         <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">★</button>
         <div class="role-badge" aria-hidden="true">${roleBadges}</div>
-        <img src="${hero.image}"    class="hero-art"      alt="${hero.name}" loading="lazy">
-        <img src="${hero.prestige || hero.image}" class="hero-prestige" alt="${hero.name} prestige" loading="lazy">
+        <img src="${imgs.image}"                   class="hero-art"      alt="${hero.name}" loading="lazy">
+        <img src="${imgs.prestige || imgs.image}"   class="hero-prestige" alt="${hero.name} prestige" loading="lazy">
         ${(showName !== 'off' || showProficiency !== 'off') ? `
         <div class="hero-info">
             ${showName        !== 'off' ? `<div class="hero-name">${hero.name}</div>` : ''}
@@ -420,10 +457,20 @@ function getIconSet(hero, idx) {
 }
 
 function heroIcon(hero, data) {
-    const iconSet     = getIconSet(hero, getIconPref(hero.name));
     const ri          = data?.rank ? ranks.findIndex(r => r.title === data.rank) : -1;
     const championIdx = ranks.findIndex(r => r.title === 'Champion');
     const lordIdx     = ranks.findIndex(r => r.title === 'Lord');
+
+    // If costume equipped, active images already merge costume+recolor on top of hero
+    if (getCostumeData(hero.name)?.name) {
+        const imgs = getActiveImages(hero);
+        if (ri >= championIdx && imgs['icon-champion']) return imgs['icon-champion'];
+        if (ri >= lordIdx     && imgs['icon-lord'])     return imgs['icon-lord'];
+        return imgs.icon ?? imgs.image;
+    }
+
+    // Default: respect icon picker + rank tier
+    const iconSet = getIconSet(hero, getIconPref(hero.name));
     if (ri >= championIdx && iconSet['icon-champion']) return iconSet['icon-champion'];
     if (ri >= lordIdx     && iconSet['icon-lord'])     return iconSet['icon-lord'];
     return iconSet.icon ?? hero.image;
@@ -478,11 +525,17 @@ let currentHero  = null;
 let selectedRank = null;
 
 function getModalIcon(hero, data) {
+    const ri      = data?.rank ? ranks.findIndex(r => r.title === data.rank) : -1;
+    const lordIdx = ranks.findIndex(r => r.title === 'Lord');
+
+    if (getCostumeData(hero.name)?.name) {
+        const imgs = getActiveImages(hero);
+        if (ri >= lordIdx && imgs['icon-lord']) return imgs['icon-lord'];
+        return imgs.icon ?? imgs.image;
+    }
+
     const iconSet = getIconSet(hero, getIconPref(hero.name));
     if (!data?.rank) return iconSet.icon ?? hero.image;
-    const ri      = ranks.findIndex(r => r.title === data.rank);
-    const lordIdx = ranks.findIndex(r => r.title === 'Lord');
-    // champion icon temporarily disabled until animated version is sorted
     if (ri >= lordIdx && iconSet['icon-lord']) return iconSet['icon-lord'];
     return iconSet.icon ?? hero.image;
 }
@@ -534,6 +587,10 @@ function openModal(hero) {
     renderRankGrid(data.rank ?? null);
     syncLevelControls(selectedRank, data.level ?? null, data.points ?? null);
     buildIconPicker(hero, data);
+
+    // Show costume button only if this hero has costumes defined
+    const hasCostumes = costumes.some(c => c.hero === hero.name);
+    document.getElementById('modal-costume-area').classList.toggle('hidden', !hasCostumes);
 
     document.getElementById('modal').classList.remove('hidden');
 }
@@ -666,3 +723,145 @@ document.getElementById('modal-clear').addEventListener('click', () => {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 init();
+// ── Costume modal ─────────────────────────────────────────────────────────────
+
+let costumeModalHero = null;
+
+function openCostumeModal(hero) {
+    costumeModalHero = hero;
+    document.getElementById('costume-modal-name').textContent = hero.name;
+    document.getElementById('costume-modal-art').src =
+        getModalIcon(hero, getHeroData(hero.name) ?? {});
+    renderCostumeModal(hero);
+    document.getElementById('costume-modal').classList.remove('hidden');
+}
+
+function closeCostumeModal() {
+    document.getElementById('costume-modal').classList.add('hidden');
+    costumeModalHero = null;
+}
+
+function renderCostumeModal(hero) {
+    // Refresh art in case costume changed
+    document.getElementById('costume-modal-art').src =
+        getModalIcon(hero, getHeroData(hero.name) ?? {});
+
+    const list = document.getElementById('costume-list');
+    list.innerHTML = '';
+
+    const cd           = getCostumeData(hero.name);
+    const heroCostumes = costumes.filter(c => c.hero === hero.name);
+    heroCostumes.forEach(costume => list.appendChild(buildCostumeItem(costume, cd, hero)));
+}
+
+function buildCostumeItem(costume, cd, hero) {
+    const isEquipped = cd?.name === costume.name;
+
+    const item = document.createElement('div');
+    item.className = 'costume-item' + (isEquipped ? ' equipped' : '');
+
+    // Thumbnail: use recolor image if this costume is equipped with a recolor
+    let thumbSrc = costume.image;
+    if (isEquipped && cd.recolorIdx > 0) {
+        const rc = costume.recolors?.[cd.recolorIdx - 1];
+        if (rc?.image) thumbSrc = rc.image;
+    }
+
+    const rarity = rarities.find(r => r.name === costume.rarity);
+
+    item.innerHTML = `
+        <img class="costume-thumb" src="${thumbSrc}" alt="${costume.name}">
+        <div class="costume-info">
+            <div class="costume-name">${costume.name}</div>
+            <div class="costume-rarity">
+                ${rarity?.icon ? `<img src="${rarity.icon}" alt="${costume.rarity}" class="rarity-icon">` : ''}
+                <span style="color:${rarity?.color ?? 'inherit'}">${costume.rarity}</span>
+            </div>
+        </div>
+    `;
+
+    // Recolor picker (stop propagation so it doesn't trigger equip/unequip)
+    if (costume.recolors?.length > 0) {
+        item.appendChild(buildRecolorPicker(costume, cd, hero));
+    }
+
+    // Click costume to equip; click again to unequip
+    item.addEventListener('click', () => {
+        if (isEquipped) {
+            clearCostumeData(hero.name);
+        } else {
+            setCostumeData(hero.name, { name: costume.name, recolorIdx: 0 });
+        }
+        renderCostumeModal(hero);
+        renderGrid();
+    });
+
+    return item;
+}
+
+function buildRecolorPicker(costume, cd, hero) {
+    const isEquipped   = cd?.name === costume.name;
+    const currentIdx   = isEquipped ? (cd.recolorIdx ?? 0) : 0;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'recolor-wrapper';
+    wrapper.addEventListener('click', e => e.stopPropagation()); // don't equip/unequip
+
+    const trigger = document.createElement('button');
+    trigger.className   = 'recolor-trigger';
+    trigger.textContent = currentIdx === 0 ? '◈' : String(currentIdx + 1);
+    trigger.title       = 'Recolors';
+
+    const panel = document.createElement('div');
+    panel.className = 'recolor-panel hidden';
+
+    // Build option for base + each recolor
+    const allOptions = [{ name: costume.name, image: costume.image }, ...costume.recolors];
+    allOptions.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className   = 'recolor-opt' + (currentIdx === i ? ' active' : '');
+        btn.textContent = String(i + 1);
+        btn.title       = opt.name;
+        btn.addEventListener('click', () => {
+            setCostumeData(hero.name, { name: costume.name, recolorIdx: i });
+            panel.classList.add('hidden');
+            renderCostumeModal(hero);
+            renderGrid();
+        });
+        panel.appendChild(btn);
+    });
+
+    trigger.addEventListener('click', e => {
+        e.stopPropagation();
+        const wasHidden = panel.classList.contains('hidden');
+        document.querySelectorAll('.recolor-panel').forEach(p => p.classList.add('hidden'));
+        if (wasHidden) panel.classList.remove('hidden');
+    });
+
+    wrapper.append(trigger, panel);
+    return wrapper;
+}
+
+// Close recolor panels on outside click
+document.addEventListener('click', () => {
+    document.querySelectorAll('.recolor-panel').forEach(p => p.classList.add('hidden'));
+});
+
+// Costume modal listeners
+document.getElementById('modal-costume-btn').addEventListener('click', () => {
+    const hero = currentHero;
+    closeModal();
+    openCostumeModal(hero);
+});
+
+document.getElementById('costume-modal').addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeCostumeModal();
+});
+
+document.getElementById('costume-modal-close').addEventListener('click', closeCostumeModal);
+
+document.getElementById('costume-back-btn').addEventListener('click', () => {
+    const hero = costumeModalHero;
+    closeCostumeModal();
+    if (hero) openModal(hero);
+});
