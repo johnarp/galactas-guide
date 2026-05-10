@@ -98,3 +98,84 @@ function showNotice(message, type) {
 }
 
 loadSettings();
+
+// ── Costume catalog ───────────────────────────────────────────────────────────
+ 
+let catalogData = null; // cached after first fetch
+ 
+async function openCatalog() {
+    const modal = document.getElementById('costume-catalog-modal');
+    modal.classList.remove('hidden');
+ 
+    if (catalogData) return; // already built
+ 
+    try {
+        const [costumes, rarities] = await Promise.all([
+            fetch('../app/costumes.json').then(r => r.json()),
+            fetch('../app/rarities.json').then(r => r.json()),
+        ]);
+        catalogData = { costumes, rarities };
+        buildCatalog(costumes, rarities);
+    } catch {
+        document.getElementById('costume-catalog-list').innerHTML =
+            '<p style="opacity:0.4;font-size:0.85rem">Could not load costume data.</p>';
+    }
+}
+ 
+function buildCatalog(costumes, rarities) {
+    // Subtitle: total count
+    const heroCount = new Set(costumes.map(c => c.hero)).size;
+    document.getElementById('catalog-subtitle').textContent =
+        `${costumes.length} Costume${costumes.length !== 1 ? 's' : ''} across ${heroCount} Hero${heroCount !== 1 ? 'es' : ''}`;
+ 
+    // Group by hero (preserving order from JSON)
+    const groups = {};
+    costumes.forEach(c => {
+        if (!groups[c.hero]) groups[c.hero] = [];
+        groups[c.hero].push(c);
+    });
+ 
+    const container = document.getElementById('costume-catalog-list');
+    container.innerHTML = '';
+ 
+    Object.entries(groups).forEach(([hero, list]) => {
+        const group = document.createElement('div');
+        group.className = 'catalog-group';
+ 
+        const heading = document.createElement('div');
+        heading.className = 'catalog-hero-name';
+        heading.textContent = `${hero}`;
+        group.appendChild(heading);
+ 
+        list.forEach(costume => {
+            const rarity = rarities.find(r => r.name === costume.rarity);
+            const row    = document.createElement('div');
+            row.className = 'catalog-item';
+ 
+            row.innerHTML = `
+                ${costume.icon
+                    ? `<img src="${costume.icon}" alt="${costume.name}" class="catalog-icon">`
+                    : `<div class="catalog-icon-placeholder"></div>`}
+                <span class="catalog-name">${costume.name}</span>
+                <span class="catalog-rarity" style="color:${rarity?.color ?? 'inherit'}">
+                    ${rarity?.icon ? `<img src="${rarity.icon}" alt="" class="rarity-icon">` : ''}
+                    ${costume.rarity}
+                </span>
+            `;
+            group.appendChild(row);
+        });
+ 
+        container.appendChild(group);
+    });
+}
+ 
+document.getElementById('costume-catalog-btn').addEventListener('click', openCatalog);
+ 
+document.getElementById('costume-catalog-close').addEventListener('click', () => {
+    document.getElementById('costume-catalog-modal').classList.add('hidden');
+});
+ 
+document.getElementById('costume-catalog-modal').addEventListener('click', e => {
+    if (e.target === e.currentTarget)
+        document.getElementById('costume-catalog-modal').classList.add('hidden');
+});

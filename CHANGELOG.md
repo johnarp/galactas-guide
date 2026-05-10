@@ -1,5 +1,6 @@
 # Changelog
 
+[1.4.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.1
 [1.4.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.0
 [1.3.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.3.1
 [1.3.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.3.0
@@ -8,6 +9,17 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.4.1] - 2026-05-10
+
+### Added
+
+- Supported Costumes list in Settings
+- Some more Costumes
+
+### Changed
+
+- [README](./README.md) preview images
 
 ## [1.4.0] - 2026-05-09
 

@@ -2256,3 +2256,79 @@ main {
  
 [data-hover-image="off"] .hero-prestige               { display : none; }
 [data-hover-image="off"] .hero-card:hover .hero-art   { opacity : 1;    }
+
+/* ============================================================
+   COSTUME CATALOG (Settings modal)
+   ============================================================ */
+ 
+.costume-catalog {
+    max-height    : 65vh;
+    overflow-y    : auto;
+    padding-right : 0.2rem;
+}
+ 
+/* Each hero section IS the grid — header spans all columns */
+.catalog-group {
+    display               : grid;
+    gap                   : 0.5rem;
+    grid-template-columns : repeat(auto-fill, minmax(6rem, 1fr));
+    margin-bottom         : 1.5rem;
+}
+ 
+.catalog-hero-name {
+    border-bottom  : 1px solid rgba(255, 255, 255, 0.08);
+    font-size      : 0.72rem;
+    font-weight    : 700;
+    grid-column    : 1 / -1;   /* span all columns */
+    letter-spacing : 0.06em;
+    margin-bottom  : 0.1rem;
+    opacity        : 0.45;
+    padding-bottom : 0.35rem;
+    text-transform : uppercase;
+}
+ 
+.catalog-item {
+    background     : var(--surface);
+    border-radius  : var(--radius-sm);
+    display        : flex;
+    flex-direction : column;
+    overflow       : hidden;
+}
+ 
+.catalog-icon {
+    aspect-ratio    : 1 / 1;
+    display         : block;
+    object-fit      : cover;
+    object-position : top center;
+    width           : 100%;
+}
+ 
+.catalog-icon-placeholder {
+    aspect-ratio : 1 / 1;
+    background   : var(--nav);
+    width        : 100%;
+}
+ 
+.catalog-name {
+    font-size      : 0.6rem;
+    font-weight    : 800;
+    line-height    : 1.2;
+    padding        : 0.3rem 0.35rem 0.1rem;
+    text-transform : uppercase;
+}
+ 
+.catalog-rarity {
+    align-items    : center;
+    display        : flex;
+    font-size      : 0.58rem;
+    font-weight    : 700;
+    gap            : 0.2rem;
+    padding        : 0 0.35rem 0.35rem;
+    text-transform : uppercase;
+}
+ 
+.catalog-rarity .rarity-icon {
+    height     : 0.72rem;
+    object-fit : contain;
+    width      : auto;
+}
