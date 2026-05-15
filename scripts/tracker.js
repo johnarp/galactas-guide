@@ -6,7 +6,7 @@ import { getHeroData, setHeroData, clearHeroData, getFavorites, toggleFavorite,
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 let heroes = [], roles = [], ranks = [], roleIconMap = {};
-let costumes = [], rarities = [];
+let costumes = [], rarities = [], difficulties = [];
 
 // ── UI state ──────────────────────────────────────────────────────────────────
 
@@ -23,17 +23,18 @@ let iconSize       = 'md';    // 'sm' | 'md' | 'lg'  — icon view
 
 async function init() {
     try {
-        const [hRes, roRes, raRes, coRes, rarRes] = await Promise.all([
+        const [hRes, roRes, raRes, coRes, rarRes, difRes] = await Promise.all([
             fetch('../app/heroes.json'),
             fetch('../app/roles.json'),
             fetch('../app/ranks.json'),
             fetch('../app/costumes.json'),
             fetch('../app/rarities.json'),
+            fetch('../app/difficulties.json')
         ]);
 
         let officialHeroes;
-        [officialHeroes, roles, ranks, costumes, rarities] = await Promise.all([
-            hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(),
+        [officialHeroes, roles, ranks, costumes, rarities, difficulties] = await Promise.all([
+            hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(), difRes.json(),
         ]);
 
         const customHeroes = getCreators()
@@ -61,6 +62,9 @@ async function init() {
 // through to heroes.json automatically — no need to duplicate paths everywhere.
 
 function getActiveImages(hero) {
+    const { showCostumes } = getSettings();
+    if ((showCostumes ?? 'on') === 'off') return hero;
+
     const cd = getCostumeData(hero.name);
     if (!cd?.name) return hero;
 
@@ -99,6 +103,10 @@ function cardColor(hero) {
         const firstRole = Array.isArray(hero.role) ? hero.role[0] : hero.role;
         const role      = roles.find(r => r.name === firstRole);
         return role?.color ?? 'var(--surface)';
+    }
+    if (cardBgMode === 'difficulty') {
+        const diff = difficulties.find(d => d.difficulty === hero.difficulty);
+        return diff?.color ?? 'var(--surface)';
     }
     if (cardBgMode === 'none') return 'var(--surface)';
     return hero.color ?? '#200630';
@@ -340,6 +348,27 @@ function byLevelUp(a, b) {
     return da - db;
 }
 
+function rankUpDistance(hero) {
+    const d = getHeroData(hero.name);
+    if (!d?.rank) return null;
+
+    const rank = ranks.find(r => r.title === d.rank);
+    if (!rank || rank.ppl === null) return null;
+
+    const levelsLeft = rank.maxLevel - (d.level ?? rank.minLevel);
+    const pointsToFill = rank.ppl - (d.points ?? 0);
+
+    return levelsLeft * rank.ppl + pointsToFill;
+}
+
+function byRankUp(a, b) {
+    const [da, db] = [rankUpDistance(a), rankUpDistance(b)];
+    if (da === null && db === null) return a.name.localeCompare(b.name);
+    if (da === null) return 1;
+    if (db === null) return -1;
+    return da - db;
+}
+
 // ── Filter + sort ─────────────────────────────────────────────────────────────
 
 function getFilteredSorted() {
@@ -373,6 +402,10 @@ function getFilteredSorted() {
             case 'rel-desc':     return (b.season ?? 999) - (a.season ?? 999);
             case 'levelup-asc':  return byLevelUp(a, b);
             case 'levelup-desc': return byLevelUp(b, a);
+            case 'rankup-asc':   return byRankUp(a, b);
+            case 'rankup-desc':  return byRankUp(b, a);
+            case 'diff-asc':     return (a.difficulty ?? 0) - (b.difficulty ?? 0);
+            case 'diff-desc':    return (b.difficulty ?? 0) - (a.difficulty ?? 0);
             default:             return 0;
         }
     });

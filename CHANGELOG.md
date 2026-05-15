@@ -1,5 +1,6 @@
 # Changelog
 
+[1.4.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.2
 [1.4.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.1
 [1.4.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.0
 [1.3.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.3.1
@@ -9,6 +10,20 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.4.2] - 2026-05-15
+
+### Added
+
+- Devil Dinosaur
+- Sort by closest to/farthest from rank up
+- Sort by difficulty
+- Show Costumes toggle
+- Difficulty card background mode
+
+### Changed
+
+- Ability inputs in Creator no longer transform to uppercase
 
 ## [1.4.1] - 2026-05-10
 

@@ -243,6 +243,20 @@
         "icon": "../assets/costumes/deadpool/icon_x-force.png"
     },
     {
+        "hero": "Devil Dinosaur",
+        "name": "Chrono-Armor",
+        "rarity": "Epic",
+        "image": "../assets/costumes/devil-dinosaur/chrono-armor.png",
+        "icon": "../assets/costumes/devil-dinosaur/icon_chrono-armor.png"
+    },
+    {
+        "hero": "Devil Dinosaur",
+        "name": "Corporate Cruncher",
+        "rarity": "Rare",
+        "image": "../assets/costumes/devil-dinosaur/corporate-cruncher.png",
+        "icon": "../assets/costumes/devil-dinosaur/icon_corporate-cruncher.png"
+    },
+    {
         "hero": "Doctor Strange",
         "name": "Doctor Strange in the Multiverse of Madness",
         "rarity": "Legendary",
@@ -906,6 +920,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/phoenix/seat-of-spring.png",
         "icon": "../assets/costumes/phoenix/icon_seat-of-spring.png"
+    },
+    {
+        "hero": "Phoenix",
+        "name": "Verdant Vogue",
+        "rarity": "Epic",
+        "image": "../assets/costumes/phoenix/verdant-vogue.png",
+        "icon": "../assets/costumes/phoenix/icon_verdant-vogue.png"
     },
     {
         "hero": "Phoenix",

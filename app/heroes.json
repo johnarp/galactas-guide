@@ -8,7 +8,8 @@
         "icon-lord": "../assets/heroes/adam-warlock/icon-lord.webp",
         "icon-champion": "../assets/heroes/adam-warlock/icon-lord.webp",
         "color": "#c27643",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Angela",
@@ -19,7 +20,8 @@
         "icon-lord": "../assets/heroes/angela/icon-lord.webp",
         "icon-champion": "../assets/heroes/angela/icon-lord.webp",
         "color": "#ec983d",
-        "season": 4
+        "season": 4,
+        "difficulty": 4
     },
     {
         "name": "Black Cat",
@@ -30,7 +32,8 @@
         "icon-lord": "../assets/heroes/black-cat/icon-lord.webp",
         "icon-champion": "../assets/heroes/black-cat/icon-lord.webp",
         "color": "#987df9",
-        "season": 7.5
+        "season": 7.5,
+        "difficulty": 4
     },
     {
         "name": "Black Panther",
@@ -41,7 +44,8 @@
         "icon-lord": "../assets/heroes/black-panther/icon-lord.webp",
         "icon-champion": "../assets/heroes/black-panther/icon-lord.webp",
         "color": "#644579",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Black Widow",
@@ -52,7 +56,8 @@
         "icon-lord": "../assets/heroes/black-widow/icon-lord.webp",
         "icon-champion": "../assets/heroes/black-widow/icon-lord.webp",
         "color": "#555b6a",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Blade",
@@ -63,7 +68,8 @@
         "icon-lord": "../assets/heroes/blade/icon-lord.webp",
         "icon-champion": "../assets/heroes/blade/icon-lord.webp",
         "color": "#f15551",
-        "season": 3.5
+        "season": 3.5,
+        "difficulty": 3
     },
     {
         "name": "Bruce Banner",
@@ -84,7 +90,8 @@
             }
         ],
         "color": "#387458",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Captain America",
@@ -95,7 +102,8 @@
         "icon-lord": "../assets/heroes/captain-america/icon-lord.webp",
         "icon-champion": "../assets/heroes/captain-america/icon-lord.webp",
         "color": "#3972b1",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Cloak & Dagger",
@@ -116,7 +124,8 @@
             }
         ],
         "color": "#889bfd",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Daredevil",
@@ -127,7 +136,8 @@
         "icon-lord": "../assets/heroes/daredevil/icon-lord.webp",
         "icon-champion": "../assets/heroes/daredevil/icon-lord.webp",
         "color": "#d24466",
-        "season": 4.5
+        "season": 4.5,
+        "difficulty": 3
     },
     {
         "name": "Deadpool",
@@ -138,7 +148,20 @@
         "icon-lord": "../assets/heroes/deadpool/icon-lord.webp",
         "icon-champion": "../assets/heroes/deadpool/icon-lord.webp",
         "color": "#f15551",
-        "season": 6
+        "season": 6,
+        "difficulty": 0
+    },
+    {
+        "name": "Devil Dinosaur",
+        "role": "Vanguard",
+        "image": "../assets/heroes/devil-dinosaur/image.png",
+        "prestige": "../assets/heroes/devil-dinosaur/prestige.png",
+        "icon": "../assets/heroes/devil-dinosaur/icon.webp",
+        "icon-lord": "../assets/heroes/devil-dinosaur/icon-lord.webp",
+        "icon-champion": "../assets/heroes/devil-dinosaur/icon-lord.webp",
+        "color": "#a14d4d",
+        "season": 8,
+        "difficulty": 3
     },
     {
         "name": "Doctor Strange",
@@ -149,7 +172,8 @@
         "icon-lord": "../assets/heroes/doctor-strange/icon-lord.webp",
         "icon-champion": "../assets/heroes/doctor-strange/icon-lord.webp",
         "color": "#db635c",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Elsa Bloodstone",
@@ -160,7 +184,8 @@
         "icon-lord": "../assets/heroes/elsa-bloodstone/icon-lord.webp",
         "icon-champion": "../assets/heroes/elsa-bloodstone/icon-lord.webp",
         "color": "#dc7449",
-        "season": 6.5
+        "season": 6.5,
+        "difficulty": 3
     },
     {
         "name": "Emma Frost",
@@ -171,7 +196,8 @@
         "icon-lord": "../assets/heroes/emma-frost/icon-lord.webp",
         "icon-champion": "../assets/heroes/emma-frost/icon-lord.webp",
         "color": "#3ec6ec",
-        "season": 2
+        "season": 2,
+        "difficulty": 3
     },
     {
         "name": "Gambit",
@@ -182,7 +208,8 @@
         "icon-lord": "../assets/heroes/gambit/icon-lord.webp",
         "icon-champion": "../assets/heroes/gambit/icon-lord.webp",
         "color": "#db6cc0",
-        "season": 5
+        "season": 5,
+        "difficulty": 4
     },
     {
         "name": "Groot",
@@ -193,7 +220,8 @@
         "icon-lord": "../assets/heroes/groot/icon-lord.webp",
         "icon-champion": "../assets/heroes/groot/icon-lord.webp",
         "color": "#83a862",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Hawkeye",
@@ -204,7 +232,8 @@
         "icon-lord": "../assets/heroes/hawkeye/icon-lord.webp",
         "icon-champion": "../assets/heroes/hawkeye/icon-lord.webp",
         "color": "#8969a6",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Hela",
@@ -215,7 +244,8 @@
         "icon-lord": "../assets/heroes/hela/icon-lord.webp",
         "icon-champion": "../assets/heroes/hela/icon-lord.webp",
         "color": "#388c8c",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Human Torch",
@@ -226,7 +256,8 @@
         "icon-lord": "../assets/heroes/human-torch/icon-lord.webp",
         "icon-champion": "../assets/heroes/human-torch/icon-lord.webp",
         "color": "#c45b4d",
-        "season": 1.5
+        "season": 1.5,
+        "difficulty": 3
     },
     {
         "name": "Invisible Woman",
@@ -237,7 +268,8 @@
         "icon-lord": "../assets/heroes/invisible-woman/icon-lord.webp",
         "icon-champion": "../assets/heroes/invisible-woman/icon-lord.webp",
         "color": "#00a6e3",
-        "season": 1
+        "season": 1,
+        "difficulty": 4
     },
     {
         "name": "Iron Fist",
@@ -248,7 +280,8 @@
         "icon-lord": "../assets/heroes/iron-fist/icon-lord.webp",
         "icon-champion": "../assets/heroes/iron-fist/icon-lord.webp",
         "color": "#1e9988",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Iron Man",
@@ -259,7 +292,8 @@
         "icon-lord": "../assets/heroes/iron-man/icon-lord.webp",
         "icon-champion": "../assets/heroes/iron-man/icon-lord.webp",
         "color": "#dd5067",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Jeff the Land Shark",
@@ -270,7 +304,8 @@
         "icon-lord": "../assets/heroes/jeff-the-land-shark/icon-lord.webp",
         "icon-champion": "../assets/heroes/jeff-the-land-shark/icon-lord.webp",
         "color": "#5f79a5",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "Loki",
@@ -281,7 +316,8 @@
         "icon-lord": "../assets/heroes/loki/icon-lord.webp",
         "icon-champion": "../assets/heroes/loki/icon-lord.webp",
         "color": "#4c865c",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Luna Snow",
@@ -292,7 +328,8 @@
         "icon-lord": "../assets/heroes/luna-snow/icon-lord.webp",
         "icon-champion": "../assets/heroes/luna-snow/icon-lord.webp",
         "color": "#1165bf",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Magik",
@@ -309,7 +346,8 @@
             }
         ],
         "color": "#8f615f",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Magneto",
@@ -320,7 +358,8 @@
         "icon-lord": "../assets/heroes/magneto/icon-lord.webp",
         "icon-champion": "../assets/heroes/magneto/icon-lord.webp",
         "color": "#5a5189",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Mantis",
@@ -331,7 +370,8 @@
         "icon-lord": "../assets/heroes/mantis/icon-lord.webp",
         "icon-champion": "../assets/heroes/mantis/icon-lord.webp",
         "color": "#6c8c66",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "Mister Fantastic",
@@ -342,7 +382,8 @@
         "icon-lord": "../assets/heroes/mister-fantastic/icon-lord.webp",
         "icon-champion": "../assets/heroes/mister-fantastic/icon-lord.webp",
         "color": "#19a7cb",
-        "season": 1
+        "season": 1,
+        "difficulty": 3
     },
     {
         "name": "Moon Knight",
@@ -353,7 +394,8 @@
         "icon-lord": "../assets/heroes/moon-knight/icon-lord.webp",
         "icon-champion": "../assets/heroes/moon-knight/icon-lord.webp",
         "color": "#678094",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Namor",
@@ -364,7 +406,8 @@
         "icon-lord": "../assets/heroes/namor/icon-lord.webp",
         "icon-champion": "../assets/heroes/namor/icon-lord.webp",
         "color": "#22938a",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Peni Parker",
@@ -375,7 +418,8 @@
         "icon-lord": "../assets/heroes/peni-parker/icon-lord.webp",
         "icon-champion": "../assets/heroes/peni-parker/icon-lord.webp",
         "color": "#db5151",
-        "season": 0
+        "season": 0,
+        "difficulty": 4
     },
     {
         "name": "Phoenix",
@@ -386,7 +430,8 @@
         "icon-lord": "../assets/heroes/phoenix/icon-lord.webp",
         "icon-champion": "../assets/heroes/phoenix/icon-lord.webp",
         "color": "#db635c",
-        "season": 3
+        "season": 3,
+        "difficulty": 3
     },
     {
         "name": "Psylocke",
@@ -397,7 +442,8 @@
         "icon-lord": "../assets/heroes/psylocke/icon-lord.webp",
         "icon-champion": "../assets/heroes/psylocke/icon-lord.webp",
         "color": "#a85bbb",
-        "season": 0
+        "season": 0,
+        "difficulty": 5
     },
     {
         "name": "Rocket Raccoon",
@@ -408,7 +454,8 @@
         "icon-lord": "../assets/heroes/rocket-raccoon/icon-lord.webp",
         "icon-champion": "../assets/heroes/rocket-raccoon/icon-lord.webp",
         "color": "#d47253",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "Rogue",
@@ -419,7 +466,8 @@
         "icon-lord": "../assets/heroes/rogue/icon-lord.webp",
         "icon-champion": "../assets/heroes/rogue/icon-lord.webp",
         "color": "#cac055",
-        "season": 5.5
+        "season": 5.5,
+        "difficulty": 5
     },
     {
         "name": "Scarlet Witch",
@@ -430,7 +478,8 @@
         "icon-lord": "../assets/heroes/scarlet-witch/icon-lord.webp",
         "icon-champion": "../assets/heroes/scarlet-witch/icon-lord.webp",
         "color": "#d24466",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "Spider-Man",
@@ -441,7 +490,8 @@
         "icon-lord": "../assets/heroes/spider-man/icon-lord.webp",
         "icon-champion": "../assets/heroes/spider-man/icon-lord.webp",
         "color": "#da515d",
-        "season": 0
+        "season": 0,
+        "difficulty": 5
     },
     {
         "name": "Squirrel Girl",
@@ -452,7 +502,8 @@
         "icon-lord": "../assets/heroes/squirrel-girl/icon-lord.webp",
         "icon-champion": "../assets/heroes/squirrel-girl/icon-lord.webp",
         "color": "#d38850",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "Star-Lord",
@@ -463,7 +514,8 @@
         "icon-lord": "../assets/heroes/star-lord/icon-lord.webp",
         "icon-champion": "../assets/heroes/star-lord/icon-lord.webp",
         "color": "#467ed7",
-        "season": 0
+        "season": 0,
+        "difficulty": 2
     },
     {
         "name": "Storm",
@@ -474,7 +526,8 @@
         "icon-lord": "../assets/heroes/storm/icon-lord.webp",
         "icon-champion": "../assets/heroes/storm/icon-lord.webp",
         "color": "#454f76",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "The Punisher",
@@ -485,7 +538,8 @@
         "icon-lord": "../assets/heroes/the-punisher/icon-lord.webp",
         "icon-champion": "../assets/heroes/the-punisher/icon-lord.webp",
         "color": "#495366",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "The Thing",
@@ -496,7 +550,8 @@
         "icon-lord": "../assets/heroes/the-thing/icon-lord.webp",
         "icon-champion": "../assets/heroes/the-thing/icon-lord.webp",
         "color": "#d9994f",
-        "season": 1.5
+        "season": 1.5,
+        "difficulty": 1
     },
     {
         "name": "Thor",
@@ -507,7 +562,8 @@
         "icon-lord": "../assets/heroes/thor/icon-lord.webp",
         "icon-champion": "../assets/heroes/thor/icon-lord.webp",
         "color": "#5964ab",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Ultron",
@@ -518,7 +574,8 @@
         "icon-lord": "../assets/heroes/ultron/icon-lord.webp",
         "icon-champion": "../assets/heroes/ultron/icon-lord.webp",
         "color": "#6b789e",
-        "season": 2.5
+        "season": 2.5,
+        "difficulty": 2
     },
     {
         "name": "Venom",
@@ -529,7 +586,8 @@
         "icon-lord": "../assets/heroes/venom/icon-lord.webp",
         "icon-champion": "../assets/heroes/venom/icon-lord.webp",
         "color": "#2a2e3d",
-        "season": 0
+        "season": 0,
+        "difficulty": 1
     },
     {
         "name": "White Fox",
@@ -546,7 +604,8 @@
             }
         ],
         "color": "#51bbbe",
-        "season": 7
+        "season": 7,
+        "difficulty": 3
     },
     {
         "name": "Winter Soldier",
@@ -557,7 +616,8 @@
         "icon-lord": "../assets/heroes/winter-soldier/icon-lord.webp",
         "icon-champion": "../assets/heroes/winter-soldier/icon-lord.webp",
         "color": "#5a583b",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     },
     {
         "name": "Wolverine",
@@ -568,6 +628,7 @@
         "icon-lord": "../assets/heroes/wolverine/icon-lord.webp",
         "icon-champion": "../assets/heroes/wolverine/icon-lord.webp",
         "color": "#be962a",
-        "season": 0
+        "season": 0,
+        "difficulty": 3
     }
 ]

@@ -1904,7 +1904,6 @@ main {
     font-weight: 700;
     min-width: 0;
     padding: 0.3rem 0.45rem;
-    text-transform: uppercase;
     transition: border-color var(--transition);
     width: 100%;
 }
@@ -2089,6 +2088,7 @@ main {
     font-weight: 900;
     min-width: 3rem;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .view-ability-name {

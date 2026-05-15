@@ -25,7 +25,7 @@ function loadSettings() {
 }
 
 function getDefaultSetting(key) {
-    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on' };
+    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on', showCostumes: 'on' };
     return defaults[key] ?? null;
 }
 

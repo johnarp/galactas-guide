@@ -1,0 +1,26 @@
+[
+    {
+        "difficulty": 0,
+        "color": "#a8a8a8"
+    },
+    {
+        "difficulty": 1,
+        "color": "#30a54d"
+    },
+    {
+        "difficulty": 2,
+        "color": "#3089a5"
+    },
+    {
+        "difficulty": 3,
+        "color": "#8b30a5"
+    },
+    {
+        "difficulty": 4,
+        "color": "#a56c30"
+    },
+    {
+        "difficulty": 5,
+        "color": "#a53030"
+    }
+]

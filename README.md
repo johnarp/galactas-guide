@@ -62,9 +62,11 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Role filter images remain white in Rivals theme
 - Hela's hover image is cut off
 - Icons are of varying quality
-- Icon changing through the proficiency modal requires existing and opening again to see in the modal
+- Icon changing through the proficiency modal requires exiting and opening again to see in the modal
 - To apply icon or costume change, the proficiency modal can only be closed, not saved
 - There are no Lord/Champion icons for costumes
+- There is no visible difference between icon sizes on mobile
+- Large and medium cards on mobile are too large (one per row)
 
 ## 🗺️ Roadmap
 
@@ -83,18 +85,20 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 ### Tracker
 
 - Heroes pop-out when hovering
+- Change color and shape of favorite button
 
 ### Creator
 
 - Icons
 - Upload custom images
+- Set a difficulty
 
 ### Settings
 
 - More options for Show Proficiency
 - Show/Hide hero role icon
 - Option to disable Lord/Champion icons
-- Option to disable Costume icons
+- Better organization
 
 ### Profile
 
