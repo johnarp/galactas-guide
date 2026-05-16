@@ -86,6 +86,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 - Heroes pop-out when hovering
 - Change color and shape of favorite button
+- Tracked only filter
 
 ### Creator
 
@@ -99,6 +100,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Show/Hide hero role icon
 - Option to disable Lord/Champion icons
 - Better organization
+- Auto Track All; defaults hero to Agent 1, 0 points
 
 ### Profile
 

@@ -22,8 +22,3 @@
 - Hero Nameplates
 - Rarity Colors
 - Rarity Icons
-
-## Temporary
-
-- Devil Dinosaur Prestige Image - [RivalSkins](https://rivalskins.com/)
-- Devil Dinosaur Color - [Marvel Rivals Wiki | Fandom](https://marvelrivals.fandom.com/wiki/Marvel_Rivals_Wiki)

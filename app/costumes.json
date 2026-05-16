@@ -8,10 +8,24 @@
     },
     {
         "hero": "Adam Warlock",
+        "name": "Guardians of the Galaxy Vol. 3",
+        "rarity": "Epic",
+        "image": "../assets/costumes/adam-warlock/guardians-of-the-galaxy-vol-3.png",
+        "icon": "../assets/costumes/adam-warlock/icon_guardians-of-the-galaxy-vol-3.png"
+    },
+    {
+        "hero": "Adam Warlock",
         "name": "Magus",
         "rarity": "Epic",
         "image": "../assets/costumes/adam-warlock/magus.png",
         "icon": "../assets/costumes/adam-warlock/icon_magus.png"
+    },
+    {
+        "hero": "Adam Warlock",
+        "name": "Cosmic Jade",
+        "rarity": "Rare",
+        "image": "../assets/costumes/adam-warlock/cosmic-jade.png",
+        "icon": "../assets/costumes/adam-warlock/icon_cosmic-jade.png"
     },
     {
         "hero": "Adam Warlock",
@@ -61,6 +75,20 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/black-panther/damisa-sarki.png",
         "icon": "../assets/costumes/black-panther/icon_damisa-sarki.png"
+    },
+    {
+        "hero": "Black Panther",
+        "name": "Bast's Chosen",
+        "rarity": "Epic",
+        "image": "../assets/costumes/black-panther/basts-chosen.png",
+        "icon": "../assets/costumes/black-panther/icon_basts-chosen.png"
+    },
+    {
+        "hero": "Black Panther",
+        "name": "Galactic Claw",
+        "rarity": "Epic",
+        "image": "../assets/costumes/black-panther/galactic-claw.png",
+        "icon": "../assets/costumes/black-panther/icon_galactic-claw.png"
     },
     {
         "hero": "Black Panther",
@@ -127,6 +155,13 @@
     },
     {
         "hero": "Bruce Banner",
+        "name": "Infinity Hulk",
+        "rarity": "Epic",
+        "image": "../assets/costumes/bruce-banner/infinity-hulk.png",
+        "icon": "../assets/costumes/bruce-banner/icon_infinity-hulk.png"
+    },
+    {
+        "hero": "Bruce Banner",
         "name": "Maestro",
         "rarity": "Epic",
         "image": "../assets/costumes/bruce-banner/maestro.png",
@@ -155,10 +190,31 @@
     },
     {
         "hero": "Captain America",
+        "name": "Captain Gladiator",
+        "rarity": "Epic",
+        "image": "../assets/costumes/captain-america/captain-gladiator.png",
+        "icon": "../assets/costumes/captain-america/icon_captain-gladiator.png"
+    },
+    {
+        "hero": "Captain America",
         "name": "Cursed Captain",
         "rarity": "Epic",
         "image": "../assets/costumes/captain-america/cursed-captain.png",
         "icon": "../assets/costumes/captain-america/icon_cursed-captain.png"
+    },
+    {
+        "hero": "Captain America",
+        "name": "Galactic Talon",
+        "rarity": "Epic",
+        "image": "../assets/costumes/captain-america/galactic-talon.png",
+        "icon": "../assets/costumes/captain-america/icon_galactic-talon.png"
+    },
+    {
+        "hero": "Captain America",
+        "name": "Captain A.I.M.erica",
+        "rarity": "Rare",
+        "image": "../assets/costumes/captain-america/captain-aimerica.png",
+        "icon": "../assets/costumes/captain-america/icon_captain-aimerica.png"
     },
     {
         "hero": "Captain America",
@@ -173,6 +229,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/cloak-dagger/dance-partner.png",
         "icon": "../assets/costumes/cloak-dagger/icon_dance-partner.png"
+    },
+    {
+        "hero": "Cloak & Dagger",
+        "name": "Growth & Decay",
+        "rarity": "Epic",
+        "image": "../assets/costumes/cloak-dagger/growth-decay.png",
+        "icon": "../assets/costumes/cloak-dagger/icon_growth-decay.png"
     },
     {
         "hero": "Cloak & Dagger",
@@ -272,6 +335,20 @@
     },
     {
         "hero": "Doctor Strange",
+        "name": "God of Magic",
+        "rarity": "Epic",
+        "image": "../assets/costumes/doctor-strange/god-of-magic.png",
+        "icon": "../assets/costumes/doctor-strange/icon_god-of-magic.png"
+    },
+    {
+        "hero": "Doctor Strange",
+        "name": "Sorcerer Supreme of the Galaxy",
+        "rarity": "Epic",
+        "image": "../assets/costumes/doctor-strange/sorcerer-supreme-of-the-galaxy.png",
+        "icon": "../assets/costumes/doctor-strange/icon_sorcerer-supreme-of-the-galaxy.png"
+    },
+    {
+        "hero": "Doctor Strange",
         "name": "Stephen Sanders: The Doctor",
         "rarity": "Epic",
         "image": "../assets/costumes/doctor-strange/stephen-sanders-the-doctor.png",
@@ -283,6 +360,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/doctor-strange/astral-wanderer.png",
         "icon": "../assets/costumes/doctor-strange/icon_astral-wanderer.png"
+    },
+    {
+        "hero": "Doctor Strange",
+        "name": "Master of Black Magic",
+        "rarity": "Rare",
+        "image": "../assets/costumes/doctor-strange/master-of-black-magic.png",
+        "icon": "../assets/costumes/doctor-strange/icon_master-of-black-magic.png"
     },
     {
         "hero": "Elsa Bloodstone",
@@ -382,6 +466,20 @@
     },
     {
         "hero": "Groot",
+        "name": "Holiday Happiness",
+        "rarity": "Epic",
+        "image": "../assets/costumes/groot/holiday-happiness.png",
+        "icon": "../assets/costumes/groot/icon_holiday-happiness.png"
+    },
+    {
+        "hero": "Groot",
+        "name": "Abies Algae",
+        "rarity": "Rare",
+        "image": "../assets/costumes/groot/abies-algae.png",
+        "icon": "../assets/costumes/groot/icon_abies-algae.png"
+    },
+    {
+        "hero": "Groot",
         "name": "Carved Traveler",
         "rarity": "Rare",
         "image": "../assets/costumes/groot/carved-traveler.png",
@@ -410,6 +508,13 @@
     },
     {
         "hero": "Hawkeye",
+        "name": "Freefall",
+        "rarity": "Epic",
+        "image": "../assets/costumes/hawkeye/freefall.png",
+        "icon": "../assets/costumes/hawkeye/icon_freefall.png"
+    },
+    {
+        "hero": "Hawkeye",
         "name": "Galactic Fangs",
         "rarity": "Epic",
         "image": "../assets/costumes/hawkeye/galactic-fangs.png",
@@ -421,6 +526,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/hawkeye/argent-archer.png",
         "icon": "../assets/costumes/hawkeye/icon_argent-archer.png"
+    },
+    {
+        "hero": "Hawkeye",
+        "name": "Tiger's Eye",
+        "rarity": "Rare",
+        "image": "../assets/costumes/hawkeye/tigers-eye.png",
+        "icon": "../assets/costumes/hawkeye/icon_tigers-eye.png"
     },
     {
         "hero": "Hela",
@@ -457,10 +569,24 @@
     },
     {
         "hero": "Hela",
+        "name": "Goddess of Death",
+        "rarity": "Epic",
+        "image": "../assets/costumes/hela/goddess-of-death.png",
+        "icon": "../assets/costumes/hela/icon_goddess-of-death.png"
+    },
+    {
+        "hero": "Hela",
         "name": "Merciful Queen",
         "rarity": "Rare",
         "image": "../assets/costumes/hela/merciful-queen.png",
         "icon": "../assets/costumes/hela/icon_merciful-queen.png"
+    },
+    {
+        "hero": "Hela",
+        "name": "Ultimate",
+        "rarity": "Rare",
+        "image": "../assets/costumes/hela/ultimate.png",
+        "icon": "../assets/costumes/hela/icon_ultimate.png"
     },
     {
         "hero": "Human Torch",
@@ -565,6 +691,13 @@
     },
     {
         "hero": "Iron Fist",
+        "name": "Sword Master",
+        "rarity": "Epic",
+        "image": "../assets/costumes/iron-fist/sword-master.png",
+        "icon": "../assets/costumes/iron-fist/icon_sword-master.png"
+    },
+    {
+        "hero": "Iron Fist",
         "name": "Martial Arts Savant",
         "rarity": "Rare",
         "image": "../assets/costumes/iron-fist/martial-arts-savant.png",
@@ -593,6 +726,13 @@
     },
     {
         "hero": "Iron Man",
+        "name": "Superior Iron Man",
+        "rarity": "Epic",
+        "image": "../assets/costumes/iron-man/superior-iron-man.png",
+        "icon": "../assets/costumes/iron-man/icon_superior-iron-man.png"
+    },
+    {
+        "hero": "Iron Man",
         "name": "Armor Model 42",
         "rarity": "Rare",
         "image": "../assets/costumes/iron-man/armor-model-42.png",
@@ -607,10 +747,55 @@
     },
     {
         "hero": "Jeff the Land Shark",
+        "name": "Devil Landshark",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/jeff-the-land-shark/devil-landshark.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon_devil-landshark.png",
+        "recolors": [
+            {
+                "name": "Magma Menace",
+                "image": "../assets/costumes/jeff-the-land-shark/magma-menace.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_magma-menace.png"
+            },
+            {
+                "name": "Rosy Ruin",
+                "image": "../assets/costumes/jeff-the-land-shark/rosy-ruin.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_rosy-ruin.png"
+            }
+        ]
+    },
+    {
+        "hero": "Jeff the Land Shark",
         "name": "Devouring Duo",
         "rarity": "Legendary",
         "image": "../assets/costumes/jeff-the-land-shark/devouring-duo.png",
         "icon": "../assets/costumes/jeff-the-land-shark/icon_devouring-duo.png"
+    },
+    {
+        "hero": "Jeff the Land Shark",
+        "name": "Cuddly Fuzzlefin",
+        "rarity": "Epic",
+        "image": "../assets/costumes/jeff-the-land-shark/cuddly-fuzzlefin.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon_cuddly-fuzzlefin.png",
+        "recolors": [
+            {
+                "name": "Powder Pink",
+                "image": "../assets/costumes/jeff-the-land-shark/powder-pink.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_powder-pink.png"
+            },
+            {
+                "name": "Blue Blizzard",
+                "image": "../assets/costumes/jeff-the-land-shark/blue-blizzard.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_blue-blizzard.png"
+            }
+        ]
+    },
+    {
+        "hero": "Jeff the Land Shark",
+        "name": "Incognito Dolphin",
+        "rarity": "Epic",
+        "image": "../assets/costumes/jeff-the-land-shark/incognito-dolphin.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon_incognito-dolphin.png"
     },
     {
         "hero": "Jeff the Land Shark",
@@ -646,6 +831,20 @@
         "rarity": "Epic",
         "image": "../assets/costumes/loki/the-avengers.png",
         "icon": "../assets/costumes/loki/icon_the-avengers.png"
+    },
+    {
+        "hero": "Loki",
+        "name": "Loki Season 2",
+        "rarity": "Epic",
+        "image": "../assets/costumes/loki/loki-season-2.png",
+        "icon": "../assets/costumes/loki/icon_loki-season-2.png"
+    },
+    {
+        "hero": "Loki",
+        "name": "Frost Giant",
+        "rarity": "Rare",
+        "image": "../assets/costumes/loki/frost-giant.png",
+        "icon": "../assets/costumes/loki/icon_frost-giant.png"
     },
     {
         "hero": "Loki",
@@ -689,6 +888,20 @@
     },
     {
         "hero": "Luna Snow",
+        "name": "Shining Star",
+        "rarity": "Epic",
+        "image": "../assets/costumes/luna-snow/shining-star.png",
+        "icon": "../assets/costumes/luna-snow/icon_shining-star.png"
+    },
+    {
+        "hero": "Luna Snow",
+        "name": "Minty Beats",
+        "rarity": "Rare",
+        "image": "../assets/costumes/luna-snow/minty-beats.png",
+        "icon": "../assets/costumes/luna-snow/icon_minty-beats.png"
+    },
+    {
+        "hero": "Luna Snow",
         "name": "Nolaehaneun Manyeo",
         "rarity": "Rare",
         "image": "../assets/costumes/luna-snow/nolaehaneun-manyeo.png",
@@ -729,6 +942,20 @@
     },
     {
         "hero": "Magik",
+        "name": "Frozen Demon",
+        "rarity": "Epic",
+        "image": "../assets/costumes/magik/frozen-demon.png",
+        "icon": "../assets/costumes/magik/icon_frozen-demon.png"
+    },
+    {
+        "hero": "Magik",
+        "name": "Amethyst Armor",
+        "rarity": "Rare",
+        "image": "../assets/costumes/magik/amethyst-armor.png",
+        "icon": "../assets/costumes/magik/icon_amethyst-armor.png"
+    },
+    {
+        "hero": "Magik",
         "name": "Retro X-Uniform",
         "rarity": "Rare",
         "image": "../assets/costumes/magik/retro-x-uniform.png",
@@ -743,6 +970,13 @@
     },
     {
         "hero": "Magneto",
+        "name": "Master of Magnetism",
+        "rarity": "Epic",
+        "image": "../assets/costumes/magneto/master-of-magnetism.png",
+        "icon": "../assets/costumes/magneto/icon_master-of-magnetism.png"
+    },
+    {
+        "hero": "Magneto",
         "name": "Seat of Autumn",
         "rarity": "Epic",
         "image": "../assets/costumes/magneto/seat-of-autumn.png",
@@ -754,6 +988,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/magneto/uncanny-blacksteel.png",
         "icon": "../assets/costumes/magneto/icon_uncanny-blacksteel.png"
+    },
+    {
+        "hero": "Magneto",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/magneto/will-of-galacta.png",
+        "icon": "../assets/costumes/magneto/icon_will-of-galacta.png"
     },
     {
         "hero": "Mantis",
@@ -825,6 +1066,13 @@
     },
     {
         "hero": "Moon Knight",
+        "name": "Lunar General",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/moon-knight/lunar-general.png",
+        "icon": "../assets/costumes/moon-knight/icon_lunar-general.png"
+    },
+    {
+        "hero": "Moon Knight",
         "name": "Suave Spector",
         "rarity": "Legendary",
         "image": "../assets/costumes/moon-knight/suave-spector.png",
@@ -839,10 +1087,24 @@
     },
     {
         "hero": "Moon Knight",
+        "name": "Mister Knight",
+        "rarity": "Epic",
+        "image": "../assets/costumes/moon-knight/mister-knight.png",
+        "icon": "../assets/costumes/moon-knight/icon_mister-knight.png"
+    },
+    {
+        "hero": "Moon Knight",
         "name": "Blood Moon Knight",
         "rarity": "Rare",
         "image": "../assets/costumes/moon-knight/blood-moon-knight.png",
         "icon": "../assets/costumes/moon-knight/icon_blood-moon-knight.png"
+    },
+    {
+        "hero": "Moon Knight",
+        "name": "Golden Moonlight",
+        "rarity": "Rare",
+        "image": "../assets/costumes/moon-knight/golden-moonlight.png",
+        "icon": "../assets/costumes/moon-knight/icon_golden-moonlight.png"
     },
     {
         "hero": "Namor",
@@ -864,6 +1126,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/namor/black-panther-wakanda-forever.png",
         "icon": "../assets/costumes/namor/icon_black-panther-wakanda-forever.png"
+    },
+    {
+        "hero": "Namor",
+        "name": "Mauve Sub-Mariner",
+        "rarity": "Rare",
+        "image": "../assets/costumes/namor/mauve-sub-mariner.png",
+        "icon": "../assets/costumes/namor/icon_mauve-sub-mariner.png"
     },
     {
         "hero": "Namor",
@@ -899,6 +1168,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/peni-parker/blue-tarantula.png",
         "icon": "../assets/costumes/peni-parker/icon_blue-tarantula.png"
+    },
+    {
+        "hero": "Peni Parker",
+        "name": "Olive Skimmer",
+        "rarity": "Rare",
+        "image": "../assets/costumes/peni-parker/olive-skimmer.png",
+        "icon": "../assets/costumes/peni-parker/icon_olive-skimmer.png"
     },
     {
         "hero": "Phoenix",
@@ -982,6 +1258,27 @@
     },
     {
         "hero": "Psylocke",
+        "name": "Kirisaki Sakura",
+        "rarity": "Rare",
+        "image": "../assets/costumes/psylocke/kirisaki-sakura.png",
+        "icon": "../assets/costumes/psylocke/icon_kirisaki-sakura.png"
+    },
+    {
+        "hero": "Psylocke",
+        "name": "Vengeance",
+        "rarity": "Epic",
+        "image": "../assets/costumes/psylocke/vengeance.png",
+        "icon": "../assets/costumes/psylocke/icon_vengeance.png",
+        "recolors": [
+            {
+                "name": "Phantom Purple",
+                "image": "../assets/costumes/psylocke/phantom-purple.png",
+                "icon": "../assets/costumes/psylocke/icon_phantom-purple.png"
+            }
+        ]
+    },
+    {
+        "hero": "Psylocke",
         "name": "Retro X-Uniform",
         "rarity": "Rare",
         "image": "../assets/costumes/psylocke/retro-x-uniform.png",
@@ -1012,6 +1309,20 @@
         "rarity": "Epic",
         "image": "../assets/costumes/rocket-raccoon/guardians-of-the-galaxy-vol-3.png",
         "icon": "../assets/costumes/rocket-raccoon/icon_guardians-of-the-galaxy-vol-3.png"
+    },
+    {
+        "hero": "Rocket Raccoon",
+        "name": "Wild Winter",
+        "rarity": "Epic",
+        "image": "../assets/costumes/rocket-raccoon/wild-winter.png",
+        "icon": "../assets/costumes/rocket-raccoon/icon_wild-winter.png"
+    },
+    {
+        "hero": "Rocket Raccoon",
+        "name": "Rocky",
+        "rarity": "Rare",
+        "image": "../assets/costumes/rocket-raccoon/rocky.png",
+        "icon": "../assets/costumes/rocket-raccoon/icon_rocky.png"
     },
     {
         "hero": "Rocket Raccoon",
@@ -1076,10 +1387,24 @@
     },
     {
         "hero": "Scarlet Witch",
+        "name": "Nyx Weaver",
+        "rarity": "Rare",
+        "image": "../assets/costumes/scarlet-witch/nyx-weaver.png",
+        "icon": "../assets/costumes/scarlet-witch/icon_nyx-weaver.png"
+    },
+    {
+        "hero": "Scarlet Witch",
         "name": "White Witch",
         "rarity": "Rare",
         "image": "../assets/costumes/scarlet-witch/white-witch.png",
         "icon": "../assets/costumes/scarlet-witch/icon_white-witch.png"
+    },
+    {
+        "hero": "Spider-Man",
+        "name": "Spider-Man: No Way Home",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/spider-man/spider-man-no-way-home.png",
+        "icon": "../assets/costumes/spider-man/icon_spider-man-no-way-home.png"
     },
     {
         "hero": "Spider-Man",
@@ -1097,6 +1422,13 @@
     },
     {
         "hero": "Spider-Man",
+        "name": "Bag-Man Beyond",
+        "rarity": "Epic",
+        "image": "../assets/costumes/spider-man/bag-man-beyond.png",
+        "icon": "../assets/costumes/spider-man/icon_bag-man-beyond.png"
+    },
+    {
+        "hero": "Spider-Man",
         "name": "Man-Spider",
         "rarity": "Epic",
         "image": "../assets/costumes/spider-man/man-spider.png",
@@ -1108,6 +1440,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/spider-man/iron-spider.png",
         "icon": "../assets/costumes/spider-man/icon_iron-spider.png"
+    },
+    {
+        "hero": "Spider-Man",
+        "name": "Scarlet Spider",
+        "rarity": "Rare",
+        "image": "../assets/costumes/spider-man/scarlet-spider.png",
+        "icon": "../assets/costumes/spider-man/icon_scarlet-spider.png"
     },
     {
         "hero": "Squirrel Girl",
@@ -1125,10 +1464,24 @@
     },
     {
         "hero": "Squirrel Girl",
+        "name": "Cheerful Dragoness",
+        "rarity": "Epic",
+        "image": "../assets/costumes/squirrel-girl/cheerful-dragoness.png",
+        "icon": "../assets/costumes/squirrel-girl/icon_cheerful-dragoness.png"
+    },
+    {
+        "hero": "Squirrel Girl",
         "name": "Red Panda",
         "rarity": "Epic",
         "image": "../assets/costumes/squirrel-girl/red-panda.png",
         "icon": "../assets/costumes/squirrel-girl/icon_red-panda.png"
+    },
+    {
+        "hero": "Squirrel Girl",
+        "name": "Urban Hunter",
+        "rarity": "Epic",
+        "image": "../assets/costumes/squirrel-girl/urban-hunter.png",
+        "icon": "../assets/costumes/squirrel-girl/icon_urban-hunter.png"
     },
     {
         "hero": "Squirrel Girl",
@@ -1153,6 +1506,13 @@
     },
     {
         "hero": "Star-Lord",
+        "name": "Master of the Sun",
+        "rarity": "Epic",
+        "image": "../assets/costumes/star-lord/master-of-the-sun.png",
+        "icon": "../assets/costumes/star-lord/icon_master-of-the-sun.png"
+    },
+    {
+        "hero": "Star-Lord",
         "name": "Starlit Outlaw",
         "rarity": "Epic",
         "image": "../assets/costumes/star-lord/starlit-outlaw.png",
@@ -1166,11 +1526,25 @@
         "icon": "../assets/costumes/star-lord/icon_ignite-star-lord-2025.png"
     },
     {
+        "hero": "Star-Lord",
+        "name": "Jovial Star",
+        "rarity": "Rare",
+        "image": "../assets/costumes/star-lord/jovial-star.png",
+        "icon": "../assets/costumes/star-lord/icon_jovial-star.png"
+    },
+    {
         "hero": "Storm",
         "name": "Goddess of Thunder",
         "rarity": "Legendary",
         "image": "../assets/costumes/storm/goddess-of-thunder.png",
         "icon": "../assets/costumes/storm/icon_goddess-of-thunder.png"
+    },
+    {
+        "hero": "Storm",
+        "name": "Mohawk Rock",
+        "rarity": "Epic",
+        "image": "../assets/costumes/storm/mohawk-rock.png",
+        "icon": "../assets/costumes/storm/icon_mohawk-rock.png"
     },
     {
         "hero": "Storm",
@@ -1206,6 +1580,20 @@
         "rarity": "Epic",
         "image": "../assets/costumes/the-punisher/daredevil-born-again.png",
         "icon": "../assets/costumes/the-punisher/icon_daredevil-born-again.png"
+    },
+    {
+        "hero": "The Punisher",
+        "name": "Punisher 2099",
+        "rarity": "Epic",
+        "image": "../assets/costumes/the-punisher/punisher-2099.png",
+        "icon": "../assets/costumes/the-punisher/icon_punisher-2099.png"
+    },
+    {
+        "hero": "The Punisher",
+        "name": "Camo",
+        "rarity": "Rare",
+        "image": "../assets/costumes/the-punisher/camo.png",
+        "icon": "../assets/costumes/the-punisher/icon_camo.png"
     },
     {
         "hero": "The Punisher",
@@ -1251,10 +1639,31 @@
     },
     {
         "hero": "Thor",
+        "name": "Thor: Love and Thunder",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/thor/thor-love-and-thunder.png",
+        "icon": "../assets/costumes/thor/icon_thor-love-and-thunder.png"
+    },
+    {
+        "hero": "Thor",
+        "name": "Herald of Thunder",
+        "rarity": "Epic",
+        "image": "../assets/costumes/thor/herald-of-thunder.png",
+        "icon": "../assets/costumes/thor/icon_herald-of-thunder.png"
+    },
+    {
+        "hero": "Thor",
         "name": "Lord of Asgard",
         "rarity": "Epic",
         "image": "../assets/costumes/thor/rune-king.png",
         "icon": "../assets/costumes/thor/icon_rune-king.png"
+    },
+    {
+        "hero": "Thor",
+        "name": "Midgard Umber",
+        "rarity": "Rare",
+        "image": "../assets/costumes/thor/midgard-umber.png",
+        "icon": "../assets/costumes/thor/icon_midgard-umber.png"
     },
     {
         "hero": "Thor",
@@ -1312,10 +1721,24 @@
     },
     {
         "hero": "Venom",
+        "name": "Space Knight",
+        "rarity": "Epic",
+        "image": "../assets/costumes/venom/space-knight.png",
+        "icon": "../assets/costumes/venom/icon_space-knight.png"
+    },
+    {
+        "hero": "Venom",
         "name": "War of the Realms",
         "rarity": "Epic",
         "image": "../assets/costumes/venom/war-of-the-realms.png",
         "icon": "../assets/costumes/venom/icon_war-of-the-realms.png"
+    },
+    {
+        "hero": "Venom",
+        "name": "Anti-Venom",
+        "rarity": "Rare",
+        "image": "../assets/costumes/venom/anti-venom.png",
+        "icon": "../assets/costumes/venom/icon_anti-venom.png"
     },
     {
         "hero": "Venom",
@@ -1359,6 +1782,13 @@
     },
     {
         "hero": "Winter Soldier",
+        "name": "Revolution",
+        "rarity": "Epic",
+        "image": "../assets/costumes/winter-soldier/revolution.png",
+        "icon": "../assets/costumes/winter-soldier/icon_revolution.png"
+    },
+    {
+        "hero": "Winter Soldier",
         "name": "Thunderbolts*",
         "rarity": "Epic",
         "image": "../assets/costumes/winter-soldier/thunderbolts.png",
@@ -1370,6 +1800,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/winter-soldier/bucky.png",
         "icon": "../assets/costumes/winter-soldier/icon_bucky.png"
+    },
+    {
+        "hero": "Winter Soldier",
+        "name": "Navy Trooper",
+        "rarity": "Rare",
+        "image": "../assets/costumes/winter-soldier/navy-trooper.png",
+        "icon": "../assets/costumes/winter-soldier/icon_navy-trooper.png"
     },
     {
         "hero": "Wolverine",

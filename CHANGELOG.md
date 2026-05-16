@@ -1,5 +1,6 @@
 # Changelog
 
+[1.4.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.3
 [1.4.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.2
 [1.4.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.1
 [1.4.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.0
@@ -10,6 +11,78 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.4.3] - 2026-05-16
+
+### Changed
+
+- Devil Dinosaur color and prestige image
+
+### New Costumes
+
+> - Remaining Season 0 Costumes
+> - Miscellaneous:
+>   - Bruce Banner - Infinity Hulk
+>   - Jeff the Land Shark - Devil Landshark
+
+- Adam Warlock - Guardians of the Galaxy Vol. 3 [Epic]
+- Adam Warlock - Cosmic Jade [Rare]
+- Black Panther - Bast's Chosen [Epic]
+- Black Panther - Galactic Claw [Epic]
+- Bruce Banner - Infinity Hulk [Epic]
+- Captain America - Captain Gladitor [Epic]
+- Captain America - Galactic Talon [Epic]
+- Captain America - Captain A.I.M.erica [Rare]
+- Cloak & Dagger - Growth & Decay [Epic]
+- Doctor Strange - God of Magic [Epic]
+- Doctor Strange - Sorcerer Supreme of the Galaxy [Epic]
+- Doctor Strange - Master of Black Magic [Rare]
+- Groot - Holiday Happiness [Epic]
+- Groot - Abies Algae [Rare]
+- Hawkeye - Freefall [Epic]
+- Hawkeye - Tiger's Eye [Rare]
+- Hela - Goddess of Death [Epic]
+- Hela - Ultimate [Rare]
+- Iron Fist - Sword Master [Epic]
+- Iron Man - Superior Iron Man [Epic]
+- Jeff the Land Shark - Devil Landshark (+ Recolors) [Legendary]
+- Jeff the Land Shark - Cuddly Fuzzlefin (+ Recolors) [Epic]
+- Jeff the Land Shark - Incognito Dolphin [Epic]
+- Loki - Loki Season 2 [Epic]
+- Loki - Frost Giant [Rare]
+- Luna Snow - Shining Star [Epic]
+- Luna Snow - Minty Beats [Rare]
+- Magik - Frozen Demon [Epic]
+- Magik - Amethyst Armor [Rare]
+- Magneto - Master of Magnetism [Epic]
+- Magneto - Will of Galacta [Rare]
+- Moon Knight - Lunar General [Legendary]
+- Moon Knight - Mister Knight [Epic]
+- Moon Knight - Golden Moonlight [Rare]
+- Namor - Mauve Sub-Mariner [Rare]
+- Peni Parker - Olive Skimmer [Rare]
+- Psylocke - Vengeance (+ Recolors) [Epic]
+- Psylocke - Kirisaki Sakura [Rare]
+- Rocket Raccoon - Wild Winter [Epic]
+- Rocket Raccoon - Rocky [Rare]
+- Scarlet Witch - Nyx Weaver [Rare]
+- Spider-Man - Spider-Man: No Way Home [Legendary]
+- Spider-Man - Bag-Man Beyond [Epic]
+- Spider-Man - Scarlet Spider [Rare]
+- Squirrel Girl - Cheerful Dragoness [Epic]
+- Squirrel Girl - Urban Hunter [Epic]
+- Star-Lord - Master of the Sun [Epic]
+- Star-Lord - Jovial Star [Rare]
+- Storm - Mohawk Rock [Epic]
+- The Punisher - Punisher 2099 [Epic]
+- The Punisher - Camo [Rare]
+- Thor - Thor: Love and Thunder [Legendary]
+- Thor - Herald of Thunder [Epic]
+- Thor - Midgard Umber [Rare]
+- Venom - Space Knight [Epic]
+- Venom - Anti-Venom [Rare]
+- Winter Soldier - Revolution [Epic]
+- Winter Soldier - Navy Trooper [Rare]
 
 ## [1.4.2] - 2026-05-15
 
