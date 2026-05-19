@@ -90,9 +90,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 ### Creator
 
-- Icons
-- Upload custom images
-- Set a difficulty
+- Description/bio
 
 ### Settings
 

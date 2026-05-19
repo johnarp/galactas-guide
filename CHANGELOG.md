@@ -1,5 +1,6 @@
 # Changelog
 
+[1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
 [1.4.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.3
 [1.4.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.2
 [1.4.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.1
@@ -11,6 +12,54 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.5.0] - 2026-05-19
+
+### Added
+
+- Image link fields in Creator
+- Difficulty selection in Creator
+
+### New Costumes
+
+> Remaining Season 1 Costumes
+
+#### Legendary
+
+- Luna Snow - Mirae 2099 (+Recolors)
+- Magik - Punkchild (+Recolors)
+
+#### Epic
+
+- Adam Warlock - Blood Soul
+- Black Panther - Thrice-Cursed King
+- Black Widow - Lion's Heartbeat
+- Black Widow - Mrs. Barnes
+- Bruce Banner - Punk Rage
+- Human Torch - Negative Zone Gladiator
+- Invisible Woman - Malice (+Recolors)
+- Iron Man - Blood Edge Armor
+- Iron Man - Steam Power
+- Loki - Presidential Attire
+- Magneto - King Magnus
+- Mantis - Jade Maiden
+- Mister Fantastic - The Maker
+- Rocket Raccoon - Bounty Hunter
+- Scarlet Witch - Emporium Matron
+- Spider-Man - Marvel's Spider-Man 2
+- Star-Lord - Lion's Mane
+- The Thing - Trench Coat
+- Venom - Lingering Imprin
+- Winter Soldier - Blood Soldier (+Recolors)
+
+#### Rare
+
+- Adam Warlock - Will of Galacta
+- Hela - Will of Galacta
+- Human Torch - Blood Blaze
+- Invisible Woman - Blood Shield
+- The Thing - First Family
+- Venom - Hyper Orange
 
 ## [1.4.3] - 2026-05-16
 

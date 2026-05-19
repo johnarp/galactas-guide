@@ -207,7 +207,6 @@ function buildCreatorCard(creator) {
         }
     });
 
-    // Click card body to open the view modal
     card.addEventListener('click', () => openViewModal(creator));
 
     return card;
@@ -330,7 +329,6 @@ function wireModalListeners() {
         document.getElementById('creator-color-display').textContent = this.value.toUpperCase();
     });
 
-    // Edit modal
     document.getElementById('creator-modal').addEventListener('click', e => {
         if (e.target === e.currentTarget) closeModal();
     });
@@ -343,7 +341,21 @@ function wireModalListeners() {
         renderAbilitiesEditor();
     });
 
-    // View modal
+    document.getElementById('image-link-btn').addEventListener('click', openImageLinkModal);
+
+    document.getElementById('image-link-modal').addEventListener('click', e => {
+        if (e.target === e.currentTarget) closeImageLinkModal();
+    });
+    document.getElementById('image-link-close').addEventListener('click', closeImageLinkModal);
+    document.getElementById('image-link-done').addEventListener('click', closeImageLinkModal);
+    document.getElementById('image-link-clear').addEventListener('click', () => {
+        document.getElementById('link-image').value = '';
+        document.getElementById('link-prestige').value = '';
+        document.getElementById('link-icon').value = '';
+        document.getElementById('link-icon-lord').value = '';
+        document.getElementById('link-icon-champion').value = '';
+    });
+
     document.getElementById('creator-view-modal').addEventListener('click', e => {
         if (e.target === e.currentTarget) closeViewModal();
     });
@@ -356,8 +368,20 @@ function wireModalListeners() {
     });
 
     document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') { closeModal(); closeViewModal(); }
+        if (e.key === 'Escape') { 
+            closeModal(); 
+            closeViewModal(); 
+            closeImageLinkModal();
+        }
     });
+}
+
+function openImageLinkModal() {
+    document.getElementById('image-link-modal').classList.remove('hidden');
+}
+
+function closeImageLinkModal() {
+    document.getElementById('image-link-modal').classList.add('hidden');
 }
 
 // ── Edit modal open / close ───────────────────────────────────────────────────
@@ -370,6 +394,9 @@ function openModal(creator) {
 
     document.getElementById('creator-name').value   = creator?.name   ?? '';
     document.getElementById('creator-season').value = creator?.season != null ? creator.season : '';
+    
+    // Repopulate difficulty selector if editing an existing custom hero
+    document.getElementById('creator-difficulty').value = creator?.difficulty != null ? creator.difficulty : '';
 
     const color = creator?.color ?? '#a612ea';
     document.getElementById('creator-color').value               = color;
@@ -379,6 +406,12 @@ function openModal(creator) {
         const heroRoles = Array.isArray(creator?.role) ? creator.role : [creator?.role];
         btn.classList.toggle('active', creator ? heroRoles.includes(btn.dataset.role) : false);
     });
+
+    document.getElementById('link-image').value = creator?.imageCustom ?? '';
+    document.getElementById('link-prestige').value = creator?.prestigeCustom ?? '';
+    document.getElementById('link-icon').value = creator?.iconCustom ?? '';
+    document.getElementById('link-icon-lord').value = creator?.iconLordCustom ?? '';
+    document.getElementById('link-icon-champion').value = creator?.iconChampionCustom ?? '';
 
     buildImagePicker(creator?.image ?? null);
     buildAbilitiesEditor(creator?.abilities ?? []);
@@ -390,6 +423,7 @@ function openModal(creator) {
 
 function closeModal() {
     document.getElementById('creator-modal').classList.add('hidden');
+    document.getElementById('image-link-modal').classList.add('hidden');
     editingId = null;
     abilities = [];
 }
@@ -399,6 +433,10 @@ function saveModal() {
     const color     = document.getElementById('creator-color').value;
     const rawSeason = document.getElementById('creator-season').value.trim();
     const season    = rawSeason !== '' ? parseFloat(rawSeason) : null;
+
+    // Read values directly from the difficulty selector dropdown
+    const rawDifficulty = document.getElementById('creator-difficulty').value;
+    const difficulty    = rawDifficulty !== '' ? parseInt(rawDifficulty, 10) : null;
 
     if (!name) { document.getElementById('creator-name').focus(); return; }
 
@@ -411,15 +449,31 @@ function saveModal() {
         (a.key ?? '').trim() || (a.name ?? '').trim() || (a.description ?? '').trim()
     );
 
+    const imgCustom = document.getElementById('link-image').value.trim();
+    const prestigeCustom = document.getElementById('link-prestige').value.trim();
+    const iconCustom = document.getElementById('link-icon').value.trim();
+    const iconLordCustom = document.getElementById('link-icon-lord').value.trim();
+    const iconChampionCustom = document.getElementById('link-icon-champion').value.trim();
+
     const creator = {
         id             : editingId ?? crypto.randomUUID(),
         name,
         role           : selectedRoles.length > 0 ? selectedRoles : [],
         color,
-        image          : placeholder?.image    ?? '',
-        prestige       : placeholder?.prestige ?? placeholder?.image ?? '',
+        imageCustom    : imgCustom,
+        prestigeCustom : prestigeCustom,
+        iconCustom     : iconCustom,
+        iconLordCustom : iconLordCustom,
+        iconChampionCustom : iconChampionCustom,
+        image          : imgCustom || placeholder?.image || '',
+        prestige       : prestigeCustom || placeholder?.prestige || placeholder?.image || imgCustom || '',
+        icon           : iconCustom || '',
+        'icon-lord'    : iconLordCustom || '',
+        'icon-champion': iconChampionCustom || '',
         addedToTracker : document.getElementById('tracker-toggle').checked,
         season         : season !== null && !isNaN(season) ? season : null,
+        // Save parsed integer value exactly matching standard structural format
+        difficulty     : difficulty !== null && !isNaN(difficulty) ? difficulty : null,
         abilities      : savedAbilities,
         isCustom       : true,
     };
@@ -442,7 +496,6 @@ function openViewModal(creator) {
     const modal = document.getElementById('creator-view-modal');
     modal.dataset.creatorId = creator.id;
 
-    // Banner
     document.getElementById('creator-view-banner').style.setProperty('--hero-color', creator.color ?? '#200630');
     const artEl = document.getElementById('creator-view-art');
     artEl.src = creator.image || '';
@@ -450,7 +503,6 @@ function openViewModal(creator) {
 
     document.getElementById('creator-view-name').textContent = creator.name;
 
-    // Roles
     const heroRoles = Array.isArray(creator.role) ? creator.role : [creator.role];
     document.getElementById('creator-view-roles').innerHTML = heroRoles.map(r => {
         const ro = roles.find(x => x.name === r);
@@ -459,7 +511,6 @@ function openViewModal(creator) {
             : '';
     }).join('');
 
-    // Season
     const seasonEl = document.getElementById('creator-view-season');
     if (creator.season != null) {
         seasonEl.textContent = `Season ${creator.season}`;
@@ -468,7 +519,17 @@ function openViewModal(creator) {
         seasonEl.classList.add('hidden');
     }
 
-    // Abilities
+    // Render difficulty details dynamically inside the preview modal component
+    const difficultyEl = document.getElementById('creator-view-difficulty');
+    if (difficultyEl) {
+        if (creator.difficulty != null) {
+            difficultyEl.textContent = `Difficulty: ${creator.difficulty}`;
+            difficultyEl.classList.remove('hidden');
+        } else {
+            difficultyEl.classList.add('hidden');
+        }
+    }
+
     const hasAbilities = Array.isArray(creator.abilities) && creator.abilities.length > 0;
     document.getElementById('creator-view-abilities').classList.toggle('hidden', !hasAbilities);
     document.getElementById('creator-view-abilities-empty').classList.toggle('hidden', hasAbilities);
