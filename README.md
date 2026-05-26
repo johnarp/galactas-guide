@@ -80,17 +80,19 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Dynamic version number in footer
     - Click to open pop-up changelog
 - Display newest hero on home screen
-- Source Code and Report Issue links
 
 ### Tracker
 
 - Heroes pop-out when hovering
 - Change color and shape of favorite button
 - Tracked only filter
+- Sort/filter Costumes
+- Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
 
 ### Creator
 
 - Description/bio
+- Costumes
 
 ### Settings
 

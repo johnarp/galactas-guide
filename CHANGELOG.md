@@ -1,5 +1,6 @@
 # Changelog
 
+[1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
 [1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
 [1.4.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.3
 [1.4.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.2
@@ -12,6 +13,65 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.5.1] - 2026-05-25
+
+### Added
+
+- Source Code and Report Issue buttons in Settings
+
+### New Costumes
+
+> - Remaining Season 2 Costumes
+> - Misc.
+>   - Daredevil - Shadowed Start [Epic]
+
+#### Legendary
+
+- Groot - Yggroot
+- Jeff the Land Shark - Sunshine Land Shark (+Recolors)
+- Loki - Shin Sagi-Shi
+- Scarlet Witch - Immortal Sovereign
+
+#### Epic
+
+- Adam Warlock - Immortal Avatar
+- Black Widow - Red Runway Veil
+- Bruce Banner - Joe Fixit
+- Captain America - Captain Klyntar
+- Captain America - Star Spangled Style
+- Daredevil - Shadowed Start
+- Emma Frost - X-Revolution
+- Hela - Yami no Karasu
+- Human Torch - Future Foundation
+- Invisible Woman - Future Foundation
+- Iron Fist - Binary Fist
+- Iron Fist - Immortal Weapon of Agamotto
+- Mantis - Flora Maiden
+- Mister Fantastic - Future Foundation
+- Moon Knight - Phoenix Knight
+- Namor - Retro X-Uniform
+- Peni Parker - Yatsukahagi
+- Scarlet Witch - Chaos Gown
+- Spider-Man - Future Foundation
+- Squirrel Girl - Nut Rocker
+- Squirrel Girl - Sunshine Squirrel
+- Star-Lord - King of Spartax
+- Storm - Ultimate Wind-Rider
+- The Thing - Future Foundation
+- Ultron - X-Tron
+- Venom - Pink Bubble
+- Wolverine - Patch
+- Wolverine - Weapon X
+
+#### Rare
+
+- Emma Frost - Golden Diamond
+- Emma Frost - Will of Galacta
+- Magik - Will of Galacta
+- Namor - Will of Galacta
+- The Thing - The Unlimited
+- Ultron - Mechanical Phantom
 
 ## [1.5.0] - 2026-05-19
 

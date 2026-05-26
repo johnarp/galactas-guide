@@ -22,6 +22,13 @@
     },
     {
         "hero": "Adam Warlock",
+        "name": "Immortal Avatar",
+        "rarity": "Epic",
+        "image": "../assets/costumes/adam-warlock/immortal-avatar.png",
+        "icon": "../assets/costumes/adam-warlock/icon_immortal-avatar.png"
+    },
+    {
+        "hero": "Adam Warlock",
         "name": "Magus",
         "rarity": "Epic",
         "image": "../assets/costumes/adam-warlock/magus.png",
@@ -148,6 +155,13 @@
     },
     {
         "hero": "Black Widow",
+        "name": "Red Runway Veil",
+        "rarity": "Epic",
+        "image": "../assets/costumes/black-widow/red-runway-veil.png",
+        "icon": "../assets/costumes/black-widow/icon_red-runway-veil.png"
+    },
+    {
+        "hero": "Black Widow",
         "name": "White Suit",
         "rarity": "Epic",
         "image": "../assets/costumes/black-widow/white-suit.png",
@@ -197,6 +211,13 @@
     },
     {
         "hero": "Bruce Banner",
+        "name": "Joe Fixit",
+        "rarity": "Epic",
+        "image": "../assets/costumes/bruce-banner/joe-fixit.png",
+        "icon": "../assets/costumes/bruce-banner/icon_joe-fixit.png"
+    },
+    {
+        "hero": "Bruce Banner",
         "name": "Maestro",
         "rarity": "Epic",
         "image": "../assets/costumes/bruce-banner/maestro.png",
@@ -239,6 +260,13 @@
     },
     {
         "hero": "Captain America",
+        "name": "Captain Klyntar",
+        "rarity": "Epic",
+        "image": "../assets/costumes/captain-america/captain-klyntar.png",
+        "icon": "../assets/costumes/captain-america/icon_captain-klyntar.png"
+    },
+    {
+        "hero": "Captain America",
         "name": "Cursed Captain",
         "rarity": "Epic",
         "image": "../assets/costumes/captain-america/cursed-captain.png",
@@ -250,6 +278,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/captain-america/galactic-talon.png",
         "icon": "../assets/costumes/captain-america/icon_galactic-talon.png"
+    },
+    {
+        "hero": "Captain America",
+        "name": "Star Spangled Style",
+        "rarity": "Epic",
+        "image": "../assets/costumes/captain-america/star-spangled-style.png",
+        "icon": "../assets/costumes/captain-america/icon_star-spangled-style.png"
     },
     {
         "hero": "Captain America",
@@ -306,6 +341,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/daredevil/devil-2099.png",
         "icon": "../assets/costumes/daredevil/icon_devil-2099.png"
+    },
+    {
+        "hero": "Daredevil",
+        "name": "Shadowed Start",
+        "rarity": "Epic",
+        "image": "../assets/costumes/daredevil/shadowed-start.png",
+        "icon": "../assets/costumes/daredevil/icon_shadowed-start.png"
     },
     {
         "hero": "Daredevil",
@@ -466,10 +508,31 @@
     },
     {
         "hero": "Emma Frost",
+        "name": "X-Revolution",
+        "rarity": "Epic",
+        "image": "../assets/costumes/emma-frost/x-revolution.png",
+        "icon": "../assets/costumes/emma-frost/icon_x-revolution.png"
+    },
+    {
+        "hero": "Emma Frost",
         "name": "Blue Sapphire",
         "rarity": "Rare",
         "image": "../assets/costumes/emma-frost/blue-sapphire.png",
         "icon": "../assets/costumes/emma-frost/icon_blue-sapphire.png"
+    },
+    {
+        "hero": "Emma Frost",
+        "name": "Golden Diamond",
+        "rarity": "Rare",
+        "image": "../assets/costumes/emma-frost/golden-diamond.png",
+        "icon": "../assets/costumes/emma-frost/icon_golden-diamond.png"
+    },
+    {
+        "hero": "Emma Frost",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/emma-frost/will-of-galacta.png",
+        "icon": "../assets/costumes/emma-frost/icon_will-of-galacta.png"
     },
     {
         "hero": "Gambit",
@@ -498,6 +561,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/groot/mecha-flora.png",
         "icon": "../assets/costumes/groot/icon_mecha-flora.png"
+    },
+    {
+        "hero": "Groot",
+        "name": "Yggroot",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/groot/yggroot.png",
+        "icon": "../assets/costumes/groot/icon_yggroot.png"
     },
     {
         "hero": "Groot",
@@ -618,6 +688,13 @@
     },
     {
         "hero": "Hela",
+        "name": "Yami no Karasu",
+        "rarity": "Epic",
+        "image": "../assets/costumes/hela/yami-no-karasu.png",
+        "icon": "../assets/costumes/hela/icon_yami-no-karasu.png"
+    },
+    {
+        "hero": "Hela",
         "name": "Merciful Queen",
         "rarity": "Rare",
         "image": "../assets/costumes/hela/merciful-queen.png",
@@ -636,6 +713,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/hela/will-of-galacta.png",
         "icon": "../assets/costumes/hela/icon_will-of-galacta.png"
+    },
+    {
+        "hero": "Human Torch",
+        "name": "Future Foundation",
+        "rarity": "Epic",
+        "image": "../assets/costumes/human-torch/future-foundation.png",
+        "icon": "../assets/costumes/human-torch/icon_future-foundation.png"
     },
     {
         "hero": "Human Torch",
@@ -707,6 +791,13 @@
     },
     {
         "hero": "Invisible Woman",
+        "name": "Future Foundation",
+        "rarity": "Epic",
+        "image": "../assets/costumes/invisible-woman/future-foundation.png",
+        "icon": "../assets/costumes/invisible-woman/icon_future-foundation.png"
+    },
+    {
+        "hero": "Invisible Woman",
         "name": "The Fantastic Four: First Steps",
         "rarity": "Epic",
         "image": "../assets/costumes/invisible-woman/the-fantastic-four-first-steps.png",
@@ -763,6 +854,20 @@
                 "icon": "../assets/costumes/iron-fist/icon_lively-lion.png"
             }
         ]
+    },
+    {
+        "hero": "Iron Fist",
+        "name": "Binary Fist",
+        "rarity": "Epic",
+        "image": "../assets/costumes/iron-fist/binary-fist.png",
+        "icon": "../assets/costumes/iron-fist/icon_binary-fist.png"
+    },
+    {
+        "hero": "Iron Fist",
+        "name": "Immortal Weapon of Agamotto",
+        "rarity": "Epic",
+        "image": "../assets/costumes/iron-fist/immortal-weapon-of-agamotto.png",
+        "icon": "../assets/costumes/iron-fist/icon_immortal-weapon-of-agamotto.png"
     },
     {
         "hero": "Iron Fist",
@@ -850,6 +955,25 @@
     },
     {
         "hero": "Jeff the Land Shark",
+        "name": "Cuddly Fuzzlefin",
+        "rarity": "Epic",
+        "image": "../assets/costumes/jeff-the-land-shark/cuddly-fuzzlefin.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon_cuddly-fuzzlefin.png",
+        "recolors": [
+            {
+                "name": "Powder Pink",
+                "image": "../assets/costumes/jeff-the-land-shark/powder-pink.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_powder-pink.png"
+            },
+            {
+                "name": "Blue Blizzard",
+                "image": "../assets/costumes/jeff-the-land-shark/blue-blizzard.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_blue-blizzard.png"
+            }
+        ]
+    },
+    {
+        "hero": "Jeff the Land Shark",
         "name": "Devil Landshark",
         "rarity": "Legendary",
         "image": "../assets/costumes/jeff-the-land-shark/devil-landshark.png",
@@ -876,20 +1000,20 @@
     },
     {
         "hero": "Jeff the Land Shark",
-        "name": "Cuddly Fuzzlefin",
-        "rarity": "Epic",
-        "image": "../assets/costumes/jeff-the-land-shark/cuddly-fuzzlefin.png",
-        "icon": "../assets/costumes/jeff-the-land-shark/icon_cuddly-fuzzlefin.png",
+        "name": "Sunshine Land Shark",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/jeff-the-land-shark/sunshine-land-shark.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon_sunshine-land-shark.png",
         "recolors": [
             {
-                "name": "Powder Pink",
-                "image": "../assets/costumes/jeff-the-land-shark/powder-pink.png",
-                "icon": "../assets/costumes/jeff-the-land-shark/icon_powder-pink.png"
+                "name": "Blue Barrage",
+                "image": "../assets/costumes/jeff-the-land-shark/blue-barrage.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_blue-barrage.png"
             },
-            {
-                "name": "Blue Blizzard",
-                "image": "../assets/costumes/jeff-the-land-shark/blue-blizzard.png",
-                "icon": "../assets/costumes/jeff-the-land-shark/icon_blue-blizzard.png"
+                    {
+                "name": "Verdant Vortex",
+                "image": "../assets/costumes/jeff-the-land-shark/verdant-vortex.png",
+                "icon": "../assets/costumes/jeff-the-land-shark/icon_verdant-vortex.png"
             }
         ]
     },
@@ -927,6 +1051,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/loki/lady-loki.png",
         "icon": "../assets/costumes/loki/icon_lady-loki.png"
+    },
+    {
+        "hero": "Loki",
+        "name": "Shin Sagi-Shi",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/loki/shin-sagi-shi.png",
+        "icon": "../assets/costumes/loki/icon_shin-sagi-shi.png"
     },
     {
         "hero": "Loki",
@@ -1100,6 +1231,13 @@
         "icon": "../assets/costumes/magik/icon_retro-x-uniform.png"
     },
     {
+        "hero": "Magik",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/magik/will-of-galacta.png",
+        "icon": "../assets/costumes/magik/icon_will-of-galacta.png"
+    },
+    {
         "hero": "Magneto",
         "name": "Binary Sword",
         "rarity": "Legendary",
@@ -1169,6 +1307,13 @@
     },
     {
         "hero": "Mantis",
+        "name": "Flora Maiden",
+        "rarity": "Epic",
+        "image": "../assets/costumes/mantis/flora-maiden.png",
+        "icon": "../assets/costumes/mantis/icon_flora-maiden.png"
+    },
+    {
+        "hero": "Mantis",
         "name": "Guardians of the Galaxy Vol. 3",
         "rarity": "Epic",
         "image": "../assets/costumes/mantis/guardians-of-the-galaxy-vol-3.png",
@@ -1201,6 +1346,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/mister-fantastic/dad-tastic-reed.png",
         "icon": "../assets/costumes/mister-fantastic/icon_dad-tastic-reed.png"
+    },
+    {
+        "hero": "Mister Fantastic",
+        "name": "Future Foundation",
+        "rarity": "Epic",
+        "image": "../assets/costumes/mister-fantastic/future-foundation.png",
+        "icon": "../assets/costumes/mister-fantastic/icon_future-foundation.png"
     },
     {
         "hero": "Mister Fantastic",
@@ -1253,6 +1405,13 @@
     },
     {
         "hero": "Moon Knight",
+        "name": "Phoenix Knight",
+        "rarity": "Epic",
+        "image": "../assets/costumes/moon-knight/phoenix-knight.png",
+        "icon": "../assets/costumes/moon-knight/icon_phoenix-knight.png"
+    },
+    {
+        "hero": "Moon Knight",
         "name": "Blood Moon Knight",
         "rarity": "Rare",
         "image": "../assets/costumes/moon-knight/blood-moon-knight.png",
@@ -1288,6 +1447,13 @@
     },
     {
         "hero": "Namor",
+        "name": "Retro X-Uniform",
+        "rarity": "Epic",
+        "image": "../assets/costumes/namor/retro-x-uniform.png",
+        "icon": "../assets/costumes/namor/icon_retro-x-uniform.png"
+    },
+    {
+        "hero": "Namor",
         "name": "Mauve Sub-Mariner",
         "rarity": "Rare",
         "image": "../assets/costumes/namor/mauve-sub-mariner.png",
@@ -1299,6 +1465,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/namor/savage-sub-mariner.png",
         "icon": "../assets/costumes/namor/icon_savage-sub-mariner.png"
+    },
+    {
+        "hero": "Namor",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/namor/will-of-galacta.png",
+        "icon": "../assets/costumes/namor/icon_will-of-galacta.png"
     },
     {
         "hero": "Peni Parker",
@@ -1320,6 +1493,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/peni-parker/venm.png",
         "icon": "../assets/costumes/peni-parker/icon_venm.png"
+    },
+    {
+        "hero": "Peni Parker",
+        "name": "Yatsukahagi",
+        "rarity": "Epic",
+        "image": "../assets/costumes/peni-parker/yatsukahagi.png",
+        "icon": "../assets/costumes/peni-parker/icon_yatsukahagi.png"
     },
     {
         "hero": "Peni Parker",
@@ -1520,6 +1700,13 @@
     },
     {
         "hero": "Scarlet Witch",
+        "name": "Immortal Sovereign",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/scarlet-witch/immortal-sovereign.png",
+        "icon": "../assets/costumes/scarlet-witch/icon_immortal-sovereign.png"
+    },
+    {
+        "hero": "Scarlet Witch",
         "name": "Twisted Conjurer",
         "rarity": "Legendary",
         "image": "../assets/costumes/scarlet-witch/twisted-conjurer.png",
@@ -1543,6 +1730,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/scarlet-witch/witch-of-the-evil-eye.png",
         "icon": "../assets/costumes/scarlet-witch/icon_witch-of-the-evil-eye.png"
+    },
+    {
+        "hero": "Scarlet Witch",
+        "name": "Chaos Gown",
+        "rarity": "Epic",
+        "image": "../assets/costumes/scarlet-witch/chaos-gown.png",
+        "icon": "../assets/costumes/scarlet-witch/icon_chaos-gown.png"
     },
     {
         "hero": "Scarlet Witch",
@@ -1602,6 +1796,13 @@
     },
     {
         "hero": "Spider-Man",
+        "name": "Future Foundation",
+        "rarity": "Epic",
+        "image": "../assets/costumes/spider-man/future-foundation.png",
+        "icon": "../assets/costumes/spider-man/icon_future-foundation.png"
+    },
+    {
+        "hero": "Spider-Man",
         "name": "Man-Spider",
         "rarity": "Epic",
         "image": "../assets/costumes/spider-man/man-spider.png",
@@ -1651,10 +1852,24 @@
     },
     {
         "hero": "Squirrel Girl",
+        "name": "Nut Rocker",
+        "rarity": "Epic",
+        "image": "../assets/costumes/squirrel-girl/nut-rocker.png",
+        "icon": "../assets/costumes/squirrel-girl/icon_nut-rocker.png"
+    },
+    {
+        "hero": "Squirrel Girl",
         "name": "Red Panda",
         "rarity": "Epic",
         "image": "../assets/costumes/squirrel-girl/red-panda.png",
         "icon": "../assets/costumes/squirrel-girl/icon_red-panda.png"
+    },
+    {
+        "hero": "Squirrel Girl",
+        "name": "Sunshine Squirrel",
+        "rarity": "Epic",
+        "image": "../assets/costumes/squirrel-girl/sunshine-squirrel.png",
+        "icon": "../assets/costumes/squirrel-girl/icon_sunshine-squirrel.png"
     },
     {
         "hero": "Squirrel Girl",
@@ -1683,6 +1898,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/star-lord/guardians-of-the-galaxy-vol-3.png",
         "icon": "../assets/costumes/star-lord/icon_guardians-of-the-galaxy-vol-3.png"
+    },
+    {
+        "hero": "Star-Lord",
+        "name": "King of Spartax",
+        "rarity": "Epic",
+        "image": "../assets/costumes/star-lord/king-of-spartax.png",
+        "icon": "../assets/costumes/star-lord/icon_king-of-spartax.png"
     },
     {
         "hero": "Star-Lord",
@@ -1749,6 +1971,13 @@
     },
     {
         "hero": "Storm",
+        "name": "Ultimate Wind-Rider",
+        "rarity": "Epic",
+        "image": "../assets/costumes/storm/ultimate-wind-rider.png",
+        "icon": "../assets/costumes/storm/icon_ultimate-wind-rider.png"
+    },
+    {
+        "hero": "Storm",
         "name": "Ivory Breeze",
         "rarity": "Rare",
         "image": "../assets/costumes/storm/ivory-breeze.png",
@@ -1798,6 +2027,13 @@
     },
     {
         "hero": "The Thing",
+        "name": "Future Foundation",
+        "rarity": "Epic",
+        "image": "../assets/costumes/the-thing/future-foundation.png",
+        "icon": "../assets/costumes/the-thing/icon_future-foundation.png"
+    },
+    {
+        "hero": "The Thing",
         "name": "Rocky Tide",
         "rarity": "Epic",
         "image": "../assets/costumes/the-thing/rocky-tide.png",
@@ -1830,6 +2066,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/the-thing/first-family.png",
         "icon": "../assets/costumes/the-thing/icon_first-family.png"
+    },
+    {
+        "hero": "The Thing",
+        "name": "The Unlimited",
+        "rarity": "Rare",
+        "image": "../assets/costumes/the-thing/the-unlimited.png",
+        "icon": "../assets/costumes/the-thing/icon_the-unlimited.png"
     },
     {
         "hero": "Thor",
@@ -1889,10 +2132,24 @@
     },
     {
         "hero": "Ultron",
+        "name": "X-Tron",
+        "rarity": "Epic",
+        "image": "../assets/costumes/ultron/x-tron.png",
+        "icon": "../assets/costumes/ultron/icon_x-tron.png"
+    },
+    {
+        "hero": "Ultron",
         "name": "Golden Ultron",
         "rarity": "Rare",
         "image": "../assets/costumes/ultron/golden-ultron.png",
         "icon": "../assets/costumes/ultron/icon_golden-ultron.png"
+    },
+    {
+        "hero": "Ultron",
+        "name": "Mechanical Phantom",
+        "rarity": "Rare",
+        "image": "../assets/costumes/ultron/mechanical-phantom.png",
+        "icon": "../assets/costumes/ultron/icon_mechanical-phantom.png"
     },
     {
         "hero": "Venom",
@@ -1926,6 +2183,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/venom/lingering-imprint.png",
         "icon": "../assets/costumes/venom/icon_lingering-imprint.png"
+    },
+    {
+        "hero": "Venom",
+        "name": "Pink Bubble",
+        "rarity": "Epic",
+        "image": "../assets/costumes/venom/pink-bubble.png",
+        "icon": "../assets/costumes/venom/icon_pink-bubble.png"
     },
     {
         "hero": "Venom",
@@ -2049,6 +2313,20 @@
         "rarity": "Epic",
         "image": "../assets/costumes/wolverine/deadpool-wolverine.png",
         "icon": "../assets/costumes/wolverine/icon_deadpool-wolverine.png"
+    },
+    {
+        "hero": "Wolverine",
+        "name": "Patch",
+        "rarity": "Epic",
+        "image": "../assets/costumes/wolverine/patch.png",
+        "icon": "../assets/costumes/wolverine/icon_patch.png"
+    },
+    {
+        "hero": "Wolverine",
+        "name": "Weapon X",
+        "rarity": "Epic",
+        "image": "../assets/costumes/wolverine/weapon-x.png",
+        "icon": "../assets/costumes/wolverine/icon_weapon-x.png"
     },
     {
         "hero": "Wolverine",
