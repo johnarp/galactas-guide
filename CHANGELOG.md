@@ -1,5 +1,6 @@
 # Changelog
 
+[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
 [1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
 [1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
 [1.4.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.3
@@ -13,6 +14,12 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [Unreleased]
+
+### Fixed
+
+- Missing White Fox Yoon Ji-Woo: The Leader icon
 
 ## [1.5.1] - 2026-05-25
 
