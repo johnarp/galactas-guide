@@ -1,6 +1,6 @@
 # Changelog
 
-[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
+[1.5.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.2
 [1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
 [1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
 [1.4.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.4.3
@@ -15,11 +15,62 @@
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
 
-## [Unreleased]
+## [1.5.2] - 2026-06-03
+
+*[View on GitLab](https://gitlab.com/johnarp/galactas-guide/-/releases/v1.5.2)*
+
+### Added
+
+- Only/Exclude tracked filter in Tracker
+
+### Changed
+
+- Tracker, Creater, Favorite icons
 
 ### Fixed
 
 - Missing White Fox Yoon Ji-Woo: The Leader icon
+
+### New Costumes
+
+> Remaining Season 3 Costumes
+
+#### Legendary
+
+- Cloak & Dagger - Polarity Bond
+- Hela - Queen in Black
+- Iron Man - Extrembiote Armor
+- Phoenix - Chaos Phoenix
+- Psylocke - Breezy Butterfly (+ Recolors)
+- Scarlet Witch - Immortal Sovereign (Recolors)
+- Scarlet Witch - Phoenix Chaos
+- Venom - Reborn King in Black
+- Winter Soldier - Polarity Soldier
+
+#### Epic
+
+- Black Panther - Phoenix Panther
+- Black Widow - Phoenix Widow
+- Doctor Strange - Old Man Strange
+- Emma Frost - Phoenix Diamond
+- Loki - Robe of Relaxation (+ Recolor)
+- Magik - Phoenix Demon
+- Namor - Phoenix King
+- Peni Parker - Wasteland Mech
+- Rocket Raccoon - Symbiote Raccoon
+- Spider-Man - Black Suit
+- The Thing - Sunshine Thing
+- The Thing - Symbiote Thing
+- Thor - Worthy Waves (+ Recolor)
+- Wolverine - Weapon Phoenix
+
+#### Rare
+
+- Black Panther - Golden Panther
+- Blade - Emerald Blade
+- Hawkeye - Will of Galacta
+- Mantis - Will of Galacta
+- Phoenix - Emerald Flames
 
 ## [1.5.1] - 2026-05-25
 

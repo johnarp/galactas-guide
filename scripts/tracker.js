@@ -14,6 +14,7 @@ let activeRoles    = new Set(); // empty = show all roles
 let activeRanks    = new Set(); // empty = show all ranks
 let favFilter      = 'all';   // 'all' | 'only' | 'exclude'
 let customFilter   = 'all';   // 'all' | 'only' | 'exclude'
+let trackedFilter = 'all';
 let sortMode       = 'name-asc';
 let searchQuery    = '';
 let cardSize       = 'md';    // 'sm' | 'md' | 'lg'  — card view
@@ -120,6 +121,7 @@ function loadUIPrefs() {
     activeRanks    = new Set(p.activeRanks    ?? []);
     favFilter    = p.favFilter    ?? 'all';
     customFilter = p.customFilter ?? 'all';
+    trackedFilter = p.trackedFilter ?? 'all';
     sortMode       = p.sortMode       ?? 'name-asc';
     searchQuery    = p.searchQuery    ?? '';
     cardSize       = p.cardSize       ?? 'md';
@@ -132,6 +134,7 @@ function loadUIPrefs() {
     document.getElementById('hero-search').value = searchQuery;
     syncCycleBtn(document.getElementById('filter-favorites'), favFilter);
     syncCycleBtn(document.getElementById('filter-custom'),    customFilter);
+    syncCycleBtn(document.getElementById('filter-tracked'), trackedFilter)
 }
 
 function saveUIPrefs() {
@@ -140,6 +143,7 @@ function saveUIPrefs() {
         activeRanks  : [...activeRanks],
         favFilter,
         customFilter,
+        trackedFilter,
         sortMode,
         searchQuery,
         cardSize,
@@ -388,6 +392,8 @@ function getFilteredSorted() {
         if (favFilter    === 'exclude' &&  favSet.has(h.name)) return false;
         if (customFilter === 'only'    && !h.isCustom)         return false;
         if (customFilter === 'exclude' &&  h.isCustom)         return false;
+        if (trackedFilter === 'only' && !getHeroData(h.name)) return false;
+        if (trackedFilter === 'exclude' && getHeroData(h.name)) return false;
         if (q              && !h.name.toLowerCase().includes(q)) return false;
         return true;
     });
@@ -459,7 +465,7 @@ function buildCard(hero, favSet) {
     const { showName, showProficiency } = getSettings();
     const imgs = getActiveImages(hero);
     card.innerHTML = `
-        <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">★</button>
+        <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">⛊</button>
         <div class="role-badge" aria-hidden="true">${roleBadges}</div>
         <img src="${imgs.image}"                   class="hero-art"      alt="${hero.name}" loading="lazy">
         <img src="${imgs.prestige || imgs.image}"   class="hero-prestige" alt="${hero.name} prestige" loading="lazy">
@@ -532,7 +538,7 @@ function buildIconCard(hero, favSet) {
 
     const { showName, showProficiency } = getSettings();
     card.innerHTML = `
-        <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">★</button>
+        <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">⛊</button>
         <div class="role-badge" aria-hidden="true">${roleBadges}</div>
         <img src="${heroIcon(hero, data)}" class="hero-icon-img" alt="${hero.name}" loading="lazy">
         ${(showName !== 'off' || showProficiency !== 'off') ? `
@@ -734,6 +740,13 @@ document.getElementById('filter-favorites').addEventListener('click', function (
     saveUIPrefs();
     renderGrid();
 });
+
+document.getElementById('filter-tracked').addEventListener('click', function () {
+    trackedFilter = cycleFilterState(trackedFilter);
+    syncCycleBtn(this, trackedFilter);
+    saveUIPrefs();
+    renderGrid();
+})
 
 document.getElementById('filter-custom').addEventListener('click', function () {
     customFilter = cycleFilterState(customFilter);

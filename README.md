@@ -33,6 +33,8 @@ A Marvel Rivals proficiency tracker and hero creator.
 
 The easiest way to access is going to the website: [https://johnarp.github.io/galactas-guide/](https://johnarp.github.io/galactas-guide/)
 
+<!-- Add GitLab Mirror here -->
+
 Or, if you wish to use locally, here are the steps:
 
 ### 1. Downloading the Code
@@ -62,7 +64,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Role filter images remain white in Rivals theme
 - Hela's hover image is cut off
 - Icons are of varying quality
-- Icon changing through the proficiency modal requires exiting and opening again to see in the modal
+- Seeing the icon change from Lord+ proficiency requires exiting and opening the proficiency modal
 - To apply icon or costume change, the proficiency modal can only be closed, not saved
 - There are no Lord/Champion icons for costumes
 - There is no visible difference between icon sizes on mobile
@@ -74,6 +76,8 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 - Champion icons
 - (WIP) Rename hero images with generic names
+- Link to mirror (GitLab)
+- Change the look of the clear button in the search bars
 
 ### Home
 
@@ -84,8 +88,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 ### Tracker
 
 - Heroes pop-out when hovering
-- Change color and shape of favorite button
-- Tracked only filter
 - Sort/filter Costumes
 - Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
 
