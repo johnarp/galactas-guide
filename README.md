@@ -6,6 +6,9 @@
 
 A Marvel Rivals proficiency tracker and hero creator.
 
+[![GitHub](https://custom-icon-badges.demolab.com/badge/GitHub_(Primary)-000000?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/johnarp/galactas-guide)
+[![GitLab](https://custom-icon-badges.demolab.com/badge/GitLab_(Mirror)-e24329?style=for-the-badge&logo=gitlab&logoColor=ffffff)](https://gitlab.com/johnarp/galactas-guide)
+
 [![License](https://img.shields.io/github/license/johnarp/galactas-guide?style=for-the-badge)](./LICENSE)
 ![Version](https://img.shields.io/github/v/release/johnarp/galactas-guide?style=for-the-badge)
 
@@ -33,8 +36,6 @@ A Marvel Rivals proficiency tracker and hero creator.
 
 The easiest way to access is going to the website: [https://johnarp.github.io/galactas-guide/](https://johnarp.github.io/galactas-guide/)
 
-<!-- Add GitLab Mirror here -->
-
 Or, if you wish to use locally, here are the steps:
 
 ### 1. Downloading the Code
@@ -42,7 +43,14 @@ Or, if you wish to use locally, here are the steps:
 Clone the repository through a terminal, such as Command Prompt or Powershell:
 
 ```
+# GitHub (primary)
 git clone https://github.com/johnarp/galactas-guide
+
+# GitLab (mirror)
+git clone https://gitlab.com/johnarp/galactas-guide
+```
+
+```
 cd galactas-guide
 ```
 
@@ -69,6 +77,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - There are no Lord/Champion icons for costumes
 - There is no visible difference between icon sizes on mobile
 - Large and medium cards on mobile are too large (one per row)
+- Cyclops is missing icons and costumes, and is using temporary images
 
 ## 🗺️ Roadmap
 
@@ -76,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 - Champion icons
 - (WIP) Rename hero images with generic names
-- Link to mirror (GitLab)
+- GitLab mirror site hosting
 - Change the look of the clear button in the search bars
 
 ### Home
@@ -90,6 +99,8 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Heroes pop-out when hovering
 - Sort/filter Costumes
 - Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
+- Playtime
+- Stats
 
 ### Creator
 

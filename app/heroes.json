@@ -128,6 +128,18 @@
         "difficulty": 3
     },
     {
+        "name": "Cyclops",
+        "role": "Duelist",
+        "image": "../assets/heroes/cyclops/image.webp",
+        "prestige": "../assets/heroes/cyclops/prestige.png",
+        "icon": "../assets/heroes/cyclops/icon.webp",
+        "icon-lord": "../assets/heroes/cyclops/icon.webp",
+        "icon-champion": "../assets/heroes/cyclops/icon.webp",
+        "color": "#3ec6ec",
+        "season": 8.5,
+        "difficulty": 2
+    },
+    {
         "name": "Daredevil",
         "role": "Duelist",
         "image": "../assets/heroes/daredevil/image.png",

@@ -1,5 +1,6 @@
 # Changelog
 
+[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
 [1.5.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.2
 [1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
 [1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
@@ -14,6 +15,13 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [Unreleased]
+
+### Added
+
+- Cyclops
+- GitLab information in [README](./README.md)
 
 ## [1.5.2] - 2026-06-03
 
