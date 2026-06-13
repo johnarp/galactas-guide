@@ -130,11 +130,11 @@
     {
         "name": "Cyclops",
         "role": "Duelist",
-        "image": "../assets/heroes/cyclops/image.webp",
+        "image": "../assets/heroes/cyclops/image.png",
         "prestige": "../assets/heroes/cyclops/prestige.png",
         "icon": "../assets/heroes/cyclops/icon.webp",
-        "icon-lord": "../assets/heroes/cyclops/icon.webp",
-        "icon-champion": "../assets/heroes/cyclops/icon.webp",
+        "icon-lord": "../assets/heroes/cyclops/icon-lord.webp",
+        "icon-champion": "../assets/heroes/cyclops/icon-lord.webp",
         "color": "#3ec6ec",
         "season": 8.5,
         "difficulty": 2

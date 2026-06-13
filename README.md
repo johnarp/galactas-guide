@@ -77,7 +77,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - There are no Lord/Champion icons for costumes
 - There is no visible difference between icon sizes on mobile
 - Large and medium cards on mobile are too large (one per row)
-- Cyclops is missing icons and costumes, and is using temporary images
 
 ## 🗺️ Roadmap
 
@@ -101,6 +100,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
 - Playtime
 - Stats
+- Display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
 
 ### Creator
 

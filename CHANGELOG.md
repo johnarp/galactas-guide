@@ -23,6 +23,19 @@
 - Cyclops
 - GitLab information in [README](./README.md)
 
+### New Costumes
+
+> Cyclops' launch costumes
+
+#### Epic
+
+- Cyclops - Weapon M
+
+#### Rare
+
+- Cyclops - Futuristic Focus
+- Cyclops - Shadowed Gaze
+
 ## [1.5.2] - 2026-06-03
 
 *[View on GitLab](https://gitlab.com/johnarp/galactas-guide/-/releases/v1.5.2)*

@@ -364,6 +364,27 @@
         "icon": "../assets/costumes/cloak-dagger/icon_lemon-lime.png"
     },
     {
+        "hero": "Cyclops",
+        "name": "Futuristic Focus",
+        "rarity": "Rare",
+        "image": "../assets/costumes/cyclops/futuristic-focus.png",
+        "icon": "../assets/costumes/cyclops/icon_futuristic-focus.png"
+    },
+    {
+        "hero": "Cyclops",
+        "name": "Shadowed Gaze",
+        "rarity": "Rare",
+        "image": "../assets/costumes/cyclops/shadowed-gaze.png",
+        "icon": "../assets/costumes/cyclops/icon_shadowed-gaze.png"
+    },
+    {
+        "hero": "Cyclops",
+        "name": "Weapon M",
+        "rarity": "Epic",
+        "image": "../assets/costumes/cyclops/weapon-m.png",
+        "icon": "../assets/costumes/cyclops/icon_weapon-m.png"
+    },
+    {
         "hero": "Daredevil",
         "name": "Daredevil: Born Again Season 2",
         "rarity": "Epic",
