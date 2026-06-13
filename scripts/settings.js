@@ -25,7 +25,7 @@ function loadSettings() {
 }
 
 function getDefaultSetting(key) {
-    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on', showCostumes: 'on' };
+    const defaults = { theme: 'galacta', cardBgMode: 'hero', viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on', showCostumes: 'on', showRoleIcons: 'on' };
     return defaults[key] ?? null;
 }
 
@@ -80,7 +80,7 @@ document.getElementById('import-file').addEventListener('change', function () {
 document.getElementById('clear-btn').addEventListener('click', () => {
     if (confirm('Clear ALL saved data? This cannot be undone.')) {
         clearAllData();
-        setSettings({ viewMode: 'card', showName: 'on', showProficiency: 'on' });
+        setSettings({ viewMode: 'card', showName: 'on', showProficiency: 'on', showHoverImage: 'on', showCostumes: 'on', showRoleIcons: 'on' });
         document.documentElement.dataset.theme = '';
         showNotice('All data cleared.', 'success');
         loadSettings();

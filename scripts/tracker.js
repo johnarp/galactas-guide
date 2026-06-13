@@ -6,7 +6,7 @@ import { getHeroData, setHeroData, clearHeroData, getFavorites, toggleFavorite,
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 let heroes = [], roles = [], ranks = [], roleIconMap = {};
-let costumes = [], rarities = [], difficulties = [];
+let costumes = [], rarities = [], difficulties = [], seasons = [];
 
 // ── UI state ──────────────────────────────────────────────────────────────────
 
@@ -24,18 +24,19 @@ let iconSize       = 'md';    // 'sm' | 'md' | 'lg'  — icon view
 
 async function init() {
     try {
-        const [hRes, roRes, raRes, coRes, rarRes, difRes] = await Promise.all([
+        const [hRes, roRes, raRes, coRes, rarRes, difRes, seaRes] = await Promise.all([
             fetch('../app/heroes.json'),
             fetch('../app/roles.json'),
             fetch('../app/ranks.json'),
             fetch('../app/costumes.json'),
             fetch('../app/rarities.json'),
-            fetch('../app/difficulties.json')
+            fetch('../app/difficulties.json'),
+            fetch('../app/seasons.json')
         ]);
 
         let officialHeroes;
-        [officialHeroes, roles, ranks, costumes, rarities, difficulties] = await Promise.all([
-            hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(), difRes.json(),
+        [officialHeroes, roles, ranks, costumes, rarities, difficulties, seasons] = await Promise.all([
+            hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(), difRes.json(), seaRes.json(),
         ]);
 
         const customHeroes = getCreators()
@@ -108,6 +109,10 @@ function cardColor(hero) {
     if (cardBgMode === 'difficulty') {
         const diff = difficulties.find(d => d.difficulty === hero.difficulty);
         return diff?.color ?? 'var(--surface)';
+    }
+    if (cardBgMode === 'season') {
+        const season = seasons.find(s => s.season === hero.season);
+        return season?.color ?? 'var(--surface)';
     }
     if (cardBgMode === 'none') return 'var(--surface)';
     return hero.color ?? '#200630';
@@ -462,11 +467,11 @@ function buildCard(hero, favSet) {
             <span>${data.rank} ${data.level}${data.points != null ? ` · ${data.points} pts` : ''}</span>
         </div>` : '';
 
-    const { showName, showProficiency } = getSettings();
+    const { showName, showProficiency, showRoleIcons } = getSettings();
     const imgs = getActiveImages(hero);
     card.innerHTML = `
         <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">⛊</button>
-        <div class="role-badge" aria-hidden="true">${roleBadges}</div>
+        ${showRoleIcons !== 'off' ? `<div class="role-badge" aria-hidden="true">${roleBadges}</div>` : ''}
         <img src="${imgs.image}"                   class="hero-art"      alt="${hero.name}" loading="lazy">
         <img src="${imgs.prestige || imgs.image}"   class="hero-prestige" alt="${hero.name} prestige" loading="lazy">
         ${(showName !== 'off' || showProficiency !== 'off') ? `

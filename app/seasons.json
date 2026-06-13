@@ -1,0 +1,27 @@
+[
+    { "season": 0,      "color": "linear-gradient(#342f4f, #312c49)" },
+
+    { "season": 1,      "color": "linear-gradient(#fd4342, #942f36)" },
+    { "season": 1.5,    "color": "linear-gradient(#fd4342, #942f36)" },
+
+    { "season": 2,      "color": "linear-gradient(#d9c074, #a07e49)" },
+    { "season": 2.5,    "color": "linear-gradient(#d9c074, #a07e49)" },
+
+    { "season": 3,      "color": "linear-gradient(#cd1f27, #51101e)" },
+    { "season": 3.5,    "color": "linear-gradient(#cd1f27, #51101e)" },
+
+    { "season": 4,      "color": "linear-gradient(#d2bba9, #f9ac8b)" },
+    { "season": 4.5,    "color": "linear-gradient(#d2bba9, #f9ac8b)" },
+
+    { "season": 5,      "color": "linear-gradient(#685461, #539ac4)" },
+    { "season": 5.5,    "color": "linear-gradient(#685461, #539ac4)" },
+
+    { "season": 6,      "color": "linear-gradient(#dbb973, #3d4267)" },
+    { "season": 6.5,    "color": "linear-gradient(#dbb973, #3d4267)" },
+
+    { "season": 7,      "color": "linear-gradient(#5f578c, #4d367c)" },
+    { "season": 7.5,    "color": "linear-gradient(#5f578c, #4d367c)" },
+
+    { "season": 8,      "color": "linear-gradient(#13a1c5, #a3acc3)" },
+    { "season": 8.5,    "color": "linear-gradient(#13a1c5, #a3acc3)" }
+]

@@ -110,7 +110,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 ### Settings
 
 - More options for Show Proficiency
-- Show/Hide hero role icon
 - Option to disable Lord/Champion icons
 - Better organization
 - Auto Track All; defaults hero to Agent 1, 0 points

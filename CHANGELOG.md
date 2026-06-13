@@ -1,6 +1,6 @@
 # Changelog
 
-[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
+[1.6.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.0
 [1.5.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.2
 [1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
 [1.5.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.0
@@ -16,25 +16,54 @@
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
 
-## [Unreleased]
+## [1.6.0] - 2026-06-13
 
 ### Added
 
 - Cyclops
+- Season card background mode
+- Show role icon toggle
 - GitLab information in [README](./README.md)
 
 ### New Costumes
 
-> Cyclops' launch costumes
+> - Cyclops' launch costumes
+> - Remaining Season 4 costumes
+
+#### Legendary
+
+- Invisible Woman - Azure Shade (+Recolors)
+- Jeff the Land Shark - Jeff O'Lantern
+- Moon Knight - Moon Knight Mech
+- Psylocke - Fleeting Butterfly (+Recolors)
+- The Punisher - Aqua Arsenal (+Recolors)
 
 #### Epic
 
 - Cyclops - Weapon M
+- Hawkeye - Old Man Hawkeye
+- Loki - Immortal Firebird
+- Magneto - The Trial of Magneto
+- Scarlet Witch - The Queen of the Dead
+- Spider-Man - Black & Gold
+- Storm - Judicator Xiezhi
+- The Thing - Verdant Vanguard (Recolor of Rocky Tide)
+- Thor - Lightning Fast
+- Ultron - Wasteland Robot
+- Wolverine - Dog Brother X
 
 #### Rare
 
+- Angela - Divine Dragon Wing
+- Angela - Siriana's Silver
+- Blade - Will of Galacta
 - Cyclops - Futuristic Focus
 - Cyclops - Shadowed Gaze
+- Daredevil - Aurora Twilight
+- Daredevil - Shenloong's Creed
+- Mister Fantastic - Will of Galacta
+- Rocket Raccoon - Will of Galacta
+- Winter Soldier - Winter's Veil
 
 ## [1.5.2] - 2026-06-03
 
