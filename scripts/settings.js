@@ -6,7 +6,7 @@ function applySetting(key, value) {
     if (key === 'theme') {
         document.documentElement.dataset.theme = value === 'galacta' ? '' : value;
         // Update mobile browser chrome colour
-        const themeColors = { galacta: '#a612ea', rivals: '#FFFF00', symbiote: '#ffffff' };
+        const themeColors = { galacta: '#a612ea', rivals: '#FFFF00', symbiote: '#ffffff', xmen: '#e6ea12' };
         const meta = document.querySelector('meta[name="theme-color"]');
         if (meta) meta.content = themeColors[value] ?? '#a612ea';
     }

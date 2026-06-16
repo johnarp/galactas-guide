@@ -1,5 +1,6 @@
 # Changelog
 
+[1.6.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.1
 [1.6.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.0
 [1.5.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.2
 [1.5.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.1
@@ -15,6 +16,58 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.6.1] - 2026-06-16
+
+### Added
+
+- X-Men theme
+
+### Fixed
+
+- Modal icon now updates live when you select Lord/Champion
+- Show role icon setting now works when in icon mode
+
+### New Costumes
+
+> Remaining Season 5 Costumes
+
+#### Legendary
+
+- Cloak & Dagger - Ice Pas de Deux
+- Doctor Strange - Bleeker Street Strut
+- Invisible Woman - Disappearing Dessert
+    - Alluring Apple
+    - Mango Magic
+- Luna Snow - Cherry Delight
+    - Blueberry Ice
+    - Fruit Cake Flurry
+- Magik - New Millennia Might
+- Peni Parker - Snow-SP//dr
+- Squirrel Girl - Tinsel Tail
+
+#### Epic
+
+- Blade - Restful Recovery
+- Daredevil - Not Daredevil
+- Gambit - Thieves Guildmaster
+- Human Torch - Jack of Hearts
+- Iron Man - Mark I
+- Magneto - Black & Gold
+- Magneto - Temporal Tyrant
+- Rocket Raccoon - Rocket of the Rafters
+- The Punisher - Franken-Castle
+- Thor - God of Winter
+- Winter Soldier - Winter Buckaroo
+
+#### Rare
+
+- Gambit - Crimson Heart
+- Groot - Big Buddy
+- Iron Fist - Shenloong Champion
+- Iron Fist - Will of Galacta
+- Phoenix - Will of Galacta
+- Rogue - Searing Spellstripe
 
 ## [1.6.0] - 2026-06-13
 

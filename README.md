@@ -72,7 +72,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Role filter images remain white in Rivals theme
 - Hela's hover image is cut off
 - Icons are of varying quality
-- Seeing the icon change from Lord+ proficiency requires exiting and opening the proficiency modal
 - To apply icon or costume change, the proficiency modal can only be closed, not saved
 - There are no Lord/Champion icons for costumes
 - There is no visible difference between icon sizes on mobile
@@ -86,6 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - (WIP) Rename hero images with generic names
 - GitLab mirror site hosting
 - Change the look of the clear button in the search bars
+- CSS overhaul
 
 ### Home
 

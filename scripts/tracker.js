@@ -541,10 +541,10 @@ function buildIconCard(hero, favSet) {
             <span>${data.rank} ${data.level}${data.points != null ? ` · ${data.points}pts` : ''}</span>
         </div>` : '';
 
-    const { showName, showProficiency } = getSettings();
+    const { showName, showProficiency, showRoleIcons } = getSettings();
     card.innerHTML = `
         <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">⛊</button>
-        <div class="role-badge" aria-hidden="true">${roleBadges}</div>
+        ${showRoleIcons !== 'off' ? `<div class="role-badge" aria-hidden="true">${roleBadges}</div>` : ''}
         <img src="${heroIcon(hero, data)}" class="hero-icon-img" alt="${hero.name}" loading="lazy">
         ${(showName !== 'off' || showProficiency !== 'off') ? `
         <div class="hero-info">
@@ -654,6 +654,7 @@ function renderRankGrid(activeTitle) {
             grid.querySelectorAll('.rank-option').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             selectedRank = rank;
+            document.getElementById('modal-hero-art').src = getModalIcon(currentHero, { rank: rank.title });
             syncLevelControls(rank, null, null);
         });
 

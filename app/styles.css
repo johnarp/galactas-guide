@@ -1017,6 +1017,26 @@ main {
 }
 
 /* ============================================================
+   X-MEN THEME
+   ============================================================ */
+
+[data-theme="xmen"] {
+    --background: #050a1d;
+    --primary: #e6ea12;
+    --primary-dim: rgba(234, 230, 18, 0.2);
+    --text: #f0eef5;
+    --nav: #0a1a3e;
+    --surface: #061330;
+    --accent: #8d8d8d;
+    --accent-glow: rgba(58, 107, 212, 0.25);
+    --overlay: rgba(0, 0, 0, 0.8);
+    --nav-glass-bg: rgba(3, 10, 22, 0.75);
+    --nav-glass-border: rgba(18, 101, 234, 0.18);
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+}
+
+/* ============================================================
    SETTINGS — OPTION BUTTONS (theme / card bg pickers)
    ============================================================ */
 
