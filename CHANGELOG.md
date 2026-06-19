@@ -1,5 +1,6 @@
 # Changelog
 
+[1.7.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.0
 [1.6.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.1
 [1.6.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.0
 [1.5.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.5.2
@@ -16,6 +17,96 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.7.0] - 2026-06-19
+
+### Added
+
+- Profile customization with nameplates and Hero display
+- Account level with explanatory popup
+- More detailed proficiency breakdown
+- Issue template and label for GitHub and GitLab for costume requests
+- Link in costume modal and supported costumes to costume request template
+- Cyclops' nameplate
+- Test profile
+
+### Changed
+
+- Improved the colours in the Season card background mode
+- Favourite icon and primary button colour in X-Men theme
+- Iron Fist's Shenloong Champion from Rare to Epic
+- README preview images
+
+### New Costumes
+
+> - Remaining Season 6 & 7 Costumes
+> - Misc.
+>   - Black Cat - Wild Card (+ Pink Purr, Purple Prowl) [Legendary]
+>   - Cloak & Dagger - Coastal Couple (+ Sapphire Splash, Sunset Shores)
+>   - Deadpool - IGNITE Series 2026 [Epic]
+>       - All costumes in this set are recolors of 100 Thieves' costume alphabetically
+>   - Groot - Ironwood Serpent [Epic]
+
+#### Legendary
+
+- Black Cat - Wild Card (+ Pink Purr, Purple Prowl)
+- Captain America - Brett Hendrick: The Star
+- Cloak & Dagger - Coastal Couple (+ Sapphire Splash, Sunset Shores)
+- Cloak & Dagger - Daring Duo (+ Darkened Day, Twisted Thorns)
+- Invisible Woman - Riann Landau: The Debater (+ Pine Opposition, Royal Blue Rebuttal)
+- Iron Man - Iron Mariner
+- Jeff the Land Shark - Duck Defender (+ Green Bill, White Waddle)
+- Luna Snow - Disco Pop (+ Jade Jewel, Night Nebula)
+- Peni Parker - Badlands Lullaby (+ Cerulean Corruption, Toxic Tint)
+- Psylocke - Chouko Takahashi: The Prodigy (+ Cobalt Charm, Sporty Tea)
+- Spider-Man - Peter Parker: The Photographer
+- Thor - Boogie Bolt (+ Purple Pulse, Shadow Shock)
+- Venom - Space Corsair
+
+#### Epic
+
+- Adam Warlock - Living Tribunal
+- Angela - Ace of Spades
+- Blade - Starlit Shadow
+- Deadpool - IGNITE Series 2026 (+ All Variants)
+- Doctor Strange - Phantom Sorcerer
+- Emma Frost - Black Queen of the Marauders
+- Emma Frost - Queen of Diamonds
+- Groot - Ironwood Serpent
+- Hela - Disco of the Dead
+- Jeff the Land Shark - 8-Bit Bash
+- Loki - Low-Key Loki
+- Loki - Twilight Aurora (Recolor of The Avengers)
+- Mantis - Black & Gold
+- Mantis - Galactic Gladiator
+- Mister Fantastic - Danum Ket: The Professor
+- Moon Knight - Eclipse Knight
+- Moon Knight - King of Clubs
+- Namor - Sea Samba
+- Psylocke - Once-Captive Corsair
+- Rocket Raccoon - Giant Panda
+- Spider-Man - Groovy Swing
+- Spider-Man - Marvel Cosmic Invasion
+- Squirrel Girl - Maureen Allene: The Programmer
+- Star-Lord - Groovy Guardian
+- The Punisher - Marauder Marksman
+- Thor - Low-Key Thor
+- Venom - Marvel Cosmic Invasion
+- Wolverine - Winter Soldier
+
+#### Rare
+
+- Black Cat - Gilded Shadow
+- Blade - Vampire Slayer
+- Daredevil - Will of Galacta
+- Deadpool - Wade Wilson: The Spirit Squad
+- Deadpool - Workwear Woes
+- Gambit - Will of Galacta
+- Invisible Woman - Will of Galacta
+- Scarlet Witch - Will of Galacta
+- Star-Lord - Luminous Legend
+- Ultron - Will of Galacta
+- White Fox - Rosy Recon
 
 ## [1.6.1] - 2026-06-16
 

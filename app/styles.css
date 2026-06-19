@@ -1036,6 +1036,14 @@ main {
     --radius-sm: 0.5rem;
 }
 
+[data-theme="xmen"] .fav-btn.active {
+    color: var(--primary);
+}
+
+[data-theme="xmen"] .btn-primary {
+    color: var(--background);
+}
+
 /* ============================================================
    SETTINGS — OPTION BUTTONS (theme / card bg pickers)
    ============================================================ */
@@ -1088,15 +1096,32 @@ main {
    ============================================================ */
 
 .profile-body {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 14rem;
-    max-width: 60rem;
+    display               : grid;
+    gap                   : 2rem;
+    grid-template-columns : 1fr 1fr;
+    align-items           : start;
+}
+
+.profile-left-col {
+    display        : flex;
+    flex-direction : column;
+    gap            : 2rem;
+}
+
+#profile-display-hero {
+    width           : 100%;
+    max-height      : 80vh;
+    object-fit      : contain;
+    object-position : top center;
+    display         : block;
 }
 
 @media (max-width: 640px) {
     .profile-body {
         grid-template-columns: 1fr;
+    }
+    #profile-display-hero {
+        max-height : 70vw;
     }
 }
 
@@ -2351,4 +2376,401 @@ main {
     height     : 0.72rem;
     object-fit : contain;
     width      : auto;
+}
+
+.link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ============================================================
+   PROFILE REFRESH EXTENSIONS — pass 1
+   ============================================================ */
+
+.profile-header-info {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#account-level {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--accent);
+    background: var(--surface);
+    border: 1px solid var(--primary-dim);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+#breakdown-avg {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.85;
+    margin: -0.5rem 0 1.25rem 0;
+    letter-spacing: 0.03em;
+}
+
+/* Row wrapping & Sub-Grid Drawers */
+.rank-row-container {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: background var(--transition);
+}
+
+.rank-row-container:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.rank-row-count[role="button"] {
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 0.1rem 0.4rem;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.rank-row-count[role="button"]:hover {
+    background: var(--primary-dim);
+    color: var(--text);
+    transform: scale(1.1);
+}
+
+.rank-row-count.drawer-active {
+    background: var(--accent) !important;
+    color: var(--nav) !important;
+    opacity: 1 !important;
+    transform: scale(1.05);
+}
+
+/* Responsive Grid inside Dropdowns */
+.rank-heroes-drawer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 0.4rem;
+    padding: 0.6rem 0.25rem;
+}
+
+.drawer-grid-list {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(2.4rem, 1fr));
+}
+
+.drawer-hero-avatar-thumb {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--background);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.drawer-hero-avatar-thumb:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.drawer-hero-avatar-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rivals Theme Color Adjustments for New Elements */
+[data-theme="rivals"] #account-level {
+    color: var(--nav);
+    background: var(--accent);
+    border-color: var(--nav);
+}
+
+[data-theme="rivals"] .rank-row-count.drawer-active {
+    background: var(--nav) !important;
+    color: var(--primary) !important;
+}
+
+[data-theme="rivals"] .drawer-hero-avatar-thumb {
+    background: var(--surface);
+    border-color: var(--nav);
+}
+
+/* Make the badge feel interactive */
+#account-level {
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition), filter var(--transition);
+}
+
+#account-level:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Modal Overlay & Box Setup */
+.profile-modal-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.profile-modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.profile-modal-content {
+    background: var(--surface);
+    border: 1px solid var(--primary-dim);
+    border-radius: var(--radius-sm);
+    padding: 2rem;
+    max-width: 350px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-modal-overlay.hidden .modal-content {
+    transform: translateY(15px);
+}
+
+.profile-modal-content h3 {
+    margin-top: 0;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.profile-modal-content p {
+    font-size: 0.95rem;
+    color: var(--text);
+    opacity: 0.85;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.profile-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text);
+    opacity: 0.5;
+    transition: opacity var(--transition), color var(--transition);
+}
+
+.profile-modal-close:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* --- NEW PROFILE HEADER --- */
+.profile-header-new {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.profile-nameplate {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md);
+    /* border: 2px solid var(--primary-dim); */
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.3); */
+}
+
+.profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 0.5rem;
+}
+
+.profile-identity h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.profile-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.edit-btn {
+    background: transparent;
+    border: 1px solid var(--primary-dim);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+}
+
+.edit-btn:hover {
+    background: var(--primary-dim);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* --- CUSTOMIZATION MODAL --- */
+.customize-modal-content {
+    max-width: 450px !important;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.customize-section {
+    margin-bottom: 1.5rem;
+}
+
+.customize-section label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+#modal-name-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--primary-dim);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition);
+}
+
+#modal-name-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Scrollable Icon Grids */
+.hero-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 0.5rem;
+    max-height: 140px;
+    overflow-y: auto;
+    padding: 0.5rem;
+    background: rgba(0,0,0,0.15);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.hero-icon-grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.hero-icon-grid img:hover {
+    transform: scale(1.05);
+}
+
+.hero-icon-grid img.selected-icon {
+    border-color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.5);
+}
+
+/* Base vs Prestige Selector */
+.style-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.style-card {
+    flex: 1;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid var(--primary-dim);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.style-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Forces a uniform box size */
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.style-card span {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.style-card:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.style-card.selected-style {
+    border-color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.1);
+}
+
+/* --- NAMEPLATE FIX (848x192 Ratio) --- */
+#current-nameplate {
+    width: 100%;
+    max-width: 424px; /* Exactly half of 848px to make it much smaller on screen */
+    height: auto;
+    aspect-ratio: 848 / 192; /* Locks in your exact file dimensions */
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md, 8px); 
+}
+
+/* Mobile scaling so they don't break smaller screens */
+@media (max-width: 640px) {
+    #current-nameplate {
+        max-width: 100%; /* Allows it to fill the mobile column while keeping the 848/192 ratio */
+    }
 }

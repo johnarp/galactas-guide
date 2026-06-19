@@ -1,0 +1,28 @@
+name: Costume Request
+description: Request a new costume to be added.
+title: "[Costume Request]: "
+labels: ["costume request"]
+
+body:
+  - type: input
+    id: hero
+    attributes:
+      label: Hero Name
+      placeholder: Adam Warlock
+    validations:
+      required: true
+
+  - type: input
+    id: costume
+    attributes:
+      label: Costume Name
+      placeholder: Cosmic Warlock
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Screenshots, sources, or anything else that may help.
+      placeholder: Any screenshots or extra information...

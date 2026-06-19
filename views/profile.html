@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport"               content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color"            content="#a612ea">
-    <meta name="description"            content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#a612ea">
+    <meta name="description" content="A Marvel Rivals proficiency tracker and hero creator.">
 
-    <meta property="og:title"           content="Profile | Galacta's Guide">
-    <meta property="og:site_name"       content="Galacta's Guide">
-    <meta property="og:description"     content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta property="og:image"           content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
-    <meta property="og:image:alt"       content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta property="og:url"             content="https://johnarp.github.io/galactas-guide/views/profile.html">
-    <meta property="og:type"            content="website">
+    <meta property="og:title" content="Profile | Galacta's Guide">
+    <meta property="og:site_name" content="Galacta's Guide">
+    <meta property="og:description" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta property="og:image" content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
+    <meta property="og:image:alt" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta property="og:url" content="https://johnarp.github.io/galactas-guide/views/profile.html">
+    <meta property="og:type" content="website">
 
-    <meta name="twitter:card"           content="summary_large_image">
-    <meta name="twitter:title"          content="Profile | Galacta's Guide">
-    <meta name="twitter:description"    content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta name="twitter:image"          content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profile | Galacta's Guide">
+    <meta name="twitter:description" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta name="twitter:image" content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
     <title>Profile | Galacta's Guide</title>
     <link rel="stylesheet" href="../app/styles.css">
     <link rel="icon" href="../assets/github/icon.png" type="image/png">
-    <script>try{var _s=JSON.parse(localStorage.getItem('gg'));var _t=_s?.settings?.theme;if(_t)document.documentElement.dataset.theme=_t;var _tc={'rivals':'#282A31','symbiote':'#131313'};var _m=document.querySelector('meta[name="theme-color"]');if(_m&&_t&&_tc[_t])_m.content=_tc[_t];}catch(e){}</script>
+    <script>try { var _s = JSON.parse(localStorage.getItem('gg')); var _t = _s?.settings?.theme; if (_t) document.documentElement.dataset.theme = _t; var _tc = { 'rivals': '#282A31', 'symbiote': '#131313' }; var _m = document.querySelector('meta[name="theme-color"]'); if (_m && _t && _tc[_t]) _m.content = _tc[_t]; } catch (e) { }</script>
 </head>
+
 <body>
     <header>
         <a href="../index.html" class="site-title">Galacta's Guide</a>
@@ -36,36 +38,119 @@
             </ul>
             <ul class="nav-utils">
                 <li><button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button></li>
-                <li><a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a></li>
-                <li><a href="profile.html" class="nav-icon-btn active" title="Profile" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a></li>
+                <li><a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg></a></li>
+                <li><a href="profile.html" class="nav-icon-btn active" title="Profile" aria-label="Profile"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="profile-header">
-            <div class="profile-avatar" aria-hidden="true">GG</div>
-            <input id="profile-name-input" class="profile-name-input"
-                   type="text" placeholder="Your Name" maxlength="32" aria-label="Your display name">
+        <div class="profile-header-new">
+            <div class="profile-nameplate" id="current-nameplate"
+                style="background-image: url('../assets/heroes/adam-warlock/nameplate.png');"></div>
+            <div class="profile-identity">
+                <h1 id="profile-display-name">Player</h1>
+                <div class="profile-badges">
+                    <span id="account-level" title="Click for details">LVL 0</span>
+                    <button id="open-customize-btn" class="edit-btn" title="Customize Profile">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <div class="profile-body">
-            <!-- Left: rank breakdown -->
-            <div class="breakdown-card">
-                <h2>Proficiency Breakdown</h2>
-                <div id="rank-breakdown"></div>
+            <div class="profile-left-col">
+                <!-- Rank breakdown -->
+                <div class="breakdown-card">
+                    <h2>Proficiency Breakdown</h2>
+                    <p id="breakdown-avg" class="breakdown-avg"></p>
+                    <div id="rank-breakdown"></div>
+                </div>
+
+                <!-- Creator count -->
+                <div class="concepts-card">
+                    <h2>Creator</h2>
+                    <span id="concepts-number" class="concepts-number">0</span>
+                    <span class="concepts-label">Concepts Created</span>
+                </div>
             </div>
 
-            <!-- Right: concepts count -->
-            <div class="concepts-card">
-                <h2>Creator</h2>
-                <span id="concepts-number" class="concepts-number">0</span>
-                <span class="concepts-label">Concepts Created</span>
-            </div>
+            <img id="profile-display-hero" src="../assets/heroes/adam-warlock/adam-warlock.png" alt="Featured Hero">
         </div>
     </main>
 
+    <!-- Reusable Modal Container -->
+    <div id="level-modal" class="profile-modal-overlay hidden">
+        <div class="profile-modal-content">
+            <span class="profile-modal-close" id="close-level-modal">&times;</span>
+            <h3>Account Level</h3>
+            <p>Your Account Level is calculated by adding together the individual levels of every hero you are currently
+                tracking.</p>
+        </div>
+    </div>
+
+    <!-- Customization Modal -->
+    <div id="customize-modal" class="modal hidden">
+        <div class="modal-content customize-modal-content">
+            <span class="modal-close" id="close-customize-modal">&times;</span>
+            <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--primary-dim); padding-bottom: 0.5rem;">
+                Customize Profile</h3>
+
+            <!-- Name Edit -->
+            <div class="customize-section">
+                <label>Player Name</label>
+                <input type="text" id="modal-name-input" placeholder="Enter your name..." autocomplete="off">
+            </div>
+
+            <!-- Nameplate Selection -->
+            <div class="customize-section">
+                <label>Nameplate</label>
+                <div class="hero-icon-grid" id="nameplate-grid"></div>
+            </div>
+
+            <!-- Display Hero Selection -->
+            <div class="customize-section">
+                <label>Featured Hero</label>
+                <div class="hero-icon-grid" id="display-hero-grid"></div>
+
+                <!-- Prestige/Base Selector (Hidden until a hero is clicked) -->
+                <div id="style-selector-container" class="hidden">
+                    <label style="margin-top: 1rem;">Select Style</label>
+                    <div class="style-options">
+                        <div class="style-card" id="style-base" data-style="image">
+                            <img src="" alt="Base">
+                            <span>Base</span>
+                        </div>
+                        <div class="style-card" id="style-prestige" data-style="prestige">
+                            <img src="" alt="Prestige">
+                            <span>Prestige</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../scripts/profile.js"></script>
-    <script>!function(){var b=document.querySelector('.nav-hamburger');if(!b)return;var h=document.querySelector('header');b.addEventListener('click',function(){var o=h.classList.toggle('nav-open');b.setAttribute('aria-expanded',String(o));});document.addEventListener('click',function(e){if(!h.contains(e.target)&&h.classList.contains('nav-open')){h.classList.remove('nav-open');b.setAttribute('aria-expanded','false');}});}();</script>
+    <script>!function () { var b = document.querySelector('.nav-hamburger'); if (!b) return; var h = document.querySelector('header'); b.addEventListener('click', function () { var o = h.classList.toggle('nav-open'); b.setAttribute('aria-expanded', String(o)); }); document.addEventListener('click', function (e) { if (!h.contains(e.target) && h.classList.contains('nav-open')) { h.classList.remove('nav-open'); b.setAttribute('aria-expanded', 'false'); } }); }();</script>
 </body>
+
 </html>

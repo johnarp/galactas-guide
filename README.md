@@ -32,6 +32,11 @@ A Marvel Rivals proficiency tracker and hero creator.
     <img src="./assets/github/preview-2.png" width="45%">
 </div>
 
+<div style="display: flex; gap: 10px; justify-content: center; padding-top: 10px">
+    <img src="./assets/github/preview-3.png" width="45%">
+    <img src="./assets/github/preview-4.png" width="45%">
+</div>
+
 ## 🚀 Installation
 
 The easiest way to access is going to the website: [https://johnarp.github.io/galactas-guide/](https://johnarp.github.io/galactas-guide/)
@@ -76,6 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - There are no Lord/Champion icons for costumes
 - There is no visible difference between icon sizes on mobile
 - Large and medium cards on mobile are too large (one per row)
+- Costume selection is ordered by order in `costumes.json`
 
 ## 🗺️ Roadmap
 
@@ -85,6 +91,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - (WIP) Rename hero images with generic names
 - GitLab mirror site hosting
 - Change the look of the clear button in the search bars
+- Improve look of scrollbar (eg. in costume modal, in supported costumes, etc.)
 - CSS overhaul
 
 ### Home
@@ -100,12 +107,23 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
 - Playtime
 - Stats
-- Display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
+- Option to display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
+- Costume collections, release, etc.
+- Costume templates (eg. apply "Formula R" to all applicable heroes, or make your own)
+- Show costume names instead of only numbers
 
 ### Creator
 
 - Description/bio
 - Costumes
+
+### Profile
+
+- Game level alongside website level
+- Display created heroes
+- Display costumes
+- Choose costume nameplates
+- Order the hero icons in proficiency breakdown (eg. order by level)
 
 ### Settings
 
@@ -113,11 +131,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Option to disable Lord/Champion icons
 - Better organization
 - Auto Track All; defaults hero to Agent 1, 0 points
-
-### Profile
-
-- Hero nameplate
-- Display a hero and its info on your profile
 
 ## 📄 License
 
