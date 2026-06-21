@@ -2765,7 +2765,8 @@ main {
     aspect-ratio: 848 / 192; /* Locks in your exact file dimensions */
     background-size: cover;
     background-position: center;
-    border-radius: var(--radius-md, 8px); 
+    /* border-radius: var(--radius-md, 8px);  */
+    border-radius: 0;
 }
 
 /* Mobile scaling so they don't break smaller screens */

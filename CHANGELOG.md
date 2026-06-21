@@ -1,5 +1,6 @@
 # Changelog
 
+[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
 [1.7.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.0
 [1.6.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.1
 [1.6.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.0
@@ -17,6 +18,52 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [Unreleased]
+
+### Fixed
+
+- Removed smooth corners on nameplates
+
+### New Costumes
+
+> Season 8 costumes (up to June 19)
+
+#### Legendary
+
+- Doctor Strange - Nautical Mystic (+ Crimson Conjurer, Magical Mint)
+- Emma Frost - White Wave Queen (+ Caviar Black, Ravishing Red)
+- Iron Man - Iron Samurai
+- Luna Snow - Sonic Trailblazer (+ Citrus Spark, Purple Pulse)
+- Magik - Soulless Sword (+ Green Glow, Neon Nemesis)
+- Peni Parker - Peni Parker: The Freshman (+ Berry Blast, Frosty Fall)
+- Rogue - Starlit Rebel (+ High Noon, Midnight Mirage)
+
+#### Epic
+
+- Captain America - Primal Patriot
+- Deadpool - Monster King
+- Gambit - Barrier Buster
+- Hela - Savage Monarch
+- Iron Fist - Shou-Lao's Champion (Recolor of Shenloong's Champion)
+- Magneto - Untamed Overlord
+- Mantis - Mandy Celestine: The Greeter
+- Mister Fantastic - Fantastic Beach Dad
+- Phoenix - White Crown Phoenix
+- Spider-Man - Coastal Wall-Crawler
+- Star-Lord - Glory Gunner
+- Thor - Unworthy Thor
+- Ultron - Cybernetic Drip
+- Wolverine - X-2099
+
+#### Rare
+
+- Devil Dinosaur - Tropical Beast
+- Human Torch - Silver Spark
+- Mantis - Starlit Madonna
+- Rogue - Will of Galacta
+- Storm - Will of Galacta
+- The Thing - Infinity Thing
 
 ## [1.7.0] - 2026-06-19
 

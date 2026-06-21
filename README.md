@@ -111,6 +111,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Costume collections, release, etc.
 - Costume templates (eg. apply "Formula R" to all applicable heroes, or make your own)
 - Show costume names instead of only numbers
+- Accessories
 
 ### Creator
 
