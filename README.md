@@ -79,15 +79,16 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Icons are of varying quality
 - To apply icon or costume change, the proficiency modal can only be closed, not saved
 - There are no Lord/Champion icons for costumes
+- There are no separate Champion icons for Heroes with multiple icons (eg. Cloak & Dagger/Cloak/Dagger, Bruce Banner/Hulk/MH)
 - There is no visible difference between icon sizes on mobile
 - Large and medium cards on mobile are too large (one per row)
 - Costume selection is ordered by order in `costumes.json`
+- There is severe lag when equipped 4-5+ Champion icons in icon mode
 
 ## 🗺️ Roadmap
 
 ### General
 
-- Champion icons
 - (WIP) Rename hero images with generic names
 - GitLab mirror site hosting
 - Change the look of the clear button in the search bars
@@ -110,7 +111,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Option to display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
 - Costume collections, release, etc.
 - Costume templates (eg. apply "Formula R" to all applicable heroes, or make your own)
-- Show costume names instead of only numbers
+- Show costume recolor names instead of only numbers
 - Accessories
 
 ### Creator

@@ -520,6 +520,13 @@ function heroIcon(hero, data) {
     return iconSet.icon ?? hero.image;
 }
 
+function isChampionRank(data) {
+    if (!data?.rank) return false;
+    const championIdx = ranks.findIndex(r => r.title === 'Champion');
+    const ri          = ranks.findIndex(r => r.title === data.rank);
+    return ri >= championIdx;
+}
+
 function buildIconCard(hero, favSet) {
     const heroRoles = Array.isArray(hero.role) ? hero.role : [hero.role];
     const data      = getHeroData(hero.name);
@@ -542,16 +549,40 @@ function buildIconCard(hero, favSet) {
         </div>` : '';
 
     const { showName, showProficiency, showRoleIcons } = getSettings();
+
+    // Use animated sprite div for champion, regular img otherwise
+    const iconSrc  = heroIcon(hero, data);
+    const useSprite = isChampionRank(data) && hero['icon-champion'];
+    const iconHtml  = useSprite
+        ? `<div class="hero-icon-img champion-sprite" style="background-image:url('${iconSrc}')"></div>`
+        : `<img src="${iconSrc}" class="hero-icon-img" alt="${hero.name}" loading="lazy">`;
+
     card.innerHTML = `
         <button class="fav-btn${isFav ? ' active' : ''}" aria-label="${isFav ? 'Unfavourite' : 'Favourite'} ${hero.name}">⛊</button>
         ${showRoleIcons !== 'off' ? `<div class="role-badge" aria-hidden="true">${roleBadges}</div>` : ''}
-        <img src="${heroIcon(hero, data)}" class="hero-icon-img" alt="${hero.name}" loading="lazy">
+        ${iconHtml}
         ${(showName !== 'off' || showProficiency !== 'off') ? `
         <div class="hero-info">
             ${showName        !== 'off' ? `<div class="hero-name">${hero.name}</div>` : ''}
             ${showProficiency !== 'off' ? rankInfo : ''}
         </div>` : ''}
     `;
+
+    // JS-driven sprite: steps through all 60 frames (6 cols × 10 rows) at 24fps
+    if (useSprite) {
+        const spriteEl = card.querySelector('.champion-sprite');
+        let frame = 0;
+        const COLS = 6, TOTAL = 60;
+        const id = setInterval(() => {
+            if (!spriteEl.isConnected) { clearInterval(id); return; }
+            const col = frame % COLS;
+            const row = Math.floor(frame / COLS);
+            // spriteEl.style.backgroundPositionX = `${col * 20}%`;
+            spriteEl.style.backgroundPositionX = `${(col * 18.75) + 3.125}%`;
+            spriteEl.style.backgroundPositionY = `${row * (100 / 9)}%`;
+            frame = (frame + 1) % TOTAL;
+        }, 1000 / 24);
+    }
 
     card.querySelector('.fav-btn').addEventListener('click', e => {
         e.stopPropagation();

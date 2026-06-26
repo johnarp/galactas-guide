@@ -2775,3 +2775,15 @@ main {
         max-width: 100%; /* Allows it to fill the mobile column while keeping the 848/192 ratio */
     }
 }
+
+
+
+
+.champion-sprite {
+    background-repeat  : no-repeat;
+    /* Force exact dimensions: 6 columns wide, 10 rows tall */
+    background-size    : 900% 1000%; 
+    background-position: 0% 0%;
+    will-change: background-position;
+    transform: translateZ(0);
+}

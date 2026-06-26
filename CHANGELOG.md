@@ -1,6 +1,6 @@
 # Changelog
 
-[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
+[1.7.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.1
 [1.7.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.0
 [1.6.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.1
 [1.6.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.6.0
@@ -19,18 +19,25 @@
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
 
-## [Unreleased]
+## [1.7.1] - 2026-06-26
+
+### Added
+
+- Champion (animated) icons
 
 ### Fixed
 
+- Mantis is now a Strategist
 - Removed smooth corners on nameplates
 
 ### New Costumes
 
-> Season 8 costumes (up to June 19)
+> Season 8 costumes (up to June 26)
 
 #### Legendary
 
+- Black Widow - Aquatic Assassin (+ Golden Gossamer, Toxic Trace)
+- Daredevil - Sonar Savior
 - Doctor Strange - Nautical Mystic (+ Crimson Conjurer, Magical Mint)
 - Emma Frost - White Wave Queen (+ Caviar Black, Ravishing Red)
 - Iron Man - Iron Samurai
@@ -64,6 +71,7 @@
 - Rogue - Will of Galacta
 - Storm - Will of Galacta
 - The Thing - Infinity Thing
+- Wolverine - Will of Galacta
 
 ## [1.7.0] - 2026-06-19
 

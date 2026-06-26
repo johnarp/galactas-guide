@@ -202,6 +202,25 @@
     },
     {
         "hero": "Black Widow",
+        "name": "Aquatic Assassin",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/black-widow/aquatic-assassin.png",
+        "icon": "../assets/costumes/black-widow/icon_aquatic-assassin.png",
+        "recolors": [
+            {
+                "name": "Golden Gossamer",
+                "image": "../assets/costumes/black-widow/golden-gossamer.png",
+                "icon": "../assets/costumes/black-widow/icon_golden-gossamer.png"
+            },
+            {
+                "name": "Toxic Trace",
+                "image": "../assets/costumes/black-widow/toxic-trace.png",
+                "icon": "../assets/costumes/black-widow/icon_toxic-trace.png"
+            }
+        ]
+    },
+    {
+        "hero": "Black Widow",
         "name": "Lion's Heartbeat",
         "rarity": "Epic",
         "image": "../assets/costumes/black-widow/lions-heartbeat.png",
@@ -524,6 +543,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/cyclops/shadowed-gaze.png",
         "icon": "../assets/costumes/cyclops/icon_shadowed-gaze.png"
+    },
+    {
+        "hero": "Daredevil",
+        "name": "Sonar Savior",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/daredevil/sonar-savior.png",
+        "icon": "../assets/costumes/daredevil/icon_sonar-savior.png"
     },
     {
         "hero": "Daredevil",
@@ -3761,5 +3787,12 @@
         "rarity": "Rare",
         "image": "../assets/costumes/wolverine/lone-wolf.png",
         "icon": "../assets/costumes/wolverine/icon_lone-wolf.png"
+    },
+    {
+        "hero": "Wolverine",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/wolverine/will-of-galacta.png",
+        "icon": "../assets/costumes/wolverine/icon_will-of-galacta.png"
     }
 ]
