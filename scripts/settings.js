@@ -1,4 +1,4 @@
-import { exportData, importData, clearAllData, getSettings, setSettings } from './state.js';
+import { exportData, importData, clearAllData, getSettings, setSettings, getProfile } from './state.js';
 
 // ── Apply saved settings on load ──────────────────────────────────────────────
 
@@ -46,16 +46,24 @@ document.querySelectorAll('.option-btn').forEach(btn => {
 // ── Export ────────────────────────────────────────────────────────────────────
 
 document.getElementById('export-btn').addEventListener('click', () => {
+    // 1. Retrieve name
+    const profile = getProfile();
+    const rawName = profile.name || '';
+    // 2. Sanitize name
+    const safeName = rawName.trim().toLowerCase().replace(/[^a-z0-9-_]/g, '_') || 'backup';
+    const fileName = `galactas-guide-${safeName}.json`;
+    // 3. Inject clean name into download
     const blob = new Blob([exportData()], { type: 'application/json' });
-    const url  = URL.createObjectURL(blob);
-    const a    = Object.assign(document.createElement('a'), {
-        href: url, download: 'galactas-guide-backup.json',
+    const url = URL.createObjectURL(blob);
+    const a = Object.assign(document.createElement('a'), {
+        href: url,
+        download: fileName,
     });
     document.body.appendChild(a);
     a.click();
     a.remove();
     URL.revokeObjectURL(url);
-    showNotice('Data exported!', 'success');
+    showNotice('Data exported', 'success')
 });
 
 // ── Import ────────────────────────────────────────────────────────────────────

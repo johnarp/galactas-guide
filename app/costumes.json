@@ -424,6 +424,13 @@
     },
     {
         "hero": "Captain America",
+        "name": "Seaside Sentinel",
+        "rarity": "Epic",
+        "image": "../assets/costumes/captain-america/1022303-costume.png",
+        "icon": "../assets/costumes/captain-america/1022303-icon.png"
+    },
+    {
+        "hero": "Captain America",
         "name": "Star Spangled Style",
         "rarity": "Epic",
         "image": "../assets/costumes/captain-america/star-spangled-style.png",
@@ -1711,6 +1718,25 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/loki/lady-loki.png",
         "icon": "../assets/costumes/loki/icon_lady-loki.png"
+    },
+    {
+        "hero": "Loki",
+        "name": "Seaside Siren",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/loki/1016504-costume.png",
+        "icon": "../assets/costumes/loki/1016504-icon.png",
+        "recolors": [
+            {
+                "name": "Sapphire Sorceress",
+                "image": "../assets/costumes/loki/ps1016506-costume.png",
+                "icon": "../assets/costumes/loki/ps1016506-icon.png"
+            },
+            {
+                "name": "Sunlit Sovereign",
+                "image": "../assets/costumes/loki/ps1016505-costume.png",
+                "icon": "../assets/costumes/loki/ps1016505-icon.png"
+            }
+        ]
     },
     {
         "hero": "Loki",
@@ -3622,6 +3648,25 @@
         "rarity": "Rare",
         "image": "../assets/costumes/venom/cyan-clash.png",
         "icon": "../assets/costumes/venom/icon_cyan-clash.png"
+    },
+    {
+        "hero": "White Fox",
+        "name": "Coastal Kumiho",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/white-fox/1060501-costume.png",
+        "icon": "../assets/costumes/white-fox/1060501-icon.png",
+        "recolors": [
+            {
+                "name": "Magical Mint",
+                "image": "../assets/costumes/white-fox/ps1060300-costume.png",
+                "icon": "../assets/costumes/white-fox/ps1060300-icon.png"
+            },
+            {
+                "name": "Pink Claws",
+                "image": "../assets/costumes/white-fox/ps1060301-costume.png",
+                "icon": "../assets/costumes/white-fox/ps1060301-icon.png"
+            }
+        ]
     },
     {
         "hero": "White Fox",

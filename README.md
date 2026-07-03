@@ -84,16 +84,21 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Large and medium cards on mobile are too large (one per row)
 - Costume selection is ordered by order in `costumes.json`
 - There is severe lag when equipped 4-5+ Champion icons in icon mode
+- Champion icons do not show in proficiency modal
 
 ## 🗺️ Roadmap
 
 ### General
 
+- CSS overhaul
 - (WIP) Rename hero images with generic names
+- Rename assets (eg. costumes) with in-game IDs
 - GitLab mirror site hosting
 - Change the look of the clear button in the search bars
 - Improve look of scrollbar (eg. in costume modal, in supported costumes, etc.)
-- CSS overhaul
+- Enter to close modals (eg. "Enter" to close proficiency modal)
+- Keyboard navigation (eg. type "Spi" to highlight "Spider-Man", WASD to move around, "Enter" to open modal, Brackets to switch between pages)
+- Profile button in navigation uses chosen nameplate/icon
 
 ### Home
 
@@ -133,6 +138,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Option to disable Lord/Champion icons
 - Better organization
 - Auto Track All; defaults hero to Agent 1, 0 points
+- Option to disable tracking outline on hero cards
 
 ## 📄 License
 
