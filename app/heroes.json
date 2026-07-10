@@ -79,6 +79,7 @@
     },
     {
         "name": "Bruce Banner",
+        "aliases": ["Hulk"],
         "role": "Vanguard",
         "image": "../assets/heroes/bruce-banner/bruce-banner.png",
         "prestige": "../assets/heroes/bruce-banner/bruce-banner-prof.png",
@@ -349,6 +350,19 @@
         "difficulty": 1
     },
     {
+        "name": "Jubilee",
+        "role": "Strategist",
+        "image": "../assets/heroes/jubilee/image.png",
+        "prestige": "../assets/heroes/jubilee/prestige.png",
+        "icon": "../assets/heroes/jubilee/icon.png",
+        "icon-lord": "../assets/heroes/jubilee/lord.webp",
+        "icon-champion": "../assets/heroes/jubilee/lord.webp",
+        "nameplate": "../assets/heroes/jubilee/nameplate.png",
+        "color": "#d7bb3a",
+        "season": 9,
+        "difficulty": 4
+    },
+    {
         "name": "Loki",
         "role": "Strategist",
         "image": "../assets/heroes/loki/loki.png",
@@ -539,6 +553,7 @@
     },
     {
         "name": "Spider-Man",
+        "aliases": ["Spidey"],
         "role": "Duelist",
         "image": "../assets/heroes/spider-man/spider-man.png",
         "prestige": "../assets/heroes/spider-man/spider-man-prof.png",
@@ -676,6 +691,7 @@
     },
     {
         "name": "Winter Soldier",
+        "aliases": ["Bucky"],
         "role": "Duelist",
         "image": "../assets/heroes/winter-soldier/image.png",
         "prestige": "../assets/heroes/winter-soldier/prestige.png",

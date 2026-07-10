@@ -451,6 +451,13 @@
         "icon": "../assets/costumes/captain-america/icon_golden-age.png"
     },
     {
+        "hero": "Captain America",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/captain-america/1022102.png",
+        "icon": "../assets/costumes/captain-america/icon-1022102.png"
+    },
+    {
         "hero": "Cloak & Dagger",
         "name": "Coastal Couple",
         "rarity": "Legendary",
@@ -529,6 +536,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/cloak-dagger/lemon-lime.png",
         "icon": "../assets/costumes/cloak-dagger/icon_lemon-lime.png"
+    },
+    {
+        "hero": "Cloak & Dagger",
+        "name": "Storied Survivors",
+        "rarity": "Rare",
+        "image": "../assets/costumes/cloak-dagger/1025501.png",
+        "icon": "../assets/costumes/cloak-dagger/icon-1025501.png"
     },
     {
         "hero": "Cyclops",
@@ -613,6 +627,13 @@
         "rarity": "Rare",
         "image": "../assets/costumes/daredevil/will-of-galacta.png",
         "icon": "../assets/costumes/daredevil/icon_will-of-galacta.png"
+    },
+    {
+        "hero": "Deadpool",
+        "name": "Dead Mummy",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/deadpool/1057302.png",
+        "icon": "../assets/costumes/deadpool/icon-1057302.png"
     },
     {
         "hero": "Deadpool",
@@ -858,6 +879,25 @@
                 "name": "Pastel Polisher",
                 "image": "../assets/costumes/elsa-bloodstone/pastel-polisher.png",
                 "icon": "../assets/costumes/elsa-bloodstone/icon_pastel-polisher.png"
+            }
+        ]
+    },
+    {
+        "hero": "Elsa Bloodstone",
+        "name": "Primal Predator",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/elsa-bloodstone/1059503.png",
+        "icon": "../assets/costumes/elsa-bloodstone/icon-1059503.png",
+        "recolors": [
+            {
+                "name": "Cangyan",
+                "image": "../assets/costumes/elsa-bloodstone/ps1059301.png",
+                "icon": "../assets/costumes/elsa-bloodstone/icon-ps1059301.png"
+            },
+            {
+                "name": "Shadowy Moss",
+                "image": "../assets/costumes/elsa-bloodstone/ps1059302.png",
+                "icon": "../assets/costumes/elsa-bloodstone/icon-ps1059302.png"
             }
         ]
     },
@@ -1547,6 +1587,13 @@
     },
     {
         "hero": "Iron Man",
+        "name": "Iron Pharaoh",
+        "rarity": "Epic",
+        "image": "../assets/costumes/iron-man/1034302.png",
+        "icon": "../assets/costumes/iron-man/icon-1034302.png"
+    },
+    {
+        "hero": "Iron Man",
         "name": "Mark I",
         "rarity": "Epic",
         "image": "../assets/costumes/iron-man/mark-i.png",
@@ -1704,6 +1751,27 @@
         "rarity": "Rare",
         "image": "../assets/costumes/jeff-the-land-shark/adopted-avenger.png",
         "icon": "../assets/costumes/jeff-the-land-shark/icon_adopted-avenger.png"
+    },
+    {
+        "hero": "Jubilee",
+        "name": "Midnight Mutant",
+        "rarity": "Epic",
+        "image": "../assets/costumes/jubilee/1064500.png",
+        "icon": "../assets/costumes/jubilee/icon-1064500.png"
+    },
+    {
+        "hero": "Jubilee",
+        "name": "Cool Combustion",
+        "rarity": "Rare",
+        "image": "../assets/costumes/jubilee/1064100.png",
+        "icon": "../assets/costumes/jubilee/icon-1064100.png"
+    },
+    {
+        "hero": "Jubilee",
+        "name": "Crimson Crown",
+        "rarity": "Rare",
+        "image": "../assets/costumes/jubilee/1064101.png",
+        "icon": "../assets/costumes/jubilee/icon-1064101.png"
     },
     {
         "hero": "Loki",
@@ -2146,6 +2214,13 @@
     },
     {
         "hero": "Mantis",
+        "name": "Akkaban Acolyte",
+        "rarity": "Epic",
+        "image": "../assets/costumes/mantis/1020306.png",
+        "icon": "../assets/costumes/mantis/icon-1020306.png"
+    },
+    {
+        "hero": "Mantis",
         "name": "Black & Gold",
         "rarity": "Epic",
         "image": "../assets/costumes/mantis/black-gold.png",
@@ -2265,6 +2340,13 @@
     },
     {
         "hero": "Mister Fantastic",
+        "name": "Red-Y 4 Action",
+        "rarity": "Rare",
+        "image": "../assets/costumes/mister-fantastic/1040102.png",
+        "icon": "../assets/costumes/mister-fantastic/icon-1040102.png"
+    },
+    {
+        "hero": "Mister Fantastic",
         "name": "Will of Galacta",
         "rarity": "Rare",
         "image": "../assets/costumes/mister-fantastic/will-of-galacta.png",
@@ -2381,6 +2463,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/namor/sea-samba.png",
         "icon": "../assets/costumes/namor/icon_sea-samba.png"
+    },
+    {
+        "hero": "Namor",
+        "name": "Lord of Atlantis",
+        "rarity": "Rare",
+        "image": "../assets/costumes/namor/1045503.png",
+        "icon": "../assets/costumes/namor/icon-1045503.png"
     },
     {
         "hero": "Namor",
@@ -2732,6 +2821,13 @@
     },
     {
         "hero": "Rocket Raccoon",
+        "name": "Golden Artificer",
+        "rarity": "Epic",
+        "image": "../assets/costumes/rocket-raccoon/1023308.png",
+        "icon": "../assets/costumes/rocket-raccoon/icon-1023308.png"
+    },
+    {
+        "hero": "Rocket Raccoon",
         "name": "Guardians of the Galaxy Vol. 3",
         "rarity": "Epic",
         "image": "../assets/costumes/rocket-raccoon/guardians-of-the-galaxy-vol-3.png",
@@ -2785,6 +2881,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/rogue/mrs-x.png",
         "icon": "../assets/costumes/rogue/icon_mrs-x.png"
+    },
+    {
+        "hero": "Rogue",
+        "name": "Raider Prime",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/rogue/1065501.png",
+        "icon": "../assets/costumes/rogue/icon-1065501.png"
     },
     {
         "hero": "Rogue",
@@ -3520,6 +3623,13 @@
     },
     {
         "hero": "Ultron",
+        "name": "Ultron-15",
+        "rarity": "Epic",
+        "image": "../assets/costumes/ultron/1028503.png",
+        "icon": "../assets/costumes/ultron/icon-1028503.png"
+    },
+    {
+        "hero": "Ultron",
         "name": "Wasteland Robot",
         "rarity": "Epic",
         "image": "../assets/costumes/ultron/wasteland-robot.png",
@@ -3620,6 +3730,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/venom/space-knight.png",
         "icon": "../assets/costumes/venom/icon_space-knight.png"
+    },
+    {
+        "hero": "Venom",
+        "name": "Venom Bloom",
+        "rarity": "Epic",
+        "image": "../assets/costumes/venom/1035503.png",
+        "icon": "../assets/costumes/venom/icon-1035503.png"
     },
     {
         "hero": "Venom",
@@ -3776,6 +3893,13 @@
         "rarity": "Legendary",
         "image": "../assets/costumes/wolverine/blood-berserker.png",
         "icon": "../assets/costumes/wolverine/icon_blood-berserker.png"
+    },
+    {
+        "hero": "Wolverine",
+        "name": "Bloodless Berserker",
+        "rarity": "Epic",
+        "image": "../assets/costumes/wolverine/1049504.png",
+        "icon": "../assets/costumes/wolverine/icon-1049504.png"
     },
     {
         "hero": "Wolverine",

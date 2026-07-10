@@ -399,7 +399,13 @@ function getFilteredSorted() {
         if (customFilter === 'exclude' &&  h.isCustom)         return false;
         if (trackedFilter === 'only' && !getHeroData(h.name)) return false;
         if (trackedFilter === 'exclude' && getHeroData(h.name)) return false;
-        if (q              && !h.name.toLowerCase().includes(q)) return false;
+
+        if (q) {
+            const nameMatch = h.name.toLowerCase().includes(q);
+            const aliasMatch = h.aliases?.some(alias => alias.toLowerCase().includes(q));
+            if (!nameMatch && !aliasMatch) return false;
+        }
+
         return true;
     });
 

@@ -1,5 +1,6 @@
 # Changelog
 
+[1.7.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.3
 [1.7.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.2
 [1.7.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.1
 [1.7.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.0
@@ -19,6 +20,18 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.7.3] - 2026-07-09
+
+### Added
+
+- Jubilee
+- Search aliases (Hulk, Spidey, Bucky)
+- New Costumes (week of July 10)
+
+### Changed
+
+- Exported `.json` is formatted and readable
 
 ## [1.7.2] - 2026-07-03
 

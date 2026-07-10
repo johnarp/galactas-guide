@@ -99,6 +99,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Enter to close modals (eg. "Enter" to close proficiency modal)
 - Keyboard navigation (eg. type "Spi" to highlight "Spider-Man", WASD to move around, "Enter" to open modal, Brackets to switch between pages)
 - Profile button in navigation uses chosen nameplate/icon
+- Output json is formatted (readable)
 
 ### Home
 
@@ -110,7 +111,6 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 
 - Heroes pop-out when hovering
 - Sort/filter Costumes
-- Hero search aliases (eg. Hulk -> Bruce Banner, Spidey -> Spider-Man)
 - Playtime
 - Stats
 - Option to display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
@@ -131,6 +131,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Display costumes
 - Choose costume nameplates
 - Order the hero icons in proficiency breakdown (eg. order by level)
+- Make profile statistics into a list of dropdowns
 
 ### Settings
 
@@ -139,6 +140,7 @@ Open [http://localhost:3000](http://localhost:3000) in a web browser.
 - Better organization
 - Auto Track All; defaults hero to Agent 1, 0 points
 - Option to disable tracking outline on hero cards
+- Condense show/hide buttons into single toggle button
 
 ## 📄 License
 

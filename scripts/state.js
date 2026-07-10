@@ -53,7 +53,8 @@ export const setProfile = data =>
 
 // ── Import / Export / Clear ──────────────────────────────────────────────────
 
-export const exportData = () => localStorage.getItem(KEY) ?? '{}';
+// export const exportData = () => localStorage.getItem(KEY) ?? '{}';
+export const exportData = () => JSON.stringify(getState(), null, 2);
 
 export function importData(json) {
     try {
