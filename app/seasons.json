@@ -23,5 +23,8 @@
     { "season": 7.5,    "color": "linear-gradient(#574c76, #61a8b8)" },
 
     { "season": 8,      "color": "linear-gradient(#39dee8, #3d5373)" },
-    { "season": 8.5,    "color": "linear-gradient(#39dee8, #3d5373)" }
+    { "season": 8.5,    "color": "linear-gradient(#39dee8, #3d5373)" },
+
+    { "season": 9,      "color": "linear-gradient(#d39770, #202a49)" },
+    { "season": 9.5,    "color": "linear-gradient(#d39770, #202a49)" }
 ]
