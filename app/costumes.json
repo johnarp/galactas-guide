@@ -43,6 +43,13 @@
     },
     {
         "hero": "Adam Warlock",
+        "name": "Tailored Perfection",
+        "rarity": "Epic",
+        "image": "../assets/costumes/adam-warlock/1046303.png",
+        "icon": "../assets/costumes/adam-warlock/icon-1046303.png"
+    },
+    {
+        "hero": "Adam Warlock",
         "name": "Cosmic Jade",
         "rarity": "Rare",
         "image": "../assets/costumes/adam-warlock/cosmic-jade.png",
@@ -755,6 +762,25 @@
     },
     {
         "hero": "Devil Dinosaur",
+        "name": "Jeff the Dinosaur",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/devil-dinosaur/1062501.png",
+        "icon": "../assets/costumes/devil-dinosaur/icon-1062501.png",
+        "recolors": [
+            {
+                "name": "Playful Pink",
+                "image": "../assets/costumes/devil-dinosaur/ps1062300.png",
+                "icon": "../assets/costumes/devil-dinosaur/icon-ps1062300.png"
+            },
+            {
+                "name": "Vibrant Violet",
+                "image": "../assets/costumes/devil-dinosaur/ps1062301.png",
+                "icon": "../assets/costumes/devil-dinosaur/icon-ps1062301.png"
+            }
+        ]
+    },
+    {
+        "hero": "Devil Dinosaur",
         "name": "Chrono-Armor",
         "rarity": "Epic",
         "image": "../assets/costumes/devil-dinosaur/chrono-armor.png",
@@ -1027,6 +1053,13 @@
     },
     {
         "hero": "Gambit",
+        "name": "Dead Man's Hand",
+        "rarity": "Epic",
+        "image": "../assets/costumes/gambit/1058304.png",
+        "icon": "../assets/costumes/gambit/icon-1058304.png"
+    },
+    {
+        "hero": "Gambit",
         "name": "Thieves Guildmaster",
         "rarity": "Epic",
         "image": "../assets/costumes/gambit/thieves-guildmaster.png",
@@ -1115,6 +1148,25 @@
         "rarity": "Rare",
         "image": "../assets/costumes/groot/symbiote-flora.png",
         "icon": "../assets/costumes/groot/icon_symbiote-flora.png"
+    },
+    {
+        "hero": "Hawkeye",
+        "name": "Bed-Stuy's Best",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/hawkeye/1021302.png",
+        "icon": "../assets/costumes/hawkeye/icon-1021302.png",
+        "recolors": [
+            {
+                "name": "Dazzling Drip",
+                "image": "../assets/costumes/hawkeye/ps1021304.png",
+                "icon": "../assets/costumes/hawkeye/icon-ps1021304.png"
+            },
+            {
+                "name": "Teal Trend",
+                "image": "../assets/costumes/hawkeye/ps1021303.png",
+                "icon": "../assets/costumes/hawkeye/icon-ps1021303.png"
+            }
+        ]
     },
     {
         "hero": "Hawkeye",
@@ -1340,6 +1392,25 @@
                 "name": "Tangerine Tint",
                 "image": "../assets/costumes/invisible-woman/tangerine-tint.png",
                 "icon": "../assets/costumes/invisible-woman/icon_tangerine-tint.png"
+            }
+        ]
+    },
+    {
+        "hero": "Invisible Woman",
+        "name": "Baxter Building Beauty",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/invisible-woman/1050310.png",
+        "icon": "../assets/costumes/invisible-woman/icon-1050310.png",
+        "recolors": [
+            {
+                "name": "Classic Contrast",
+                "image": "../assets/costumes/invisible-woman/ps1050312.png",
+                "icon": "../assets/costumes/invisible-woman/icon-ps1050312.png"
+            },
+            {
+                "name": "Pretty in Pink",
+                "image": "../assets/costumes/invisible-woman/ps1050311.png",
+                "icon": "../assets/costumes/invisible-woman/icon-ps1050311.png"
             }
         ]
     },
@@ -2136,6 +2207,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/magneto/king-magnus.png",
         "icon": "../assets/costumes/magneto/icon_king-magnus.png"
+    },
+    {
+        "hero": "Magneto",
+        "name": "Magnetic Vintage",
+        "rarity": "Epic",
+        "image": "../assets/costumes/magneto/1037303.png",
+        "icon": "../assets/costumes/magneto/icon-1037303.png"
     },
     {
         "hero": "Magneto",
