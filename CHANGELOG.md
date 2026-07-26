@@ -1,5 +1,6 @@
 # Changelog
 
+[1.7.5]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.5
 [1.7.4]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.4
 [1.7.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.3
 [1.7.2]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.2
@@ -21,6 +22,12 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [1.7.5] - 2026-07-26
+
+### Added
+
+- Costumes (July 17-24, 2026)
 
 ## [1.7.4] - 2026-07-11
 

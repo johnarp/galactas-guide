@@ -623,6 +623,13 @@
     },
     {
         "hero": "Daredevil",
+        "name": "IGNITE Daredevil (2026)",
+        "rarity": "Rare",
+        "image": "../assets/costumes/daredevil/1055104.png",
+        "icon": "../assets/costumes/daredevil/icon-1055104.png"
+    },
+    {
+        "hero": "Daredevil",
         "name": "Shenloong's Creed",
         "rarity": "Rare",
         "image": "../assets/costumes/daredevil/shenloongs-creed.png",
@@ -1223,6 +1230,25 @@
         "rarity": "Rare",
         "image": "../assets/costumes/hawkeye/will-of-galacta.png",
         "icon": "../assets/costumes/hawkeye/icon_will-of-galacta.png"
+    },
+    {
+        "hero": "Hela",
+        "name": "Consort of Khonshu",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/hela/1024308.png",
+        "icon": "../assets/costumes/hela/icon-1024308.png",
+        "recolors": [
+            {
+                "name": "Midnight Moon",
+                "image": "../assets/costumes/hela/ps1024501.png",
+                "icon": "../assets/costumes/hela/icon-ps1024501.png"
+            },
+            {
+                "name": "Sapphire Shadow",
+                "image": "../assets/costumes/hela/ps1024502.png",
+                "icon": "../assets/costumes/hela/icon-ps1024502.png"
+            }
+        ]
     },
     {
         "hero": "Hela",
@@ -2053,6 +2079,13 @@
     },
     {
         "hero": "Luna Snow",
+        "name": "Carmine Cassette",
+        "rarity": "Epic",
+        "image": "../assets/costumes/luna-snow/1031316.png",
+        "icon": "../assets/costumes/luna-snow/icon-1031316.png"
+    },
+    {
+        "hero": "Luna Snow",
         "name": "Park Sun-Young: The Dancer",
         "rarity": "Epic",
         "image": "../assets/costumes/luna-snow/park-sun-young-the-dancer.png",
@@ -2802,6 +2835,13 @@
                 "icon": "../assets/costumes/psylocke/icon_orange-edge.png"
             }
         ]
+    },
+    {
+        "hero": "Psylocke",
+        "name": "Pinned Butterfly",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/psylocke/1048506.png",
+        "icon": "../assets/costumes/psylocke/icon-1048506.png"
     },
     {
         "hero": "Psylocke",
