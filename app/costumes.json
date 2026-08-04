@@ -368,6 +368,13 @@
     },
     {
         "hero": "Bruce Banner",
+        "name": "Spider-Man: Brand New Day",
+        "rarity": "Epic",
+        "image": "../assets/costumes/bruce-banner/1011801.png",
+        "icon": "../assets/costumes/bruce-banner/icon-1011801.png"
+    },
+    {
+        "hero": "Bruce Banner",
         "name": "Mighty G-Bomb",
         "rarity": "Rare",
         "image": "../assets/costumes/bruce-banner/mighty-g-bomb.png",
@@ -3108,6 +3115,13 @@
     },
     {
         "hero": "Scarlet Witch",
+        "name": "Avengers: Age of Ultron",
+        "rarity": "Epic",
+        "image": "../assets/costumes/scarlet-witch/1038803.png",
+        "icon": "../assets/costumes/scarlet-witch/icon-1038803.png"
+    },
+    {
+        "hero": "Scarlet Witch",
         "name": "Chaos Gown",
         "rarity": "Epic",
         "image": "../assets/costumes/scarlet-witch/chaos-gown.png",
@@ -3245,6 +3259,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/spider-man/marvels-spider-man-2.png",
         "icon": "../assets/costumes/spider-man/icon_marvels-spider-man-2.png"
+    },
+    {
+        "hero": "Spider-Man",
+        "name": "Spider-Man: Brand New Day",
+        "rarity": "Epic",
+        "image": "../assets/costumes/spider-man/1036802.png",
+        "icon": "../assets/costumes/spider-man/icon-1036802.png"
     },
     {
         "hero": "Spider-Man",
@@ -3720,6 +3741,13 @@
     },
     {
         "hero": "Ultron",
+        "name": "Avengers: Age of Ultron",
+        "rarity": "Epic",
+        "image": "../assets/costumes/ultron/1028504.png",
+        "icon": "../assets/costumes/ultron/icon-1028504.png"
+    },
+    {
+        "hero": "Ultron",
         "name": "Cybernetic Drip",
         "rarity": "Epic",
         "image": "../assets/costumes/ultron/cybernetic-drip.png",
@@ -3962,6 +3990,13 @@
                 "image": "../assets/costumes/winter-soldier/winters-wrath.png"
             }
         ]
+    },
+    {
+        "hero": "Winter Soldier",
+        "name": "Captain America: The Winter Soldier",
+        "rarity": "Epic",
+        "image": "../assets/costumes/winter-soldier/1041802.png",
+        "icon": "../assets/costumes/winter-soldier/icon-1041802.png"
     },
     {
         "hero": "Winter Soldier",
