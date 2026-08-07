@@ -28,6 +28,7 @@
 
 ### Added
 
+- The Hood
 - Costumes (July 31, 2026)
 
 ## [1.7.5] - 2026-07-26

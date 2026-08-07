@@ -605,6 +605,26 @@
         "difficulty": 3
     },
     {
+        "name": "The Hood",
+        "role": "Vanguard",
+        "image": "../assets/heroes/the-hood/image.png",
+        "prestige": "../assets/heroes/the-hood/prestige.webp",
+        "icon": "../assets/heroes/the-hood/icon.webp",
+        "icon-lord": "../assets/heroes/the-hood/icon-lord.webp",
+        "icon-champion": "../assets/heroes/the-hood/bust-champion.webp",
+        "alt-icons": [
+            {
+                "icon": "../assets/heroes/the-hood/icon-2.webp",
+                "icon-lord": "../assets/heroes/the-hood/icon-lord-2.webp",
+                "icon-champion": "../assets/heroes/the-hood/bust-champion.webp"
+            }
+        ],
+        "nameplate": "../assets/heroes/the-hood/nameplate.png",
+        "color": "#ef424a",
+        "season": 9.5,
+        "difficulty": 2
+    },
+    {
         "name": "The Punisher",
         "role": "Duelist",
         "image": "../assets/heroes/the-punisher/the-punisher.png",
