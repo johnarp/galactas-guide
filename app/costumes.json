@@ -963,6 +963,13 @@
         "icon": "../assets/costumes/elsa-bloodstone/icon_icy-edge.png"
     },
     {
+        "hero": "Elsa Bloodstone",
+        "name": "Will of Galacta",
+        "rarity": "Rare",
+        "image": "../assets/costumes/elsa-bloodstone/1059102.png",
+        "icon": "../assets/costumes/elsa-bloodstone/icon-1059102.png"
+    },
+    {
         "hero": "Emma Frost",
         "name": "Hellfire Protocol",
         "rarity": "Legendary",
@@ -1567,6 +1574,25 @@
     },
     {
         "hero": "Iron Fist",
+        "name": "Furious Flow",
+        "rarity": "Legendary",
+        "image": "../assets/costumes/iron-fist/1052306.png",
+        "icon": "../assets/costumes/iron-fist/icon-1052306.png",
+        "recolors": [
+            {
+                "name": "Blackened Rage",
+                "image": "../assets/costumes/iron-fist/ps1052309.png",
+                "icon": "../assets/costumes/iron-fist/icon-ps1052309.png"
+            },
+            {
+                "name": "Cobalt Cruiser",
+                "image": "../assets/costumes/iron-fist/ps1052308.png",
+                "icon": "../assets/costumes/iron-fist/icon-ps1052308.png"
+            }
+        ]
+    },
+    {
+        "hero": "Iron Fist",
         "name": "Lion's Gaze",
         "rarity": "Legendary",
         "image": "../assets/costumes/iron-fist/lions-gaze.png",
@@ -1841,6 +1867,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/jeff-the-land-shark/incognito-dolphin.png",
         "icon": "../assets/costumes/jeff-the-land-shark/icon_incognito-dolphin.png"
+    },
+    {
+        "hero": "Jeff the Land Shark",
+        "name": "Jeff-Pool",
+        "rarity": "Epic",
+        "image": "../assets/costumes/jeff-the-land-shark/1047505.png",
+        "icon": "../assets/costumes/jeff-the-land-shark/icon-1047505.png"
     },
     {
         "hero": "Jeff the Land Shark",
@@ -2497,6 +2530,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/moon-knight/eclipse-knight.png",
         "icon": "../assets/costumes/moon-knight/icon_eclipse-knight.png"
+    },
+    {
+        "hero": "Moon Knight",
+        "name": "Fist of Khonshu",
+        "rarity": "Epic",
+        "image": "../assets/costumes/moon-knight/1030503.png",
+        "icon": "../assets/costumes/moon-knight/icon-1030503.png"
     },
     {
         "hero": "Moon Knight",
@@ -3485,6 +3525,27 @@
         "icon": "../assets/costumes/storm/icon_will-of-galacta.png"
     },
     {
+        "hero": "The Hood",
+        "name": "Sinful Blackout",
+        "rarity": "Epic",
+        "image": "../assets/costumes/the-hood/1066500.png",
+        "icon": "../assets/costumes/the-hood/icon-1066500.png"
+    },
+    {
+        "hero": "The Hood",
+        "name": "Oblivion's Whisper",
+        "rarity": "Rare",
+        "image": "../assets/costumes/the-hood/1066100.png",
+        "icon": "../assets/costumes/the-hood/icon-1066100.png"
+    },
+    {
+        "hero": "The Hood",
+        "name": "Sapphire Sands",
+        "rarity": "Rare",
+        "image": "../assets/costumes/the-hood/1066101.png",
+        "icon": "../assets/costumes/the-hood/icon-1066101.png"
+    },
+    {
         "hero": "The Punisher",
         "name": "Aqua Arsenal",
         "rarity": "Legendary",
@@ -3537,6 +3598,13 @@
         "rarity": "Epic",
         "image": "../assets/costumes/the-punisher/punisher-2099.png",
         "icon": "../assets/costumes/the-punisher/icon_punisher-2099.png"
+    },
+    {
+        "hero": "The Punisher",
+        "name": "Sandstorm Soldier",
+        "rarity": "Epic",
+        "image": "../assets/costumes/the-punisher/1014302.png",
+        "icon": "../assets/costumes/the-punisher/icon-1014302.png"
     },
     {
         "hero": "The Punisher",
