@@ -246,6 +246,19 @@
         "difficulty": 4
     },
     {
+        "name": "Gorr the God Butcher",
+        "role": "Duelist",
+        "image": "../assets/heroes/gorr-the-god-butcher/image.png",
+        "prestige": "../assets/heroes/gorr-the-god-butcher/prestige.png",
+        "icon": "../assets/heroes/gorr-the-god-butcher/icon.png",
+        "icon-lord": "../assets/heroes/gorr-the-god-butcher/icon-lord.webp",
+        "icon-champion": "../assets/heroes/gorr-the-god-butcher/bust-champion.webp",
+        "nameplate": "../assets/heroes/gorr-the-god-butcher/nameplate.png",
+        "color": "#86a4ae",
+        "season": 10,
+        "difficulty": 4
+    },
+    {
         "name": "Groot",
         "role": "Vanguard",
         "image": "../assets/heroes/groot/groot.png",

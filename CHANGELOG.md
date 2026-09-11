@@ -29,6 +29,7 @@
 ### Added
 
 - The Hood
+- Gorr the God Butcher
 - Costumes (July 31 - August 7, 2026)
 
 ## [1.7.5] - 2026-07-26
