@@ -1,6 +1,6 @@
 # Changelog
 
-[unreleased]: https://github.com/johnarp/galactas-guide/releases/tag/HEAD
+[1.8.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.8.0
 [1.7.5]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.5
 [1.7.4]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.4
 [1.7.3]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.3
@@ -24,10 +24,11 @@
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
 
-## [Unreleased] - YYYY-MM-DD
+## [1.8.0] - 2026-11-03
 
 ### Added
 
+- Costume adder
 - The Hood
 - Gorr the God Butcher
 - Costumes (July 31 - August 7, 2026)

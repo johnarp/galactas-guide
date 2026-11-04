@@ -1,7 +1,8 @@
 import { getHeroData, setHeroData, clearHeroData, getFavorites, toggleFavorite,
          getUIPrefs, setUIPrefs, getSettings, getCreators,
          getIconPref, setIconPref,
-         getCostumeData, setCostumeData, clearCostumeData } from './state.js';
+         getCostumeData, setCostumeData, clearCostumeData,
+         getCustomCostumes, saveCustomCostume, deleteCustomCostume } from './state.js';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -10,15 +11,15 @@ let costumes = [], rarities = [], difficulties = [], seasons = [];
 
 // ── UI state ──────────────────────────────────────────────────────────────────
 
-let activeRoles    = new Set(); // empty = show all roles
-let activeRanks    = new Set(); // empty = show all ranks
-let favFilter      = 'all';   // 'all' | 'only' | 'exclude'
-let customFilter   = 'all';   // 'all' | 'only' | 'exclude'
-let trackedFilter = 'all';
+let activeRoles    = new Set();
+let activeRanks    = new Set();
+let favFilter      = 'all';
+let customFilter   = 'all';
+let trackedFilter  = 'all';
 let sortMode       = 'name-asc';
 let searchQuery    = '';
-let cardSize       = 'md';    // 'sm' | 'md' | 'lg'  — card view
-let iconSize       = 'md';    // 'sm' | 'md' | 'lg'  — icon view
+let cardSize       = 'md';
+let iconSize       = 'md';
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
@@ -34,10 +35,13 @@ async function init() {
             fetch('../app/seasons.json')
         ]);
 
-        let officialHeroes;
-        [officialHeroes, roles, ranks, costumes, rarities, difficulties, seasons] = await Promise.all([
+        let officialHeroes, staticCostumes;
+        [officialHeroes, roles, ranks, staticCostumes, rarities, difficulties, seasons] = await Promise.all([
             hRes.json(), roRes.json(), raRes.json(), coRes.json(), rarRes.json(), difRes.json(), seaRes.json(),
         ]);
+
+        const customCostumes = getCustomCostumes();
+        costumes = [...staticCostumes, ...customCostumes];
 
         const customHeroes = getCreators()
             .filter(c => c.addedToTracker)
@@ -59,10 +63,6 @@ async function init() {
     }
 }
 
-// ── Active image resolution (hero → costume → recolor) ───────────────────────
-// Only keys present in costume/recolor override the hero. Missing keys fall
-// through to heroes.json automatically — no need to duplicate paths everywhere.
-
 function getActiveImages(hero) {
     const { showCostumes } = getSettings();
     if ((showCostumes ?? 'on') === 'off') return hero;
@@ -74,19 +74,17 @@ function getActiveImages(hero) {
     if (!costume) return hero;
 
     const keys   = ['image', 'prestige', 'icon', 'icon-lord', 'icon-champion'];
-    const merged = { ...hero };                       // start with full hero data
+    const merged = { ...hero };
 
-    keys.forEach(k => { if (costume[k]) merged[k] = costume[k]; });  // costume overrides
+    keys.forEach(k => { if (costume[k]) merged[k] = costume[k]; });
 
     if (cd.recolorIdx > 0) {
         const rc = costume.recolors?.[cd.recolorIdx - 1];
-        if (rc) keys.forEach(k => { if (rc[k]) merged[k] = rc[k]; });  // recolor overrides
+        if (rc) keys.forEach(k => { if (rc[k]) merged[k] = rc[k]; });
     }
 
     return merged;
 }
-
-// ── Card background colour ────────────────────────────────────────────────────
 
 function cardColor(hero) {
     const { cardBgMode } = getSettings();
@@ -118,28 +116,25 @@ function cardColor(hero) {
     return hero.color ?? '#200630';
 }
 
-// ── UI prefs ──────────────────────────────────────────────────────────────────
-
 function loadUIPrefs() {
     const p        = getUIPrefs();
     activeRoles    = new Set(p.activeRoles    ?? []);
     activeRanks    = new Set(p.activeRanks    ?? []);
-    favFilter    = p.favFilter    ?? 'all';
-    customFilter = p.customFilter ?? 'all';
-    trackedFilter = p.trackedFilter ?? 'all';
+    favFilter      = p.favFilter    ?? 'all';
+    customFilter   = p.customFilter ?? 'all';
+    trackedFilter  = p.trackedFilter ?? 'all';
     sortMode       = p.sortMode       ?? 'name-asc';
     searchQuery    = p.searchQuery    ?? '';
     cardSize       = p.cardSize       ?? 'md';
     iconSize       = p.iconSize       ?? 'md';
 
     document.getElementById('sort-select').value = sortMode;
-    // Sync size-select to whichever view is currently active
     const isIconView = getSettings().viewMode === 'icon';
     document.getElementById('size-select').value = isIconView ? iconSize : cardSize;
     document.getElementById('hero-search').value = searchQuery;
     syncCycleBtn(document.getElementById('filter-favorites'), favFilter);
     syncCycleBtn(document.getElementById('filter-custom'),    customFilter);
-    syncCycleBtn(document.getElementById('filter-tracked'), trackedFilter)
+    syncCycleBtn(document.getElementById('filter-tracked'), trackedFilter);
 }
 
 function saveUIPrefs() {
@@ -156,7 +151,6 @@ function saveUIPrefs() {
     });
 }
 
-// Cycle: all -> only -> exclude -> all
 function cycleFilterState(current) {
     if (current === 'all')  return 'only';
     if (current === 'only') return 'exclude';
@@ -169,24 +163,19 @@ function syncCycleBtn(btn, state) {
     if (state === 'exclude') btn.classList.add('filter-exclude');
 }
 
-// ── Rank filter dropdown ──────────────────────────────────────────────────────
-
 function buildRankFilter() {
     const wrapper = document.getElementById('rank-filter');
     wrapper.innerHTML = '';
 
-    // ── Trigger button ────────────────────────────────────────────────────────
     const trigger = document.createElement('button');
     trigger.className = 'filter-btn rank-filter-trigger';
     trigger.id        = 'rank-filter-trigger';
     updateRankTriggerLabel(trigger);
 
-    // ── Panel ─────────────────────────────────────────────────────────────────
     const panel = document.createElement('div');
     panel.className = 'rank-filter-panel hidden';
     panel.id        = 'rank-filter-panel';
 
-    // "All" clear row
     const clearRow = document.createElement('button');
     clearRow.className   = 'rank-filter-row rank-filter-clear';
     clearRow.textContent = 'All';
@@ -199,7 +188,6 @@ function buildRankFilter() {
     });
     panel.appendChild(clearRow);
 
-    // One row per rank
     ranks.forEach(rank => {
         const row = document.createElement('button');
         row.className        = 'rank-filter-row' + (activeRanks.has(rank.title) ? ' checked' : '');
@@ -236,7 +224,6 @@ function buildRankFilter() {
 
     wrapper.append(trigger, panel);
 
-    // ── Toggle open/close ─────────────────────────────────────────────────────
     trigger.addEventListener('click', e => {
         e.stopPropagation();
         const isOpen = !panel.classList.contains('hidden');
@@ -244,7 +231,6 @@ function buildRankFilter() {
         if (!isOpen) panel.classList.remove('hidden');
     });
 
-    // Close on outside click
     document.addEventListener('click', e => {
         if (!wrapper.contains(e.target)) panel.classList.add('hidden');
     });
@@ -265,8 +251,6 @@ function updateRankPanelChecks(panel) {
 function closeAllRankPanels() {
     document.querySelectorAll('.rank-filter-panel').forEach(p => p.classList.add('hidden'));
 }
-
-// ── Role filters ──────────────────────────────────────────────────────────────
 
 let allBtn      = null;
 const roleBtns  = new Map();
@@ -322,8 +306,6 @@ function syncFilterButtonStates() {
     roleBtns.forEach((btn, name) => btn.classList.toggle('active', activeRoles.has(name)));
 }
 
-// ── Sort helpers ──────────────────────────────────────────────────────────────
-
 function rankScore(hero) {
     const d  = getHeroData(hero.name);
     if (!d) return -1;
@@ -378,8 +360,6 @@ function byRankUp(a, b) {
     return da - db;
 }
 
-// ── Filter + sort ─────────────────────────────────────────────────────────────
-
 function getFilteredSorted() {
     const favSet = new Set(getFavorites());
     const q      = searchQuery.trim().toLowerCase();
@@ -397,7 +377,7 @@ function getFilteredSorted() {
         if (favFilter    === 'exclude' &&  favSet.has(h.name)) return false;
         if (customFilter === 'only'    && !h.isCustom)         return false;
         if (customFilter === 'exclude' &&  h.isCustom)         return false;
-        if (trackedFilter === 'only' && !getHeroData(h.name)) return false;
+        if (trackedFilter === 'only'   && !getHeroData(h.name)) return false;
         if (trackedFilter === 'exclude' && getHeroData(h.name)) return false;
 
         if (q) {
@@ -430,8 +410,6 @@ function getFilteredSorted() {
     return list;
 }
 
-// ── Grid ──────────────────────────────────────────────────────────────────────
-
 function renderGrid() {
     const grid   = document.getElementById('hero-grid');
     const list   = getFilteredSorted();
@@ -441,7 +419,6 @@ function renderGrid() {
     grid.innerHTML = '';
     grid.dataset.viewMode = isIcon ? 'icon' : 'card';
     grid.dataset.cardSize = isIcon ? iconSize : cardSize;
-    // Keep the size dropdown in sync when switching views
     document.getElementById('size-select').value = isIcon ? iconSize : cardSize;
 
     if (!list.length) {
@@ -497,10 +474,6 @@ function buildCard(hero, favSet) {
     return card;
 }
 
-// ── Icon card ─────────────────────────────────────────────────────────────────
-
-// Pick the right icon image based on rank tier
-// Returns the icon set at a given index (0 = base, 1+ = alt-icons)
 function getIconSet(hero, idx) {
     if (!idx) return hero;
     return (hero['alt-icons'] ?? [])[idx - 1] ?? hero;
@@ -511,7 +484,6 @@ function heroIcon(hero, data) {
     const championIdx = ranks.findIndex(r => r.title === 'Champion');
     const lordIdx     = ranks.findIndex(r => r.title === 'Lord');
 
-    // If costume equipped, active images already merge costume+recolor on top of hero
     if (getCostumeData(hero.name)?.name) {
         const imgs = getActiveImages(hero);
         if (ri >= championIdx && imgs['icon-champion']) return imgs['icon-champion'];
@@ -519,7 +491,6 @@ function heroIcon(hero, data) {
         return imgs.icon ?? imgs.image;
     }
 
-    // Default: respect icon picker + rank tier
     const iconSet = getIconSet(hero, getIconPref(hero.name));
     if (ri >= championIdx && iconSet['icon-champion']) return iconSet['icon-champion'];
     if (ri >= lordIdx     && iconSet['icon-lord'])     return iconSet['icon-lord'];
@@ -556,7 +527,6 @@ function buildIconCard(hero, favSet) {
 
     const { showName, showProficiency, showRoleIcons } = getSettings();
 
-    // Use animated sprite div for champion, regular img otherwise
     const iconSrc  = heroIcon(hero, data);
     const useSprite = isChampionRank(data) && hero['icon-champion'];
     const iconHtml  = useSprite
@@ -574,7 +544,6 @@ function buildIconCard(hero, favSet) {
         </div>` : ''}
     `;
 
-    // JS-driven sprite: steps through all 60 frames (6 cols × 10 rows) at 24fps
     if (useSprite) {
         const spriteEl = card.querySelector('.champion-sprite');
         let frame = 0;
@@ -583,7 +552,6 @@ function buildIconCard(hero, favSet) {
             if (!spriteEl.isConnected) { clearInterval(id); return; }
             const col = frame % COLS;
             const row = Math.floor(frame / COLS);
-            // spriteEl.style.backgroundPositionX = `${col * 20}%`;
             spriteEl.style.backgroundPositionX = `${(col * 18.75) + 3.125}%`;
             spriteEl.style.backgroundPositionY = `${row * (100 / 9)}%`;
             frame = (frame + 1) % TOTAL;
@@ -599,8 +567,6 @@ function buildIconCard(hero, favSet) {
     card.addEventListener('click', () => openModal(hero));
     return card;
 }
-
-// ── Modal ─────────────────────────────────────────────────────────────────────
 
 let currentHero  = null;
 let selectedRank = null;
@@ -626,10 +592,9 @@ function buildIconPicker(hero, data) {
     container.innerHTML = '';
 
     const alts       = hero['alt-icons'] ?? [];
-    const allSets    = [hero, ...alts];   // idx 0 = base, 1+ = alts
+    const allSets    = [hero, ...alts];
     const currentIdx = getIconPref(hero.name);
 
-    // Only show picker if there are multiple options
     if (allSets.length <= 1) return;
 
     allSets.forEach((iconSet, i) => {
@@ -669,9 +634,7 @@ function openModal(hero) {
     syncLevelControls(selectedRank, data.level ?? null, data.points ?? null);
     buildIconPicker(hero, data);
 
-    // Show costume button only if this hero has costumes defined
-    const hasCostumes = costumes.some(c => c.hero === hero.name);
-    document.getElementById('modal-costume-area').classList.toggle('hidden', !hasCostumes);
+    document.getElementById('modal-costume-area').classList.remove('hidden');
 
     document.getElementById('modal').classList.remove('hidden');
 }
@@ -755,8 +718,6 @@ function closeModal() {
     selectedRank = null;
 }
 
-// ── Event listeners ───────────────────────────────────────────────────────────
-
 document.getElementById('sort-select').addEventListener('change', e => {
     sortMode = e.target.value;
     saveUIPrefs();
@@ -789,7 +750,7 @@ document.getElementById('filter-tracked').addEventListener('click', function () 
     syncCycleBtn(this, trackedFilter);
     saveUIPrefs();
     renderGrid();
-})
+});
 
 document.getElementById('filter-custom').addEventListener('click', function () {
     customFilter = cycleFilterState(customFilter);
@@ -812,7 +773,6 @@ document.getElementById('modal-clear').addEventListener('click', () => {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 init();
-// ── Costume modal ─────────────────────────────────────────────────────────────
 
 let costumeModalHero = null;
 
@@ -821,6 +781,15 @@ function openCostumeModal(hero) {
     document.getElementById('costume-modal-name').textContent = hero.name;
     document.getElementById('costume-modal-art').src =
         getModalIcon(hero, getHeroData(hero.name) ?? {});
+
+    const raritySelect = document.getElementById('custom-costume-rarity');
+    raritySelect.innerHTML = rarities.map(r => `<option value="${r.name}">${r.name}</option>`).join('');
+
+    document.getElementById('add-costume-form-container').classList.add('hidden');
+    document.getElementById('custom-costume-name').value = '';
+    document.getElementById('custom-costume-image').value = '';
+    document.getElementById('custom-costume-icon').value = '';
+
     renderCostumeModal(hero);
     document.getElementById('costume-modal').classList.remove('hidden');
 }
@@ -831,7 +800,6 @@ function closeCostumeModal() {
 }
 
 function renderCostumeModal(hero) {
-    // Refresh art in case costume changed
     document.getElementById('costume-modal-art').src =
         getModalIcon(hero, getHeroData(hero.name) ?? {});
 
@@ -840,6 +808,12 @@ function renderCostumeModal(hero) {
 
     const cd           = getCostumeData(hero.name);
     const heroCostumes = costumes.filter(c => c.hero === hero.name);
+    
+    if (heroCostumes.length === 0) {
+        list.innerHTML = '<p style="opacity:0.5;font-size:0.85rem;text-align:center;padding:1rem;">No costumes yet. Use the button above to add custom costumes!</p>';
+        return;
+    }
+
     heroCostumes.forEach(costume => list.appendChild(buildCostumeItem(costume, cd, hero)));
 }
 
@@ -849,7 +823,6 @@ function buildCostumeItem(costume, cd, hero) {
     const item = document.createElement('div');
     item.className = 'costume-item' + (isEquipped ? ' equipped' : '');
 
-    // Thumbnail: use recolor image if this costume is equipped with a recolor
     let thumbSrc = costume.image;
     if (isEquipped && cd.recolorIdx > 0) {
         const rc = costume.recolors?.[cd.recolorIdx - 1];
@@ -859,7 +832,7 @@ function buildCostumeItem(costume, cd, hero) {
     const rarity = rarities.find(r => r.name === costume.rarity);
 
     item.innerHTML = `
-        <img class="costume-thumb" src="${thumbSrc}" alt="${costume.name}">
+        <img class="costume-thumb" src="${thumbSrc}" alt="${costume.name}" onerror="this.src='../assets/heroes/default-icon.png'">
         <div class="costume-info">
             <div class="costume-name">${costume.name}</div>
             <div class="costume-rarity">
@@ -867,14 +840,28 @@ function buildCostumeItem(costume, cd, hero) {
                 <span style="color:${rarity?.color ?? 'inherit'}">${costume.rarity}</span>
             </div>
         </div>
+        ${costume.isCustom ? `<button class="card-action-btn delete custom-costume-delete" title="Delete custom costume" style="margin-left:auto;background:transparent;border:none;cursor:pointer;font-size:0.9rem;opacity:0.7;">✕</button>` : ''}
     `;
 
-    // Recolor picker (stop propagation so it doesn't trigger equip/unequip)
+    if (costume.isCustom) {
+        item.querySelector('.custom-costume-delete').addEventListener('click', e => {
+            e.stopPropagation();
+            if (confirm(`Delete custom costume "${costume.name}"?`)) {
+                if (cd?.name === costume.name) {
+                    clearCostumeData(hero.name);
+                }
+                deleteCustomCostume(hero.name, costume.name);
+                costumes = costumes.filter(c => !(c.hero === hero.name && c.name === costume.name && c.isCustom));
+                renderCostumeModal(hero);
+                renderGrid();
+            }
+        });
+    }
+
     if (costume.recolors?.length > 0) {
         item.appendChild(buildRecolorPicker(costume, cd, hero));
     }
 
-    // Click costume to equip; click again to unequip
     item.addEventListener('click', () => {
         if (isEquipped) {
             clearCostumeData(hero.name);
@@ -894,7 +881,7 @@ function buildRecolorPicker(costume, cd, hero) {
 
     const wrapper = document.createElement('div');
     wrapper.className = 'recolor-wrapper';
-    wrapper.addEventListener('click', e => e.stopPropagation()); // don't equip/unequip
+    wrapper.addEventListener('click', e => e.stopPropagation());
 
     const trigger = document.createElement('button');
     trigger.className   = 'recolor-trigger';
@@ -904,7 +891,6 @@ function buildRecolorPicker(costume, cd, hero) {
     const panel = document.createElement('div');
     panel.className = 'recolor-panel hidden';
 
-    // Build option for base + each recolor
     const allOptions = [{ name: costume.name, image: costume.image }, ...costume.recolors];
     allOptions.forEach((opt, i) => {
         const btn = document.createElement('button');
@@ -931,12 +917,10 @@ function buildRecolorPicker(costume, cd, hero) {
     return wrapper;
 }
 
-// Close recolor panels on outside click
 document.addEventListener('click', () => {
     document.querySelectorAll('.recolor-panel').forEach(p => p.classList.add('hidden'));
 });
 
-// Costume modal listeners
 document.getElementById('modal-costume-btn').addEventListener('click', () => {
     const hero = currentHero;
     closeModal();
@@ -953,4 +937,56 @@ document.getElementById('costume-back-btn').addEventListener('click', () => {
     const hero = costumeModalHero;
     closeCostumeModal();
     if (hero) openModal(hero);
+});
+
+document.getElementById('toggle-add-costume-btn').addEventListener('click', () => {
+    const formContainer = document.getElementById('add-costume-form-container');
+    formContainer.classList.toggle('hidden');
+});
+
+document.getElementById('cancel-custom-costume-btn').addEventListener('click', () => {
+    document.getElementById('add-costume-form-container').classList.add('hidden');
+    document.getElementById('custom-costume-name').value = '';
+    document.getElementById('custom-costume-image').value = '';
+    document.getElementById('custom-costume-icon').value = '';
+});
+
+document.getElementById('save-custom-costume-btn').addEventListener('click', () => {
+    if (!costumeModalHero) return;
+    const name = document.getElementById('custom-costume-name').value.trim();
+    const rarity = document.getElementById('custom-costume-rarity').value;
+    const image = document.getElementById('custom-costume-image').value.trim();
+    const icon = document.getElementById('custom-costume-icon').value.trim();
+
+    if (!name) {
+        alert('Please enter a costume name.');
+        document.getElementById('custom-costume-name').focus();
+        return;
+    }
+    if (!image) {
+        alert('Please provide an image link.');
+        document.getElementById('custom-costume-image').focus();
+        return;
+    }
+
+    const newCostume = {
+        hero: costumeModalHero.name,
+        name,
+        rarity,
+        image,
+        icon: icon || undefined,
+        isCustom: true
+    };
+
+    saveCustomCostume(newCostume);
+
+    costumes = [...costumes.filter(c => !(c.hero === costumeModalHero.name && c.name === name && c.isCustom)), newCostume];
+
+    document.getElementById('add-costume-form-container').classList.add('hidden');
+    document.getElementById('custom-costume-name').value = '';
+    document.getElementById('custom-costume-image').value = '';
+    document.getElementById('custom-costume-icon').value = '';
+
+    renderCostumeModal(costumeModalHero);
+    renderGrid();
 });

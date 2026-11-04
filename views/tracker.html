@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport"               content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color"            content="#a612ea">
-    <meta name="description"            content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta name="theme-color" content="#a612ea">
+    <meta name="description" content="A Marvel Rivals proficiency tracker and hero creator.">
 
-    <meta property="og:title"           content="Tracker | Galacta's Guide">
-    <meta property="og:site_name"       content="Galacta's Guide">
-    <meta property="og:description"     content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta property="og:image"           content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
-    <meta property="og:image:alt"       content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta property="og:url"             content="https://johnarp.github.io/galactas-guide/views/tracker.html">
-    <meta property="og:type"            content="website">
+    <meta property="og:title" content="Tracker | Galacta's Guide">
+    <meta property="og:site_name" content="Galacta's Guide">
+    <meta property="og:description" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta property="og:image" content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
+    <meta property="og:image:alt" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta property="og:url" content="https://johnarp.github.io/galactas-guide/views/tracker.html">
+    <meta property="og:type" content="website">
 
-    <meta name="twitter:card"           content="summary_large_image">
-    <meta name="twitter:title"          content="Tracker | Galacta's Guide">
-    <meta name="twitter:description"    content="A Marvel Rivals proficiency tracker and hero creator.">
-    <meta name="twitter:image"          content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tracker | Galacta's Guide">
+    <meta name="twitter:description" content="A Marvel Rivals proficiency tracker and hero creator.">
+    <meta name="twitter:image" content="https://johnarp.github.io/galactas-guide/assets/github/social_preview.png">
     <title>Tracker | Galacta's Guide</title>
     <link rel="stylesheet" href="../app/styles.css">
     <link rel="icon" href="../assets/github/icon.png" type="image/png">
@@ -35,7 +33,6 @@
                 <li><a href="creator.html">Creator</a></li>
             </ul>
             <ul class="nav-utils">
-            <ul class="nav-utils">
                 <li><button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button></li>
                 <li><a href="settings.html" class="nav-icon-btn" title="Settings" aria-label="Settings"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></a></li>
                 <li><a href="profile.html" class="nav-icon-btn" title="Profile" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a></li>
@@ -48,13 +45,12 @@
             <div class="filters-row">
                 <div id="role-filters"></div>
                 <div id="rank-filter" class="rank-filter-wrapper"></div>
-                <button id="filter-tracked"   class="filter-btn" title="Tracked heroes only">🗲</button>
+                <button id="filter-tracked" class="filter-btn" title="Tracked heroes only">🗲</button>
                 <button id="filter-favorites" class="filter-btn" title="Favourites only">⛊</button>
-                <button id="filter-custom"    class="filter-btn" title="Custom heroes only">✎</button>
+                <button id="filter-custom" class="filter-btn" title="Custom heroes only">✎</button>
             </div>
             <div class="controls-right">
-                <input type="search" id="hero-search" class="hero-search"
-                       placeholder="Search…" aria-label="Search heroes" autocomplete="off">
+                <input type="search" id="hero-search" class="hero-search" placeholder="Search…" aria-label="Search heroes" autocomplete="off">
                 <select id="size-select" class="sort-select" aria-label="Card size">
                     <option value="sm">Small</option>
                     <option value="md">Medium</option>
@@ -86,11 +82,8 @@
                 <img id="modal-hero-art" src="" alt="" class="modal-hero-art">
                 <h2 id="modal-hero-name"></h2>
             </div>
-            <!-- Icon picker — hidden for heroes with no alts, built by JS -->
             <div id="modal-icon-picker" class="modal-icon-picker"></div>
-
-            <!-- Costumes button — hidden if hero has no costumes in costumes.json -->
-            <div id="modal-costume-area" class="hidden" style="margin-bottom:1rem">
+            <div id="modal-costume-area" class="modal-costume-area" style="margin-bottom:1rem">
                 <button id="modal-costume-btn" class="btn btn-ghost" style="font-size:0.78rem;padding:0.35rem 0.85rem">Costumes</button>
             </div>
             <div id="rank-grid" class="rank-grid"></div>
@@ -108,13 +101,11 @@
             </div>
             <div class="modal-actions">
                 <button id="modal-clear" class="btn btn-ghost">Clear</button>
-                <button id="modal-save"  class="btn btn-primary">Save</button>
+                <button id="modal-save" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>
 
-
-    <!-- ── Costume modal ──────────────────────────────────────────────── -->
     <div id="costume-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="costume-modal-name" tabindex="-1">
         <div class="modal-content costume-modal-content">
             <button id="costume-modal-close" class="modal-close" aria-label="Close">✕</button>
@@ -125,6 +116,37 @@
                     <button id="costume-back-btn" class="btn btn-ghost" style="font-size:0.75rem;padding:0.3rem 0.75rem;margin-top:0.5rem">← Proficiency</button>
                 </div>
             </div>
+
+            <div style="margin: 1rem 0;">
+                <button id="toggle-add-costume-btn" class="btn btn-ghost" style="font-size:0.8rem;padding:0.4rem 0.9rem;">+ Add Custom Costume</button>
+            </div>
+
+            <div id="add-costume-form-container" class="hidden" style="background: var(--surface-2, rgba(255,255,255,0.05)); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                <h3 style="margin-top: 0; font-size: 0.95rem; margin-bottom: 0.75rem;">Add Custom Costume</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label class="field-label" style="font-size: 0.8rem;">
+                        Costume Name *
+                        <input type="text" id="custom-costume-name" class="number-input" placeholder="e.g. Neon Variant" style="width:100%; box-sizing:border-box;">
+                    </label>
+                    <label class="field-label" style="font-size: 0.8rem;">
+                        Rarity
+                        <select id="custom-costume-rarity" class="sort-select" style="width:100%; box-sizing:border-box;"></select>
+                    </label>
+                    <label class="field-label" style="font-size: 0.8rem;">
+                        Image Link (URL) *
+                        <input type="url" id="custom-costume-image" class="number-input" placeholder="https://..." style="width:100%; box-sizing:border-box;">
+                    </label>
+                    <label class="field-label" style="font-size: 0.8rem;">
+                        Icon Link (URL) - Optional
+                        <input type="url" id="custom-costume-icon" class="number-input" placeholder="https://..." style="width:100%; box-sizing:border-box;">
+                    </label>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                        <button id="save-custom-costume-btn" class="btn btn-primary" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Save Costume</button>
+                        <button id="cancel-custom-costume-btn" class="btn btn-ghost" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
             <div id="costume-list" class="costume-list"></div>
             <span><a class="link" href="https://github.com/johnarp/galactas-guide/issues/new?template=costume_request.yml" target="_blank">Request a costume to be added</a></span>
         </div>

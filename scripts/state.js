@@ -53,7 +53,6 @@ export const setProfile = data =>
 
 // ── Import / Export / Clear ──────────────────────────────────────────────────
 
-// export const exportData = () => localStorage.getItem(KEY) ?? '{}';
 export const exportData = () => JSON.stringify(getState(), null, 2);
 
 export function importData(json) {
@@ -67,6 +66,7 @@ export function importData(json) {
 }
 
 export const clearAllData = () => localStorage.removeItem(KEY);
+
 // ── App settings (theme, cardBgMode, etc.) ────────────────────────────────────
 
 export const getSettings = () => getState().settings ?? {};
@@ -105,6 +105,7 @@ export const getIconPref = name =>
 
 export const setIconPref = (name, idx) =>
     setState(s => ({ ...s, iconPrefs: { ...(s.iconPrefs ?? {}), [name]: idx } }));
+
 // ── Costume data ──────────────────────────────────────────────────────────────
 
 export const getCostumeData = hero =>
@@ -119,3 +120,23 @@ export const clearCostumeData = hero =>
         delete c[hero];
         return { ...s, costumes: c };
     });
+
+// ── Custom Costumes Data ──────────────────────────────────────────────────────
+
+export const getCustomCostumes = () => getState().customCostumes ?? [];
+
+export const saveCustomCostume = costume =>
+    setState(s => {
+        const list = s.customCostumes ?? [];
+        const idx = list.findIndex(c => c.hero === costume.hero && c.name === costume.name);
+        const next = idx >= 0
+            ? list.map((c, i) => i === idx ? costume : c)
+            : [...list, costume];
+        return { ...s, customCostumes: next };
+    });
+
+export const deleteCustomCostume = (hero, costumeName) =>
+    setState(s => ({
+        ...s,
+        customCostumes: (s.customCostumes ?? []).filter(c => !(c.hero === hero && c.name === costumeName))
+    }));
