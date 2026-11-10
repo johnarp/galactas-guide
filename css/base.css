@@ -1,0 +1,31 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html { color-scheme: var(--scheme); -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom));
+  font: 400 1rem/1.5 var(--font-ui);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, p { margin: 0; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus, var(--color-primary)); outline-offset: 2px; }
+
+[hidden] { display: none !important; }
+
+/* Theme background image + overlay (both are variables, see theme.css) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), var(--bg-image) var(--bg-position) / var(--bg-size) no-repeat;
+}

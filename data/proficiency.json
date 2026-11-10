@@ -1,0 +1,90 @@
+[
+    {
+        "title"     : "Agent",
+        "minLvl"    : 1,
+        "maxLvl"    : 4,
+        "ppl"       : 125,
+        "icon"      : "../assets/ui/agent.png",
+        "color"     : ["#8c7d61","#9f8e71"]
+    },
+    {
+        "title"     : "Knight",
+        "minLvl"    : 5,
+        "maxLvl"    : 9,
+        "ppl"       : 240,
+        "icon"      : "../assets/ui/knight.png",
+        "color"     : ["#b4bec8","#cedae4"]
+    },
+    {
+        "title"     : "Captain",
+        "minLvl"    : 10,
+        "maxLvl"    : 14,
+        "ppl"       : 400,
+        "icon"      : "../assets/ui/captain.png",
+        "color"     : ["#9fc0c8","#b7dce5"]
+    },
+    {
+        "title"     : "Centurion",
+        "minLvl"    : 15,
+        "maxLvl"    : 19,
+        "ppl"       : 480,
+        "icon"      : "../assets/ui/centurion.png",
+        "color"     : ["#93b0e1","#b6d9fb"]
+    },
+    {
+        "title"     : "Lord",
+        "minLvl"    : 20,
+        "maxLvl"    : 24,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/lord.png",
+        "color"     : ["#d2af6e","#f7cf80"]
+    },
+    {
+        "title"     : "Count",
+        "minLvl"    : 25,
+        "maxLvl"    : 29,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/count.png",
+        "color"     : ["#9bcfd3","#cef8fc"]
+    },
+    {
+        "title"     : "Colonel",
+        "minLvl"    : 30,
+        "maxLvl"    : 34,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/colonel.png",
+        "color"     : ["#82b1d9","#b3ddfa"]
+    },
+    {
+        "title"     : "Warrior",
+        "minLvl"    : 35,
+        "maxLvl"    : 39,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/warrior.png",
+        "color"     : ["#c287ed","#dfbbf9"]
+    },
+    {
+        "title"     : "Elite",
+        "minLvl"    : 40,
+        "maxLvl"    : 44,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/elite.png",
+        "color"     : ["#e8814a","#ea9669"]
+    },
+    {
+        "title"     : "Guardian",
+        "minLvl"    : 45,
+        "maxLvl"    : 49,
+        "ppl"       : 1600,
+        "icon"      : "../assets/ui/guardian.png",
+        "color"     : ["#db7dd7","#f2b4f3"]
+    },
+    {
+        "title"     : "Champion",
+        "minLvl"    : 50,
+        "maxLvl"    : 70,
+        "ppl"       : 3100,
+        "icon"      : "../assets/ui/champion.png",
+        "color"     : ["#dd4146","#f0d155"]
+    }
+]

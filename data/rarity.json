@@ -1,0 +1,27 @@
+[
+    {
+        "title"     : "Common",
+        "icon"      : "../assets/ui/common.webp",
+        "color"     : "#a6b8c7"
+    },
+    {
+        "title"     : "Rare",
+        "icon"      : "../assets/ui/rare.webp",
+        "color"     : "#90caf9"
+    },
+    {
+        "title"     : "Epic",
+        "icon"      : "../assets/ui/epic.webp",
+        "color"     : "#d097ff"
+    },
+    {
+        "title"     : "Legendary",
+        "icon"      : "../assets/ui/legendary.webp",
+        "color"     : "#f09405"
+    },
+    {
+        "title"     : "Mythic",
+        "icon"      : "../assets/ui/mythic.webp",
+        "color"     : "#f45950"
+    }
+]

@@ -1,0 +1,71 @@
+/* Proficiency modal. Generic modal/input styles live in components.css. */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: var(--banner-h);
+  padding: var(--pad);
+  overflow: hidden;
+  color: var(--color-on-card);
+  background: linear-gradient(to bottom, var(--hero), color-mix(in srgb, var(--hero), black 40%));
+}
+.banner-name {
+  position: relative;
+  z-index: 1;
+  max-width: 62%;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: var(--title-tracking);
+}
+.banner-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 55%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.prof-body { display: grid; gap: var(--pad); padding: var(--pad); }
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.rank-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.rank { flex-direction: column; gap: 4px; padding: var(--gap) 2px; font-size: 0.75rem; }
+.rank img { width: 36px; height: 36px; object-fit: contain; }
+
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.field { display: grid; gap: 6px; }
+.field-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 6px; }
+.hint { font-size: 0.75rem; color: var(--color-muted); }
+
+
+/* Costumes list + the Costumes / Edit hero buttons */
+.row-buttons { display: flex; gap: var(--gap); }
+.row-buttons > .btn { flex: 1; }
+.costume-list { display: grid; gap: var(--gap); }
+.costume-row { display: flex; gap: var(--gap); }
+.costume-pick { flex: 1; min-width: 0; justify-content: flex-start; text-align: left; }
+.costume-pick img { width: 24px; height: 24px; object-fit: contain; }
+.costume-pick span { overflow: hidden; text-overflow: ellipsis; }
+
+.row-buttons .form-switch { min-width: 0; }
+.row-buttons .form-compact { flex: none; }   /* no names: just the icon and "1/2" */
+.form-switch span { overflow: hidden; text-overflow: ellipsis; }
+
+/* Button row: tight enough for Costumes + Edit hero + form switch on a phone */
+.row-buttons { container-type: inline-size; }
+.row-buttons > .btn { flex: 1; min-width: 0; padding: 0 8px; gap: 6px; font-size: 0.875rem; }
+.row-buttons .btn-label { overflow: hidden; text-overflow: ellipsis; }
+.row-buttons .form-compact { flex: none; }
+@container (max-width: 290px) { .row-buttons .btn-label { display: none; } }   /* very narrow screens: icons only */

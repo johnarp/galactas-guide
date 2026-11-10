@@ -1,0 +1,52 @@
+/* Settings: full screen on phones, a small popup under the nav on larger screens */
+.modal-settings {
+  width: 100%;
+  max-width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.setting { display: flex; align-items: center; justify-content: space-between; gap: var(--pad); }
+.setting-title { font-weight: 600; }
+.setting .btn,
+.setting .select { flex: none; min-width: 90px; }
+
+@media (min-width: 768px) {
+  .modal-settings {
+    width: 380px;
+    height: auto;
+    max-height: calc(100dvh - var(--nav-h) - 2 * var(--pad));
+    inset: calc(var(--nav-h) + var(--gap)) max(var(--pad), calc((100% - var(--page-max)) / 2 + var(--pad))) auto auto;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+  }
+  .modal-settings::backdrop { background: transparent; }   /* popup, not a dimmed page */
+}
+
+/* Long settings lists scroll inside the popup, so the close button stays put */
+.modal-settings[open] { display: flex; flex-direction: column; overflow: hidden; }
+.settings-scroll { flex: 1; min-height: 0; overflow: auto; }
+
+.about { display: grid; gap: var(--gap); padding-top: var(--pad); border-top: var(--border-width) solid var(--color-border); }
+
+/* Themes popup: a grid of live previews */
+:where(.theme-swatch) { --bg-image: none; --bg-overlay: transparent; }   /* so a preview never inherits the page's image */
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: var(--gap); }
+.theme-item { position: relative; }
+.theme-card { display: grid; justify-content: stretch; gap: 6px; width: 100%; height: 100%; padding: 8px; text-align: left; }
+.theme-edit { position: absolute; top: 12px; right: 12px; min-width: 32px; min-height: 32px; color: #fff; background: color-mix(in srgb, black 45%, transparent); border: 0; }
+.theme-swatch {
+  display: grid;
+  place-items: center;
+  height: 70px;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: calc(var(--radius) - 2px);
+  background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), var(--bg-image) center / cover no-repeat, var(--color-bg);
+}
+.sw-panel { display: grid; gap: 6px; width: 62%; padding: 8px; background: var(--color-surface); border: var(--border-width) solid var(--color-border); border-radius: calc(var(--radius) - 4px); }
+.sw-line { width: 70%; height: 5px; background: var(--color-text); border-radius: 999px; }
+.sw-btn { width: 45%; height: 9px; background: var(--color-primary); border-radius: 999px; }
+.theme-preview-box .theme-swatch { height: 90px; }

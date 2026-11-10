@@ -1,5 +1,6 @@
 # Changelog
 
+[2.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v2.0.0
 [1.8.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.8.0
 [1.7.5]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.5
 [1.7.4]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.4
@@ -23,6 +24,65 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [2.0.0] - 2026-11-10
+
+This project has been rebuilt from the ground-up. The overhaul was intended to remove bloat and focus primarily on proficiency tracking and mobile devices. Other websites, like [Marvel Rivals Proficiency Calculator](https://mr-calculator.github.io/) and [PSYLOCKE.GG](https://psylocke.gg/), have the more advanced features Galacta's Guide had, but better implemented.
+
+### Added
+
+- Theme creator
+- Auto-track option
+- Option to disable Lord and/or Champion icons
+- Option to ignore articles when sorting
+- Optionally coloured rank names
+- Number of heroes tracked, average proficiency/difficulty, top/lowest 3, and closest to ranking/levelling up in Statistics
+- Option to show a "Custom" tag on custom Heroes
+- Option to show each Hero's ID
+- Option to show the difficulty on the Hero's card
+- Option to show the release on the Hero's card
+- Option to colour the difficulty and release
+- Dynamic version number in settings
+- Credits in settings
+- Lord/Champion icons for multi-form Hero's other forms (e.g., Hulk and Monster Hulk, not just Bruce)
+- Install as app on mobile
+
+### Changed
+
+- Overhauled design and structure
+- Statistics is its own page
+- Settings is now a pop-up (and redesigned)
+- 'Tracker' is now 'Heroes'
+- Creator is built-into Heroes
+- Improved proficiency modal with a banner and silhouette image
+- Reverse sorting options are replaced with an arrow
+- Bookmark button can be disabled
+- Heroes are stored as their IDs and are searched instead of hardcoded
+- 'X' icon in searchbar looks better
+- Exported `.json` is formatted and readable
+- All settings are toggles instead of separate On/Off buttons
+- Removed `CREDITS.md` and put contents in the [`README`](./README.md)
+- [`NOTICE`](./NOTICE.md) contents and changed to a Markdown file
+
+### Removed
+
+- Profiles and personalization (e.g., names, level, displayed hero, etc.)
+- All built-in Costumes
+- GitHub and GitLab issue templates
+- Report Issue from settings
+- Supported Costumes from settings
+- Abilities from creator
+- Hover and tracking outline
+- Dropdown when clicking on proficiency breakdown Hero count
+- Test profile
+
+### Fixed
+
+- Multi-role Heroes show all colours as their background
+- Card/icon sizing on mobile
+- Equipping lots of Champion icons now doesn't degrade performance
+- Rivals theme (as a whole)
+- Can use keyboard in proficiency modal
 
 ## [1.8.0] - 2026-11-03
 

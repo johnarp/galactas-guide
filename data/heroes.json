@@ -1,0 +1,439 @@
+[
+    {
+        "id"            : 1011,
+        "name"          : "Bruce Banner",
+        "color"         : "#387458",
+        "difficulty"    : 4,
+        "role"          : "Vanguard",
+        "season"        : 0,
+        "forms"         : ["Bruce Banner", "Hulk", "Monster Hulk"]
+    },
+    {
+        "id"            : 1014,
+        "name"          : "The Punisher",
+        "color"         : "#495366",
+        "difficulty"    : 1,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1015,
+        "name"          : "Storm",
+        "color"         : "#454f76",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1016,
+        "name"          : "Loki",
+        "color"         : "#4c865b",
+        "difficulty"    : 4,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1017,
+        "name"          : "Human Torch",
+        "color"         : "#c45b4d",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 1.5
+    },
+    {
+        "id"            : 1018,
+        "name"          : "Doctor Strange",
+        "color"         : "#cc6a60",
+        "difficulty"    : 2,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1020,
+        "name"          : "Mantis",
+        "color"         : "#6c8c66",
+        "difficulty"    : 1,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1021,
+        "name"          : "Hawkeye",
+        "color"         : "#8969a6",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1022,
+        "name"          : "Captain America",
+        "color"         : "#3972b1",
+        "difficulty"    : 3,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1023,
+        "name"          : "Rocket Raccoon",
+        "color"         : "#d47253",
+        "difficulty"    : 1,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1024,
+        "name"          : "Hela",
+        "color"         : "#388c8c",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1025,
+        "name"          : "Cloak & Dagger",
+        "color"         : "#8c9bf7",
+        "difficulty"    : 3,
+        "role"          : "Strategist",
+        "season"        : 0,
+        "forms"         : ["Cloak & Dagger", "Cloak", "Dagger"]
+    },
+    {
+        "id"            : 1026,
+        "name"          : "Black Panther",
+        "color"         : "#644579",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1027,
+        "name"          : "Groot",
+        "color"         : "#8ba76a",
+        "difficulty"    : 2,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1028,
+        "name"          : "Ultron",
+        "color"         : "#6b789e",
+        "difficulty"    : 2,
+        "role"          : "Strategist",
+        "season"        : 2.5
+    },
+    {
+        "id"            : 1029,
+        "name"          : "Magik",
+        "color"         : "#8f605f",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0,
+        "forms"         : ["Magik", "Darkchylde"]
+    },
+    {
+        "id"            : 1030,
+        "name"          : "Moon Knight",
+        "color"         : "#678094",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1031,
+        "name"          : "Luna Snow",
+        "color"         : "#1165bf",
+        "difficulty"    : 2,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1032,
+        "name"          : "Squirrel Girl",
+        "color"         : "#d38850",
+        "difficulty"    : 1,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1033,
+        "name"          : "Black Widow",
+        "color"         : "#555b6a",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1034,
+        "name"          : "Iron Man",
+        "color"         : "#dd5067",
+        "difficulty"    : 2,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1035,
+        "name"          : "Venom",
+        "color"         : "#2b2e3c",
+        "difficulty"    : 1,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1036,
+        "name"          : "Spider-Man",
+        "color"         : "#da515d",
+        "difficulty"    : 5,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1037,
+        "name"          : "Magneto",
+        "color"         : "#585185",
+        "difficulty"    : 2,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1038,
+        "name"          : "Scarlet Witch",
+        "color"         : "#d24466",
+        "difficulty"    : 1,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1039,
+        "name"          : "Thor",
+        "color"         : "#5b64a6",
+        "difficulty"    : 3,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1040,
+        "name"          : "Mister Fantastic",
+        "color"         : "#19a7cb",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 1
+    },
+    {
+        "id"            : 1041,
+        "name"          : "Winter Soldier",
+        "color"         : "#5b593c",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1042,
+        "name"          : "Peni Parker",
+        "color"         : "#cb5a56",
+        "difficulty"    : 4,
+        "role"          : "Vanguard",
+        "season"        : 0
+    },
+    {
+        "id"            : 1043,
+        "name"          : "Star-Lord",
+        "color"         : "#467ed7",
+        "difficulty"    : 2,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1044,
+        "name"          : "Blade",
+        "color"         : "#f15551",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 3.5
+    },
+    {
+        "id"            : 1045,
+        "name"          : "Namor",
+        "color"         : "#22938a",
+        "difficulty"    : 2,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1046,
+        "name"          : "Adam Warlock",
+        "color"         : "#c27643",
+        "difficulty"    : 3,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1047,
+        "name"          : "Jeff the Land Shark",
+        "color"         : "#5f79a5",
+        "difficulty"    : 1,
+        "role"          : "Strategist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1048,
+        "name"          : "Psylocke",
+        "color"         : "#a85bbb",
+        "difficulty"    : 5,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1049,
+        "name"          : "Wolverine",
+        "color"         : "#be962a",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1050,
+        "name"          : "Invisible Woman",
+        "color"         : "#49a3de",
+        "difficulty"    : 4,
+        "role"          : "Strategist",
+        "season"        : 1
+    },
+    {
+        "id"            : 1051,
+        "name"          : "The Thing",
+        "color"         : "#cf9c5b",
+        "difficulty"    : 1,
+        "role"          : "Vanguard",
+        "season"        : 1.5
+    },
+    {
+        "id"            : 1052,
+        "name"          : "Iron Fist",
+        "color"         : "#1e9988",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 0
+    },
+    {
+        "id"            : 1053,
+        "name"          : "Emma Frost",
+        "color"         : "#68c2e7",
+        "difficulty"    : 3,
+        "role"          : "Vanguard",
+        "season"        : 2
+    },
+    {
+        "id"            : 1054,
+        "name"          : "Phoenix",
+        "color"         : "#db635c",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 3
+    },
+    {
+        "id"            : 1055,
+        "name"          : "Daredevil",
+        "color"         : "#d24466",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 4.5
+    },
+    {
+        "id"            : 1056,
+        "name"          : "Angela",
+        "color"         : "#eb973e",
+        "difficulty"    : 4,
+        "role"          : "Vanguard",
+        "season"        : 4
+    },
+    {
+        "id"            : 1057,
+        "name"          : "Deadpool",
+        "color"         : "#f15551",
+        "difficulty"    : 0,
+        "role"          : ["Vanguard","Duelist","Strategist"],
+        "season"        : 6
+    },
+    {
+        "id"            : 1058,
+        "name"          : "Gambit",
+        "color"         : "#cd72bc",
+        "difficulty"    : 4,
+        "role"          : "Strategist",
+        "season"        : 5
+    },
+    {
+        "id"            : 1059,
+        "name"          : "Elsa Bloodstone",
+        "color"         : "#dc7449",
+        "difficulty"    : 3,
+        "role"          : "Duelist",
+        "season"        : 6.5
+    },
+    {
+        "id"            : 1060,
+        "name"          : "White Fox",
+        "color"         : "#51bbbe",
+        "difficulty"    : 3,
+        "role"          : "Strategist",
+        "season"        : 7,
+        "forms"         : ["White Fox", "Kumiho"]
+    },
+    {
+        "id"            : 1061,
+        "name"          : "Black Cat",
+        "color"         : "#987df9",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 7.5
+    },
+    {
+        "id"            : 1062,
+        "name"          : "Devil Dinosaur",
+        "color"         : "#df6057",
+        "difficulty"    : 3,
+        "role"          : "Vanguard",
+        "season"        : 8
+    },
+    {
+        "id"            : 1063,
+        "name"          : "Cyclops",
+        "color"         : "#3ec3ea",
+        "difficulty"    : 2,
+        "role"          : "Duelist",
+        "season"        : 8.5
+    },
+    {
+        "id"            : 1064,
+        "name"          : "Jubilee",
+        "color"         : "#d8bc3b",
+        "difficulty"    : 4,
+        "role"          : "Strategist",
+        "season"        : 9
+    },
+    {
+        "id"            : 1065,
+        "name"          : "Rogue",
+        "color"         : "#c8c065",
+        "difficulty"    : 5,
+        "role"          : "Vanguard",
+        "season"        : 5.5
+    },
+    {
+        "id"            : 1066,
+        "name"          : "The Hood",
+        "color"         : "#dc5050",
+        "difficulty"    : 2,
+        "role"          : "Vanguard",
+        "season"        : 9.5,
+        "forms"         : ["The Hood", "Demon of the End"]
+    },
+    {
+        "id"            : 1067,
+        "name"          : "Gorr the God Butcher",
+        "color"         : "#87a4af",
+        "difficulty"    : 4,
+        "role"          : "Duelist",
+        "season"        : 10
+    }
+]

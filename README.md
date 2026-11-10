@@ -1,146 +1,83 @@
 <div align="center">
 
-![Banner](./assets/github/banner.png)
+![Banner](./assets/project/banner.png)
 
 # Galacta's Guide
 
-A Marvel Rivals proficiency tracker and hero creator.
+Track your Marvel Rivals proficiency in seconds.
 
-[![GitHub](https://custom-icon-badges.demolab.com/badge/GitHub_(Primary)-000000?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/johnarp/galactas-guide)
-[![GitLab](https://custom-icon-badges.demolab.com/badge/GitLab_(Mirror)-e24329?style=for-the-badge&logo=gitlab&logoColor=ffffff)](https://gitlab.com/johnarp/galactas-guide)
+[![License](https://img.shields.io/github/license/johnarp/galactas-guide?style=for-the-badge&color=ac4ef9)](./LICENSE)
+[![Version](https://img.shields.io/github/v/release/johnarp/galactas-guide?style=for-the-badge&color=ac4ef9)](https://github.com/johnarp/galactas-guide/releases/latest)
 
-[![License](https://img.shields.io/github/license/johnarp/galactas-guide?style=for-the-badge)](./LICENSE)
-![Version](https://img.shields.io/github/v/release/johnarp/galactas-guide?style=for-the-badge)
-
-![CSS](https://img.shields.io/badge/CSS-2a65f0?style=for-the-badge&logo=css&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-e44d25?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ffdf00?style=for-the-badge&logo=javascript&logoColor=black)
+[**Go to Galacta's Guide**](https://johnarp.github.io/galactas-guide/)
 
 </div>
 
 ## ✨ Features
 
-- Track hero proficiency using rank, level, and points
-- Create hero concepts and add them into the tracker
-- Customize with view modes, themes, card backgrounds, and more
-- localStorage persistence with export, import, and clear
+- Quick proficiency tracking
+- Add your own Heroes and cosutmes
+- View your statistics
+- Make it yours with tons of customization
+- Everything is saved in your browser. Export, import, or clear anytime
 
-## 📸 Preview
+<!-- ## 🖼️ Preview
 
-<div style="display: flex; gap: 10px; justify-content: center">
-    <img src="./assets/github/preview-1.png" width="45%">
-    <img src="./assets/github/preview-2.png" width="45%">
-</div>
-
-<div style="display: flex; gap: 10px; justify-content: center; padding-top: 10px">
-    <img src="./assets/github/preview-3.png" width="45%">
-    <img src="./assets/github/preview-4.png" width="45%">
-</div>
+| Mobile | Desktop |
+| :---: | :---: |
+| ![Mobile Preview](./assets/project/preview-mobile.png) | ![Desktop Preview](./assets/project/preview-mobile.png) | -->
 
 ## 🚀 Installation
 
-The easiest way to access is going to the website: [https://johnarp.github.io/galactas-guide/](https://johnarp.github.io/galactas-guide/)
+### 🌐 Website
 
-Or, if you wish to use locally, here are the steps:
+Open [**johnarp.github.io/galactas-guide**](https://johnarp.github.io/galactas-guide/) in any modern browser, on your phone or computer. There is no install or account to create.
 
-### 1. Downloading the Code
+### 💽 Local
 
-Clone the repository through a terminal, such as Command Prompt or Powershell:
+Galacta's Guide is a plain HTML, CSS, and JS project with no building. It loads data with `fetch`, so it has to be served over HTTP/localserver. Simply opening `index.html` will not work.
 
-```
-# GitHub (primary)
-git clone https://github.com/johnarp/galactas-guide
-
-# GitLab (mirror)
-git clone https://gitlab.com/johnarp/galactas-guide
-```
-
-```
+```bash
+git clone https://github.com/johnarp/galactas-guide.git
 cd galactas-guide
-```
-
-### 2. Running the App
-
-Run the command:
-
-```
 python -m http.server 3000
 ```
 
-### 3. Using the App
+Then, open `http://localhost:3000` in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) in a web browser.
+## ⚠️ Known Issues 
 
-## ⚠️ Known Issues
-
-- Multi-role Heroes only show the color of their first role while using the Role card background
-- Role filter images remain white in Rivals theme
-- Hela's hover image is cut off
-- Icons are of varying quality
-- To apply icon or costume change, the proficiency modal can only be closed, not saved
-- There are no Lord/Champion icons for costumes
-- There are no separate Champion icons for Heroes with multiple icons (eg. Cloak & Dagger/Cloak/Dagger, Bruce Banner/Hulk/MH)
-- There is no visible difference between icon sizes on mobile
-- Large and medium cards on mobile are too large (one per row)
-- Costume selection is ordered by order in `costumes.json`
-- There is severe lag when equipped 4-5+ Champion icons in icon mode
-- Champion icons do not show in proficiency modal
+- Agent icons for alternate forms (e.g., Darkchylde) come from a different source and are square, so they look zoomed in on the icon tiles.
 
 ## 🗺️ Roadmap
 
-### General
+- In-app changelog
+- Rank icon on the bottom left corner of the card
+- List view; row per Hero, uses story images
+- Option to separate multi-role Heroes and sync or separate proficiency
+- Announcement system
 
-- CSS overhaul
-- (WIP) Rename hero images with generic names
-- Rename assets (eg. costumes) with in-game IDs
-- GitLab mirror site hosting
-- Change the look of the clear button in the search bars
-- Improve look of scrollbar (eg. in costume modal, in supported costumes, etc.)
-- Enter to close modals (eg. "Enter" to close proficiency modal)
-- Keyboard navigation (eg. type "Spi" to highlight "Spider-Man", WASD to move around, "Enter" to open modal, Brackets to switch between pages)
-- Profile button in navigation uses chosen nameplate/icon
-- Output json is formatted (readable)
+## 🔏 Privacy
 
-### Home
+Galacta's Guide has no accounts, analytics, or server. All of your data never leave your browser/device. The only outside requests are for fonts and icons from Google Fonts, custom hero and costume images you provide, and the latest version number from GitHub in the settings.
 
-- Dynamic version number in footer
-    - Click to open pop-up changelog
-- Display newest hero on home screen
+## 🤝 Contributing
 
-### Tracker
+Contributions are welcome. Please [open an issue](https://github.com/johnarp/galactas-guide/issues) for any bugs, ideas, or other contributions. Pull requests are also welcome.
 
-- Heroes pop-out when hovering
-- Sort/filter Costumes
-- Playtime
-- Stats
-- Option to display multi-role heroes separately (eg. separate Tankpool, DPSpool, and Supportpool)
-- Costume collections, release, etc.
-- Costume templates (eg. apply "Formula R" to all applicable heroes, or make your own)
-- Show costume recolor names instead of only numbers
-- Accessories
+Project is organized like this:
 
-### Creator
+```
+assets/     images
+css/        stylesheets
+data/       data
+js/         scripts
+views/      pages other than the home page
+```
 
-- Description/bio
-- Costumes
+## 🙏 Credits
 
-### Profile
-
-- Game level alongside website level
-- Display created heroes
-- Display costumes
-- Choose costume nameplates
-- Order the hero icons in proficiency breakdown (eg. order by level)
-- Make profile statistics into a list of dropdowns
-
-### Settings
-
-- More options for Show Proficiency
-- Option to disable Lord/Champion icons
-- Better organization
-- Auto Track All; defaults hero to Agent 1, 0 points
-- Option to disable tracking outline on hero cards
-- Condense show/hide buttons into single toggle button
+Hero art, icons, and theme backgrounds come from [PSYLOCKE.GG](https://psylocke.gg). Silhouettes and rarity icons come from [Marvel Rivals Skins](https://rivalskins.com). Agent icons for alternate forms come from [Marvel Rivals Fandom](https://marvelrivals.fandom.com/)
 
 ## 📄 License
 
@@ -148,6 +85,4 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## ⚖️ Legal
 
-Galacta's Guide is an unofficial project and is not affiliated with, endorsed by, or associated with NetEase games or Marvel in any way.
-
-Marvel Rivals assets, images, and related media included in this project are the property of NetEase Games and/or Marvel and are not covered by the MIT License.
+Galacta’s Guide is an unofficial fan project. It is not affiliated with or endorsed by Marvel or NetEase Games. Marvel Rivals and all related names and artwork belong to their respective owners. See [NOTICE](.//NOTICE.md) for details.

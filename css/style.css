@@ -1,0 +1,15 @@
+/* Entry point: external fonts/icons first (imports must come first), then our files in order. */
+
+/* Fonts: Big Shoulders Display (style) + Exo 2 (UI) */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Exo+2:wght@400..700&display=swap");
+/* Icons: Material Symbols, only the icons listed in icon_names (keep alphabetical) */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=add,arrow_downward,arrow_upward,bar_chart,bolt,bookmark,checkroom,close,delete,edit,expand_more,filter_alt_off,home,search,settings,star,swap_horiz,tune&display=block");
+
+@import url("theme.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("heroes.css");
+@import url("proficiency.css");
+@import url("settings.css");
+@import url("stats.css");

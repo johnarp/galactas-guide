@@ -1,0 +1,193 @@
+/* Reusable pieces: icon, buttons, select, segmented groups, control bar */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  font: 400 24px/1 "Material Symbols Rounded";
+  font-variation-settings: "FILL" 0;
+  font-feature-settings: "liga";
+  white-space: nowrap;
+  user-select: none;
+}
+[aria-current="page"] .icon,
+[aria-pressed="true"] .icon { font-variation-settings: "FILL" 1; }
+
+.btn, .select, .input {
+  min-height: var(--tap);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.btn {
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-width: var(--tap);
+  padding: 0 var(--pad);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--ease), transform var(--ease);
+}
+.btn:active { transform: scale(0.96); }
+.btn-icon { padding: 0; }
+.btn-icon img { width: 24px; height: 24px; object-fit: contain; filter: var(--icon-filter); }
+.btn-lg { min-height: 52px; padding: 0 2.5rem; font-size: 1.05rem; }
+.select { padding: 0 var(--gap); }
+
+.btn-primary { color: var(--color-on-primary); background: var(--color-primary); border-color: var(--color-primary); }
+
+/* Hover only on devices that can hover, so taps never leave a "stuck" highlight */
+@media (hover: hover) {
+  .btn:hover, .select:hover { background: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface)); }
+  .btn-primary:hover { background: color-mix(in srgb, white 15%, var(--color-primary)); }
+}
+
+/* On state = filled, not outlined */
+.btn[aria-pressed="true"],
+.btn[aria-checked="true"],
+.btn[data-on],
+.select[data-on] { background: var(--color-selected); }
+
+/* Joined controls */
+.segmented {
+  display: flex;
+  flex: none;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+}
+.segmented > * { background: transparent; border: 0; border-radius: 0; }
+.segmented > * + * { border-left: var(--border-width) solid var(--color-border); }
+.segmented > :focus-visible { outline: none; }
+.segmented:has(:focus-visible) { outline: 2px solid var(--color-focus, var(--color-primary)); outline-offset: 2px; }
+
+/* Sticky bar; scrolls sideways on narrow screens if it ever overflows */
+.control-bar {
+  position: sticky;
+  top: var(--nav-top);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  margin: 0 calc(-1 * var(--pad)) var(--gap);
+  padding: var(--gap) var(--pad);
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: var(--color-bar);
+  backdrop-filter: var(--bar-blur);
+}
+.control-bar::-webkit-scrollbar { display: none; }
+.push { margin-left: auto; }
+/* If the bar overflows on a small screen, keep sort pinned to the right edge */
+.control-bar .push { position: sticky; right: 0; box-shadow: calc(-1 * var(--gap)) 0 0 var(--color-bar), var(--pad) 0 0 var(--color-bar); }
+
+/* Text/number input */
+.input { width: 100%; padding: 0 var(--pad); font: inherit; cursor: text; }
+.input:disabled { opacity: 0.4; cursor: not-allowed; }
+.input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.input::-webkit-inner-spin-button, .input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* Modal (see js/modal.js) */
+.modal {
+  width: min(var(--modal-w), calc(100% - 2 * var(--pad)));
+  max-width: 100%;
+  max-height: 90dvh;
+  padding: 0;
+  overflow: auto;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+}
+.modal[open] { animation: modal-in var(--ease-slow); }
+.modal::backdrop { background: color-mix(in srgb, var(--color-scrim) 80%, transparent); }
+.modal-close {
+  position: absolute;
+  top: var(--gap);
+  right: var(--gap);
+  z-index: 2;
+  color: var(--color-on-card);
+  background: color-mix(in srgb, black 40%, transparent);
+  border: 0;
+}
+body:has(.modal[open]) { overflow: hidden; }
+@keyframes modal-in { from { opacity: 0; transform: translateY(12px); } }
+
+/* Shared modal parts */
+.modal-title {
+  margin: 0;
+  padding: var(--pad) 60px var(--pad) var(--pad);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: var(--title-transform);
+  letter-spacing: var(--title-tracking);
+}
+.modal-body { display: grid; gap: var(--pad); padding: 0 var(--pad) var(--pad); }
+.modal-text { color: var(--color-muted); }
+.modal-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: var(--gap);
+  padding: var(--pad);
+  background: var(--color-surface);
+  border-top: var(--border-width) solid var(--color-border);
+}
+.modal-actions > :last-child { flex: 1; }
+
+.btn-danger { color: var(--color-danger); border-color: color-mix(in srgb, var(--color-danger) 55%, var(--color-border)); }
+@media (hover: hover) { .btn-danger:hover { background: color-mix(in srgb, var(--color-danger) 16%, var(--color-surface)); } }
+
+/* Search: an icon that expands over the bar on phones, an always-visible field on larger screens */
+.search { display: flex; flex: none; order: -1; gap: var(--gap); }
+.search-field { display: none; flex: 1; gap: var(--gap); }
+.search-field .input { flex: 1; width: auto; min-width: 0; }
+
+@media (max-width: 767px) {
+  .control-bar[data-searching] > :not(.search) { display: none; }
+  .control-bar[data-searching] .search { flex: 1; }
+  .control-bar[data-searching] .search-toggle { display: none; }
+  .control-bar[data-searching] .search-field { display: flex; }
+  .search .input::-webkit-search-cancel-button { display: none; }   /* we have our own close button */
+}
+@media (min-width: 768px) {
+  .search { order: 0; }
+  .search-field { display: flex; flex: none; width: 220px; }
+  .search-toggle, .search-close { display: none; }
+}
+
+/* Dropdown lists: give the options their own colours (otherwise the list turns white when the select is transparent) */
+.select option { color: var(--color-text); background-color: var(--color-surface); }
+
+/* Reset-filters button: right after search on phones, after the filters on large screens */
+.reset { order: -1; }
+@media (min-width: 768px) { .reset { order: 0; } }
+
+/* Items in the scrolling control bar keep their size instead of shrinking */
+.control-bar > * { flex: none; }
+
+/* Forms */
+.form-error { font-size: 0.875rem; color: var(--color-danger); }
+.form-error:empty { display: none; }
+.color-input { padding: 4px; cursor: pointer; }
+.more > summary { padding: var(--gap) 0; font-weight: 600; cursor: pointer; }
+.more-fields { display: grid; gap: var(--pad); padding-bottom: var(--gap); }
+
+.link { color: var(--color-link); text-underline-offset: 2px; }
+
+/* Single-choice button rows inside popups (e.g. Filters) fill the width */
+.modal-body > .segmented > * { flex: 1; }
+
+/* Extra forms in the hero form */
+.form-blocks { display: grid; gap: var(--gap); }
+.form-block { display: grid; gap: var(--pad); padding: var(--pad); border: var(--border-width) solid var(--color-border); border-radius: var(--radius); }
+
+input[type="range"] { width: 100%; accent-color: var(--color-primary); }

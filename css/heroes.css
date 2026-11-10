@@ -1,0 +1,258 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+  gap: var(--gap);
+}
+
+/* Card: hero colour is the background; type scales with card width (container units) */
+.tile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: var(--card-ratio);
+  container-type: inline-size;
+  padding: 0;
+  overflow: hidden;
+  color: var(--color-on-card);
+  text-align: left;
+  --card-color: var(--hero, var(--color-card));   /* what the shade and role icons are based on */
+  background: var(--card-bg, var(--card-color));
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform var(--ease);
+}
+.tile:active { transform: scale(0.97); }
+
+/* Soft shade at the bottom so the name stays readable on any hero colour */
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, color-mix(in srgb, var(--card-color), black 60%), transparent 55%);
+}
+
+.tile-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform var(--ease-slow), opacity var(--ease-slow);
+}
+.tile-img.missing { display: none; }
+.tile-alt { opacity: 0; }   /* prestige art, revealed on hover */
+
+.tile-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5cqw;
+  padding: 7cqw;
+}
+.tile-prof {
+  font-size: var(--card-meta-size);
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.tile-prof:empty { display: none; }
+.tile-name {
+  font-family: var(--font-display);
+  font-size: var(--card-name-size);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: var(--title-tracking);
+}
+
+/* Role icons: tone-on-tone (a darker shade of the card colour), stacked top-left, behind the art */
+.tile-roles {
+  position: absolute;
+  top: 6cqw;
+  left: 6cqw;
+  display: flex;
+  flex-direction: column;
+  gap: 3cqw;
+}
+.role-icon {
+  width: var(--card-icon-size);
+  aspect-ratio: 1;
+  background: color-mix(in srgb, var(--card-tint, var(--card-color)), black var(--card-icon-shade));
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+/* Hover: swap to prestige art (base art fades out once prestige has loaded) */
+@media (hover: hover) {
+  .tile:hover .tile-img { transform: scale(1.05); }
+  .tile:hover:has(.tile-alt.ready) .tile-base { opacity: 0; }
+  .tile:hover .tile-alt.ready { opacity: 1; }
+}
+
+/* Whole-card click target, with the bookmark sitting above it */
+.tile-open {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.tile-open:focus-visible { outline-offset: -3px; }
+
+.tile-save {
+  position: absolute;
+  top: 6cqw;
+  right: 6cqw;
+  z-index: 4;
+  display: grid;
+  padding: 0;
+  color: var(--color-on-card);
+  opacity: 0.75;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: opacity var(--ease), transform var(--ease);
+}
+.tile-save::after { content: ""; position: absolute; inset: -10px; }   /* bigger tap area than the icon */
+.tile-save .icon { font-size: var(--card-icon-size); filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.5)); }
+.tile-save[aria-pressed="true"] { opacity: 1; }
+.tile-save:active { transform: scale(0.85); }
+@media (hover: hover) { .tile-save:hover { opacity: 1; } }
+
+.hero-grid > .empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap);
+  color: var(--color-muted);
+}
+
+/* Rank name painted with its gradient from proficiency.json */
+.rank-gradient {
+  background: var(--rank-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.4));   /* keeps pale ranks readable on light cards */
+}
+
+/* Setting "Coloured rank names" = off */
+[data-rank-colors="off"] .rank-gradient {
+  background: none;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  filter: none;
+}
+
+/* Setting "Card colour": hero (default) | proficiency | none */
+[data-card-colors="none"] .tile { --card-color: var(--color-card); }
+[data-card-colors="proficiency"] .tile {
+  --card-color: var(--rank-end, var(--color-card));     /* untracked heroes fall back to the neutral colour */
+  --card-bg: var(--rank-grad, var(--card-color));       /* rank gradient, top to bottom */
+}
+
+/* Settings > Card details / hover art. Hidden elements are removed (display: none), so they can't be tapped or tabbed to. */
+[data-show-name="off"] .tile-name,
+[data-show-proficiency="off"] .tile-prof,
+[data-show-roles="off"] .tile-roles,
+[data-show-bookmark="off"] .tile-save,
+[data-hover-art="off"] .tile-alt { display: none; }
+
+[data-hover-art="off"] .tile:hover .tile-img { transform: none; }
+[data-hover-art="off"] .tile:hover:has(.tile-alt.ready) .tile-base { opacity: 1; }
+
+/* Setting "Layout" = icons: landscape 3:2 tiles using the agent / lord / champion icon images */
+[data-view-mode="icons"] .hero-grid { grid-template-columns: repeat(auto-fill, minmax(var(--icon-min), 1fr)); }
+
+.tile-icon {
+  aspect-ratio: var(--icon-ratio);
+  align-items: flex-start;                 /* text goes in the empty top area of the icon art */
+  --card-icon-size: max(14px, 9cqw);
+}
+.tile-icon::after { background: linear-gradient(to bottom, color-mix(in srgb, var(--card-color), black 60%), transparent 60%); }
+.tile-icon .tile-img { object-position: center 20%; }   /* also frames a portrait hero image sensibly if a custom hero has no icon */
+.tile-icon .tile-text { padding: 5cqw 14cqw 5cqw 5cqw; }   /* right side leaves room for the bookmark */
+.tile-icon .tile-name { font-size: var(--icon-name-size); }
+.tile-icon .tile-prof { font-size: var(--icon-meta-size); }
+.tile-icon .tile-roles { top: auto; bottom: 5cqw; left: 5cqw; flex-direction: row; }
+.tile-icon .tile-save { top: 5cqw; right: 5cqw; }
+
+/* Card colour: role (bands, one per role) / difficulty / season. Missing entries fall back to the neutral colour. */
+[data-card-colors="difficulty"] .tile { --card-color: var(--difficulty, var(--color-card)); }
+[data-card-colors="season"] .tile { --card-color: var(--season, var(--color-card)); }
+[data-card-colors="role"] .tile {
+  --card-color: var(--role-first, var(--color-card));
+  --card-bg: var(--role-grad, var(--card-color));
+}
+
+/* "Custom" tag on heroes you added (Settings > Card details can hide it) */
+.tile-tag {   /* cards: a small tab hanging from the top edge, between the role icons and the bookmark */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  padding: 0.15em 0.7em;
+  font-size: max(8px, 4.5cqw);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, black 45%, transparent);
+  border-radius: 0 0 8px 8px;
+  transform: translateX(-50%);
+  max-width: 60%;   /* a long "Custom | id" tag is cut short instead of covering the icons */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tile-icon .tile-tag {   /* icon layout: the text is at the top, so the tag goes bottom-right */
+  top: auto;
+  right: 5cqw;
+  bottom: 5cqw;
+  left: auto;
+  border-radius: 999px;
+  transform: none;
+}
+
+/* Role icons sit at the top of a card, so with a top-to-bottom proficiency gradient tint them from its top colour.
+   (In the icon layout they sit at the bottom, where the card colour is already the right one.) */
+[data-card-colors="proficiency"] .tile { --card-tint: var(--rank-start, var(--card-color)); }
+[data-card-colors="proficiency"] .tile-icon { --card-tint: var(--card-color); }
+
+/* Card colour: rarity of the equipped costume (no costume = neutral colour) */
+[data-card-colors="rarity"] .tile { --card-color: var(--rarity, var(--color-card)); }
+
+/* Difficulty and season chips, stacked under the bookmark (Settings > Card details). Each sits on a dark pill so it reads on any art. */
+.tile-meta {
+  position: absolute;
+  top: calc(6cqw + var(--card-icon-size) + 3cqw);
+  right: 6cqw;
+  z-index: 2;
+  display: grid;
+  justify-items: end;
+  gap: 3cqw;
+}
+.tile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15em;
+  padding: 0.1em 0.45em;
+  font-size: max(9px, 5.5cqw);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-on-card);
+  background: color-mix(in srgb, black 50%, transparent);
+  border-radius: 999px;
+}
+.tile-chip.difficulty { color: var(--difficulty, var(--color-on-card)); }
+.tile-chip.season { color: var(--season, var(--color-on-card)); }
+.tile-chip .icon { font-size: 1.2em; font-variation-settings: "FILL" 1; }
+[data-color-chips="off"] .tile-chip { color: var(--color-on-card); }
+.tile-icon .tile-meta { top: calc(5cqw + var(--card-icon-size) + 3cqw); right: 5cqw; }

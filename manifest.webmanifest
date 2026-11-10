@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Galacta's Guide",
+  "short_name": "Galacta",
+  "description": "Track your Marvel Rivals hero proficiency.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0e0415",
+  "theme_color": "#0e0415",
+  "icons": [
+    {
+      "src": "assets/project/icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

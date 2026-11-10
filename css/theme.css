@@ -1,0 +1,166 @@
+/* Everything a theme can change lives here: colour, shape, spacing, type, motion.
+   Other files only use var(--...). A new theme = a block that overrides some of these. */
+:root, [data-theme="galacta"] {
+  /* colour */
+  --color-bg:         #0e0415;
+  --color-surface:    #1a0f27;
+  --color-card:       color-mix(in srgb, var(--color-primary) 30%, var(--color-surface));   /* "None" card colour */
+  --color-selected:   color-mix(in srgb, var(--color-primary) 40%, var(--color-surface));   /* "on" buttons */
+  --color-border:     #30214a;
+  --color-primary:    #ac4ef9;
+  --color-on-primary: #0e0415;
+  --color-text:       #ece8f2;
+  --color-muted:      #a99bbd;
+  --color-danger:     #ff5d73;
+
+  /* shape + spacing */
+  --radius:           10px;
+  --border-width:     1px;
+  --gap:              10px;
+  --pad:              14px;
+
+  /* sizing */
+  --tap:              44px;
+  --nav-h:            56px;
+  --page-max:         1400px;
+  --modal-w:          480px;
+  --banner-h:         130px;
+  --card-min:         100px;      /* smallest hero card width (grid fills the row) */
+  --card-ratio:       3 / 4;
+  --icon-min:         140px;      /* smallest icon-view tile width */
+  --icon-ratio:       3 / 2;      /* the icon images are all 3:2 */
+  --icon-name-size:   max(14px, 11cqw);
+  --icon-meta-size:   max(10px, 6.5cqw);
+  --card-name-size:   max(14px, 14cqw);   /* scales with the card */
+  --card-meta-size:   max(10px, 7cqw);    /* proficiency line under the name */
+  --card-icon-size:   max(14px, 13cqw);   /* role icons on cards */
+  --card-icon-shade:  40%;                /* how much darker than the card colour the icons are */
+
+  /* type */
+  --font-display:     "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --font-ui:          "Exo 2", system-ui, sans-serif;
+  --title-transform:  uppercase;
+  --title-tracking:   0.01em;
+
+  /* motion */
+  --ease:             150ms ease;
+  --ease-slow:        300ms ease;
+}
+
+/* Larger-screen defaults */
+@media (min-width: 768px) {
+  :root {
+    --card-min: 220px;
+    --icon-min: 240px;
+    --gap:      16px;
+  }
+}
+
+/* Setting "Size": small / large. Medium is the default above. Text and icons scale with the card, so only the minimums change. */
+[data-card-size="small"] {
+  --card-min: 74px;
+  --icon-min: 100px;
+  --card-name-size: max(11px, 13cqw);
+  --card-meta-size: max(9px, 7cqw);
+  --card-icon-size: max(12px, 13cqw);
+  --icon-name-size: max(11px, 11cqw);
+  --icon-meta-size: max(9px, 6.5cqw);
+}
+[data-card-size="large"] { --card-min: 160px; --icon-min: 280px; }
+@media (min-width: 768px) {
+  [data-card-size="small"] { --card-min: 160px; --icon-min: 180px; }
+  [data-card-size="large"] { --card-min: 300px; --icon-min: 360px; }
+}
+
+/* Optional background image. A theme sets --bg-image (a url(...)) and an overlay to keep content readable.
+   The overlay is a colour with transparency, so each theme picks how dark / how tinted it needs: e.g.
+     --bg-image: url("https://example.com/space.jpg");
+     --bg-overlay: color-mix(in srgb, var(--color-bg) 80%, transparent);   (higher % = darker, more tinted) */
+:root {
+  --bg-image:    none;
+  --bg-overlay:  transparent;
+  --bg-position: center;
+  --bg-size:     cover;
+
+  /* Roles that normally follow the main colours, so a light or image theme can change them on its own */
+  --color-title:    var(--color-primary);   /* big title on the home page */
+  --color-on-card:  var(--color-text);      /* text and icons drawn over hero art (always sits on a dark fade) */
+  --color-nav:      var(--color-surface);   /* navigation bar background */
+  --color-nav-text: var(--color-muted);     /* inactive navigation items */
+  --color-scrim:    var(--color-bg);        /* dimming behind popups */
+  --color-link:     var(--color-primary);   /* text links */
+  --color-bar:      var(--color-bg);        /* sticky control bar (can be see-through over a background image) */
+  --bar-blur:       none;
+  --icon-filter:    none;                   /* invert(1) turns the white role icons black on a light theme */
+  --scheme:         dark;                   /* dark | light: native controls and scrollbars */
+}
+
+/* ---- Themes (chosen in Settings). The default, "Galacta", is the :root values above. A theme only overrides variables. ---- */
+
+/* X-Men: deep blue with a slightly muted yellow */
+[data-theme="x-men"] {
+  --color-bg:         #071634;
+  --color-surface:    #102553;
+  --color-card:       #1d3d7c;
+  --color-border:     #27478a;
+  --color-primary:    #e3c25a;
+  --color-on-primary: #08122b;
+  --color-text:       #eaf0ff;
+  --color-muted:      #9fb0d6;
+  --color-selected:   #2f58b5;
+}
+
+/* Symbiote: no colour at all, only black, white and grey */
+[data-theme="symbiote"] {
+  --color-bg:         #050505;
+  --color-surface:    #121212;
+  --color-card:       #2b2b2b;
+  --color-border:     #2f2f2f;
+  --color-primary:    #f2f2f2;
+  --color-on-primary: #050505;
+  --color-text:       #f2f2f2;
+  --color-muted:      #8c8c8c;
+  --color-danger:     #d4d4d4;
+  --color-selected:   #3b3b3b;
+}
+
+/* Rivals: light, based on the game's own UI. Bright yellow, white page, near-black navigation */
+[data-theme="rivals"] {
+  --scheme:           light;
+  --color-bg:         #ffffff;
+  --color-surface:    #f1f2f8;
+  --color-card:       #c9cbe0;
+  --color-border:     #d3d5e6;
+  --color-primary:    #ffd21f;
+  --color-on-primary: #14141a;
+  --color-text:       #16161d;
+  --color-muted:      #6a6d86;
+  --color-danger:     #d62c4a;
+  --color-selected:   #ffe27a;
+  --color-title:      #14141a;   /* bright yellow on white would be unreadable */
+  --color-on-card:    #f6f6fb;
+  --color-nav:        #14141a;
+  --color-nav-text:   #b9bbcc;
+  --color-scrim:      #000000;
+  --color-link:       #8a6a00;
+  --color-focus:      #14141a;
+  --icon-filter:      invert(1);
+}
+
+/* Thebes: dusk blues and gold, with a background image (assets/themes/thebes.webp) */
+[data-theme="thebes"] {
+  --color-bg:         #0b1030;
+  --color-surface:    #151b4a;
+  --color-card:       #28307a;
+  --color-border:     #343c88;
+  --color-primary:    #e6b657;
+  --color-on-primary: #0b1030;
+  --color-text:       #eef0ff;
+  --color-muted:      #a6abda;
+  --color-selected:   #3b3f9c;
+  --color-bar:        color-mix(in srgb, var(--color-bg) 62%, transparent);
+  --bar-blur:         blur(10px);
+  --bg-image:         url("../assets/themes/thebes.webp");
+  --bg-overlay:       color-mix(in srgb, var(--color-bg) 72%, transparent);
+  --bg-position:      center top;
+}
