@@ -97,7 +97,18 @@ export const getSetting = (key) => valueOf(SETTINGS.find((s) => s.key === key));
 export const onSettingChange = (fn) => listeners.add(fn);
 
 // Built-in themes are CSS blocks in theme.css; custom ones (made in the theme creator) are turned into CSS variables here.
-export const BUILT_IN_THEMES = [['galacta', 'Galacta'], ['x-men', 'X-Men'], ['symbiote', 'Symbiote'], ['rivals', 'Rivals'], ['thebes', 'Thebes']];
+// Built-in themes: [id, name, group]. To add one: add a line here (any order) and a [data-theme="id"] block in theme.css.
+// The picker shows each group under its heading, in the order of THEME_GROUPS, with the themes sorted A-Z.
+export const THEME_GROUPS = ['Core', 'Characters', 'Seasons'];
+export const BUILT_IN_THEMES = [
+  ['galacta',   'Galacta',   'Core'],
+  ['rivals',    'Rivals',    'Core'],
+  ['symbiote',  'Symbiote',  'Characters'],
+  ['x-men',     'X-Men',     'Characters'],
+  ['alchemax',  'Alchemax',  'Seasons'],
+  ['blasphemy', 'Blasphemy', 'Seasons'],
+  ['thebes',    'Thebes',    'Seasons'],
+];
 
 const luminance = (hex) => {
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)

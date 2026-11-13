@@ -4,7 +4,9 @@
 export const ROOT = new URL('../', import.meta.url);
 
 export const url = (path) => new URL(path, ROOT).href;
-export const heroImg = (id, type = 'hero') => url(`assets/heroes/${id}-${type}.png`);
+// Champion icons are animated, so they are .webp (much smaller than animated PNG). Everything else stays .png.
+// This also covers other forms, whose type looks like "2-champion".
+export const heroImg = (id, type = 'hero') => url(`assets/heroes/${id}-${type}.${type.endsWith('champion') ? 'webp' : 'png'}`);
 export const roleImg = (role) => url(`assets/ui/${role.toLowerCase()}.png`);
 
 export async function loadData(path) {

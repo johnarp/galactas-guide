@@ -11,6 +11,13 @@ function download(data, filename) {
   setTimeout(() => URL.revokeObjectURL(href), 1000);
 }
 
+// 2026-11-13_14-32-05: your local time, no characters Windows dislikes, and files sort oldest to newest by name
+const timestamp = () => {
+  const d = new Date();
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}_${p(d.getHours())}-${p(d.getMinutes())}-${p(d.getSeconds())}`;
+};
+
 const row = (title, description, button) =>
   el('div', { class: 'setting' }, [
     el('div', {}, [el('p', { class: 'setting-title' }, title), el('p', { class: 'hint' }, description)]),
@@ -136,7 +143,7 @@ export function openSettings() {
   const exportBtn = el('button', {
     class: 'btn',
     type: 'button',
-    onclick: () => download(store.exportProfile(), `galactas-guide-${new Date().toISOString().slice(0, 10)}.json`),
+    onclick: () => download(store.exportProfile(), `galactas-guide-${timestamp()}.json`),
   }, 'Export');
 
   const importBtn = el('button', { class: 'btn', type: 'button', onclick: () => fileInput.click() }, 'Import');

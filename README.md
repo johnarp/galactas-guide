@@ -56,6 +56,8 @@ Then, open `http://localhost:3000` in your browser.
 - List view; row per Hero, uses story images
 - Option to separate multi-role Heroes and sync or separate proficiency
 - Announcement system
+- Alias search
+- Improve look of control bar
 
 ## 🔏 Privacy
 

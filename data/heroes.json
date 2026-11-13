@@ -435,5 +435,13 @@
         "difficulty"    : 4,
         "role"          : "Duelist",
         "season"        : 10
+    },
+    {
+        "id"            : 1068,
+        "name"          : "Nightcrawler",
+        "color"         : "#68c3e8",
+        "difficulty"    : 4,
+        "role"          : "Strategist",
+        "season"        : 11
     }
 ]

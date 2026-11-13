@@ -147,20 +147,57 @@
   --icon-filter:      invert(1);
 }
 
-/* Thebes: dusk blues and gold, with a background image (assets/themes/thebes.webp) */
+/* Thebes: colours sampled from the background image. Violet dusk sky and shadows, rose-brown stone, gold glow */
 [data-theme="thebes"] {
-  --color-bg:         #0b1030;
-  --color-surface:    #151b4a;
-  --color-card:       #28307a;
-  --color-border:     #343c88;
-  --color-primary:    #e6b657;
-  --color-on-primary: #0b1030;
-  --color-text:       #eef0ff;
-  --color-muted:      #a6abda;
-  --color-selected:   #3b3f9c;
-  --color-bar:        color-mix(in srgb, var(--color-bg) 62%, transparent);
+  --color-bg:         #2f2030;   /* darkest shadows */
+  --color-surface:    #353257;   /* dusk sky */
+  --color-card:       #5a424c;   /* rose-brown stone */
+  --color-border:     #4e435f;
+  --color-primary:    #d2b17b;   /* gold highlights */
+  --color-on-primary: #2f2030;
+  --color-text:       #f3ece6;
+  --color-muted:      #b39178;   /* warm sandstone */
+  --color-selected:   #806261;
+  --color-bar:        color-mix(in srgb, var(--color-bg) 55%, transparent);
   --bar-blur:         blur(10px);
   --bg-image:         url("../assets/themes/thebes.webp");
-  --bg-overlay:       color-mix(in srgb, var(--color-bg) 72%, transparent);
+  --bg-overlay:       color-mix(in srgb, var(--color-bg) 50%, transparent);
+  --bg-position:      center top;
+}
+
+[data-theme="blasphemy"] {
+  --color-bg:         #151521;
+  --color-surface:    #222235;
+  --color-card:       #3f3a4a;
+  --color-border:     #3d3d5c;
+  --color-primary:    #f0e6cf;
+  --color-on-primary: #151521;
+  --color-text:       #ecebf5;
+  --color-muted:      #9896bf;
+  --color-selected:   #45456b;
+  --color-link:       #a6c0da;
+  --color-focus:      #a6c0da;
+  --color-bar:        color-mix(in srgb, var(--color-bg) 62%, transparent);
+  --bar-blur:         blur(10px);
+  --bg-image:         url("../assets/themes/blasphemy.webp");
+  --bg-overlay:       color-mix(in srgb, var(--color-bg) 66%, transparent);
+  --bg-position:      center top;
+}
+
+/* Alchemax: colours sampled from the background image. Deep blues with the vivid cyan glow */
+[data-theme="alchemax"] {
+  --color-bg:         #152532;   /* darkest blue */
+  --color-surface:    #203a52;
+  --color-card:       #325275;
+  --color-border:     #2c4b6a;
+  --color-primary:    #3cc0de;   /* the bright cyan */
+  --color-on-primary: #152532;
+  --color-text:       #e8f2f6;
+  --color-muted:      #79b1d1;
+  --color-selected:   #2c72a0;
+  --color-bar:        color-mix(in srgb, var(--color-bg) 55%, transparent);
+  --bar-blur:         blur(10px);
+  --bg-image:         url("../assets/themes/alchemax.webp");
+  --bg-overlay:       color-mix(in srgb, var(--color-bg) 45%, transparent);
   --bg-position:      center top;
 }

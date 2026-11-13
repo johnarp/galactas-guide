@@ -4,7 +4,7 @@ import { el, icon } from './dom.js';
 import { openModal, confirmModal } from './modal.js';
 import { field, isWebUrl } from './custom-heroes.js';
 import * as store from './storage.js';
-import { BUILT_IN_THEMES, getSetting, setSetting, themeVars } from './preferences.js';
+import { BUILT_IN_THEMES, THEME_GROUPS, getSetting, setSetting, themeVars } from './preferences.js';
 
 const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 const customValue = (t) => `custom:${t.id}`;
@@ -25,6 +25,19 @@ function preview({ id, custom }) {
   ]);
 }
 
+const byName = (a, b) => a.name.localeCompare(b.name);
+
+// [[group, [[id, name], ...]], ...]: groups in THEME_GROUPS order, themes A-Z. A theme with an unknown group goes under "Other".
+function groups() {
+  const known = new Set(THEME_GROUPS);
+  const names = [...THEME_GROUPS, ...(BUILT_IN_THEMES.some(([, , g]) => !known.has(g)) ? ['Other'] : [])];
+  return names
+    .map((group) => [group, BUILT_IN_THEMES
+      .filter(([, , g]) => (known.has(g) ? g : 'Other') === group)
+      .sort((a, b) => a[1].localeCompare(b[1]))])
+    .filter(([, themes]) => themes.length);
+}
+
 export function openThemes(onChange) {
   const body = el('div', { class: 'modal-body' });
   const refreshAll = () => { onChange?.(); render(); };
@@ -42,11 +55,13 @@ export function openThemes(onChange) {
   function render() {
     const customs = store.get('customThemes');
     body.replaceChildren(
-      el('p', { class: 'label' }, 'Built-in'),
-      el('div', { class: 'theme-grid' }, BUILT_IN_THEMES.map(([id, name]) => card(id, name, preview({ id })))),
+      ...groups().flatMap(([group, themes]) => [
+        el('p', { class: 'label' }, group),
+        el('div', { class: 'theme-grid' }, themes.map(([id, name]) => card(id, name, preview({ id })))),
+      ]),
       el('p', { class: 'label' }, 'Custom'),
       customs.length
-        ? el('div', { class: 'theme-grid' }, customs.map((t) => card(customValue(t), t.name, preview({ custom: t }),
+        ? el('div', { class: 'theme-grid' }, [...customs].sort(byName).map((t) => card(customValue(t), t.name, preview({ custom: t }),
             el('button', {
               class: 'btn btn-icon theme-edit',
               type: 'button',

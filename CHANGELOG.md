@@ -1,5 +1,6 @@
 # Changelog
 
+[2.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v2.1.0
 [2.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v2.0.0
 [1.8.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.8.0
 [1.7.5]: https://github.com/johnarp/galactas-guide/releases/tag/v1.7.5
@@ -24,6 +25,20 @@
 [1.1.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.1.0
 [1.0.1]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.1
 [1.0.0]: https://github.com/johnarp/galactas-guide/releases/tag/v1.0.0
+
+## [2.1.0] - 2026-11-13
+
+### Added
+
+- Nightcrawler
+- Alchemax and Blasphemy themes
+- Timestamp to export file
+
+### Changed
+
+- All Champion icons are compressed to reduce file sizes
+- Organized and sorted themes
+- Improved Thebes theme
 
 ## [2.0.0] - 2026-11-10
 
